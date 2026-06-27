@@ -1,0 +1,188 @@
+export type Place = {
+  id: string;
+  name: string;
+  subCategory: string;
+  address: string;
+  rating: number;
+  reviewCount: number;
+  avgPrice?: string;
+  description: string;
+};
+
+export const places: Record<string, Place[]> = {
+  coffee: [
+    {
+      id: "c1",
+      name: "블루보틀 커피 삼청점",
+      subCategory: "카페",
+      address: "서울 종로구 삼청로 109",
+      rating: 4.8,
+      reviewCount: 1240,
+      avgPrice: "7,500원",
+      description: "스페셜티 원두를 사용한 핸드드립 전문 카페",
+    },
+    {
+      id: "c2",
+      name: "앤트러사이트 한남",
+      subCategory: "카페",
+      address: "서울 용산구 한남대로20길 33-17",
+      rating: 4.6,
+      reviewCount: 890,
+      avgPrice: "6,500원",
+      description: "오래된 공장을 개조한 분위기 있는 스페셜티 카페",
+    },
+    {
+      id: "c3",
+      name: "테라로사 서울숲",
+      subCategory: "카페",
+      address: "서울 성동구 왕십리로 83",
+      rating: 4.7,
+      reviewCount: 2100,
+      avgPrice: "7,000원",
+      description: "강릉 로스터리 카페의 서울 직영점",
+    },
+    {
+      id: "c4",
+      name: "커피리브레 연남",
+      subCategory: "카페",
+      address: "서울 마포구 연남로3길 26",
+      rating: 4.5,
+      reviewCount: 670,
+      avgPrice: "6,000원",
+      description: "국내 스페셜티 커피 선구자, 다양한 싱글오리진 원두",
+    },
+    {
+      id: "c5",
+      name: "인텔리젠시아 청담",
+      subCategory: "카페",
+      address: "서울 강남구 도산대로45길 10",
+      rating: 4.9,
+      reviewCount: 540,
+      avgPrice: "8,000원",
+      description: "미국 시카고에서 온 스페셜티 커피 브랜드",
+    },
+  ],
+  carrot: [
+    {
+      id: "k1",
+      name: "바르다김선생 강남점",
+      subCategory: "김밥·분식",
+      address: "서울 강남구 테헤란로 152",
+      rating: 4.4,
+      reviewCount: 3200,
+      avgPrice: "4,500원",
+      description: "신선한 재료로 만든 프리미엄 김밥 전문점",
+    },
+    {
+      id: "k2",
+      name: "종로김밥",
+      subCategory: "김밥·분식",
+      address: "서울 종로구 종로 123",
+      rating: 4.6,
+      reviewCount: 1800,
+      avgPrice: "3,500원",
+      description: "40년 전통의 수제 김밥, 참기름 향이 일품",
+    },
+    {
+      id: "k3",
+      name: "고봉민김밥인",
+      subCategory: "김밥·분식",
+      address: "서울 마포구 와우산로 94",
+      rating: 4.3,
+      reviewCount: 2500,
+      avgPrice: "4,000원",
+      description: "큼직한 재료와 넉넉한 양으로 유명한 김밥집",
+    },
+    {
+      id: "k4",
+      name: "김밥나라 홍대점",
+      subCategory: "김밥·분식",
+      address: "서울 마포구 양화로 144",
+      rating: 4.1,
+      reviewCount: 980,
+      avgPrice: "3,000원",
+      description: "다양한 종류의 김밥과 라면을 합리적인 가격에",
+    },
+  ],
+  pizza: [
+    {
+      id: "p1",
+      name: "피자알볼로 연남점",
+      subCategory: "피자",
+      address: "서울 마포구 연남로 115",
+      rating: 4.7,
+      reviewCount: 1560,
+      avgPrice: "22,000원",
+      description: "두꺼운 도우와 풍성한 토핑의 뉴욕 스타일 피자",
+    },
+    {
+      id: "p2",
+      name: "오베르뉴 이태원",
+      subCategory: "피자",
+      address: "서울 용산구 이태원로 175",
+      rating: 4.8,
+      reviewCount: 890,
+      avgPrice: "28,000원",
+      description: "나폴리 정통 화덕 피자 전문점",
+    },
+    {
+      id: "p3",
+      name: "노머니노피자 합정",
+      subCategory: "피자",
+      address: "서울 마포구 합정동 358-1",
+      rating: 4.5,
+      reviewCount: 720,
+      avgPrice: "18,000원",
+      description: "가성비 좋은 수제 피자와 생맥주",
+    },
+  ],
+  croissant: [
+    {
+      id: "b1",
+      name: "메종엠오 압구정",
+      subCategory: "베이커리",
+      address: "서울 강남구 압구정로 316",
+      rating: 4.9,
+      reviewCount: 2300,
+      avgPrice: "5,500원",
+      description: "프랑스 정통 방식의 버터 크루아상 맛집",
+    },
+    {
+      id: "b2",
+      name: "런던베이글뮤지엄 안국",
+      subCategory: "베이커리",
+      address: "서울 종로구 북촌로5길 32",
+      rating: 4.6,
+      reviewCount: 4100,
+      avgPrice: "6,000원",
+      description: "수제 베이글과 다양한 크림치즈 스프레드",
+    },
+    {
+      id: "b3",
+      name: "밀도 성수",
+      subCategory: "베이커리",
+      address: "서울 성동구 성수이로 78",
+      rating: 4.7,
+      reviewCount: 1800,
+      avgPrice: "4,500원",
+      description: "쫄깃한 식빵과 크루아상으로 유명한 베이커리",
+    },
+    {
+      id: "b4",
+      name: "오월의 종 인사동",
+      subCategory: "베이커리",
+      address: "서울 종로구 인사동5길 26",
+      rating: 4.4,
+      reviewCount: 1200,
+      avgPrice: "3,500원",
+      description: "국산 밀로 만든 건강한 통밀 빵 전문점",
+    },
+  ],
+};
+
+export const panelLabels: Record<string, string> = {
+  coffee: "카페·커피",
+  carrot: "김밥·분식",
+  pizza: "피자",
+  croissant: "빵·베이커리",
+};

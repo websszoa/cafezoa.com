@@ -10,7 +10,10 @@ export const metadata = {
 
 export default function NotFound() {
   return (
-    <main id="main-content" className="main__container flex flex-col justify-center min-h-screen">
+    <main
+      id="main-content"
+      className="main__container flex flex-col justify-center min-h-screen"
+    >
       <div className="flex flex-col items-center justify-center py-12 md:py-20">
         <div className="text-center mb-6" aria-hidden="true">
           <p className="font-nanumNeo text-8xl md:text-9xl text-brand/20 select-none">

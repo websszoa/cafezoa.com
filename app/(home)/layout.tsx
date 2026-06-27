@@ -1,5 +1,5 @@
-import Footer from "@/components/footer/footer";
-import Header from "@/components/header/header";
+import NavBar from "@/components/nav/nav-bar";
+import InfoPanelWrapper from "@/components/panel/info-panel-wrapper";
 
 export default function HomeLayout({
   children,
@@ -7,12 +7,12 @@ export default function HomeLayout({
   children: React.ReactNode;
 }) {
   return (
-    <>
-      <Header />
-      <main id="main-content" className="main__container flex-1">
+    <div className="flex h-dvh overflow-hidden">
+      <NavBar />
+      <InfoPanelWrapper />
+      <main id="main-content" className="flex-1 min-w-0 pb-16 md:pb-0">
         {children}
       </main>
-      <Footer />
-    </>
+    </div>
   );
 }
