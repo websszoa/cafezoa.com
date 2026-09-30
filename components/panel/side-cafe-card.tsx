@@ -36,7 +36,7 @@ export default function SideCafeCard({
           <div className="relative size-14 shrink-0 overflow-hidden rounded-xl">
             <Image
               src={cafe.images.cover}
-              alt={`${cafe.name} 전경`}
+              alt={`${cafe.name}`}
               fill
               sizes="56px"
               className="object-cover"
