@@ -20,8 +20,8 @@ const anyvid = localFont({
 });
 
 const nanumSquare = localFont({
-  variable: "--font-nanumNeo",
-  display: "optional",
+  variable: "--font-nanum-square-neo",
+  display: "swap",
   preload: false,
   src: [
     {

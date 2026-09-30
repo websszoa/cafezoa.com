@@ -7,9 +7,13 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-brand: var(--brand);
+  --color-brand-foreground: var(--brand-foreground);
+  --color-brand-soft: var(--brand-soft);
+  --color-cafe-green: var(--cafe-green);
   --font-mono: ui-monospace, monospace;
   --font-anyvid: var(--font-anyvid);
-  --font-nanumNeo: var(--font-nanumNeo);
+  --font-nanum-neo: var(--font-nanum-square-neo);
   --font-paperlogy: var(--font-paperlogy);
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
@@ -50,6 +54,10 @@
 }
 
 :root {
+  --brand: oklch(0.5 0.1 48);
+  --brand-foreground: oklch(0.98 0.01 75);
+  --brand-soft: oklch(0.95 0.025 68);
+  --cafe-green: oklch(0.46 0.09 142);
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);
   --card: oklch(1 0 0);
@@ -85,6 +93,10 @@
 }
 
 .dark {
+  --brand: oklch(0.69 0.11 55);
+  --brand-foreground: oklch(0.18 0.02 48);
+  --brand-soft: oklch(0.27 0.035 50);
+  --cafe-green: oklch(0.7 0.11 142);
   --background: oklch(0.145 0 0);
   --foreground: oklch(0.985 0 0);
   --card: oklch(0.205 0 0);
@@ -127,5 +139,59 @@
   }
   html {
     @apply font-sans;
+  }
+}
+
+@font-face {
+  font-family: "fontzoa-sc-dream-light";
+  src: url("https://raw.githubusercontent.com/websszoa/fontzoa.com/refs/heads/main/public/fonts/catalog/SCDream-Light.woff2")
+    format("woff2");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+.fontzoa-sc-dream-light {
+  font-family: "fontzoa-sc-dream-light", sans-serif;
+  font-weight: 300;
+}
+
+.cafe-logo-bean {
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: 17px;
+  height: 22px;
+  border-radius: 48% 52% 46% 54%;
+  background: var(--brand);
+  transform: rotate(28deg);
+  animation: cafe-bean-hop 3.2s cubic-bezier(0.45, 0, 0.25, 1) infinite;
+}
+
+.cafe-logo-bean-seam {
+  position: absolute;
+  inset: 3px 7px;
+  border-left: 1.5px solid color-mix(in oklab, var(--brand-foreground) 75%, transparent);
+  border-radius: 50%;
+  transform: rotate(-8deg);
+}
+
+@keyframes cafe-bean-hop {
+  0%,
+  12%,
+  100% {
+    transform: translateY(0) rotate(28deg);
+  }
+  5% {
+    transform: translateY(-6px) rotate(-16deg);
+  }
+  9% {
+    transform: translateY(-2px) rotate(12deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cafe-logo-bean {
+    animation: none;
   }
 }

@@ -19,7 +19,7 @@ export default function Error({ error, reset }: ErrorProps) {
           </p>
         </div>
         <div className="text-center mb-8 max-w-md px-4">
-          <h1 className="font-nanumNeo text-2xl md:text-3xl text-slate-900 mb-3">
+          <h1 className="font-nanum-neo text-2xl md:text-3xl text-slate-900 mb-3">
             오류가 발생했습니다.<span aria-hidden="true">🥶🙏</span>
           </h1>
           <p className="font-anyvid text-sm text-muted-foreground leading-relaxed">
@@ -37,7 +37,7 @@ export default function Error({ error, reset }: ErrorProps) {
           </p>
           {error.message && (
             <div className="mt-6 p-3 border rounded" role="alert">
-              <p className="font-nanumNeo text-xs text-muted-foreground wrap-break-word">
+              <p className="font-nanum-neo text-xs text-muted-foreground wrap-break-word">
                 {error.message}
               </p>
             </div>

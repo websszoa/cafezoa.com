@@ -16,13 +16,13 @@ export default function NotFound() {
     >
       <div className="flex flex-col items-center justify-center py-12 md:py-20">
         <div className="text-center mb-6" aria-hidden="true">
-          <p className="font-nanumNeo text-8xl md:text-9xl text-brand/20 select-none">
+          <p className="font-nanum-neo text-8xl md:text-9xl text-brand/20 select-none">
             404
           </p>
         </div>
 
         <div className="text-center mb-8 max-w-md px-4">
-          <h1 className="font-nanumNeo text-2xl md:text-3xl text-slate-900 mb-3">
+          <h1 className="font-nanum-neo text-2xl md:text-3xl text-slate-900 mb-3">
             페이지를 찾을 수 없습니다.<span aria-hidden="true">🥶🙏</span>
           </h1>
           <p className="font-anyvid text-sm text-muted-foreground leading-relaxed">

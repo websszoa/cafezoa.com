@@ -1,14 +1,5 @@
-export type MenuItem = {
-  id: string;
-  label: string;
-  href: string;
-  icon: string;
-};
-
-export const menuItems: MenuItem[] = [
-  { id: "cafe", label: "커피", href: "/?panel=coffee", icon: "Coffee" },
-  { id: "carrot", label: "김밥", href: "/?panel=carrot", icon: "Carrot" },
-  { id: "pizza", label: "피자", href: "/?panel=pizza", icon: "Pizza" },
-  { id: "croissant", label: "빵", href: "/?panel=croissant", icon: "Croissant" },
-  { id: "bookmark", label: "저장", href: "/bookmark", icon: "Bookmark" },
+export const navigation = [
+  { label: "카페 찾기", href: "#" },
+  { label: "추천 카페", href: "#" },
+  { label: "카페 이야기", href: "#" },
 ];
