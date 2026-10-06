@@ -37,7 +37,7 @@ export function MainPage() {
         <p className="font-paperlogy flex items-center gap-2.5 text-xs font-black tracking-[0.2em] uppercase">
           Cafe curation guide
         </p>
-        <h1 className="font-paperlogy mt-8 -skew-x-6 text-[clamp(3.5rem,16vw,7.25rem)] leading-[0.84] font-black -tracking-widest uppercase [text-shadow:5px_5px_0_#c83d12]">
+        <h1 className="font-paperlogy mt-8 -skew-x-6 text-[clamp(3.5rem,16vw,7.25rem)] leading-[0.84] font-black -tracking-widest uppercase italic [text-shadow:5px_5px_0_#c83d12]">
           <span className="text-[#9cff75]">cafe</span>
           <span>zoa</span>
         </h1>

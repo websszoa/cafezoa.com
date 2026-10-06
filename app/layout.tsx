@@ -104,12 +104,6 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  alternates: {
-    canonical: "/",
-    languages: {
-      "ko-KR": "/",
-    },
-  },
   icons: {
     icon: [{ url: "/icons/favicon.svg", type: "image/svg+xml" }],
     shortcut: "/icons/favicon.svg",
@@ -118,7 +112,6 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "ko_KR",
-    url: "/",
     siteName: APP_NAME,
     title: defaultTitle,
     description: APP_DESCRIPTION,

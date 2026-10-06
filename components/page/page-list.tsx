@@ -122,7 +122,11 @@ function CafeTable({ cafes }: { cafes: Cafe[] }) {
                   </div>
                 </td>
                 <td className="px-5 py-4 align-middle">
-                  <div className="flex items-center gap-3">
+                  <Link
+                    href={`/cafe/${cafe.slug}`}
+                    aria-label={`${cafe.name} 상세 정보 보기`}
+                    className="flex items-center gap-3 rounded-xl outline-none focus-visible:ring-2 focus-visible:ring-[#ff5b20]"
+                  >
                     <div className="relative h-24 w-20 shrink-0 overflow-hidden rounded">
                       <Image
                         src={cafe.thumbnail}
@@ -189,7 +193,7 @@ function CafeTable({ cafes }: { cafes: Cafe[] }) {
                         </PawPrint>
                       </div>
                     </div>
-                  </div>
+                  </Link>
                 </td>
                 <td className="font-nanum-square-neo px-4 py-4 align-top text-sm whitespace-nowrap text-[#3a241c]">
                   <Eye className="mb-2 size-3.5 text-[#ff5b20]" />

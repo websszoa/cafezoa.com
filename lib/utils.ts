@@ -23,8 +23,12 @@ interface CafeBasic {
 
 interface CafeDetail {
   features?: string[];
+  purpose?: string[];
+  floors?: string[];
   parking?: string[];
   pet?: string[];
+  restroom?: string[];
+  children?: string[];
   services?: string[];
   study?: string[];
   smoking?: string[];
@@ -34,7 +38,11 @@ interface CafeDetail {
     closed_days: string;
     hours: Record<string, string>;
   };
+  price?: Record<string, number>;
   media?: {
+    phone?: string;
+    website?: string | null;
+    instagram?: string;
     gallery?: string[];
   };
 }
@@ -142,10 +150,11 @@ export const cafes = cafeBasic.map((cafe) => {
     type: Array.from(new Set(cafe.type.map(canonicalType))),
     province: provinceOf(cafe.location.address),
     // 각 카페의 01번 이미지를 목록과 카드의 대표 이미지로 사용한다.
-    thumbnail: `/cafe/${cafe.slug}-01.jpg`,
+    thumbnail: `/cafe/${cafe.slug}-01.webp`,
     naver: rating?.naver,
     google: rating?.google,
     businessHoursLines: businessHoursLinesOf(detail?.business?.hours),
+    businessHours: detail?.business?.hours ?? {},
     closedDays: detail?.business?.closed_days,
     isParkingFree: detail?.parking?.includes("무료") ?? false,
     isPetFriendly: detail?.pet?.some((item) => item.includes("가능")) ?? false,
@@ -156,10 +165,21 @@ export const cafes = cafeBasic.map((cafe) => {
       : "불가",
     smokingLabel: detail?.smoking?.[0],
     serviceLabels: detail?.services,
+    purposeLabels: detail?.purpose ?? [],
     features: detail?.features ?? [],
+    floorLabels: detail?.floors ?? [],
+    restroomLabels: detail?.restroom ?? [],
+    childrenLabels: detail?.children ?? [],
     galleryImages: galleryImagesOf(detail?.media?.gallery),
     viewLabels: detail?.view,
     seatingLabels: detail?.seating,
+    studyLabels: detail?.study ?? [],
+    smokingLabels: detail?.smoking ?? [],
+    petLabels: detail?.pet ?? [],
+    prices: detail?.price ?? {},
+    phone: detail?.media?.phone,
+    website: detail?.media?.website,
+    instagram: detail?.media?.instagram,
   };
 });
 

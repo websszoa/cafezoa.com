@@ -138,6 +138,11 @@ function CafeStoryCard({ cafe, priority }: { cafe: Cafe; priority: boolean }) {
       id={cafe.slug}
       className="group flex min-h-145 scroll-mt-6 flex-col overflow-hidden rounded-[1.6rem] bg-white shadow-[0_16px_35px_rgba(145,75,0,0.12)]"
     >
+      <Link
+        href={`/cafe/${cafe.slug}`}
+        aria-label={`${cafe.name} 상세 정보 보기`}
+        className="flex flex-1 flex-col outline-none"
+      >
       <div className="relative aspect-4/4 shrink-0 overflow-hidden bg-[#eee]">
         <Image
           src={cafe.thumbnail}
@@ -173,7 +178,11 @@ function CafeStoryCard({ cafe, priority }: { cafe: Cafe; priority: boolean }) {
         <p className="mt-4 line-clamp-4 text-sm leading-6 text-[#666]">
           {cafe.description}
         </p>
+        <span className="mt-auto pt-5 text-sm font-bold text-[#ff5b20]">
+          상세 정보 보기 →
+        </span>
       </div>
+      </Link>
     </article>
   );
 }

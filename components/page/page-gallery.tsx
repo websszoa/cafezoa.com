@@ -127,8 +127,8 @@ function GalleryCard({
 
   return (
     <Link
-      href={`/blog#${cafe.slug}`}
-      aria-label={`${cafe.name} 카페 이야기 보기`}
+      href={`/cafe/${cafe.slug}`}
+      aria-label={`${cafe.name} 상세 정보 보기`}
       className={cn(
         "group relative mb-5 block break-inside-avoid overflow-hidden rounded-3xl bg-stone-200 shadow-[0_12px_28px_rgba(58,36,28,0.14)] outline-none",
         aspectRatio,
@@ -162,7 +162,7 @@ function GalleryCard({
           ))}
         </div>
         <span className="mt-5 inline-flex items-center gap-1 text-sm font-bold text-[#9cff75]">
-          카페 이야기 보기
+          상세 정보 보기
           <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" />
         </span>
       </div>

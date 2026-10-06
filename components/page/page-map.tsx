@@ -5,6 +5,7 @@ import Link from "next/link";
 import Script from "next/script";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import {
+  ArrowRight,
   Coffee,
   Home,
   LocateFixed,
@@ -258,7 +259,7 @@ export function MapPage() {
       )}
       {isMapReady && (
         <div
-          className="absolute top-5 right-5 z-10 flex items-center overflow-hidden rounded-full border border-white/80 bg-white/95 shadow-md backdrop-blur-sm sm:top-8 sm:right-8"
+          className="absolute top-5 right-5 z-10 flex items-center overflow-hidden rounded-full border border-white/80 bg-white/95 sm:top-6 sm:right-5"
           aria-label={`지도 레벨 ${zoomLevel}`}
         >
           <Button
@@ -294,9 +295,9 @@ export function MapPage() {
                 <MapPinned className="size-5" />
               </span>
               <div>
-                <p className="font-paperlogy text-xl font-semibold text-[#3a241c]">
+                <h1 className="font-paperlogy text-xl font-semibold text-[#3a241c]">
                   카페 지도
-                </p>
+                </h1>
                 <p className="text-sm text-stone-500">
                   지도에서 취향에 맞는 카페를 찾아보세요.
                 </p>
@@ -334,14 +335,17 @@ export function MapPage() {
         <div className="flex-1 space-y-2 overflow-y-auto p-3">
           {filteredCafes.length ? (
             filteredCafes.map((cafe) => (
-              <Button
+              <div
                 key={cafe.slug}
+                className="group relative rounded-2xl bg-white transition hover:bg-[#fffaf2] hover:shadow-[0_8px_18px_rgba(145,75,0,0.12)]"
+              >
+              <Button
                 type="button"
                 variant="ghost"
                 onClick={() =>
                   moveToCafe(cafe.location.latitude, cafe.location.longitude)
                 }
-                className="h-auto w-full justify-start gap-3 rounded-2xl bg-white p-3 text-left whitespace-normal hover:bg-[#fffaf2] hover:shadow-[0_8px_18px_rgba(145,75,0,0.12)]"
+                className="h-auto w-full justify-start gap-3 rounded-2xl bg-transparent p-3 pr-11 text-left whitespace-normal hover:bg-transparent"
               >
                 <span className="relative size-16 shrink-0 overflow-hidden rounded-xl bg-stone-200">
                   <Image
@@ -368,6 +372,17 @@ export function MapPage() {
                   )}
                 </span>
               </Button>
+                <Button
+                  render={<Link href={`/cafe/${cafe.slug}`} />}
+                  nativeButton={false}
+                  variant="ghost"
+                  size="icon-sm"
+                  aria-label={`${cafe.name} 상세 정보 보기`}
+                  className="absolute top-3 right-2 rounded-full text-[#ff5b20] hover:bg-[#fff3e5]"
+                >
+                  <ArrowRight className="size-4" />
+                </Button>
+              </div>
             ))
           ) : (
             <p className="px-4 py-12 text-center text-sm text-stone-500">
@@ -376,7 +391,7 @@ export function MapPage() {
           )}
         </div>
       </aside>
-      <div className="absolute right-5 bottom-6 z-10 flex flex-col items-end gap-3 sm:right-8 sm:bottom-8">
+      <div className="absolute right-4 bottom-4 z-10 flex flex-col items-end gap-2 sm:right-5 sm:bottom-8">
         {locationMessage && (
           <p className="rounded-full bg-white px-4 py-2 text-xs font-bold text-[#3a241c] shadow-lg">
             {locationMessage}
@@ -389,7 +404,7 @@ export function MapPage() {
           onClick={moveToCurrentLocation}
           disabled={isLocating}
           aria-label="내 위치 찾기"
-          className="size-11 rounded-full bg-white text-[#ff5b20] shadow-[0_8px_18px_rgba(58,36,28,0.22)] hover:-translate-y-0.5 hover:bg-white sm:size-12"
+          className="size-11 rounded-full bg-white text-[#ff5b20] hover:-translate-y-0.5 hover:bg-white sm:size-12"
         >
           <LocateFixed
             className={cn("size-5", isLocating && "animate-pulse")}
@@ -401,7 +416,7 @@ export function MapPage() {
           variant="ghost"
           size="icon"
           aria-label="홈으로"
-          className="size-11 rounded-full bg-[#9cff75] text-[#3a241c] shadow-[0_8px_18px_rgba(58,36,28,0.22)] hover:-translate-y-0.5 hover:bg-[#8df267] sm:size-12"
+          className="size-11 rounded-full bg-[#9cff75] text-[#3a241c] hover:-translate-y-0.5 hover:bg-[#8df267] sm:size-12"
         >
           <Home className="size-5" />
         </Button>
