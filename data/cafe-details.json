@@ -1,0 +1,375 @@
+{
+  "dirty-trunk-paju": {
+    "services": ["카페", "베이커리", "브런치", "식사", "맥주", "와인"],
+    "purpose": ["데이트", "가족", "브런치", "드라이브", "사진", "모임"],
+    "view": ["실내뷰"],
+    "features": ["높은 층고", "창고형 인테리어", "대형 실내공간"],
+    "floors": ["지하1층", "1층", "2층"],
+    "seating": ["200석 이상"],
+    "restroom": ["실내"],
+    "children": ["아이 동반 가능"],
+    "study": ["가능", "장시간 이용 비추천"],
+    "smoking": ["가능", "외부 별도 흡연공간 있음"],
+    "pet": ["불가", "반려동물 입장 불가"],
+    "parking": ["무료", "지상 · 지하 주차장", "60대 정도"],
+    "business": {
+      "closed_days": "연중무휴",
+      "hours": {
+        "월요일": "09:30 ~ 21:30",
+        "화요일": "09:30 ~ 21:30",
+        "수요일": "09:30 ~ 21:30",
+        "목요일": "09:30 ~ 21:30",
+        "금요일": "09:30 ~ 21:30",
+        "토요일": "09:30 ~ 21:30",
+        "일요일": "09:30 ~ 21:30"
+      }
+    },
+    "media": {
+      "phone": "031-946-9283",
+      "website": null,
+      "instagram": "dirty_trunk_korea",
+      "gallery": [
+        "/dirty-trunk-paju-02.jpg",
+        "/dirty-trunk-paju-03.jpg",
+        "/dirty-trunk-paju-04.jpg",
+        "/dirty-trunk-paju-05.jpg",
+        "/dirty-trunk-paju-06.jpg",
+        "/dirty-trunk-paju-07.jpg"
+      ]
+    }
+  },
+  "zatura-gimpo": {
+    "services": ["카페", "베이커리", "디저트", "브런치", "식사", "주류"],
+    "purpose": ["데이트", "가족", "드라이브", "사진", "모임"],
+    "view": ["실내뷰"],
+    "features": ["대형 실내공간", "독특한 목재 인테리어", "체험형 공간"],
+    "floors": ["1층"],
+    "seating": ["300석 이상", "다양한 형태의 좌석"],
+    "restroom": ["남녀 구분", "매우 깨끗함"],
+    "children": ["아이 동반 가능"],
+    "study": ["가능", "장시간 이용 비추천"],
+    "smoking": ["가능", "외부 별도 흡연공간 있음"],
+    "pet": ["불가", "반려동물 입장 불가"],
+    "parking": ["무료", "지상 주차장", "100대 정도"],
+    "business": {
+      "closed_days": "연중무휴",
+      "hours": {
+        "월요일": "10:00 ~ 01:00",
+        "화요일": "10:00 ~ 01:00",
+        "수요일": "10:00 ~ 01:00",
+        "목요일": "10:00 ~ 01:00",
+        "금요일": "10:00 ~ 01:00",
+        "토요일": "10:00 ~ 01:00",
+        "일요일": "10:00 ~ 01:00"
+      }
+    },
+    "media": {
+      "phone": "031-8049-9499",
+      "website": "https://blog.naver.com/zatura__official",
+      "instagram": "zatura__official",
+      "gallery": [
+        "/cafe/zatura-gimpo-02.jpg",
+        "/cafe/zatura-gimpo-03.jpg",
+        "/cafe/zatura-gimpo-04.jpg",
+        "/cafe/zatura-gimpo-05.jpg",
+        "/cafe/zatura-gimpo-06.jpg",
+        "/cafe/zatura-gimpo-07.jpg",
+        "/cafe/zatura-gimpo-08.jpg",
+        "/cafe/zatura-gimpo-09.jpg",
+        "/cafe/zatura-gimpo-10.jpg",
+        "/cafe/zatura-gimpo-11.jpg",
+        "/cafe/zatura-gimpo-12.jpg",
+        "/cafe/zatura-gimpo-13.jpg",
+        "/cafe/zatura-gimpo-14.jpg"
+      ]
+    }
+  },
+  "forest-outings-goyang": {
+    "services": ["카페", "베이커리", "브런치", "식사"],
+    "purpose": ["데이트", "가족", "브런치", "드라이브", "사진", "모임"],
+    "view": ["실내뷰", "식물원뷰"],
+    "features": ["높은 층고", "대형 실내공간", "실내 정원", "포토존"],
+    "floors": ["1층", "2층"],
+    "seating": ["300석 이상", "다양한 형태의 좌석"],
+    "restroom": ["실내", "매우 깨끗함"],
+    "children": ["아이 동반 가능"],
+    "study": ["가능", "장시간 이용 비추천"],
+    "smoking": ["가능", "외부 별도 흡연공간 있음"],
+    "pet": ["불가", "반려동물 입장 불가"],
+    "parking": ["무료", "지상 · 지하 주차장", "150대 정도"],
+    "business": {
+      "closed_days": "연중무휴",
+      "hours": {
+        "월요일": "10:00 ~ 22:00",
+        "화요일": "10:00 ~ 22:00",
+        "수요일": "10:00 ~ 22:00",
+        "목요일": "10:00 ~ 22:00",
+        "금요일": "10:00 ~ 22:00",
+        "토요일": "10:00 ~ 22:00",
+        "일요일": "10:00 ~ 22:00"
+      }
+    },
+    "media": {
+      "phone": "031-963-0500",
+      "website": "https://forestoutings.co.kr",
+      "instagram": "forestoutings_ilsan",
+      "gallery": [
+        "/cafe/forest-outings-goyang-02.jpg",
+        "/cafe/forest-outings-goyang-03.jpg",
+        "/cafe/forest-outings-goyang-04.jpg",
+        "/cafe/forest-outings-goyang-05.jpg",
+        "/cafe/forest-outings-goyang-06.jpg",
+        "/cafe/forest-outings-goyang-07.jpg",
+        "/cafe/forest-outings-goyang-08.jpg",
+        "/cafe/forest-outings-goyang-09.jpg",
+        "/cafe/forest-outings-goyang-10.jpg",
+        "/cafe/forest-outings-goyang-11.jpg",
+        "/cafe/forest-outings-goyang-12.jpg",
+        "/cafe/forest-outings-goyang-13.jpg",
+        "/cafe/forest-outings-goyang-14.jpg",
+        "/cafe/forest-outings-goyang-15.jpg",
+        "/cafe/forest-outings-goyang-16.jpg",
+        "/cafe/forest-outings-goyang-17.jpg"
+      ]
+    }
+  },
+  "forest-outings-songdo": {
+    "services": ["카페", "베이커리", "브런치/식사"],
+    "purpose": ["데이트", "가족", "브런치", "드라이브", "사진", "모임"],
+    "view": ["실내뷰", "식물원뷰"],
+    "features": ["높은 층고", "대형 실내공간", "실내 정원", "포토존"],
+    "floors": ["1층", "2층", "3층"],
+    "seating": ["300석 이상", "다양한 형태의 좌석"],
+    "restroom": ["남녀 구분", "깨끗함"],
+    "children": ["아이 동반 가능"],
+    "study": ["가능", "장시간 이용 비추천"],
+    "smoking": ["가능", "외부 별도 흡연공간 있음"],
+    "pet": ["가능", "1층 펫 프렌들리존 입장 가능"],
+    "parking": ["무료", "지상 · 지하 주차장", "150대 정도"],
+    "business": {
+      "closed_days": "연중무휴",
+      "hours": {
+        "월요일": "10:00 ~ 22:00",
+        "화요일": "10:00 ~ 22:00",
+        "수요일": "10:00 ~ 22:00",
+        "목요일": "10:00 ~ 22:00",
+        "금요일": "10:00 ~ 22:00",
+        "토요일": "10:00 ~ 22:00",
+        "일요일": "10:00 ~ 22:00"
+      }
+    },
+    "media": {
+      "phone": "032-831-3750",
+      "website": "https://forestoutings.co.kr",
+      "instagram": "forestoutings_songdo",
+      "gallery": [
+        "/cafe/forest-outings-songdo-02.jpg",
+        "/cafe/forest-outings-songdo-03.jpg",
+        "/cafe/forest-outings-songdo-04.jpg",
+        "/cafe/forest-outings-songdo-05.jpg",
+        "/cafe/forest-outings-songdo-06.jpg",
+        "/cafe/forest-outings-songdo-07.jpg",
+        "/cafe/forest-outings-songdo-08.jpg",
+        "/cafe/forest-outings-songdo-09.jpg",
+        "/cafe/forest-outings-songdo-10.jpg",
+        "/cafe/forest-outings-songdo-11.jpg",
+        "/cafe/forest-outings-songdo-12.jpg",
+        "/cafe/forest-outings-songdo-13.jpg",
+        "/cafe/forest-outings-songdo-14.jpg",
+        "/cafe/forest-outings-songdo-15.jpg"
+      ]
+    }
+  },
+  "hollys-jeju-dodu-coast-dt": {
+    "services": ["카페", "디저트", "베이커리", "드라이브스루", "포토존"],
+    "purpose": ["데이트", "가족", "브런치", "드라이브", "사진", "모임"],
+    "view": ["바다뷰", "무지개해안도로뷰"],
+    "features": ["넓은 실내공간", "통창", "다양한 좌석", "루프탑"],
+    "floors": ["1층", "2층", "루프탑"],
+    "seating": ["100석 이상", "창가 좌석 인기"],
+    "restroom": ["실내", "남녀 구분"],
+    "children": ["아이 동반 가능"],
+    "study": ["가능", "노트북 작업하기 좋은 좌석 있음", "콘셉트 있음"],
+    "smoking": ["불가", "흡연공간 없음"],
+    "pet": ["불가", "반려동물 입장 불가"],
+    "parking": [
+      "유료",
+      "매장 뒤편 전용 주차장",
+      "50대 정도",
+      "2시간 무료, 이후 10분당 1000원"
+    ],
+    "business": {
+      "closed_days": "연중무휴",
+      "hours": {
+        "월요일": "10:00 ~ 22:00",
+        "화요일": "10:00 ~ 22:00",
+        "수요일": "10:00 ~ 22:00",
+        "목요일": "10:00 ~ 22:00",
+        "금요일": "10:00 ~ 22:00",
+        "토요일": "10:00 ~ 22:00",
+        "일요일": "10:00 ~ 22:00"
+      }
+    },
+    "media": {
+      "phone": "032-831-3750",
+      "website": "https://www.hollys.co.kr/",
+      "instagram": "official_hollys",
+      "gallery": [
+        "/hollys-jeju-dodu-coast-dt-02.jpg",
+        "/hollys-jeju-dodu-coast-dt-03.jpg",
+        "/hollys-jeju-dodu-coast-dt-04.jpg",
+        "/hollys-jeju-dodu-coast-dt-05.jpg",
+        "/hollys-jeju-dodu-coast-dt-06.jpg",
+        "/hollys-jeju-dodu-coast-dt-07.jpg",
+        "/hollys-jeju-dodu-coast-dt-08.jpg",
+        "/hollys-jeju-dodu-coast-dt-09.jpg",
+        "/hollys-jeju-dodu-coast-dt-10.jpg",
+        "/hollys-jeju-dodu-coast-dt-11.jpg",
+        "/hollys-jeju-dodu-coast-dt-12.jpg",
+        "/hollys-jeju-dodu-coast-dt-13.jpg",
+        "/hollys-jeju-dodu-coast-dt-14.jpg",
+        "/hollys-jeju-dodu-coast-dt-15.jpg"
+      ]
+    }
+  },
+  "forest-outings-yongin": {
+    "services": ["카페", "디저트", "베이커리", "브런치/식사", "포토존"],
+    "purpose": ["데이트", "가족", "브런치", "드라이브", "사진", "모임"],
+    "view": ["실내뷰", "식물원뷰"],
+    "features": [
+      "높은 층고",
+      "대형 실내공간",
+      "플랜테리어",
+      "실내 정원",
+      "포토존",
+      "엘리베이터",
+      "수유실"
+    ],
+    "floors": ["1층", "2층", "3층", "4층"],
+    "seating": ["300석 이상", "다양한 형태의 좌석", "단체석", "창가 좌석"],
+    "restroom": ["실내", "남녀 구분"],
+    "children": ["아이 동반 가능", "유아의자 있음", "수유실 있음"],
+    "study": ["가능", "장시간 공부는 비추", "주말 혼잡"],
+    "smoking": ["가능", "외부 별도 흡연공간 있음"],
+    "pet": ["불기", "반려동물 입장 불가"],
+    "parking": ["무료", "지상 · 지하 주차장", "200대 정도"],
+    "business": {
+      "closed_days": "연중무휴",
+      "hours": {
+        "월요일": "10:00 ~ 22:00",
+        "화요일": "10:00 ~ 22:00",
+        "수요일": "10:00 ~ 22:00",
+        "목요일": "10:00 ~ 22:00",
+        "금요일": "10:00 ~ 22:00",
+        "토요일": "10:00 ~ 22:00",
+        "일요일": "10:00 ~ 22:00"
+      }
+    },
+    "price": {
+      "americano": 6800,
+      "croissant": 5800
+    },
+    "media": {
+      "phone": "0507-1435-1320",
+      "website": "https://forestoutings.co.kr",
+      "instagram": "forestoutings_yongin",
+      "gallery": [
+        "/forest-outings-yongin-02.jpg",
+        "/forest-outings-yongin-03.jpg",
+        "/forest-outings-yongin-04.jpg",
+        "/forest-outings-yongin-05.jpg",
+        "/forest-outings-yongin-06.jpg",
+        "/forest-outings-yongin-07.jpg",
+        "/forest-outings-yongin-08.jpg",
+        "/forest-outings-yongin-09.jpg",
+        "/forest-outings-yongin-10.jpg",
+        "/forest-outings-yongin-11.jpg",
+        "/forest-outings-yongin-12.jpg",
+        "/forest-outings-yongin-13.jpg",
+        "/forest-outings-yongin-14.jpg",
+        "/forest-outings-yongin-15.jpg",
+        "/forest-outings-yongin-16.jpg",
+        "/forest-outings-yongin-17.jpg",
+        "/forest-outings-yongin-18.jpg",
+        "/forest-outings-yongin-19.jpg"
+      ]
+    }
+  },
+  "hutan-namyangju": {
+    "services": ["카페", "디저트", "베이커리", "브런치", "식사", "포토존"],
+    "purpose": ["데이트", "가족", "브런치", "드라이브", "사진", "모임"],
+    "view": ["오남저수지뷰", "실내정원뷰", "마운틴뷰"],
+    "features": [
+      "높은 층고",
+      "대형 실내공간",
+      "통창",
+      "대형 실내정원",
+      "열대식물",
+      "분수",
+      "테라스",
+      "루프탑",
+      "포토존"
+    ],
+    "floors": ["1층", "2층", "3층", "4층", "루프탑"],
+    "seating": [
+      "500석 이상",
+      "다양한 형태의 좌석",
+      "창가 좌석 인기",
+      "단체석",
+      "가족석"
+    ],
+    "restroom": ["실내", "남녀 구분", "층별 이용 가능"],
+    "children": [
+      "아이 동반 가능",
+      "유아의자 있음",
+      "수유실 있음",
+      "기저귀교환대 있음"
+    ],
+    "study": ["가능", "장시간 공부는 비추", "주말 혼잡"],
+    "smoking": ["가능", "외부 별도 흡연공간 있음"],
+    "pet": ["불가", "반려동물 입장 불가"],
+    "parking": ["무료", "지상 · 지하 주차장", "200대 이상"],
+    "business": {
+      "closed_days": "연중무휴",
+      "hours": {
+        "월요일": "10:00 ~ 22:00",
+        "화요일": "10:00 ~ 22:00",
+        "수요일": "10:00 ~ 22:00",
+        "목요일": "10:00 ~ 22:00",
+        "금요일": "10:00 ~ 24:00",
+        "토요일": "10:00 ~ 24:00",
+        "일요일": "10:00 ~ 22:00"
+      }
+    },
+    "price": {
+      "americano": 8000,
+      "cafelatte": 9000
+    },
+    "media": {
+      "phone": "0507-1429-9907",
+      "website": "https://blog.naver.com/hutan_desk",
+      "instagram": "hutan_official",
+      "gallery": [
+        "/cafe/hutan-namyangju-02.jpg",
+        "/cafe/hutan-namyangju-03.jpg",
+        "/cafe/hutan-namyangju-04.jpg",
+        "/cafe/hutan-namyangju-05.jpg",
+        "/cafe/hutan-namyangju-06.jpg",
+        "/cafe/hutan-namyangju-07.jpg",
+        "/cafe/hutan-namyangju-08.jpg",
+        "/cafe/hutan-namyangju-09.jpg",
+        "/cafe/hutan-namyangju-10.jpg",
+        "/cafe/hutan-namyangju-11.jpg",
+        "/cafe/hutan-namyangju-12.jpg",
+        "/cafe/hutan-namyangju-13.jpg",
+        "/cafe/hutan-namyangju-14.jpg",
+        "/cafe/hutan-namyangju-15.jpg",
+        "/cafe/hutan-namyangju-16.jpg",
+        "/cafe/hutan-namyangju-17.jpg",
+        "/cafe/hutan-namyangju-18.jpg",
+        "/cafe/hutan-namyangju-19.jpg",
+        "/cafe/hutan-namyangju-20.jpg"
+      ]
+    }
+  }
+}

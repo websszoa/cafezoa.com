@@ -1,0 +1,30 @@
+{
+  "dirty-trunk-paju": {
+    "naver": ["2026-09", 4.28, 31000],
+    "google": ["2026-09", 3.9, 5400]
+  },
+  "zatura-gimpo": {
+    "naver": ["2026-09", 4.31, 3700],
+    "google": ["2026-09", 4.5, 203]
+  },
+  "forest-outings-goyang": {
+    "naver": ["2026-09", 4.43, 29000],
+    "google": ["2026-09", 4.2, 3304]
+  },
+  "forest-outings-songdo": {
+    "naver": ["2026-09", 4.39, 31000],
+    "google": ["2026-09", 4.4, 2173]
+  },
+  "hollys-jeju-dodu-coast-dt": {
+    "naver": ["2026-09", 4.3, 1503],
+    "google": ["2026-09", 4.5, 187]
+  },
+  "forest-outings-yongin": {
+    "naver": ["2026-09", 4.35, 5935],
+    "google": ["2026-10", 4.1, 266]
+  },
+  "hutan-namyangju": {
+    "naver": ["2026-10", 4.71, 25377],
+    "google": ["2026-10", 4.5, 606]
+  }
+}
