@@ -153,11 +153,7 @@ function CafeTable({ cafes }: { cafes: Cafe[] }) {
                               ? "text-[#ff5b20]"
                               : "text-stone-300",
                           )}
-                        >
-                          <title>
-                            주차 {cafe.parkingLabels?.[0] ?? "정보 없음"}
-                          </title>
-                        </CircleParking>
+                        />
                         <BookOpenCheck
                           aria-label={`스터디 ${cafe.studyLabel ?? "정보 없음"}`}
                           className={cn(
@@ -166,9 +162,7 @@ function CafeTable({ cafes }: { cafes: Cafe[] }) {
                               ? "text-[#ff5b20]"
                               : "text-stone-300",
                           )}
-                        >
-                          <title>스터디 {cafe.studyLabel ?? "정보 없음"}</title>
-                        </BookOpenCheck>
+                        />
                         <Cigarette
                           aria-label={`흡연 ${cafe.smokingLabel ?? "정보 없음"}`}
                           className={cn(
@@ -177,9 +171,7 @@ function CafeTable({ cafes }: { cafes: Cafe[] }) {
                               ? "text-[#ff5b20]"
                               : "text-stone-300",
                           )}
-                        >
-                          <title>흡연 {cafe.smokingLabel ?? "정보 없음"}</title>
-                        </Cigarette>
+                        />
                         <PawPrint
                           aria-label={`펫 ${cafe.petLabel}`}
                           className={cn(
@@ -188,9 +180,7 @@ function CafeTable({ cafes }: { cafes: Cafe[] }) {
                               ? "text-[#ff5b20]"
                               : "text-stone-300",
                           )}
-                        >
-                          <title>펫 {cafe.petLabel}</title>
-                        </PawPrint>
+                        />
                       </div>
                     </div>
                   </Link>
