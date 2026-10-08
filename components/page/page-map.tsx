@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/image";
+import { FallbackImage } from "@/components/ui/fallback-image";
 import Link from "next/link";
 import Script from "next/script";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
@@ -73,6 +73,37 @@ declare global {
 
 const naverMapClientId = process.env.NEXT_PUBLIC_NAVER_MAP_CLIENT_ID;
 
+interface CurrentLocation {
+  latitude: number;
+  longitude: number;
+}
+
+function distanceBetween(
+  latitudeA: number,
+  longitudeA: number,
+  latitudeB: number,
+  longitudeB: number,
+) {
+  const toRadians = (degree: number) => (degree * Math.PI) / 180;
+  const latitudeDifference = toRadians(latitudeB - latitudeA);
+  const longitudeDifference = toRadians(longitudeB - longitudeA);
+  const originLatitude = toRadians(latitudeA);
+  const targetLatitude = toRadians(latitudeB);
+  const haversine =
+    Math.sin(latitudeDifference / 2) ** 2 +
+    Math.cos(originLatitude) *
+      Math.cos(targetLatitude) *
+      Math.sin(longitudeDifference / 2) ** 2;
+
+  return 6371 * 2 * Math.atan2(Math.sqrt(haversine), Math.sqrt(1 - haversine));
+}
+
+function formatDistance(distance: number) {
+  return distance < 1
+    ? `${Math.round(distance * 1000)}m`
+    : `${distance.toFixed(1)}km`;
+}
+
 function escapeMarkerText(value: string) {
   return value.replace(
     /[&<>"]/g,
@@ -81,13 +112,17 @@ function escapeMarkerText(value: string) {
   );
 }
 
-function cafeMarkerIcon(name: string) {
+function cafeMarkerIcon(name: string, slug: string, rating?: number) {
   return `
-    <div style="position:relative;display:flex;justify-content:center;width:160px;height:43px;">
-      <div style="max-width:150px;height:34px;overflow:hidden;border:2px solid #3a241c;border-radius:999px;background:#9cff75;padding:0 13px;color:#3a241c;font-size:12px;font-weight:800;line-height:30px;text-align:center;text-overflow:ellipsis;white-space:nowrap;">
+    <div style="position:relative;display:flex;justify-content:center;width:260px;height:52px;">
+      <a href="/cafe/${encodeURIComponent(slug)}" target="_blank" rel="noopener noreferrer" aria-label="${escapeMarkerText(name)} 상세페이지를 새 탭에서 열기" style="position:absolute;top:18px;left:50%;height:34px;min-width:max-content;border:2px solid #3a241c;border-radius:999px;background:#9cff75;padding:0 14px;color:#3a241c;font-size:12px;font-weight:800;line-height:30px;text-align:center;text-decoration:none;white-space:nowrap;transform:translateX(-50%);">
         ${escapeMarkerText(name)}
-      </div>
-      <span style="position:absolute;bottom:4px;left:50%;width:11px;height:11px;border-right:2px solid #3a241c;border-bottom:2px solid #3a241c;background:#9cff75;transform:translateX(-50%) rotate(45deg);"></span>
+      </a>
+      ${
+        rating === undefined
+          ? ""
+          : `<span style="position:absolute;top:0;left:50%;z-index:1;border:2px solid #3a241c;border-radius:999px;background:#ff5b20;padding:2px 8px;color:white;font-size:10px;font-weight:800;line-height:16px;white-space:nowrap;transform:translateX(-50%);">★ ${rating.toFixed(2)}</span>`
+      }
     </div>
   `;
 }
@@ -97,10 +132,13 @@ export function MapPage() {
   const mapInstanceRef = useRef<NaverMapInstance | null>(null);
   const markerRefs = useRef<NaverMapMarker[]>([]);
   const zoomListenerRef = useRef<NaverMapEventListener | null>(null);
+  const [draftQuery, setDraftQuery] = useState("");
   const [query, setQuery] = useState("");
   const [isLocating, setIsLocating] = useState(false);
   const [isMapReady, setIsMapReady] = useState(false);
   const [zoomLevel, setZoomLevel] = useState(9);
+  const [currentLocation, setCurrentLocation] =
+    useState<CurrentLocation | null>(null);
   const [locationMessage, setLocationMessage] = useState<string | null>(null);
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
 
@@ -135,19 +173,13 @@ export function MapPage() {
         ),
         title: cafe.name,
         icon: {
-          content: cafeMarkerIcon(cafe.name),
-          anchor: new window.naver!.maps.Point(80, 42),
-        },
-      });
-
-      window.naver!.maps.Event.addListener(marker, "click", () => {
-        map.morph(
-          new window.naver!.maps.LatLng(
-            cafe.location.latitude,
-            cafe.location.longitude,
+          content: cafeMarkerIcon(
+            cafe.name,
+            cafe.slug,
+            cafe.naver?.[1] ?? cafe.google?.[1],
           ),
-          16,
-        );
+          anchor: new window.naver!.maps.Point(130, 52),
+        },
       });
 
       return marker;
@@ -189,6 +221,10 @@ export function MapPage() {
     setLocationMessage(null);
     navigator.geolocation.getCurrentPosition(
       ({ coords }) => {
+        setCurrentLocation({
+          latitude: coords.latitude,
+          longitude: coords.longitude,
+        });
         moveToCafe(coords.latitude, coords.longitude);
         setIsLocating(false);
       },
@@ -199,6 +235,21 @@ export function MapPage() {
       { enableHighAccuracy: true, timeout: 10000 },
     );
   };
+
+  useEffect(() => {
+    if (!navigator.geolocation) return;
+
+    navigator.geolocation.getCurrentPosition(
+      ({ coords }) => {
+        setCurrentLocation({
+          latitude: coords.latitude,
+          longitude: coords.longitude,
+        });
+      },
+      () => undefined,
+      { enableHighAccuracy: false, timeout: 10000, maximumAge: 300000 },
+    );
+  }, []);
 
   useEffect(() => {
     window.navermap_authFailure = () => {
@@ -305,27 +356,37 @@ export function MapPage() {
             </div>
           </div>
 
-          <div className="relative mt-4">
+          <form
+            className="relative mt-4"
+            role="search"
+            onSubmit={(event) => {
+              event.preventDefault();
+              setQuery(draftQuery);
+            }}
+          >
             <Search className="pointer-events-none absolute top-1/2 left-4 size-4 -translate-y-1/2 text-stone-500" />
             <input
-              value={query}
-              onChange={(event) => setQuery(event.target.value)}
+              value={draftQuery}
+              onChange={(event) => setDraftQuery(event.target.value)}
               placeholder="카페 이름, 지역으로 검색"
               className="w-full rounded-full border-2 border-[#3a241c] bg-white py-3 pr-10 pl-10 text-sm text-[#3a241c] shadow-[3px_3px_0_#3a241c] outline-none transition-shadow placeholder:text-stone-400 focus:shadow-[1px_1px_0_#3a241c]"
             />
-            {query && (
+            {draftQuery && (
               <Button
                 type="button"
                 variant="ghost"
                 size="icon-xs"
-                onClick={() => setQuery("")}
+                onClick={() => {
+                  setDraftQuery("");
+                  setQuery("");
+                }}
                 aria-label="검색어 지우기"
                 className="absolute top-1/2 right-3 -translate-y-1/2 rounded-full text-stone-500 hover:bg-[#fff3e5] hover:text-[#3a241c]"
               >
                 <X className="size-4" />
               </Button>
             )}
-          </div>
+          </form>
 
           <p className="mt-4 text-xs font-bold text-[#795f55]">
             카페 {filteredCafes.length}곳
@@ -334,11 +395,21 @@ export function MapPage() {
 
         <div className="flex-1 space-y-2 overflow-y-auto p-3">
           {filteredCafes.length ? (
-            filteredCafes.map((cafe) => (
-              <div
-                key={cafe.slug}
-                className="group relative rounded-2xl bg-white transition hover:bg-[#fffaf2] hover:shadow-[0_8px_18px_rgba(145,75,0,0.12)]"
-              >
+            filteredCafes.map((cafe) => {
+              const distance = currentLocation
+                ? distanceBetween(
+                    currentLocation.latitude,
+                    currentLocation.longitude,
+                    cafe.location.latitude,
+                    cafe.location.longitude,
+                  )
+                : null;
+
+              return (
+                <div
+                  key={cafe.slug}
+                  className="group relative rounded-2xl bg-white transition hover:bg-[#fffaf2] hover:shadow-[0_8px_18px_rgba(145,75,0,0.12)]"
+                >
               <Button
                 type="button"
                 variant="ghost"
@@ -348,7 +419,7 @@ export function MapPage() {
                 className="h-auto w-full justify-start gap-3 rounded-2xl bg-transparent p-3 pr-11 text-left whitespace-normal hover:bg-transparent"
               >
                 <span className="relative size-16 shrink-0 overflow-hidden rounded-xl bg-stone-200">
-                  <Image
+                  <FallbackImage
                     src={cafe.thumbnail}
                     alt=""
                     fill
@@ -357,8 +428,15 @@ export function MapPage() {
                   />
                 </span>
                 <span className="min-w-0 flex-1">
-                  <span className="font-paperlogy block truncate text-base font-semibold text-[#3a241c]">
-                    {cafe.name}
+                  <span className="flex min-w-0 items-center gap-2">
+                    <span className="font-paperlogy min-w-0 truncate text-base font-semibold text-[#3a241c]">
+                      {cafe.name}
+                    </span>
+                    {distance !== null && (
+                      <span className="shrink-0 rounded-full bg-[#fff3e5] px-2 py-0.5 text-[10px] font-extrabold text-[#ff5b20]">
+                        {formatDistance(distance)}
+                      </span>
+                    )}
                   </span>
                   <span className="mt-1 flex items-center gap-1 truncate text-xs text-stone-600">
                     <Coffee className="size-3.5 shrink-0 text-[#ff5b20]" />
@@ -382,8 +460,9 @@ export function MapPage() {
                 >
                   <ArrowRight className="size-4" />
                 </Button>
-              </div>
-            ))
+                </div>
+              );
+            })
           ) : (
             <p className="px-4 py-12 text-center text-sm text-stone-500">
               검색 결과가 없어요.

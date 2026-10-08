@@ -31,15 +31,13 @@ export function PageFooter() {
         <div>
           <Link
             href="/"
-            className="font-paperlogy inline-flex items-center gap-3 text-4xl font-black tracking-[-0.06em] uppercase"
+            className="inline-flex -mt-1 items-center gap-1 text-2xl font-black tracking-[-0.04em] uppercase"
           >
             <span>
               <span className="text-[#9cff75]">cafe</span>zoa
             </span>
           </Link>
-          <p className="font-paperlogy mt-3 text-lg text-[#fff3e5]">
-            {APP_SLOGAN}
-          </p>
+          <p className="font-paperlogy mt-2 text-[#fff3e5]">{APP_SLOGAN}</p>
           <p className="mt-5 max-w-lg break-keep text-sm leading-6 text-white/65">
             {APP_DESCRIPTION}
           </p>

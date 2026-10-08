@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { cafes, cn, type Cafe } from "@/lib/utils";
 import { useMemo, useState } from "react";
@@ -20,8 +19,10 @@ import {
   Star,
   X,
 } from "lucide-react";
+import { FallbackImage } from "@/components/ui/fallback-image";
 
 export function ListPage() {
+  const [draftQuery, setDraftQuery] = useState("");
   const [query, setQuery] = useState("");
 
   const filteredCafes = useMemo(() => {
@@ -54,25 +55,35 @@ export function ListPage() {
           </p>
         </div>
 
-        <div className="relative mx-auto mt-8 max-w-xl">
+        <form
+          className="relative mx-auto mt-8 max-w-xl"
+          role="search"
+          onSubmit={(event) => {
+            event.preventDefault();
+            setQuery(draftQuery);
+          }}
+        >
           <Search className="pointer-events-none absolute top-1/2 left-5 size-5 -translate-y-1/2 text-stone-500" />
           <input
-            value={query}
-            onChange={(e) => setQuery(e.target.value)}
+            value={draftQuery}
+            onChange={(e) => setDraftQuery(e.target.value)}
             placeholder="카페 이름, 지역으로 검색"
             className="w-full rounded-full border-2 border-[#3a241c] bg-white py-3.5 pr-12 pl-12 text-sm text-[#3a241c] shadow-[4px_4px_0_#3a241c] outline-none transition-shadow placeholder:text-[#b3a097] focus:shadow-[2px_2px_0_#3a241c]"
           />
-          {query && (
+          {draftQuery && (
             <button
               type="button"
-              onClick={() => setQuery("")}
+              onClick={() => {
+                setDraftQuery("");
+                setQuery("");
+              }}
               aria-label="검색어 지우기"
               className="absolute top-1/2 right-5 -translate-y-1/2 text-stone-500 hover:text-[#3a241c]"
             >
               <X className="size-4" />
             </button>
           )}
-        </div>
+        </form>
 
         {filteredCafes.length === 0 ? (
           <div className="mt-9 rounded-3xl bg-white py-20 text-center text-sm text-stone-500 shadow-[0_16px_35px_rgba(145,75,0,0.12)]">
@@ -128,7 +139,7 @@ function CafeTable({ cafes }: { cafes: Cafe[] }) {
                     className="flex items-center gap-3 rounded-xl outline-none focus-visible:ring-2 focus-visible:ring-[#ff5b20]"
                   >
                     <div className="relative h-24 w-20 shrink-0 overflow-hidden rounded">
-                      <Image
+                      <FallbackImage
                         src={cafe.thumbnail}
                         alt={cafe.name}
                         fill

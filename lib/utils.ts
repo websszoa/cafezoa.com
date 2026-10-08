@@ -1,6 +1,7 @@
 import cafeBasicData from "@/data/cafe-basic.json";
 import cafeDetailsData from "@/data/cafe-details.json";
 import cafeRatingsData from "@/data/cafe-ratings.json";
+import cafeReviewsData from "@/data/cafe-reviews.json";
 
 export { cn } from "cn";
 
@@ -54,9 +55,23 @@ interface CafeRating {
   google?: RatingEntry;
 }
 
+export interface CafeReviewItem {
+  text: string;
+  tags: string[];
+  source_ids: string[];
+}
+
+export interface CafeReviews {
+  updated_at: string;
+  good: CafeReviewItem[];
+  bad: CafeReviewItem[];
+  sources: Record<string, { label: string; url: string }>;
+}
+
 const cafeBasic = cafeBasicData as CafeBasic[];
 const cafeDetails = cafeDetailsData as unknown as Record<string, CafeDetail>;
 const cafeRatings = cafeRatingsData as unknown as Record<string, CafeRating>;
+const cafeReviews = cafeReviewsData as unknown as Record<string, CafeReviews>;
 
 // -----------------------------------------------------------------------------
 // 카페 데이터 정규화 유틸
@@ -78,8 +93,14 @@ function provinceOf(address: string) {
 }
 
 // 일부 원본 경로의 /cafe 접두사가 빠져 있어 파일명 기준으로 경로를 통일한다.
-function galleryImagesOf(paths: string[] | undefined) {
-  return (paths ?? []).map((path) => `/cafe/${path.split("/").pop()}`);
+function galleryImagesOf(paths: string[] | undefined, thumbnail: string) {
+  const normalizedPaths = (paths ?? []).map(
+    (path) => `/cafe/${path.split("/").pop()}`,
+  );
+
+  return Array.from(new Set(normalizedPaths)).filter(
+    (path) => path !== thumbnail,
+  );
 }
 
 // -----------------------------------------------------------------------------
@@ -144,13 +165,14 @@ function businessHoursLinesOf(hours: Record<string, string> | undefined) {
 export const cafes = cafeBasic.map((cafe) => {
   const detail = cafeDetails[cafe.slug];
   const rating = cafeRatings[cafe.slug];
+  const thumbnail = `/cafe/${cafe.slug}-01.webp`;
 
   return {
     ...cafe,
     type: Array.from(new Set(cafe.type.map(canonicalType))),
     province: provinceOf(cafe.location.address),
     // 각 카페의 01번 이미지를 목록과 카드의 대표 이미지로 사용한다.
-    thumbnail: `/cafe/${cafe.slug}-01.webp`,
+    thumbnail,
     naver: rating?.naver,
     google: rating?.google,
     businessHoursLines: businessHoursLinesOf(detail?.business?.hours),
@@ -170,7 +192,7 @@ export const cafes = cafeBasic.map((cafe) => {
     floorLabels: detail?.floors ?? [],
     restroomLabels: detail?.restroom ?? [],
     childrenLabels: detail?.children ?? [],
-    galleryImages: galleryImagesOf(detail?.media?.gallery),
+    galleryImages: galleryImagesOf(detail?.media?.gallery, thumbnail),
     viewLabels: detail?.view,
     seatingLabels: detail?.seating,
     studyLabels: detail?.study ?? [],
@@ -180,6 +202,7 @@ export const cafes = cafeBasic.map((cafe) => {
     phone: detail?.media?.phone,
     website: detail?.media?.website,
     instagram: detail?.media?.instagram,
+    reviews: cafeReviews[cafe.slug],
   };
 });
 

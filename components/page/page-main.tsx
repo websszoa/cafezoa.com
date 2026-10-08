@@ -1,7 +1,7 @@
-import Image from "next/image";
 import Link from "next/link";
 import { Images, LayoutList, MapPinned, Newspaper } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { FallbackImage } from "@/components/ui/fallback-image";
 
 export function MainPage() {
   return (
@@ -10,27 +10,33 @@ export function MainPage() {
         className="pointer-events-none absolute inset-0 overflow-hidden"
         aria-hidden="true"
       >
-        <Image
-          src="/leaf-maple-yellow.png"
-          width={180}
-          height={165}
-          alt=""
-          className="absolute -top-8 left-[4%] w-24 -rotate-12 opacity-90 sm:w-36"
-        />
-        <Image
-          src="/leaf-maple-red.png"
-          width={180}
-          height={165}
-          alt=""
-          className="absolute top-[12%] right-[5%] w-20 rotate-12 opacity-80 sm:w-32"
-        />
-        <Image
-          src="/leaf-oak-orange.png"
-          width={180}
-          height={165}
-          alt=""
-          className="absolute top-[34%] left-[8%] w-14 rotate-45 opacity-55 sm:w-24"
-        />
+        <span className="absolute -top-8 left-[4%] aspect-[180/165] w-24 -rotate-12 overflow-hidden opacity-90 sm:w-36">
+          <FallbackImage
+            src="/leaf-maple-yellow.png"
+            fill
+            sizes="144px"
+            alt=""
+            className="object-contain"
+          />
+        </span>
+        <span className="absolute top-[12%] right-[5%] aspect-[180/165] w-20 rotate-12 overflow-hidden opacity-80 sm:w-32">
+          <FallbackImage
+            src="/leaf-maple-red.png"
+            fill
+            sizes="128px"
+            alt=""
+            className="object-contain"
+          />
+        </span>
+        <span className="absolute top-[34%] left-[8%] aspect-[180/165] w-14 rotate-45 overflow-hidden opacity-55 sm:w-24">
+          <FallbackImage
+            src="/leaf-oak-orange.png"
+            fill
+            sizes="96px"
+            alt=""
+            className="object-contain"
+          />
+        </span>
       </div>
 
       <section className="relative z-10 mx-auto flex min-h-dvh w-full max-w-6xl flex-col items-center px-5 pt-[clamp(4.5rem,10vh,7rem)] text-center">
@@ -88,15 +94,14 @@ export function MainPage() {
           </Button>
         </div>
 
-        <div className="absolute -bottom-4 left-1/2 w-[min(760px,100vw)] -translate-x-1/2 sm:-bottom-8">
-          <Image
+        <div className="absolute -bottom-4 left-1/2 aspect-[1680/936] w-[min(760px,100vw)] -translate-x-1/2 overflow-hidden sm:-bottom-8">
+          <FallbackImage
             src="/main-hero-autumn.png"
-            width={1680}
-            height={936}
+            fill
             alt="가을 야외 카페에서 커피를 즐기는 사람들"
             priority
             sizes="(max-width: 768px) 100vw, 760px"
-            className="h-auto w-full drop-shadow-[0_24px_18px_rgba(132,42,13,0.2)]"
+            className="object-contain drop-shadow-[0_24px_18px_rgba(132,42,13,0.2)]"
           />
         </div>
       </section>

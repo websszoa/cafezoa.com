@@ -270,6 +270,7 @@
       "website": "https://forestoutings.co.kr",
       "instagram": "forestoutings_yongin",
       "gallery": [
+        "/forest-outings-yongin-01.webp",
         "/forest-outings-yongin-02.webp",
         "/forest-outings-yongin-03.webp",
         "/forest-outings-yongin-04.webp",
@@ -345,6 +346,7 @@
       "website": "https://blog.naver.com/hutan_desk",
       "instagram": "hutan_official",
       "gallery": [
+        "/cafe/hutan-namyangju-01.webp",
         "/cafe/hutan-namyangju-02.webp",
         "/cafe/hutan-namyangju-03.webp",
         "/cafe/hutan-namyangju-04.webp",
@@ -363,6 +365,78 @@
         "/cafe/hutan-namyangju-17.webp",
         "/cafe/hutan-namyangju-18.webp",
         "/cafe/hutan-namyangju-19.webp"
+      ]
+    }
+  },
+  "mieum-yeongjongdo": {
+    "services": ["카페", "디저트", "베이커리", "브런치", "포토존"],
+    "purpose": ["데이트", "가족", "브런치", "드라이브", "사진", "모임"],
+    "view": ["바다뷰", "마시안해변뷰", "일몰뷰"],
+    "features": [
+      "높은 층고",
+      "대형 실내공간",
+      "통창",
+      "중정",
+      "야외 테라스",
+      "잔디마당",
+      "루프탑",
+      "포토존",
+      "엘리베이터"
+    ],
+    "floors": ["1층", "2층", "3층", "루프탑"],
+    "seating": [
+      "100석 이하",
+      "다양한 형태의 좌석",
+      "오션뷰 창가 좌석 인기",
+      "계단식 좌석",
+      "단체석"
+    ],
+    "restroom": ["실내", "남녀 구분"],
+    "children": ["아이 동반 가능", "키즈존", "야외 잔디공간"],
+    "study": ["가능", "장시간 공부는 비추", "주말 혼잡"],
+    "smoking": ["불가", "흡연공간 없음"],
+    "pet": ["불가", "반려동물 입장 불가"],
+    "parking": ["유료", "전용 주차장", "카페 이용 시 2시간 무료 주차 가능"],
+    "business": {
+      "closed_days": "연중무휴",
+      "hours": {
+        "월요일": "10:00 ~ 20:30",
+        "화요일": "10:00 ~ 20:30",
+        "수요일": "10:00 ~ 20:30",
+        "목요일": "10:00 ~ 20:30",
+        "금요일": "10:00 ~ 21:00",
+        "토요일": "10:00 ~ 21:00",
+        "일요일": "10:00 ~ 21:00"
+      }
+    },
+    "price": {
+      "americano": 7300,
+      "cafelatte": 7900
+    },
+    "media": {
+      "phone": "0507-1320-7041",
+      "website": null,
+      "instagram": "cafe.mieum",
+      "gallery": [
+        "/cafe/mieum-yeongjongdo-01.webp",
+        "/cafe/mieum-yeongjongdo-02.webp",
+        "/cafe/mieum-yeongjongdo-03.webp",
+        "/cafe/mieum-yeongjongdo-04.webp",
+        "/cafe/mieum-yeongjongdo-05.webp",
+        "/cafe/mieum-yeongjongdo-06.webp",
+        "/cafe/mieum-yeongjongdo-07.webp",
+        "/cafe/mieum-yeongjongdo-08.webp",
+        "/cafe/mieum-yeongjongdo-09.webp",
+        "/cafe/mieum-yeongjongdo-10.webp",
+        "/cafe/mieum-yeongjongdo-11.webp",
+        "/cafe/mieum-yeongjongdo-12.webp",
+        "/cafe/mieum-yeongjongdo-13.webp",
+        "/cafe/mieum-yeongjongdo-14.webp",
+        "/cafe/mieum-yeongjongdo-15.webp",
+        "/cafe/mieum-yeongjongdo-16.webp",
+        "/cafe/mieum-yeongjongdo-17.webp",
+        "/cafe/mieum-yeongjongdo-18.webp",
+        "/cafe/mieum-yeongjongdo-19.webp"
       ]
     }
   }

@@ -1,12 +1,13 @@
 "use client";
 
-import Image from "next/image";
+import { FallbackImage } from "@/components/ui/fallback-image";
 import Link from "next/link";
 import { cafes, cafeTypes, cn, type Cafe } from "@/lib/utils";
 import { useMemo, useState } from "react";
 import { Coffee, Home, MapPin, Search, Star, X } from "lucide-react";
 
 export function BlogPage() {
+  const [draftQuery, setDraftQuery] = useState("");
   const [query, setQuery] = useState("");
   const [activeType, setActiveType] = useState<string | null>(null);
 
@@ -39,25 +40,35 @@ export function BlogPage() {
           </p>
         </div>
 
-        <div className="relative mx-auto mt-8 max-w-xl">
+        <form
+          className="relative mx-auto mt-8 max-w-xl"
+          role="search"
+          onSubmit={(event) => {
+            event.preventDefault();
+            setQuery(draftQuery);
+          }}
+        >
           <Search className="pointer-events-none absolute top-1/2 left-5 size-5 -translate-y-1/2 text-[#9c8578]" />
           <input
-            value={query}
-            onChange={(e) => setQuery(e.target.value)}
+            value={draftQuery}
+            onChange={(e) => setDraftQuery(e.target.value)}
             placeholder="카페 이름, 지역으로 검색"
             className="w-full rounded-full border-2 border-[#3a241c] bg-white py-3.5 pr-12 pl-12 text-sm text-[#3a241c] shadow-[4px_4px_0_#3a241c] outline-none transition-shadow placeholder:text-[#b3a097] focus:shadow-[2px_2px_0_#3a241c]"
           />
-          {query && (
+          {draftQuery && (
             <button
               type="button"
-              onClick={() => setQuery("")}
+              onClick={() => {
+                setDraftQuery("");
+                setQuery("");
+              }}
               aria-label="검색어 지우기"
               className="absolute top-1/2 right-5 -translate-y-1/2 text-[#9c8578] hover:text-[#3a241c]"
             >
               <X className="size-4" />
             </button>
           )}
-        </div>
+        </form>
 
         <nav
           className="mx-auto my-6 flex max-w-5xl flex-wrap justify-center gap-2 sm:mb-16"
@@ -144,10 +155,11 @@ function CafeStoryCard({ cafe, priority }: { cafe: Cafe; priority: boolean }) {
         className="flex flex-1 flex-col outline-none"
       >
       <div className="relative aspect-4/4 shrink-0 overflow-hidden bg-[#eee]">
-        <Image
+        <FallbackImage
           src={cafe.thumbnail}
           alt={`${cafe.name} 전경`}
           fill
+          showLoadingAnimation
           sizes="(max-width:768px) 100vw, (max-width:1024px) 60vw, 33vw"
           loading={priority ? "eager" : "lazy"}
           className="object-cover transition-transform duration-500 group-hover:scale-105"

@@ -1,10 +1,10 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { useMemo, useState } from "react";
 import { ArrowRight, Home, Images, MapPin, Search, X } from "lucide-react";
 import { cafes, cn, type Cafe } from "@/lib/utils";
+import { FallbackImage } from "@/components/ui/fallback-image";
 
 interface GalleryImage {
   cafe: Cafe;
@@ -29,6 +29,7 @@ const galleryImages: GalleryImage[] = cafes.flatMap((cafe) =>
 );
 
 export function GalleryPage({ seed }: { seed: number }) {
+  const [draftQuery, setDraftQuery] = useState("");
   const [query, setQuery] = useState("");
 
   const filteredImages = useMemo(() => {
@@ -67,25 +68,35 @@ export function GalleryPage({ seed }: { seed: number }) {
           </p>
         </div>
 
-        <div className="relative mx-auto mt-8 max-w-xl">
+        <form
+          className="relative mx-auto mt-8 max-w-xl"
+          role="search"
+          onSubmit={(event) => {
+            event.preventDefault();
+            setQuery(draftQuery);
+          }}
+        >
           <Search className="pointer-events-none absolute top-1/2 left-5 size-5 -translate-y-1/2 text-stone-500" />
           <input
-            value={query}
-            onChange={(event) => setQuery(event.target.value)}
+            value={draftQuery}
+            onChange={(event) => setDraftQuery(event.target.value)}
             placeholder="카페 이름, 지역, 특징으로 검색"
             className="w-full rounded-full border-2 border-[#3a241c] bg-white py-3.5 pr-12 pl-12 text-sm text-[#3a241c] shadow-[4px_4px_0_#3a241c] outline-none transition-shadow placeholder:text-[#b3a097] focus:shadow-[2px_2px_0_#3a241c]"
           />
-          {query && (
+          {draftQuery && (
             <button
               type="button"
-              onClick={() => setQuery("")}
+              onClick={() => {
+                setDraftQuery("");
+                setQuery("");
+              }}
               aria-label="검색어 지우기"
               className="absolute top-1/2 right-5 -translate-y-1/2 text-stone-500 hover:text-[#3a241c]"
             >
               <X className="size-4" />
             </button>
           )}
-        </div>
+        </form>
 
         {filteredImages.length ? (
           <div className="mt-16 columns-1 gap-5 sm:columns-2 md:columns-3 lg:columns-4 2xl:columns-5 min-[1920px]:columns-6">
@@ -134,10 +145,11 @@ function GalleryCard({
         aspectRatio,
       )}
     >
-      <Image
+      <FallbackImage
         src={src}
         alt={`${cafe.name} 공간 이미지`}
         fill
+        showLoadingAnimation
         sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, (max-width: 1280px) 33vw, 25vw"
         priority={priority}
         className="object-cover transition duration-500 group-hover:scale-105 group-hover:brightness-60 group-focus-visible:scale-105 group-focus-visible:brightness-60"
