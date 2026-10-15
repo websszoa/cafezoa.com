@@ -165,3 +165,78 @@
     opacity: 0;
   }
 }
+
+.current-location-marker {
+  position: relative;
+  width: 52px;
+  height: 52px;
+  pointer-events: none;
+}
+
+.current-location-marker__pulse,
+.current-location-marker__face {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 999px;
+  transform: translate(-50%, -50%);
+}
+
+.current-location-marker__pulse {
+  width: 42px;
+  height: 42px;
+  background: rgb(37 99 235 / 35%);
+  animation: current-location-pulse 1.8s ease-out infinite;
+}
+
+.current-location-marker__face {
+  width: 38px;
+  height: 38px;
+  overflow: hidden;
+  border: 3px solid white;
+  background: #2563eb;
+  box-shadow:
+    0 2px 8px rgb(15 23 42 / 35%),
+    0 0 0 3px #2563eb;
+  animation: current-location-float 2.2s ease-in-out infinite;
+}
+
+.current-location-marker__face img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@keyframes current-location-pulse {
+  0% {
+    opacity: 0.9;
+    transform: translate(-50%, -50%) scale(0.55);
+  }
+  75%,
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(1.55);
+  }
+}
+
+@keyframes current-location-float {
+  0%,
+  100% {
+    transform: translate(-50%, -50%) translateY(0);
+  }
+  50% {
+    transform: translate(-50%, -50%) translateY(-3px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .current-location-marker__pulse {
+    animation: none;
+    opacity: 0.35;
+  }
+
+  .current-location-marker__face {
+    animation: none;
+  }
+}

@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { CafeGallery } from "@/components/cafe/cafe-gallery";
 import { CafeLocationMap } from "@/components/cafe/cafe-location-map";
 import { PageFooter } from "@/components/page/page-footer";
+import { BackButton } from "@/components/ui/back-button";
 import {
   ArrowLeft,
   AtSign,
@@ -23,7 +24,6 @@ import {
   Home,
   MapPin,
   Phone,
-  ReceiptText,
   Rows3,
   Smile,
   Sparkles,
@@ -33,12 +33,6 @@ import {
 } from "lucide-react";
 
 import { cafes, type Cafe, type CafeReviews } from "@/lib/utils";
-
-const priceNames: Record<string, string> = {
-  americano: "아메리카노",
-  cafelatte: "카페라테",
-  croissant: "크루아상",
-};
 
 export function CafeDetailPage({ cafe }: { cafe: Cafe }) {
   const gallery = [cafe.thumbnail, ...cafe.galleryImages];
@@ -55,7 +49,6 @@ export function CafeDetailPage({ cafe }: { cafe: Cafe }) {
           src={cafe.thumbnail}
           alt={`${cafe.name} 대표 전경`}
           fill
-          showLoadingAnimation
           priority
           sizes="100vw"
           className="object-cover opacity-70"
@@ -108,12 +101,12 @@ export function CafeDetailPage({ cafe }: { cafe: Cafe }) {
                 {cafe.description}
               </p>
               <div className="mt-7 flex flex-wrap gap-2">
-                {cafe.features.map((feature) => (
+                {cafe.type.map((type) => (
                   <span
-                    key={feature}
+                    key={type}
                     className="rounded-full border-2 border-[#3a241c] bg-[#9cff75] px-3 py-1.5 text-xs font-bold"
                   >
-                    {feature}
+                    {type}
                   </span>
                 ))}
               </div>
@@ -160,21 +153,50 @@ export function CafeDetailPage({ cafe }: { cafe: Cafe }) {
                   </div>
                 ))}
                 <p className="border-t border-[#ead9ca] pt-3 font-bold text-[#ff5b20]">
-                  휴무 · {cafe.closedDays ?? "정보 없음"}
+                  {cafe.closedDays === "연중무휴"
+                    ? cafe.closedDays
+                    : `휴무 · ${cafe.closedDays ?? "정보 없음"}`}
+                  {cafe.operatingPeriodLabel &&
+                    ` · ${cafe.operatingPeriodLabel}`}
                 </p>
               </div>
             </InfoCard>
+            <InfoCard icon={<Coffee />} title="메뉴·서비스">
+              <div className="space-y-5">
+                <TagList items={cafe.serviceLabels ?? []} />
+                {Object.keys(cafe.prices).length > 0 && (
+                  <div className="space-y-2 border-t border-[#ead9ca] pt-4">
+                    <p className="font-bold text-[#3a241c]">대표 가격</p>
+                    {Object.entries(cafe.prices).map(([menu, price]) => (
+                      <div key={menu} className="flex justify-between gap-4">
+                        <span>{menu}</span>
+                        <span className="font-bold">
+                          {price === null
+                            ? "가격 정보 없음"
+                            : `${price.toLocaleString()}원`}
+                        </span>
+                      </div>
+                    ))}
+                  </div>
+                )}
+              </div>
+            </InfoCard>
             <InfoCard
-              icon={<Coffee />}
-              title="메뉴·서비스"
-              items={cafe.serviceLabels}
+              icon={<Sparkles />}
+              title="공간 특징"
+              items={cafe.features}
+            />
+            <InfoCard
+              icon={<Building2 />}
+              title="층"
+              items={cafe.floorLabels}
+            />
+            <InfoCard
+              icon={<Rows3 />}
+              title="좌석"
+              items={cafe.seatingLabels}
             />
             <InfoCard icon={<Car />} title="주차" items={cafe.parkingLabels} />
-            <InfoCard icon={<Rows3 />} title="층·좌석">
-              <TagList
-                items={[...cafe.floorLabels, ...(cafe.seatingLabels ?? [])]}
-              />
-            </InfoCard>
             <InfoCard icon={<Eye />} title="전망" items={cafe.viewLabels} />
             <InfoCard
               icon={<Users />}
@@ -206,25 +228,6 @@ export function CafeDetailPage({ cafe }: { cafe: Cafe }) {
               title="화장실"
               items={cafe.restroomLabels}
             />
-            <InfoCard
-              icon={<Sparkles />}
-              title="공간 특징"
-              items={cafe.features}
-            />
-            {Object.keys(cafe.prices).length > 0 && (
-              <InfoCard icon={<ReceiptText />} title="대표 가격">
-                <div className="space-y-2">
-                  {Object.entries(cafe.prices).map(([menu, price]) => (
-                    <div key={menu} className="flex justify-between gap-4">
-                      <span>{priceNames[menu] ?? menu}</span>
-                      <span className="font-bold">
-                        {price.toLocaleString()}원
-                      </span>
-                    </div>
-                  ))}
-                </div>
-              </InfoCard>
-            )}
           </div>
         </section>
 
@@ -276,10 +279,12 @@ export function CafeDetailPage({ cafe }: { cafe: Cafe }) {
           </div>
         </section>
 
-        <section className="mt-16 sm:mt-24">
-          <SectionHeading eyebrow="Gallery">공간 둘러보기</SectionHeading>
-          <CafeGallery cafeName={cafe.name} images={gallery} />
-        </section>
+        {cafe.galleryImages.length > 0 && (
+          <section className="mt-16 sm:mt-24">
+            <SectionHeading eyebrow="Gallery">공간 둘러보기</SectionHeading>
+            <CafeGallery cafeName={cafe.name} images={gallery} />
+          </section>
+        )}
 
         <section className="mt-16 sm:mt-24">
           <SectionHeading eyebrow="Explore">
@@ -398,6 +403,8 @@ export function CafeDetailPage({ cafe }: { cafe: Cafe }) {
       </div>
 
       <PageFooter />
+
+      <BackButton />
 
       <Link
         href="/"

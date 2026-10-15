@@ -115,7 +115,9 @@ function cafeStructuredData(cafe: Cafe) {
       ? `https://www.instagram.com/${cafe.instagram}/`
       : undefined,
   ].filter((url): url is string => Boolean(url));
-  const prices = Object.values(cafe.prices);
+  const prices = Object.values(cafe.prices).filter(
+    (price): price is number => price !== null,
+  );
   const dateModified = [cafe.naver?.[0], cafe.google?.[0]]
     .filter((date): date is string => Boolean(date))
     .sort()

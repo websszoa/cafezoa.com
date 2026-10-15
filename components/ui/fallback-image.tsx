@@ -2,6 +2,7 @@
 
 import Image, { type ImageProps } from "next/image";
 import { useEffect, useState } from "react";
+import { ImageIcon } from "lucide-react";
 import { APP_IMAGE_BASE_URL } from "@/lib/constants";
 import { cn } from "@/lib/utils";
 
@@ -29,6 +30,7 @@ export function FallbackImage({
   ...props
 }: FallbackImageProps) {
   const [failedSrc, setFailedSrc] = useState<ImageProps["src"] | null>(null);
+  const [errorSrc, setErrorSrc] = useState<ImageProps["src"] | null>(null);
   const [loadedSrc, setLoadedSrc] = useState<ImageProps["src"] | null>(null);
   const [delayElapsedSrc, setDelayElapsedSrc] = useState<
     ImageProps["src"] | null
@@ -40,9 +42,11 @@ export function FallbackImage({
       : jpgFallbackOf(remoteSrc);
   const currentSrc =
     failedSrc === remoteSrc && fallbackSrc ? fallbackSrc : remoteSrc;
+  const isUnavailable = errorSrc === currentSrc;
   const isReady =
-    !showLoadingAnimation ||
-    (loadedSrc === currentSrc && delayElapsedSrc === remoteSrc);
+    !isUnavailable &&
+    (!showLoadingAnimation ||
+      (loadedSrc === currentSrc && delayElapsedSrc === remoteSrc));
 
   useEffect(() => {
     if (!showLoadingAnimation) return;
@@ -64,7 +68,7 @@ export function FallbackImage({
         className={cn(
           className,
           "transition-opacity duration-300",
-          isReady ? "opacity-100" : "opacity-0",
+          isReady && !isUnavailable ? "opacity-100" : "opacity-0",
         )}
         onLoad={(event) => {
           setLoadedSrc(currentSrc);
@@ -73,11 +77,22 @@ export function FallbackImage({
         onError={(event) => {
           if (fallbackSrc && currentSrc !== fallbackSrc) {
             setFailedSrc(remoteSrc);
+          } else {
+            setErrorSrc(currentSrc);
           }
           onError?.(event);
         }}
       />
-      {showLoadingAnimation && (
+      {isUnavailable && (
+        <span
+          role="img"
+          aria-label="Image unavailable"
+          className="absolute inset-0 grid place-items-center bg-[#eadfd4] text-[#795f55]"
+        >
+          <ImageIcon className="size-6" aria-hidden="true" />
+        </span>
+      )}
+      {showLoadingAnimation && !isUnavailable && (
         <span
           aria-hidden="true"
           className={cn(

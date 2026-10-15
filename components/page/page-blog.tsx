@@ -162,7 +162,7 @@ function CafeStoryCard({ cafe, priority }: { cafe: Cafe; priority: boolean }) {
           showLoadingAnimation
           sizes="(max-width:768px) 100vw, (max-width:1024px) 60vw, 33vw"
           loading={priority ? "eager" : "lazy"}
-          className="object-cover transition-transform duration-500 group-hover:scale-105"
+          className="object-cover"
         />
         {cafe.naver && (
           <span className="absolute top-4 left-4 inline-flex items-center gap-1 rounded-full bg-linear-to-r from-[#ff5b20] to-[#7d16ed] px-3 py-1.5 text-xs font-semibold text-white shadow-sm">

@@ -1,6 +1,5 @@
 import cafeBasicData from "@/data/cafe-basic.json";
 import cafeDetailsData from "@/data/cafe-details.json";
-import cafeRatingsData from "@/data/cafe-ratings.json";
 import cafeReviewsData from "@/data/cafe-reviews.json";
 
 export { cn } from "cn";
@@ -20,6 +19,7 @@ interface CafeBasic {
     latitude: number;
     longitude: number;
   };
+  ratings?: Record<string, MonthlyRatings>;
 }
 
 interface CafeDetail {
@@ -36,10 +36,11 @@ interface CafeDetail {
   view?: string[];
   seating?: string[];
   business?: {
+    opened_at?: string;
     closed_days: string;
     hours: Record<string, string>;
   };
-  price?: Record<string, number>;
+  price?: Record<string, number | null>;
   media?: {
     phone?: string;
     website?: string | null;
@@ -50,9 +51,11 @@ interface CafeDetail {
 
 export type RatingEntry = [string, number, number];
 
-interface CafeRating {
-  naver?: RatingEntry;
-  google?: RatingEntry;
+type MonthlyRatingEntry = [number, number];
+
+interface MonthlyRatings {
+  naver?: MonthlyRatingEntry;
+  google?: MonthlyRatingEntry;
 }
 
 export interface CafeReviewItem {
@@ -70,7 +73,6 @@ export interface CafeReviews {
 
 const cafeBasic = cafeBasicData as CafeBasic[];
 const cafeDetails = cafeDetailsData as unknown as Record<string, CafeDetail>;
-const cafeRatings = cafeRatingsData as unknown as Record<string, CafeRating>;
 const cafeReviews = cafeReviewsData as unknown as Record<string, CafeReviews>;
 
 // -----------------------------------------------------------------------------
@@ -90,6 +92,22 @@ function canonicalType(type: string) {
 
 function provinceOf(address: string) {
   return address.split(" ")[0] ?? "";
+}
+
+function latestRatingOf(
+  ratings: Record<string, MonthlyRatings> | undefined,
+  source: keyof MonthlyRatings,
+): RatingEntry | undefined {
+  if (!ratings) return undefined;
+
+  const month = Object.keys(ratings)
+    .filter((key) => ratings[key]?.[source] !== undefined)
+    .sort()
+    .at(-1);
+  if (!month) return undefined;
+
+  const rating = ratings[month]?.[source];
+  return rating ? [month, rating[0], rating[1]] : undefined;
 }
 
 // 일부 원본 경로의 /cafe 접두사가 빠져 있어 파일명 기준으로 경로를 통일한다.
@@ -158,14 +176,54 @@ function businessHoursLinesOf(hours: Record<string, string> | undefined) {
   return lines.length <= 2 ? lines : [lines[0], lines.slice(1).join(" / ")];
 }
 
+// 오픈 날짜의 정밀도(일/월/년)에 맞춰 운영 기간을 표시한다.
+function operatingPeriodLabelOf(openedAt: string | undefined) {
+  if (!openedAt) return undefined;
+
+  const match = /^(\d{4})(?:-(\d{2})(?:-(\d{2}))?)?$/.exec(openedAt);
+  if (!match) return undefined;
+
+  const openedYear = Number(match[1]);
+  const openedMonth = match[2] ? Number(match[2]) : undefined;
+  const openedDay = match[3] ? Number(match[3]) : undefined;
+  const todayParts = new Intl.DateTimeFormat("en-CA", {
+    timeZone: "Asia/Seoul",
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+  }).formatToParts(new Date());
+  const todayPart = (type: Intl.DateTimeFormatPartTypes) =>
+    Number(todayParts.find((part) => part.type === type)?.value);
+  const todayYear = todayPart("year");
+  const todayMonth = todayPart("month");
+  const todayDay = todayPart("day");
+
+  if (openedMonth && openedDay) {
+    const openedDate = Date.UTC(openedYear, openedMonth - 1, openedDay);
+    const todayDate = Date.UTC(todayYear, todayMonth - 1, todayDay);
+    const days = Math.floor((todayDate - openedDate) / 86_400_000) + 1;
+    return days > 0 ? `${days.toLocaleString("ko-KR")}일째 오픈 중` : undefined;
+  }
+
+  if (openedMonth) {
+    const months =
+      (todayYear - openedYear) * 12 + (todayMonth - openedMonth) + 1;
+    return months > 0 ? `${months.toLocaleString("ko-KR")}개월째 운영 중` : undefined;
+  }
+
+  const years = todayYear - openedYear + 1;
+  return years > 0 ? `${years.toLocaleString("ko-KR")}년째 운영 중` : undefined;
+}
+
 // -----------------------------------------------------------------------------
 // 화면에서 사용하는 카페 데이터
 // -----------------------------------------------------------------------------
 
 export const cafes = cafeBasic.map((cafe) => {
   const detail = cafeDetails[cafe.slug];
-  const rating = cafeRatings[cafe.slug];
   const thumbnail = `/cafe/${cafe.slug}-01.webp`;
+  const naver = latestRatingOf(cafe.ratings, "naver");
+  const google = latestRatingOf(cafe.ratings, "google");
 
   return {
     ...cafe,
@@ -173,11 +231,12 @@ export const cafes = cafeBasic.map((cafe) => {
     province: provinceOf(cafe.location.address),
     // 각 카페의 01번 이미지를 목록과 카드의 대표 이미지로 사용한다.
     thumbnail,
-    naver: rating?.naver,
-    google: rating?.google,
+    naver,
+    google,
     businessHoursLines: businessHoursLinesOf(detail?.business?.hours),
     businessHours: detail?.business?.hours ?? {},
     closedDays: detail?.business?.closed_days,
+    operatingPeriodLabel: operatingPeriodLabelOf(detail?.business?.opened_at),
     isParkingFree: detail?.parking?.includes("무료") ?? false,
     isPetFriendly: detail?.pet?.some((item) => item.includes("가능")) ?? false,
     parkingLabels: detail?.parking,

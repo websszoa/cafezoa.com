@@ -17,7 +17,7 @@ import {
   X,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { cafes, cn } from "@/lib/utils";
+import { cafes, cn, type Cafe, type RatingEntry } from "@/lib/utils";
 
 interface NaverMapInstance {
   getZoom(): number;
@@ -72,11 +72,17 @@ declare global {
 }
 
 const naverMapClientId = process.env.NEXT_PUBLIC_NAVER_MAP_CLIENT_ID;
+const faceIcons = Array.from(
+  { length: 10 },
+  (_, index) => `/face/face${String(index + 1).padStart(2, "0")}.webp`,
+);
 
 interface CurrentLocation {
   latitude: number;
   longitude: number;
 }
+
+type MobileSheetState = "collapsed" | "half" | "full";
 
 function distanceBetween(
   latitudeA: number,
@@ -112,17 +118,43 @@ function escapeMarkerText(value: string) {
   );
 }
 
-function cafeMarkerIcon(name: string, slug: string, rating?: number) {
+function displayRatingOf(cafe: Cafe): RatingEntry | undefined {
+  return (
+    [cafe.naver, cafe.google].find((rating) => rating && rating[2] > 0) ??
+    cafe.naver ??
+    cafe.google
+  );
+}
+
+function cafeMarkerIcon(name: string, slug: string, rating?: RatingEntry) {
+  const ratingBadge =
+    rating === undefined
+      ? ""
+      : rating[2] === 0
+        ? "신규"
+        : `★ ${rating[1].toFixed(2)}`;
+
   return `
     <div style="position:relative;display:flex;justify-content:center;width:260px;height:52px;">
       <a href="/cafe/${encodeURIComponent(slug)}" target="_blank" rel="noopener noreferrer" aria-label="${escapeMarkerText(name)} 상세페이지를 새 탭에서 열기" style="position:absolute;top:18px;left:50%;height:34px;min-width:max-content;border:2px solid #3a241c;border-radius:999px;background:#9cff75;padding:0 14px;color:#3a241c;font-size:12px;font-weight:800;line-height:30px;text-align:center;text-decoration:none;white-space:nowrap;transform:translateX(-50%);">
         ${escapeMarkerText(name)}
       </a>
       ${
-        rating === undefined
+        ratingBadge === ""
           ? ""
-          : `<span style="position:absolute;top:0;left:50%;z-index:1;border:2px solid #3a241c;border-radius:999px;background:#ff5b20;padding:2px 8px;color:white;font-size:10px;font-weight:800;line-height:16px;white-space:nowrap;transform:translateX(-50%);">★ ${rating.toFixed(2)}</span>`
+          : `<span style="position:absolute;top:0;left:50%;z-index:1;border:2px solid #3a241c;border-radius:999px;background:#ff5b20;padding:2px 8px;color:white;font-size:10px;font-weight:800;line-height:16px;white-space:nowrap;transform:translateX(-50%);">${ratingBadge}</span>`
       }
+    </div>
+  `;
+}
+
+function currentLocationMarkerIcon(faceIcon: string) {
+  return `
+    <div class="current-location-marker" role="img" aria-label="내 현재 위치">
+      <span class="current-location-marker__pulse"></span>
+      <span class="current-location-marker__face">
+        <img src="${faceIcon}" alt="" draggable="false" />
+      </span>
     </div>
   `;
 }
@@ -131,7 +163,11 @@ export function MapPage() {
   const mapElementRef = useRef<HTMLDivElement>(null);
   const mapInstanceRef = useRef<NaverMapInstance | null>(null);
   const markerRefs = useRef<NaverMapMarker[]>([]);
+  const currentLocationMarkerRef = useRef<NaverMapMarker | null>(null);
+  const currentFaceIconRef = useRef<string | null>(null);
   const zoomListenerRef = useRef<NaverMapEventListener | null>(null);
+  const sheetDragStartYRef = useRef<number | null>(null);
+  const sheetWasDraggedRef = useRef(false);
   const [draftQuery, setDraftQuery] = useState("");
   const [query, setQuery] = useState("");
   const [isLocating, setIsLocating] = useState(false);
@@ -141,6 +177,20 @@ export function MapPage() {
     useState<CurrentLocation | null>(null);
   const [locationMessage, setLocationMessage] = useState<string | null>(null);
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
+  const [mobileSheetState, setMobileSheetState] =
+    useState<MobileSheetState>("collapsed");
+
+  const moveMobileSheet = (direction: "up" | "down") => {
+    setMobileSheetState((current) => {
+      const states: MobileSheetState[] = ["collapsed", "half", "full"];
+      const currentIndex = states.indexOf(current);
+      const nextIndex =
+        direction === "up"
+          ? Math.min(currentIndex + 1, states.length - 1)
+          : Math.max(currentIndex - 1, 0);
+      return states[nextIndex];
+    });
+  };
 
   const filteredCafes = useMemo(() => {
     const keyword = query.trim().toLowerCase();
@@ -176,7 +226,7 @@ export function MapPage() {
           content: cafeMarkerIcon(
             cafe.name,
             cafe.slug,
-            cafe.naver?.[1] ?? cafe.google?.[1],
+            displayRatingOf(cafe),
           ),
           anchor: new window.naver!.maps.Point(130, 52),
         },
@@ -252,6 +302,31 @@ export function MapPage() {
   }, []);
 
   useEffect(() => {
+    if (!isMapReady || !currentLocation || !window.naver) return;
+
+    currentFaceIconRef.current ??=
+      faceIcons[Math.floor(Math.random() * faceIcons.length)];
+    currentLocationMarkerRef.current?.setMap(null);
+    currentLocationMarkerRef.current = new window.naver.maps.Marker({
+      map: mapInstanceRef.current!,
+      position: new window.naver.maps.LatLng(
+        currentLocation.latitude,
+        currentLocation.longitude,
+      ),
+      title: "내 현재 위치",
+      icon: {
+        content: currentLocationMarkerIcon(currentFaceIconRef.current),
+        anchor: new window.naver.maps.Point(26, 26),
+      },
+    });
+
+    return () => {
+      currentLocationMarkerRef.current?.setMap(null);
+      currentLocationMarkerRef.current = null;
+    };
+  }, [currentLocation, isMapReady]);
+
+  useEffect(() => {
     window.navermap_authFailure = () => {
       setErrorMessage("네이버 지도 인증에 실패했습니다.");
     };
@@ -285,6 +360,8 @@ export function MapPage() {
       }
       markerRefs.current.forEach((marker) => marker.setMap(null));
       markerRefs.current = [];
+      currentLocationMarkerRef.current?.setMap(null);
+      currentLocationMarkerRef.current = null;
       mapInstanceRef.current = null;
     };
   }, [initializeMap]);
@@ -338,26 +415,82 @@ export function MapPage() {
           </Button>
         </div>
       )}
-      <aside className="absolute inset-y-4 left-4 z-10 flex w-[min(23rem,calc(100vw-2rem))] flex-col overflow-hidden rounded-3xl border border-white/70 bg-[#fff3e5]/95 shadow-[0_20px_55px_rgba(58,36,28,0.25)] backdrop-blur-md">
-        <div className="border-b border-[#ead9ca] px-5 pt-5 pb-4">
+      <aside
+        className={cn(
+          "absolute right-2 bottom-2 left-2 z-20 flex flex-col overflow-hidden rounded-3xl border border-white/70 bg-[#fff3e5]/95 shadow-[0_20px_55px_rgba(58,36,28,0.25)] backdrop-blur-md transition-[height] duration-300 ease-out lg:inset-y-4 lg:right-auto lg:left-4 lg:h-auto lg:w-[min(23rem,calc(100vw-2rem))]",
+          mobileSheetState === "collapsed" && "h-26",
+          mobileSheetState === "half" && "h-[52dvh]",
+          mobileSheetState === "full" && "h-[calc(100dvh-1rem)]",
+        )}
+        aria-label="카페 목록"
+      >
+        <button
+          type="button"
+          className="flex h-7 shrink-0 touch-none items-center justify-center lg:hidden"
+          aria-label={
+            mobileSheetState === "collapsed"
+              ? "카페 목록 펼치기"
+              : "카페 목록 크기 변경"
+          }
+          aria-expanded={mobileSheetState !== "collapsed"}
+          onClick={() => {
+            if (sheetWasDraggedRef.current) {
+              sheetWasDraggedRef.current = false;
+              return;
+            }
+            if (mobileSheetState === "full") {
+              setMobileSheetState("collapsed");
+            } else {
+              moveMobileSheet("up");
+            }
+          }}
+          onPointerDown={(event) => {
+            sheetDragStartYRef.current = event.clientY;
+            sheetWasDraggedRef.current = false;
+            event.currentTarget.setPointerCapture(event.pointerId);
+          }}
+          onPointerUp={(event) => {
+            const startY = sheetDragStartYRef.current;
+            sheetDragStartYRef.current = null;
+            if (startY === null) return;
+
+            const distance = event.clientY - startY;
+            if (Math.abs(distance) < 40) return;
+            sheetWasDraggedRef.current = true;
+            moveMobileSheet(distance < 0 ? "up" : "down");
+          }}
+          onPointerCancel={() => {
+            sheetDragStartYRef.current = null;
+          }}
+        >
+          <span className="h-1.5 w-12 rounded-full bg-[#c9afa0]" />
+        </button>
+
+        <div className="border-b border-[#ead9ca] px-4 pb-3 lg:px-5 lg:pt-5 lg:pb-4">
           <div className="flex items-center">
             <div className="flex items-center gap-3">
-              <span className="grid size-11 place-items-center rounded-full bg-[#9cff75] text-[#3a241c]">
+              <span className="hidden size-11 place-items-center rounded-full bg-[#9cff75] text-[#3a241c] lg:grid">
                 <MapPinned className="size-5" />
               </span>
               <div>
-                <h1 className="font-paperlogy text-xl font-semibold text-[#3a241c]">
+                <h1 className="font-paperlogy text-lg font-semibold text-[#3a241c] lg:text-xl">
                   카페 지도
                 </h1>
-                <p className="text-sm text-stone-500">
+                <p className="hidden text-sm text-stone-500 lg:block">
                   지도에서 취향에 맞는 카페를 찾아보세요.
                 </p>
               </div>
             </div>
+            <p className="ml-auto text-xs font-bold text-[#795f55] lg:hidden">
+              카페 {filteredCafes.length}곳
+            </p>
           </div>
 
           <form
-            className="relative mt-4"
+            className={cn(
+              "relative mt-3 lg:mt-4 lg:block",
+              mobileSheetState === "collapsed" && "hidden",
+            )}
             role="search"
             onSubmit={(event) => {
               event.preventDefault();
@@ -388,14 +521,20 @@ export function MapPage() {
             )}
           </form>
 
-          <p className="mt-4 text-xs font-bold text-[#795f55]">
+          <p className="mt-4 hidden text-xs font-bold text-[#795f55] lg:block">
             카페 {filteredCafes.length}곳
           </p>
         </div>
 
-        <div className="flex-1 space-y-2 overflow-y-auto p-3">
+        <div
+          className={cn(
+            "min-h-0 flex-1 space-y-2 overflow-y-auto p-3 lg:block",
+            mobileSheetState === "collapsed" && "hidden",
+          )}
+        >
           {filteredCafes.length ? (
             filteredCafes.map((cafe) => {
+              const displayRating = displayRatingOf(cafe);
               const distance = currentLocation
                 ? distanceBetween(
                     currentLocation.latitude,
@@ -413,9 +552,10 @@ export function MapPage() {
               <Button
                 type="button"
                 variant="ghost"
-                onClick={() =>
-                  moveToCafe(cafe.location.latitude, cafe.location.longitude)
-                }
+                onClick={() => {
+                  moveToCafe(cafe.location.latitude, cafe.location.longitude);
+                  setMobileSheetState("collapsed");
+                }}
                 className="h-auto w-full justify-start gap-3 rounded-2xl bg-transparent p-3 pr-11 text-left whitespace-normal hover:bg-transparent"
               >
                 <span className="relative size-16 shrink-0 overflow-hidden rounded-xl bg-stone-200">
@@ -442,10 +582,18 @@ export function MapPage() {
                     <Coffee className="size-3.5 shrink-0 text-[#ff5b20]" />
                     {cafe.type.join(" · ")}
                   </span>
-                  {cafe.naver && (
+                  {displayRating && (
                     <span className="mt-1.5 flex items-center gap-1 text-xs font-bold text-[#795f55]">
-                      <Star className="size-3.5 fill-[#ff5b20] text-[#ff5b20]" />
-                      {cafe.naver[1].toFixed(2)}
+                      {displayRating[2] === 0 ? (
+                        <span className="rounded-full bg-[#ff5b20] px-2 py-0.5 text-[10px] font-extrabold text-white">
+                          신규
+                        </span>
+                      ) : (
+                        <>
+                          <Star className="size-3.5 fill-[#ff5b20] text-[#ff5b20]" />
+                          {displayRating[1].toFixed(2)}
+                        </>
+                      )}
                     </span>
                   )}
                 </span>
@@ -470,7 +618,14 @@ export function MapPage() {
           )}
         </div>
       </aside>
-      <div className="absolute right-4 bottom-4 z-10 flex flex-col items-end gap-2 sm:right-5 sm:bottom-8">
+      <div
+        className={cn(
+          "absolute right-4 z-10 flex flex-col items-end gap-2 sm:right-5 lg:top-auto lg:bottom-8",
+          mobileSheetState === "collapsed"
+            ? "bottom-30"
+            : "top-18 bottom-auto",
+        )}
+      >
         {locationMessage && (
           <p className="rounded-full bg-white px-4 py-2 text-xs font-bold text-[#3a241c] shadow-lg">
             {locationMessage}
