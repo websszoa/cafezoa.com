@@ -209,7 +209,7 @@ export function UserAvatarButton() {
               type="button"
               aria-label={item.label}
               onClick={item.onClick}
-              className="cursor-pointer absolute inset-0 flex size-12 items-center justify-center rounded-full border-2 border-[#3a241c] bg-white text-[#3a241c] shadow-[3px_4px_0_#3a241c] transition-colors duration-150 ease-out hover:bg-[#ffe9dd]"
+              className="cursor-pointer absolute inset-0 flex size-12 items-center justify-center rounded-full border-2 border-[#3a241c] bg-white text-[#3a241c] shadow-[3px_4px_0_#3a241c] transition-colors duration-150 ease-out hover:bg-[#9cff75]"
             >
               <Icon className="size-5" />
             </button>
@@ -232,7 +232,7 @@ export function UserAvatarButton() {
           />
           <span
             aria-hidden="true"
-            className="absolute inset-0 bg-[#ffe9dd] opacity-0 transition-opacity duration-150 ease-out group-hover:opacity-50"
+            className="absolute inset-0 bg-[#9cff75] opacity-0 transition-opacity duration-150 ease-out group-hover:opacity-50"
           />
         </button>
       </div>
