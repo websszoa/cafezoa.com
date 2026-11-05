@@ -1,6 +1,8 @@
 import type { Metadata, Viewport } from "next";
 import { Poppins } from "next/font/google";
 import localFont from "next/font/local";
+import { Toaster } from "sonner";
+import { UserAvatarButton } from "@/components/auth/user-avatar-button";
 
 import {
   APP_COPYRIGHT,
@@ -196,6 +198,17 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           }}
         />
         {children}
+        <UserAvatarButton />
+        <Toaster
+          position="top-center"
+          toastOptions={{
+            classNames: {
+              title: "font-anyvid",
+              description: "font-anyvid",
+            },
+            style: { boxShadow: "none" },
+          }}
+        />
       </body>
     </html>
   );

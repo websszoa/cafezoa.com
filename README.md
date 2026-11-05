@@ -2,11 +2,11 @@
 # 1. Next.js 프로젝트 생성
 npx create-next-app@latest ./
 
-# 2. Supabase (데이터베이스 & 인증)
-npm install @supabase/supabase-js @supabase/ssr
-
-# 3. 폼 처리 & 유효성 검사
+# 2. 폼 처리 & 유효성 검사
 npm install react-hook-form zod @hookform/resolvers
+
+# 3. Supabase (데이터베이스 & 인증)
+npm install @supabase/supabase-js @supabase/ssr
 
 # 4. 이메일 발송
 npm install resend

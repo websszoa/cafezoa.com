@@ -2,10 +2,14 @@ import Link from "next/link";
 import Image from "next/image";
 import { Images, LayoutList, MapPinned, Newspaper } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { GoogleLoginButton } from "@/components/auth/google-login-button";
+import { KakaoLoginButton } from "@/components/auth/kakao-login-button";
+import { AuthToast } from "@/components/auth/auth-toast";
 
 export function MainPage() {
   return (
     <main className="relative isolate min-h-dvh overflow-hidden bg-[#ff5b20] text-white">
+      <AuthToast />
       <div
         className="autumn-background-pattern pointer-events-none absolute inset-0"
         aria-hidden="true"
@@ -103,47 +107,8 @@ export function MainPage() {
           className="relative z-20 mt-8 flex items-center justify-center gap-4"
           aria-label="소셜 로그인"
         >
-          <Button
-            type="button"
-            size="icon"
-            aria-label="Google로 로그인"
-            className="size-12 rounded-full border-2 border-[#3a241c] bg-white p-0 text-[#3a241c] shadow-[3px_4px_0_#3a241c] transition-[box-shadow,background-color] duration-200 ease-out hover:bg-[#f8f8f8] hover:shadow-[0_0_0_#3a241c]"
-          >
-            <svg aria-hidden="true" viewBox="0 0 24 24" className="size-5">
-              <path
-                fill="#4285F4"
-                d="M21.6 12.23c0-.71-.06-1.4-.18-2.07H12v3.91h5.38a4.6 4.6 0 0 1-2 3.02v2.54h3.24c1.9-1.75 2.98-4.33 2.98-7.4Z"
-              />
-              <path
-                fill="#34A853"
-                d="M12 22c2.7 0 4.98-.9 6.63-2.42l-3.24-2.53c-.9.6-2.05.96-3.39.96-2.61 0-4.82-1.76-5.61-4.13H3.04v2.61A10 10 0 0 0 12 22Z"
-              />
-              <path
-                fill="#FBBC05"
-                d="M6.39 13.88A6 6 0 0 1 6.08 12c0-.65.11-1.29.31-1.88V7.51H3.04A10 10 0 0 0 2 12c0 1.61.38 3.14 1.04 4.49l3.35-2.61Z"
-              />
-              <path
-                fill="#EA4335"
-                d="M12 5.99c1.47 0 2.79.5 3.83 1.5l2.87-2.87A9.65 9.65 0 0 0 12 2a10 10 0 0 0-8.96 5.51l3.35 2.61C7.18 7.75 9.39 5.99 12 5.99Z"
-              />
-            </svg>
-            <span className="sr-only">Google로 로그인</span>
-          </Button>
-
-          <Button
-            type="button"
-            size="icon"
-            aria-label="카카오로 로그인"
-            className="size-12 rounded-full border-2 border-[#3a241c] bg-[#fee500] p-0 text-[#3a241c] shadow-[3px_4px_0_#3a241c] transition-[box-shadow,background-color] duration-200 ease-out hover:bg-[#f4dc00] hover:shadow-[0_0_0_#3a241c]"
-          >
-            <svg aria-hidden="true" viewBox="0 0 24 24" className="size-5">
-              <path
-                fill="currentColor"
-                d="M12 3C6.48 3 2 6.5 2 10.82c0 2.76 1.83 5.18 4.59 6.57l-.93 3.42a.38.38 0 0 0 .58.42l4.08-2.7c.55.07 1.11.11 1.68.11 5.52 0 10-3.5 10-7.82S17.52 3 12 3Z"
-              />
-            </svg>
-            <span className="sr-only">카카오로 로그인</span>
-          </Button>
+          <GoogleLoginButton />
+          <KakaoLoginButton />
         </div>
 
         <div className="absolute -bottom-4 left-1/2 aspect-1680/936 w-[min(760px,100vw)] -translate-x-1/2 overflow-hidden sm:-bottom-8">

@@ -3,6 +3,8 @@ export const APP_ENG_NAME = "CafeZoa";
 export const APP_SLOGAN = "카페 탐방을 위한 완벽한 가이드";
 export const APP_COPYRIGHT = "© 2026 webstoryboy. All rights reserved.";
 
+export const ADMIN_EMAIL = "webstoryboy@naver.com";
+
 export const APP_SITE_URL = "https://cafezoa.com";
 export const APP_INSTAGRAM_URL = "https://www.instagram.com/cafezoa_official";
 export const APP_THREADS_URL = "https://www.threads.com/@cafezoa_official";
