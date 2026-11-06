@@ -221,7 +221,7 @@ export function UserAvatarButton() {
           aria-label={isOpen ? "메뉴 닫기" : "내 메뉴 열기"}
           aria-expanded={isOpen}
           onClick={() => setIsOpen((prev) => !prev)}
-          className="group cursor-pointer relative z-10 size-12 overflow-hidden rounded-full border-2 border-[#3a241c] bg-white shadow-[3px_4px_0_#3a241c]"
+          className="group cursor-pointer relative z-10 size-12 overflow-hidden rounded-full border-2 border-[#3a241c] bg-white"
         >
           <Image
             src={avatarUrl}
@@ -232,7 +232,7 @@ export function UserAvatarButton() {
           />
           <span
             aria-hidden="true"
-            className="absolute inset-0 bg-[#9cff75] opacity-0 transition-opacity duration-150 ease-out group-hover:opacity-50"
+            className="absolute inset-0 bg-[#9cff75] opacity-0 transition-opacity duration-150 ease-out group-hover:opacity-10"
           />
         </button>
       </div>
