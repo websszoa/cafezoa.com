@@ -1,0 +1,1957 @@
+{
+  "dirty-trunk-paju": {
+    "services": ["카페", "베이커리", "브런치", "식사", "맥주", "와인"],
+    "purpose": ["데이트", "가족", "브런치", "드라이브", "사진", "모임"],
+    "features": ["높은 층고", "창고형 인테리어", "대형 실내공간"],
+    "floors": ["지하1층", "1층", "2층"],
+    "parking": ["무료", "지상 · 지하 주차장", "60대 정도"],
+    "pet": ["불가", "반려동물 입장 불가"],
+    "restroom": ["남녀 구분"],
+    "children": ["아이 동반 가능"],
+    "study": ["가능", "장시간 이용 비추천", "콘셉트 없음"],
+    "smoking": ["가능", "외부 별도 흡연공간 있음"],
+    "view": ["실내뷰"],
+    "seating": ["200석 이상", "다양한 형태의 좌석"],
+    "business": {
+      "closed_days": "연중무휴",
+      "hours": {
+        "월요일": "09:30 ~ 21:30",
+        "화요일": "09:30 ~ 21:30",
+        "수요일": "09:30 ~ 21:30",
+        "목요일": "09:30 ~ 21:30",
+        "금요일": "09:30 ~ 21:30",
+        "토요일": "09:30 ~ 21:30",
+        "일요일": "09:30 ~ 21:30"
+      }
+    },
+    "price": {
+      "아메리카노": 5500,
+      "카페라떼": 6000,
+      "클래식 브런치": 19800
+    },
+    "media": {
+      "phone": "031-946-9283",
+      "website": null,
+      "instagram": "dirty_trunk_korea",
+      "gallery": [
+        "/cafe/dirty-trunk-paju-01.webp",
+        "/cafe/dirty-trunk-paju-02.webp",
+        "/cafe/dirty-trunk-paju-03.webp",
+        "/cafe/dirty-trunk-paju-04.webp",
+        "/cafe/dirty-trunk-paju-05.webp",
+        "/cafe/dirty-trunk-paju-06.webp",
+        "/cafe/dirty-trunk-paju-07.webp"
+      ]
+    }
+  },
+  "zatura-gimpo": {
+    "services": ["카페", "베이커리", "디저트", "브런치", "식사", "주류"],
+    "purpose": ["데이트", "가족", "드라이브", "사진", "모임"],
+    "features": ["대형 실내공간", "독특한 목재 인테리어", "체험형 공간"],
+    "floors": ["1층"],
+    "parking": ["무료", "지상 주차장", "100대 정도"],
+    "pet": ["불가", "반려동물 입장 불가"],
+    "restroom": ["남녀 구분", "매우 깨끗함"],
+    "children": ["아이 동반 가능"],
+    "study": ["가능", "장시간 이용 비추천", "콘셉트 없음"],
+    "smoking": ["가능", "외부 별도 흡연공간 있음"],
+    "view": ["실내뷰"],
+    "seating": ["300석 이상", "다양한 형태의 좌석"],
+    "business": {
+      "closed_days": "연중무휴",
+      "hours": {
+        "월요일": "10:00 ~ 01:00",
+        "화요일": "10:00 ~ 01:00",
+        "수요일": "10:00 ~ 01:00",
+        "목요일": "10:00 ~ 01:00",
+        "금요일": "10:00 ~ 01:00",
+        "토요일": "10:00 ~ 01:00",
+        "일요일": "10:00 ~ 01:00"
+      }
+    },
+    "price": {
+      "아메리카노": 9000,
+      "자투라떼": 11000,
+      "카페라떼": 9500,
+      "밤 티라미슈라떼": 12000
+    },
+    "media": {
+      "phone": "031-8049-9499",
+      "website": "https://blog.naver.com/zatura__official",
+      "instagram": "zatura__official",
+      "gallery": [
+        "/cafe/zatura-gimpo-01.webp",
+        "/cafe/zatura-gimpo-02.webp",
+        "/cafe/zatura-gimpo-03.webp",
+        "/cafe/zatura-gimpo-04.webp",
+        "/cafe/zatura-gimpo-05.webp",
+        "/cafe/zatura-gimpo-06.webp",
+        "/cafe/zatura-gimpo-07.webp",
+        "/cafe/zatura-gimpo-08.webp",
+        "/cafe/zatura-gimpo-09.webp",
+        "/cafe/zatura-gimpo-10.webp",
+        "/cafe/zatura-gimpo-11.webp",
+        "/cafe/zatura-gimpo-12.webp",
+        "/cafe/zatura-gimpo-13.webp",
+        "/cafe/zatura-gimpo-14.webp"
+      ]
+    }
+  },
+  "forest-outings-goyang": {
+    "services": ["카페", "베이커리", "브런치", "식사"],
+    "purpose": ["데이트", "가족", "브런치", "드라이브", "사진", "모임"],
+    "features": ["높은 층고", "대형 실내공간", "실내 정원", "포토존"],
+    "floors": ["1층", "2층"],
+    "parking": ["무료", "지상 · 지하 주차장", "150대 정도"],
+    "pet": ["불가", "반려동물 입장 불가"],
+    "restroom": ["실내", "매우 깨끗함"],
+    "children": ["아이 동반 가능"],
+    "study": ["가능", "장시간 이용 비추천"],
+    "smoking": ["가능", "외부 별도 흡연공간 있음"],
+    "view": ["실내뷰", "식물원뷰"],
+    "seating": ["300석 이상", "다양한 형태의 좌석"],
+    "business": {
+      "closed_days": "연중무휴",
+      "hours": {
+        "월요일": "10:00 ~ 22:00",
+        "화요일": "10:00 ~ 22:00",
+        "수요일": "10:00 ~ 22:00",
+        "목요일": "10:00 ~ 22:00",
+        "금요일": "10:00 ~ 22:00",
+        "토요일": "10:00 ~ 22:00",
+        "일요일": "10:00 ~ 22:00"
+      }
+    },
+    "price": {
+      "아메리카노": 6800,
+      "카페라떼": 7800,
+      "코코 오트 라떼": 9500,
+      "수비드 포크 목살 스테이크": 32500
+    },
+    "media": {
+      "phone": "031-963-0500",
+      "website": "https://forestoutings.co.kr",
+      "instagram": "forestoutings_ilsan",
+      "gallery": [
+        "/cafe/forest-outings-goyang-02.webp",
+        "/cafe/forest-outings-goyang-03.webp",
+        "/cafe/forest-outings-goyang-04.webp",
+        "/cafe/forest-outings-goyang-05.webp",
+        "/cafe/forest-outings-goyang-06.webp",
+        "/cafe/forest-outings-goyang-07.webp",
+        "/cafe/forest-outings-goyang-08.webp",
+        "/cafe/forest-outings-goyang-09.webp",
+        "/cafe/forest-outings-goyang-10.webp",
+        "/cafe/forest-outings-goyang-11.webp",
+        "/cafe/forest-outings-goyang-12.webp",
+        "/cafe/forest-outings-goyang-13.webp",
+        "/cafe/forest-outings-goyang-14.webp",
+        "/cafe/forest-outings-goyang-15.webp"
+      ]
+    }
+  },
+  "forest-outings-songdo": {
+    "services": ["카페", "베이커리", "브런치", "식사"],
+    "purpose": ["데이트", "가족", "브런치", "드라이브", "사진", "모임"],
+    "features": ["높은 층고", "대형 실내공간", "실내 정원", "포토존"],
+    "floors": ["1층", "2층", "3층"],
+    "parking": ["무료", "지상 · 지하 주차장", "150대 정도"],
+    "pet": ["가능", "1층 펫 프렌들리존 입장 가능"],
+    "restroom": ["남녀 구분", "깨끗함"],
+    "children": ["아이 동반 가능"],
+    "study": ["가능", "장시간 이용 비추천"],
+    "smoking": ["가능", "외부 별도 흡연공간 있음"],
+    "view": ["실내뷰", "식물원뷰"],
+    "seating": ["300석 이상", "다양한 형태의 좌석"],
+    "business": {
+      "closed_days": "연중무휴",
+      "hours": {
+        "월요일": "10:00 ~ 22:00",
+        "화요일": "10:00 ~ 22:00",
+        "수요일": "10:00 ~ 22:00",
+        "목요일": "10:00 ~ 22:00",
+        "금요일": "10:00 ~ 22:00",
+        "토요일": "10:00 ~ 22:00",
+        "일요일": "10:00 ~ 22:00"
+      }
+    },
+    "price": {
+      "아메리카노": 6800,
+      "카페라떼": 7800,
+      "코코 오트 라떼": 9500,
+      "아인슈페너": 8500
+    },
+    "media": {
+      "phone": "032-831-3750",
+      "website": "https://forestoutings.co.kr",
+      "instagram": "forestoutings_songdo",
+      "gallery": [
+        "/cafe/forest-outings-songdo-01.webp",
+        "/cafe/forest-outings-songdo-02.webp",
+        "/cafe/forest-outings-songdo-03.webp",
+        "/cafe/forest-outings-songdo-04.webp",
+        "/cafe/forest-outings-songdo-05.webp",
+        "/cafe/forest-outings-songdo-06.webp",
+        "/cafe/forest-outings-songdo-07.webp",
+        "/cafe/forest-outings-songdo-08.webp",
+        "/cafe/forest-outings-songdo-09.webp",
+        "/cafe/forest-outings-songdo-10.webp",
+        "/cafe/forest-outings-songdo-11.webp",
+        "/cafe/forest-outings-songdo-12.webp",
+        "/cafe/forest-outings-songdo-13.webp",
+        "/cafe/forest-outings-songdo-14.webp"
+      ]
+    }
+  },
+  "hollys-jeju-dodu-coast-dt": {
+    "services": ["카페", "디저트", "베이커리", "드라이브스루", "포토존"],
+    "purpose": ["데이트", "가족", "브런치", "드라이브", "사진", "모임"],
+    "features": ["넓은 실내공간", "통창", "다양한 좌석", "루프탑"],
+    "floors": ["1층", "2층", "루프탑"],
+    "parking": [
+      "유료",
+      "매장 뒤편 전용 주차장",
+      "50대 정도",
+      "2시간 무료, 이후 10분당 1000원"
+    ],
+    "pet": ["불가", "반려동물 입장 불가"],
+    "restroom": ["실내", "남녀 구분"],
+    "children": ["아이 동반 가능"],
+    "study": ["가능", "노트북 작업하기 좋은 좌석 있음", "콘셉트 있음"],
+    "smoking": ["불가", "흡연공간 없음"],
+    "view": ["바다뷰", "무지개해안도로뷰"],
+    "seating": ["100석 이상", "창가 좌석 인기"],
+    "business": {
+      "closed_days": "연중무휴",
+      "hours": {
+        "월요일": "10:00 ~ 22:00",
+        "화요일": "10:00 ~ 22:00",
+        "수요일": "10:00 ~ 22:00",
+        "목요일": "10:00 ~ 22:00",
+        "금요일": "10:00 ~ 22:00",
+        "토요일": "10:00 ~ 22:00",
+        "일요일": "10:00 ~ 22:00"
+      }
+    },
+    "media": {
+      "phone": "032-831-3750",
+      "website": "https://www.hollys.co.kr/",
+      "instagram": "official_hollys",
+      "gallery": [
+        "/cafe/hollys-jeju-dodu-coast-dt-02.webp",
+        "/cafe/hollys-jeju-dodu-coast-dt-03.webp",
+        "/cafe/hollys-jeju-dodu-coast-dt-04.webp",
+        "/cafe/hollys-jeju-dodu-coast-dt-05.webp",
+        "/cafe/hollys-jeju-dodu-coast-dt-06.webp",
+        "/cafe/hollys-jeju-dodu-coast-dt-07.webp",
+        "/cafe/hollys-jeju-dodu-coast-dt-08.webp",
+        "/cafe/hollys-jeju-dodu-coast-dt-09.webp",
+        "/cafe/hollys-jeju-dodu-coast-dt-10.webp",
+        "/cafe/hollys-jeju-dodu-coast-dt-11.webp",
+        "/cafe/hollys-jeju-dodu-coast-dt-12.webp",
+        "/cafe/hollys-jeju-dodu-coast-dt-13.webp",
+        "/cafe/hollys-jeju-dodu-coast-dt-14.webp"
+      ]
+    }
+  },
+  "forest-outings-yongin": {
+    "services": ["카페", "디저트", "베이커리", "브런치/식사", "포토존"],
+    "purpose": ["데이트", "가족", "브런치", "드라이브", "사진", "모임"],
+    "features": [
+      "높은 층고",
+      "대형 실내공간",
+      "플랜테리어",
+      "실내 정원",
+      "포토존",
+      "엘리베이터",
+      "수유실"
+    ],
+    "floors": ["1층", "2층", "3층", "4층"],
+    "parking": ["무료", "지상 · 지하 주차장", "200대 정도"],
+    "pet": ["불가", "반려동물 입장 불가"],
+    "restroom": ["실내", "남녀 구분"],
+    "children": ["아이 동반 가능", "유아의자 있음", "수유실 있음"],
+    "study": ["가능", "장시간 공부는 비추", "주말 혼잡"],
+    "smoking": ["가능", "외부 별도 흡연공간 있음"],
+    "view": ["실내뷰", "식물원뷰"],
+    "seating": ["300석 이상", "다양한 형태의 좌석", "단체석", "창가 좌석"],
+    "business": {
+      "opened_at": "2025-06-24",
+      "closed_days": "연중무휴",
+      "hours": {
+        "월요일": "10:00 ~ 22:00",
+        "화요일": "10:00 ~ 22:00",
+        "수요일": "10:00 ~ 22:00",
+        "목요일": "10:00 ~ 22:00",
+        "금요일": "10:00 ~ 22:00",
+        "토요일": "10:00 ~ 22:00",
+        "일요일": "10:00 ~ 22:00"
+      }
+    },
+    "price": {
+      "아메리카노": 6800,
+      "크루아상": 5800
+    },
+    "media": {
+      "phone": "0507-1435-1320",
+      "website": "https://forestoutings.co.kr",
+      "instagram": "forestoutings_yongin",
+      "gallery": [
+        "/cafe/forest-outings-yongin-01.webp",
+        "/cafe/forest-outings-yongin-02.webp",
+        "/cafe/forest-outings-yongin-03.webp",
+        "/cafe/forest-outings-yongin-04.webp",
+        "/cafe/forest-outings-yongin-05.webp",
+        "/cafe/forest-outings-yongin-06.webp",
+        "/cafe/forest-outings-yongin-07.webp",
+        "/cafe/forest-outings-yongin-08.webp",
+        "/cafe/forest-outings-yongin-09.webp",
+        "/cafe/forest-outings-yongin-10.webp",
+        "/cafe/forest-outings-yongin-11.webp",
+        "/cafe/forest-outings-yongin-12.webp",
+        "/cafe/forest-outings-yongin-13.webp",
+        "/cafe/forest-outings-yongin-14.webp",
+        "/cafe/forest-outings-yongin-15.webp",
+        "/cafe/forest-outings-yongin-16.webp",
+        "/cafe/forest-outings-yongin-17.webp",
+        "/cafe/forest-outings-yongin-18.webp"
+      ]
+    }
+  },
+  "hutan-namyangju": {
+    "services": ["카페", "디저트", "베이커리", "브런치", "식사", "포토존"],
+    "purpose": ["데이트", "가족", "브런치", "드라이브", "사진", "모임"],
+    "features": [
+      "높은 층고",
+      "대형 실내공간",
+      "통창",
+      "대형 실내정원",
+      "열대식물",
+      "분수",
+      "테라스",
+      "루프탑",
+      "포토존"
+    ],
+    "floors": ["1층", "2층", "3층", "4층", "루프탑"],
+    "parking": ["무료", "지상 · 지하 주차장", "200대 이상"],
+    "pet": ["불가", "반려동물 입장 불가"],
+    "restroom": ["실내", "남녀 구분", "층별 이용 가능"],
+    "children": [
+      "아이 동반 가능",
+      "유아의자 있음",
+      "수유실 있음",
+      "기저귀교환대 있음"
+    ],
+    "study": ["가능", "장시간 공부는 비추", "주말 혼잡"],
+    "smoking": ["가능", "외부 별도 흡연공간 있음"],
+    "view": ["오남저수지뷰", "실내정원뷰", "마운틴뷰"],
+    "seating": [
+      "500석 이상",
+      "다양한 형태의 좌석",
+      "창가 좌석 인기",
+      "단체석",
+      "가족석"
+    ],
+    "business": {
+      "closed_days": "연중무휴",
+      "hours": {
+        "월요일": "10:00 ~ 22:00",
+        "화요일": "10:00 ~ 22:00",
+        "수요일": "10:00 ~ 22:00",
+        "목요일": "10:00 ~ 22:00",
+        "금요일": "10:00 ~ 24:00",
+        "토요일": "10:00 ~ 24:00",
+        "일요일": "10:00 ~ 22:00"
+      }
+    },
+    "price": {
+      "아메리카노": 8000,
+      "카페라떼": 9000
+    },
+    "media": {
+      "phone": "0507-1429-9907",
+      "website": "https://blog.naver.com/hutan_desk",
+      "instagram": "hutan_official",
+      "gallery": [
+        "/cafe/hutan-namyangju-01.webp",
+        "/cafe/hutan-namyangju-02.webp",
+        "/cafe/hutan-namyangju-03.webp",
+        "/cafe/hutan-namyangju-04.webp",
+        "/cafe/hutan-namyangju-05.webp",
+        "/cafe/hutan-namyangju-06.webp",
+        "/cafe/hutan-namyangju-07.webp",
+        "/cafe/hutan-namyangju-08.webp",
+        "/cafe/hutan-namyangju-09.webp",
+        "/cafe/hutan-namyangju-10.webp",
+        "/cafe/hutan-namyangju-11.webp",
+        "/cafe/hutan-namyangju-12.webp",
+        "/cafe/hutan-namyangju-13.webp",
+        "/cafe/hutan-namyangju-14.webp",
+        "/cafe/hutan-namyangju-15.webp",
+        "/cafe/hutan-namyangju-16.webp",
+        "/cafe/hutan-namyangju-17.webp",
+        "/cafe/hutan-namyangju-18.webp",
+        "/cafe/hutan-namyangju-19.webp"
+      ]
+    }
+  },
+  "mieum-yeongjongdo": {
+    "services": ["카페", "디저트", "베이커리", "브런치", "포토존"],
+    "purpose": ["데이트", "가족", "브런치", "드라이브", "사진", "모임"],
+    "features": [
+      "높은 층고",
+      "대형 실내공간",
+      "통창",
+      "중정",
+      "야외 테라스",
+      "잔디마당",
+      "루프탑",
+      "포토존",
+      "엘리베이터"
+    ],
+    "floors": ["1층", "2층", "3층", "루프탑"],
+    "parking": ["유료", "전용 주차장", "카페 이용 시 2시간 무료 주차 가능"],
+    "pet": ["불가", "반려동물 입장 불가"],
+    "restroom": ["실내", "남녀 구분"],
+    "children": ["아이 동반 가능", "키즈존", "야외 잔디공간"],
+    "study": ["가능", "장시간 공부는 비추", "주말 혼잡"],
+    "smoking": ["불가", "흡연공간 없음"],
+    "view": ["바다뷰", "마시안해변뷰", "일몰뷰"],
+    "seating": [
+      "100석 이하",
+      "다양한 형태의 좌석",
+      "오션뷰 창가 좌석 인기",
+      "계단식 좌석",
+      "단체석"
+    ],
+    "business": {
+      "closed_days": "연중무휴",
+      "hours": {
+        "월요일": "10:00 ~ 20:30",
+        "화요일": "10:00 ~ 20:30",
+        "수요일": "10:00 ~ 20:30",
+        "목요일": "10:00 ~ 20:30",
+        "금요일": "10:00 ~ 21:00",
+        "토요일": "10:00 ~ 21:00",
+        "일요일": "10:00 ~ 21:00"
+      }
+    },
+    "price": {
+      "아메리카노": 7300,
+      "카페라떼": 7900
+    },
+    "media": {
+      "phone": "0507-1320-7041",
+      "website": null,
+      "instagram": "cafe.mieum",
+      "gallery": [
+        "/cafe/mieum-yeongjongdo-01.webp",
+        "/cafe/mieum-yeongjongdo-02.webp",
+        "/cafe/mieum-yeongjongdo-03.webp",
+        "/cafe/mieum-yeongjongdo-04.webp",
+        "/cafe/mieum-yeongjongdo-05.webp",
+        "/cafe/mieum-yeongjongdo-06.webp",
+        "/cafe/mieum-yeongjongdo-07.webp",
+        "/cafe/mieum-yeongjongdo-08.webp",
+        "/cafe/mieum-yeongjongdo-09.webp",
+        "/cafe/mieum-yeongjongdo-10.webp",
+        "/cafe/mieum-yeongjongdo-11.webp",
+        "/cafe/mieum-yeongjongdo-12.webp",
+        "/cafe/mieum-yeongjongdo-13.webp",
+        "/cafe/mieum-yeongjongdo-14.webp",
+        "/cafe/mieum-yeongjongdo-15.webp",
+        "/cafe/mieum-yeongjongdo-16.webp",
+        "/cafe/mieum-yeongjongdo-17.webp",
+        "/cafe/mieum-yeongjongdo-18.webp",
+        "/cafe/mieum-yeongjongdo-19.webp"
+      ]
+    }
+  },
+  "jinjaengimoru-jeju": {
+    "services": ["카페", "디저트", "베이커리", "브런치", "포토존", "산책정원"],
+    "purpose": [
+      "데이트",
+      "가족",
+      "브런치",
+      "드라이브",
+      "사진",
+      "모임",
+      "여행",
+      "산책"
+    ],
+    "features": [
+      "대형 실내공간",
+      "통창",
+      "1만 평 산책정원",
+      "야외 정원",
+      "산책로",
+      "분수대",
+      "황금잉어 연못",
+      "분재 정원",
+      "야외 테이블",
+      "3층 하늘정원",
+      "루프탑 포토존",
+      "시그니처 베이커리",
+      "포토존"
+    ],
+    "floors": ["1층", "2층", "3층", "하늘정원"],
+    "parking": ["무료", "전용 주차장", "자차 및 렌터카 이용 가능"],
+    "pet": ["가능", "야외 좌석 동반 가능", "실내 케이지 지참 필요"],
+    "restroom": ["실내", "남녀 구분"],
+    "children": ["아이 동반 가능", "유아의자 있음", "야외 산책정원"],
+    "study": ["가능", "장시간 공부는 비추"],
+    "smoking": [],
+    "view": ["다랑쉬오름뷰", "마운틴뷰", "정원뷰", "숲뷰", "성산뷰", "우도뷰"],
+    "seating": [
+      "300명 이하",
+      "다양한 형태의 좌석",
+      "단체석",
+      "야외 테이블",
+      "정원 좌석"
+    ],
+    "business": {
+      "closed_days": "연중무휴",
+      "hours": {
+        "월요일": "10:00 ~ 18:00",
+        "화요일": "10:00 ~ 18:00",
+        "수요일": "10:00 ~ 18:00",
+        "목요일": "10:00 ~ 18:00",
+        "금요일": "10:00 ~ 18:00",
+        "토요일": "10:00 ~ 18:00",
+        "일요일": "10:00 ~ 18:00"
+      }
+    },
+    "price": {
+      "아메리카노": 6500,
+      "카페라떼": 7000
+    },
+    "media": {
+      "phone": "0507-1442-8896",
+      "website": null,
+      "instagram": null,
+      "gallery": [
+        "/cafe/jinjaengimoru-jeju-01.webp",
+        "/cafe/jinjaengimoru-jeju-02.webp",
+        "/cafe/jinjaengimoru-jeju-03.webp",
+        "/cafe/jinjaengimoru-jeju-04.webp",
+        "/cafe/jinjaengimoru-jeju-05.webp",
+        "/cafe/jinjaengimoru-jeju-06.webp",
+        "/cafe/jinjaengimoru-jeju-07.webp",
+        "/cafe/jinjaengimoru-jeju-08.webp",
+        "/cafe/jinjaengimoru-jeju-09.webp",
+        "/cafe/jinjaengimoru-jeju-10.webp",
+        "/cafe/jinjaengimoru-jeju-11.webp",
+        "/cafe/jinjaengimoru-jeju-12.webp",
+        "/cafe/jinjaengimoru-jeju-13.webp",
+        "/cafe/jinjaengimoru-jeju-14.webp",
+        "/cafe/jinjaengimoru-jeju-15.webp",
+        "/cafe/jinjaengimoru-jeju-16.webp",
+        "/cafe/jinjaengimoru-jeju-17.webp"
+      ]
+    }
+  },
+  "sihaon-ulju": {
+    "services": ["카페", "포토존"],
+    "purpose": ["데이트", "가족", "드라이브", "사진", "모임", "여행", "휴식"],
+    "features": [
+      "통유리 외관",
+      "넓은 실내공간",
+      "우드톤 인테리어",
+      "야외 정원",
+      "잔디밭",
+      "야외 포토존"
+    ],
+    "floors": ["지하1층", "1층", "2층", "지상 전용 주차장"],
+    "parking": ["무료", "지상 전용 주차장", "약 60대 정도"],
+    "pet": ["불가"],
+    "restroom": ["남녀 구분"],
+    "children": ["아이 동반 가능", "노키즈존 있음"],
+    "study": ["가능", "콘센트 있음", "지하 1층 공부하기 좋음"],
+    "smoking": ["불가", "외부 별도 흡연공간 없음"],
+    "view": ["마운틴뷰", "자연경관뷰", "정원뷰"],
+    "seating": ["실내 좌석", "창가 좌석", "야외 좌석", "여유로운 좌석 간격"],
+    "business": {
+      "opened_at": "2024-05-15",
+      "closed_days": "매주 화요일, 대관 시 휴무",
+      "hours": {
+        "월요일": "11:00 ~ 20:00",
+        "화요일": "휴무",
+        "수요일": "11:00 ~ 20:00",
+        "목요일": "11:00 ~ 20:00",
+        "금요일": "11:00 ~ 20:00",
+        "토요일": "11:00 ~ 20:00",
+        "일요일": "11:00 ~ 20:00"
+      }
+    },
+    "price": {
+      "아메리카노": 5500,
+      "카페라떼": 6000,
+      "리얼 콜릿라떼": 7500,
+      "배차": 7000
+    },
+    "media": {
+      "phone": "0507-1423-0948",
+      "website": "https://weddingreserve.kr/sihaon/",
+      "instagram": "sihaon.official",
+      "gallery": [
+        "/cafe/sihaon-ulju-01.webp",
+        "/cafe/sihaon-ulju-02.webp",
+        "/cafe/sihaon-ulju-03.webp",
+        "/cafe/sihaon-ulju-04.webp",
+        "/cafe/sihaon-ulju-05.webp",
+        "/cafe/sihaon-ulju-06.webp",
+        "/cafe/sihaon-ulju-07.webp",
+        "/cafe/sihaon-ulju-08.webp",
+        "/cafe/sihaon-ulju-09.webp",
+        "/cafe/sihaon-ulju-10.webp",
+        "/cafe/sihaon-ulju-11.webp",
+        "/cafe/sihaon-ulju-12.webp",
+        "/cafe/sihaon-ulju-13.webp",
+        "/cafe/sihaon-ulju-14.webp",
+        "/cafe/sihaon-ulju-15.webp",
+        "/cafe/sihaon-ulju-16.webp",
+        "/cafe/sihaon-ulju-17.webp",
+        "/cafe/sihaon-ulju-18.webp",
+        "/cafe/sihaon-ulju-19.webp"
+      ]
+    }
+  },
+  "concrete-wall-jecheon": {
+    "services": ["카페", "디저트", "포토존"],
+    "purpose": [
+      "데이트",
+      "가족",
+      "드라이브",
+      "사진",
+      "모임",
+      "여행",
+      "휴식",
+      "건축 감상"
+    ],
+    "features": [
+      "노출 콘크리트 인테리어",
+      "건축미가 돋보이는 외관",
+      "독특한 사선 구조",
+      "통창",
+      "높은 층고",
+      "빛과 그림자를 활용한 공간",
+      "2023 한국건축가협회상 수상",
+      "야외 테라스",
+      "루프탑",
+      "포토존"
+    ],
+    "floors": ["1층", "2층", "3층", "루프탑"],
+    "parking": [
+      "무료",
+      "매장 앞 전용 주차장",
+      "약 25대 정도",
+      "장애인 주차장 있음"
+    ],
+    "pet": ["야외 동반 가능", "실내 동반 불가"],
+    "restroom": ["실내", "남녀 구분"],
+    "children": [
+      "아이 동반 가능",
+      "유아의자 있음",
+      "일부 층 노키즈존",
+      "일부 층 케어키즈존"
+    ],
+    "study": ["가능", "장시간 이용 비추천", "콘센트 없음"],
+    "smoking": ["가능", "외부 별도 흡연공간 있음"],
+    "view": ["청풍호뷰", "마운틴뷰", "숲뷰", "자연경관뷰"],
+    "seating": [
+      "다양한 형태의 좌석",
+      "창가 좌석",
+      "실내 좌석",
+      "야외 테라스 좌석",
+      "단체석"
+    ],
+    "business": {
+      "opened_at": "2023-06-12",
+      "closed_days": "매주 화요일",
+      "hours": {
+        "월요일": "10:00 ~ 18:00",
+        "화요일": "휴무",
+        "수요일": "10:00 ~ 18:00",
+        "목요일": "10:00 ~ 18:00",
+        "금요일": "10:00 ~ 18:00",
+        "토요일": "10:00 ~ 19:00",
+        "일요일": "10:00 ~ 18:00"
+      }
+    },
+    "price": {
+      "아메리카노": 7000,
+      "에스프레소": 6500,
+      "서리태 크림라떼": 7500,
+      "서리태 아이스크림": 6200
+    },
+    "media": {
+      "phone": "0507-1408-3554",
+      "website": null,
+      "instagram": "space_concretewall",
+      "gallery": [
+        "/cafe/concrete-wall-jecheon-01.webp",
+        "/cafe/concrete-wall-jecheon-02.webp",
+        "/cafe/concrete-wall-jecheon-03.webp",
+        "/cafe/concrete-wall-jecheon-04.webp",
+        "/cafe/concrete-wall-jecheon-05.webp",
+        "/cafe/concrete-wall-jecheon-06.webp",
+        "/cafe/concrete-wall-jecheon-07.webp",
+        "/cafe/concrete-wall-jecheon-08.webp",
+        "/cafe/concrete-wall-jecheon-09.webp",
+        "/cafe/concrete-wall-jecheon-10.webp",
+        "/cafe/concrete-wall-jecheon-11.webp",
+        "/cafe/concrete-wall-jecheon-12.webp",
+        "/cafe/concrete-wall-jecheon-13.webp",
+        "/cafe/concrete-wall-jecheon-14.webp",
+        "/cafe/concrete-wall-jecheon-15.webp",
+        "/cafe/concrete-wall-jecheon-16.webp",
+        "/cafe/concrete-wall-jecheon-17.webp",
+        "/cafe/concrete-wall-jecheon-18.webp",
+        "/cafe/concrete-wall-jecheon-19.webp",
+        "/cafe/concrete-wall-jecheon-20.webp"
+      ]
+    }
+  },
+  "aleffee-asan": {
+    "services": [
+      "카페",
+      "베이커리",
+      "디저트",
+      "브런치",
+      "식사",
+      "바베큐",
+      "수영장"
+    ],
+    "purpose": [
+      "데이트",
+      "가족",
+      "드라이브",
+      "사진",
+      "모임",
+      "여행",
+      "휴식",
+      "건축 감상"
+    ],
+    "features": [
+      "대형 실내공간",
+      "노출 콘크리트 인테리어",
+      "기하학적인 건축 구조",
+      "높은 층고",
+      "통창",
+      "건축가 곽희수 설계",
+      "영인산성저수지 전망",
+      "야외 테라스",
+      "온돌 평상",
+      "루프탑",
+      "포토존"
+    ],
+    "floors": ["1층", "2층", "3층", "루프탑"],
+    "parking": ["무료", "지상 전용 주차장", "약 100대 정도"],
+    "pet": ["불가"],
+    "restroom": ["실내", "남녀 구분"],
+    "children": ["아이 동반 가능"],
+    "study": ["가능", "비지니스룸 있음"],
+    "smoking": ["가능", "외부 별도 흡연공간 있음"],
+    "view": ["저수지뷰", "마운틴뷰", "자연경관뷰"],
+    "seating": [
+      "다양한 형태의 좌석",
+      "창가 좌석",
+      "실내 좌석",
+      "야외 테라스 좌석",
+      "온돌 평상",
+      "단체석"
+    ],
+    "business": {
+      "opened_at": "2022-01-01",
+      "closed_days": "연중무휴",
+      "hours": {
+        "월요일": "10:00 ~ 20:00",
+        "화요일": "10:00 ~ 20:00",
+        "수요일": "10:00 ~ 20:00",
+        "목요일": "10:00 ~ 20:00",
+        "금요일": "10:00 ~ 20:00",
+        "토요일": "10:00 ~ 20:00",
+        "일요일": "10:00 ~ 20:00"
+      }
+    },
+    "price": {
+      "아메리카노": 7500,
+      "카페라떼": 8500,
+      "카라멜라떼": 9000,
+      "쌀슈페너": 8500
+    },
+    "media": {
+      "phone": "0507-1363-2568",
+      "website": "http://aleffee.com/",
+      "instagram": "aleffee_official",
+      "gallery": [
+        "/cafe/aleffee-asan-01.webp",
+        "/cafe/aleffee-asan-02.webp",
+        "/cafe/aleffee-asan-03.webp",
+        "/cafe/aleffee-asan-04.webp",
+        "/cafe/aleffee-asan-05.webp",
+        "/cafe/aleffee-asan-06.webp",
+        "/cafe/aleffee-asan-07.webp",
+        "/cafe/aleffee-asan-08.webp",
+        "/cafe/aleffee-asan-09.webp",
+        "/cafe/aleffee-asan-10.webp",
+        "/cafe/aleffee-asan-11.webp",
+        "/cafe/aleffee-asan-12.webp",
+        "/cafe/aleffee-asan-13.webp",
+        "/cafe/aleffee-asan-14.webp",
+        "/cafe/aleffee-asan-15.webp",
+        "/cafe/aleffee-asan-16.webp",
+        "/cafe/aleffee-asan-17.webp",
+        "/cafe/aleffee-asan-18.webp",
+        "/cafe/aleffee-asan-19.webp",
+        "/cafe/aleffee-asan-20.webp"
+      ]
+    }
+  },
+  "most-seokmun-hoengseong": {
+    "services": [
+      "카페",
+      "디저트",
+      "브런치",
+      "포토존",
+      "전시",
+      "산책정원",
+      "노키즈존"
+    ],
+    "purpose": [
+      "데이트",
+      "가족",
+      "드라이브",
+      "사진",
+      "모임",
+      "여행",
+      "산책",
+      "휴식"
+    ],
+    "features": [
+      "대형 실내공간",
+      "높은 층고",
+      "통창",
+      "갤러리형 인테리어",
+      "예술 작품 전시",
+      "야외 조각 작품",
+      "넓은 잔디정원",
+      "야외 산책로",
+      "야외 펫존",
+      "포토존"
+    ],
+    "floors": ["1층", "2층"],
+    "parking": ["무료", "지상 전용 주차장", "50대 이하"],
+    "pet": ["가능", "야외 펫존 이용 가능", "실내 동반 불가능"],
+    "restroom": ["실내", "남녀 구분", "깨끗함"],
+    "children": ["유아의자 있음", "노키즈존"],
+    "study": ["가능", "장시간 이용 비추천", "콘센트 없음"],
+    "smoking": ["가능", "외부 별도 흡연공간 있음"],
+    "view": ["마운틴뷰", "숲뷰", "정원뷰"],
+    "seating": ["200석 이하", "다양한 형태의 좌석", "실내 좌석", "야외 좌석"],
+    "business": {
+      "closed_days": "매주 화요일",
+      "hours": {
+        "월요일": "10:00 ~ 20:00",
+        "화요일": "휴무",
+        "수요일": "10:00 ~ 20:00",
+        "목요일": "10:00 ~ 20:00",
+        "금요일": "10:00 ~ 20:00",
+        "토요일": "10:00 ~ 20:00",
+        "일요일": "10:00 ~ 20:00"
+      }
+    },
+    "price": {
+      "아메리카노": 7500,
+      "카페라떼": 8000,
+      "바닐라라떼": 8500,
+      "블루베리치즈케이크 스무디": 10000,
+      "바질토마토 에이드": 9000
+    },
+    "media": {
+      "phone": "0507-1369-0199",
+      "website": null,
+      "instagram": "mostseokmoon",
+      "gallery": [
+        "/cafe/most-seokmun-hoengseong-01.webp",
+        "/cafe/most-seokmun-hoengseong-02.webp",
+        "/cafe/most-seokmun-hoengseong-03.webp",
+        "/cafe/most-seokmun-hoengseong-04.webp",
+        "/cafe/most-seokmun-hoengseong-05.webp",
+        "/cafe/most-seokmun-hoengseong-06.webp",
+        "/cafe/most-seokmun-hoengseong-07.webp",
+        "/cafe/most-seokmun-hoengseong-08.webp",
+        "/cafe/most-seokmun-hoengseong-09.webp",
+        "/cafe/most-seokmun-hoengseong-10.webp",
+        "/cafe/most-seokmun-hoengseong-11.webp",
+        "/cafe/most-seokmun-hoengseong-12.webp",
+        "/cafe/most-seokmun-hoengseong-13.webp",
+        "/cafe/most-seokmun-hoengseong-14.webp",
+        "/cafe/most-seokmun-hoengseong-15.webp",
+        "/cafe/most-seokmun-hoengseong-16.webp",
+        "/cafe/most-seokmun-hoengseong-17.webp",
+        "/cafe/most-seokmun-hoengseong-18.webp",
+        "/cafe/most-seokmun-hoengseong-19.webp"
+      ]
+    }
+  },
+  "navid-jeongseon": {
+    "services": ["카페", "디져트", "포토존"],
+    "purpose": ["여행", "휴식", "데이트", "박물관 관람"],
+    "features": ["박물관 내 카페", "문화공간 연계", "권양기실 리모델링"],
+    "floors": ["1층", "2층"],
+    "parking": ["무료", "박물관 주차장 이용", "100대 정도"],
+    "pet": ["불가", "반려동물 입장 불가"],
+    "restroom": ["실내", "남녀 구분"],
+    "children": ["가능", "아이 동반 가능"],
+    "study": ["가능", "장시간 이용 비추천"],
+    "smoking": ["불가", "흡연공간 없음"],
+    "view": ["실내뷰", "권양기실 뷰"],
+    "seating": ["100석 정도"],
+    "business": {
+      "closed_days": "매월 둘째·넷째 화요일(공휴일이면 다음 날 휴무)",
+      "hours": {
+        "월요일": "09:00 ~ 18:00",
+        "화요일": "09:00 ~ 18:00",
+        "수요일": "09:00 ~ 18:00",
+        "목요일": "09:00 ~ 18:00",
+        "금요일": "09:00 ~ 18:00",
+        "토요일": "09:00 ~ 18:00",
+        "일요일": "09:00 ~ 18:00"
+      }
+    },
+    "price": {
+      "아메리카노": 5500,
+      "카페라떼": 7000,
+      "카푸치노": 7000
+    },
+    "media": {
+      "phone": null,
+      "website": null,
+      "instagram": null,
+      "gallery": [
+        "/cafe/navid-jeongseon-01.webp",
+        "/cafe/navid-jeongseon-02.webp",
+        "/cafe/navid-jeongseon-03.webp",
+        "/cafe/navid-jeongseon-04.webp",
+        "/cafe/navid-jeongseon-05.webp",
+        "/cafe/navid-jeongseon-06.webp",
+        "/cafe/navid-jeongseon-07.webp",
+        "/cafe/navid-jeongseon-08.webp",
+        "/cafe/navid-jeongseon-09.webp",
+        "/cafe/navid-jeongseon-10.webp",
+        "/cafe/navid-jeongseon-11.webp",
+        "/cafe/navid-jeongseon-12.webp",
+        "/cafe/navid-jeongseon-13.webp",
+        "/cafe/navid-jeongseon-14.webp",
+        "/cafe/navid-jeongseon-15.webp",
+        "/cafe/navid-jeongseon-16.webp"
+      ]
+    }
+  },
+  "destination9-anseong": {
+    "services": ["카페", "디저트", "베이커리", "포토존"],
+    "purpose": ["데이트", "가족", "휴식", "드라이브", "사진", "모임"],
+    "features": [
+      "높은 층고",
+      "대형 실내공간",
+      "통창",
+      "노출 콘크리트 인테리어",
+      "야외 테라스",
+      "야외 오두막",
+      "포토존",
+      "엘리베이터"
+    ],
+    "floors": ["지하 1층", "1층", "옥상"],
+    "parking": ["무료", "지상 전용 주차장", "100대 정도"],
+    "pet": ["불가"],
+    "restroom": ["남녀 구분", "화장실 휠체어 이용가능"],
+    "children": ["가능"],
+    "study": ["가능", "장시간 이용 비추천"],
+    "smoking": ["가능", "외부 별도 흡연공간 있음"],
+    "view": ["만수저수지뷰", "정원뷰"],
+    "seating": [
+      "300석 이상",
+      "다양한 형태의 좌석",
+      "창가 좌석",
+      "소파 좌석",
+      "빈백 좌석",
+      "야외 좌석"
+    ],
+    "business": {
+      "opened_at": "2023-07",
+      "closed_days": "연중무휴",
+      "hours": {
+        "월요일": "10:00 ~ 21:00",
+        "화요일": "10:00 ~ 21:00",
+        "수요일": "10:00 ~ 21:00",
+        "목요일": "10:00 ~ 21:00",
+        "금요일": "10:00 ~ 21:00",
+        "토요일": "10:00 ~ 21:00",
+        "일요일": "10:00 ~ 21:00"
+      }
+    },
+    "price": {
+      "아메리카노": 7000,
+      "카페라떼": 7500,
+      "피스타치오 크림 라떼": 8500,
+      "목적지9 밀크티": 8500
+    },
+    "media": {
+      "phone": "0507-1318-5851",
+      "website": null,
+      "instagram": "cafe_mokjeokji_nine",
+      "gallery": [
+        "/cafe/destination9-anseong-01.webp",
+        "/cafe/destination9-anseong-02.webp",
+        "/cafe/destination9-anseong-03.webp",
+        "/cafe/destination9-anseong-04.webp",
+        "/cafe/destination9-anseong-05.webp",
+        "/cafe/destination9-anseong-06.webp",
+        "/cafe/destination9-anseong-07.webp",
+        "/cafe/destination9-anseong-08.webp",
+        "/cafe/destination9-anseong-09.webp",
+        "/cafe/destination9-anseong-10.webp",
+        "/cafe/destination9-anseong-11.webp",
+        "/cafe/destination9-anseong-12.webp",
+        "/cafe/destination9-anseong-13.webp",
+        "/cafe/destination9-anseong-14.webp",
+        "/cafe/destination9-anseong-15.webp",
+        "/cafe/destination9-anseong-16.webp",
+        "/cafe/destination9-anseong-17.webp",
+        "/cafe/destination9-anseong-18.webp",
+        "/cafe/destination9-anseong-19.webp"
+      ]
+    }
+  },
+  "root-square-jincheon": {
+    "services": [
+      "카페",
+      "디저트",
+      "식사",
+      "전시",
+      "체험",
+      "교육",
+      "포토존",
+      "산책정원",
+      "스마트팜"
+    ],
+    "purpose": [
+      "데이트",
+      "가족",
+      "드라이브",
+      "사진",
+      "모임",
+      "여행",
+      "산책",
+      "휴식",
+      "체험",
+      "아이와 함께"
+    ],
+    "features": [
+      "약 6,000평 규모",
+      "대형 실내공간",
+      "식물원형 인테리어",
+      "높은 층고",
+      "통창",
+      "대형 온실",
+      "실내 식물정원",
+      "아쿠아포닉스 농장",
+      "스마트팜 재배시설",
+      "야외 산책로",
+      "농업 관련 전시",
+      "독특한 건축물",
+      "포토존",
+      "체험 프로그램"
+    ],
+    "floors": ["1층", "2층", "별도 전시 및 체험공간"],
+    "parking": ["무료", "전용 주차장", "약 100대", "테슬라 전기차 충전시설"],
+    "pet": ["가능", "실내 케이지 필요"],
+    "restroom": ["실내", "남녀 구분", "장애인 화장실 있음"],
+    "children": ["아이 동반 가능", "체험 프로그램", "키즈 체험시설"],
+    "study": ["가능", "장시간 이용 비추천", "콘센트 없음"],
+    "smoking": ["가능", "외부 별도 흡연공간 있음"],
+    "view": ["식물원뷰", "정원뷰", "숲뷰", "자연경관뷰"],
+    "seating": [
+      "넓은 실내 좌석",
+      "식물원 주변 좌석",
+      "다양한 형태의 좌석",
+      "야외 좌석",
+      "단체 이용 가능"
+    ],
+    "business": {
+      "opened_at": "2022-05-05",
+      "closed_days": "연중무휴",
+      "hours": {
+        "월요일": "10:00 ~ 20:00",
+        "화요일": "10:00 ~ 20:00",
+        "수요일": "10:00 ~ 20:00",
+        "목요일": "10:00 ~ 20:00",
+        "금요일": "10:00 ~ 20:00",
+        "토요일": "10:00 ~ 20:00",
+        "일요일": "10:00 ~ 20:00"
+      }
+    },
+    "price": {
+      "아메리카노": 5500,
+      "카페라떼": 6500,
+      "바닐라라떼": 6500,
+      "쌀 크림라떼": 7000
+    },
+    "media": {
+      "phone": "043-533-7180",
+      "website": "https://www.rootsquare.co.kr",
+      "instagram": "rootsquare_kr",
+      "gallery": [
+        "/cafe/root-square-jincheon-01.webp",
+        "/cafe/root-square-jincheon-02.webp",
+        "/cafe/root-square-jincheon-03.webp",
+        "/cafe/root-square-jincheon-04.webp",
+        "/cafe/root-square-jincheon-05.webp",
+        "/cafe/root-square-jincheon-06.webp",
+        "/cafe/root-square-jincheon-07.webp",
+        "/cafe/root-square-jincheon-08.webp",
+        "/cafe/root-square-jincheon-09.webp",
+        "/cafe/root-square-jincheon-10.webp",
+        "/cafe/root-square-jincheon-11.webp",
+        "/cafe/root-square-jincheon-12.webp",
+        "/cafe/root-square-jincheon-13.webp",
+        "/cafe/root-square-jincheon-14.webp",
+        "/cafe/root-square-jincheon-15.webp",
+        "/cafe/root-square-jincheon-16.webp",
+        "/cafe/root-square-jincheon-17.webp",
+        "/cafe/root-square-jincheon-18.webp",
+        "/cafe/root-square-jincheon-19.webp",
+        "/cafe/root-square-jincheon-20.webp"
+      ]
+    }
+  },
+  "monavalley-asan": {
+    "services": [
+      "카페",
+      "베이커리",
+      "디저트",
+      "브런치",
+      "식사",
+      "전시",
+      "공연",
+      "포토존",
+      "산책정원"
+    ],
+    "purpose": [
+      "데이트",
+      "가족",
+      "드라이브",
+      "사진",
+      "모임",
+      "여행",
+      "산책",
+      "휴식",
+      "전시 관람",
+      "아이와 함께"
+    ],
+    "features": [
+      "대형 실내공간",
+      "높은 층고",
+      "통창",
+      "대형 워터가든",
+      "분수",
+      "수변 산책로",
+      "야외 조각 작품",
+      "갤러리",
+      "공연장",
+      "레스토랑",
+      "웨딩홀",
+      "포토존",
+      "야외 테라스"
+    ],
+    "floors": ["1층", "야외 테라스", "별도 갤러리 및 공연공간"],
+    "parking": [
+      "유료",
+      "최초 3시간 무료 주차 가능",
+      "약 200대 이상",
+      "추가 요금 10분당 500원, 최대 10,000원"
+    ],
+    "pet": ["불가"],
+    "restroom": ["실내", "남녀 구분"],
+    "children": ["아이 동반 가능", "유아의자 있음", "유모차 이용 가능"],
+    "study": ["가능", "장시간 이용 비추천", "콘센트 없음"],
+    "smoking": ["가능", "외부 별도 흡연공간 있음"],
+    "view": ["워터가든뷰", "정원뷰", "수변뷰", "야외공연장뷰"],
+    "seating": [
+      "약 100석 정도",
+      "다양한 형태의 좌석",
+      "창가 좌석",
+      "실내 좌석",
+      "야외 좌석",
+      "단체석"
+    ],
+    "business": {
+      "opened_at": "2019-10-11",
+      "closed_days": "연중무휴",
+      "hours": {
+        "월요일": "10:00 ~ 22:00",
+        "화요일": "10:00 ~ 22:00",
+        "수요일": "10:00 ~ 22:00",
+        "목요일": "10:00 ~ 22:00",
+        "금요일": "10:00 ~ 22:00",
+        "토요일": "10:00 ~ 22:00",
+        "일요일": "10:00 ~ 22:00"
+      }
+    },
+    "price": {
+      "아메리카노": 6800,
+      "카페라떼": 7500,
+      "아인슈페너": 7000,
+      "피스타치오 슈페너": 7500
+    },
+    "media": {
+      "phone": "041-582-1004",
+      "website": "https://www.monavalley.co.kr",
+      "instagram": "monamour1857",
+      "gallery": [
+        "/cafe/monavalley-asan-01.webp",
+        "/cafe/monavalley-asan-02.webp",
+        "/cafe/monavalley-asan-03.webp",
+        "/cafe/monavalley-asan-04.webp",
+        "/cafe/monavalley-asan-05.webp",
+        "/cafe/monavalley-asan-06.webp",
+        "/cafe/monavalley-asan-07.webp",
+        "/cafe/monavalley-asan-08.webp",
+        "/cafe/monavalley-asan-09.webp",
+        "/cafe/monavalley-asan-10.webp",
+        "/cafe/monavalley-asan-11.webp",
+        "/cafe/monavalley-asan-12.webp",
+        "/cafe/monavalley-asan-13.webp",
+        "/cafe/monavalley-asan-14.webp",
+        "/cafe/monavalley-asan-15.webp",
+        "/cafe/monavalley-asan-16.webp"
+      ]
+    }
+  },
+  "arena-pina-gyeongju": {
+    "services": ["카페", "베이커리", "디저트", "브런치", "식사", "포토존"],
+    "purpose": [
+      "데이트",
+      "가족",
+      "드라이브",
+      "사진",
+      "모임",
+      "여행",
+      "휴식",
+      "바다 감상"
+    ],
+    "features": [
+      "대형 실내공간",
+      "통창",
+      "바다 전망",
+      "야외 테라스",
+      "다양한 베이커리",
+      "포토존"
+    ],
+    "floors": ["1층", "2층", "3층", "4층", "루프탑"],
+    "parking": [
+      "유료",
+      "전용 지상 주차장",
+      "카페 이용시 3시간 무료",
+      "약 70대 정도"
+    ],
+    "pet": ["불가"],
+    "restroom": ["실내", "남녀 구분"],
+    "children": ["아이 동반 가능"],
+    "study": ["가능", "장시간 이용 비추천", "콘센트 없음"],
+    "smoking": ["불가", "외부 별도 흡연공간 없음"],
+    "view": ["오션뷰", "해변뷰"],
+    "seating": [
+      "약 300석 이상",
+      "실내 좌석",
+      "창가 좌석",
+      "야외 테라스 좌석",
+      "단체석",
+      "룸"
+    ],
+    "business": {
+      "opened_at": "2024-12-28",
+      "closed_days": "연중무휴",
+      "hours": {
+        "월요일": "10:00 ~ 19:50",
+        "화요일": "10:00 ~ 19:50",
+        "수요일": "10:00 ~ 19:50",
+        "목요일": "10:00 ~ 19:50",
+        "금요일": "10:00 ~ 19:50",
+        "토요일": "09:30 ~ 20:50",
+        "일요일": "09:30 ~ 20:50"
+      }
+    },
+    "price": {
+      "아메리카노": 6500,
+      "카페라떼": 7000,
+      "고운모래": 8000
+    },
+    "media": {
+      "phone": "0507-1368-6908",
+      "website": null,
+      "instagram": "arenafina_",
+      "gallery": []
+    }
+  },
+  "breath-coffee-works-gyeongju": {
+    "services": [
+      "카페",
+      "베이커리",
+      "디저트",
+      "로스터리",
+      "스페셜티 커피",
+      "포토존"
+    ],
+    "purpose": [
+      "데이트",
+      "가족",
+      "드라이브",
+      "사진",
+      "모임",
+      "여행",
+      "휴식",
+      "커피 감상"
+    ],
+    "features": [
+      "대형 실내공간",
+      "곡선형 건축물",
+      "높은 층고",
+      "대형 통창",
+      "워터가든",
+      "야외 테라스",
+      "연못 전망",
+      "로스터리 커피",
+      "다양한 베이커리",
+      "시그니처 브레상",
+      "야외 포토존"
+    ],
+    "floors": ["지하 주차장", "1층", "2층"],
+    "parking": ["무료", "지하 전용 주차장", "약 50대 정도"],
+    "pet": ["불가", "반려동물 입장 불가"],
+    "restroom": ["실내", "남녀 구분"],
+    "children": ["아이 동반 가능", "키즈케어존", "실내 유모차 반입 제한"],
+    "study": ["가능", "장시간 이용 비추천", "콘센트 없음"],
+    "smoking": ["불가", "외부 별도 흡연공간 없음"],
+    "view": ["연못뷰", "정원뷰", "자연경관뷰"],
+    "seating": [
+      "실내 좌석",
+      "창가 좌석",
+      "연못 전망 좌석",
+      "야외 테라스 좌석",
+      "단체석",
+      "룸 형태 좌석"
+    ],
+    "business": {
+      "opened_at": "2025-04-26",
+      "closed_days": "연중무휴",
+      "hours": {
+        "월요일": "10:00 ~ 21:00",
+        "화요일": "10:00 ~ 21:00",
+        "수요일": "10:00 ~ 21:00",
+        "목요일": "10:00 ~ 21:00",
+        "금요일": "10:00 ~ 21:00",
+        "토요일": "10:00 ~ 21:00",
+        "일요일": "10:00 ~ 21:00"
+      }
+    },
+    "price": {
+      "아메리카노": 6500,
+      "카페라떼": 7000,
+      "누릉지 과자와 슈페너": 8500
+    },
+    "media": {
+      "phone": "0507-1495-8854",
+      "website": null,
+      "instagram": "breath.coworks_",
+      "gallery": [
+        "/cafe/breath-coffee-works-gyeongju-01.webp",
+        "/cafe/breath-coffee-works-gyeongju-02.webp",
+        "/cafe/breath-coffee-works-gyeongju-03.webp",
+        "/cafe/breath-coffee-works-gyeongju-05.webp",
+        "/cafe/breath-coffee-works-gyeongju-06.webp",
+        "/cafe/breath-coffee-works-gyeongju-07.webp",
+        "/cafe/breath-coffee-works-gyeongju-08.webp",
+        "/cafe/breath-coffee-works-gyeongju-09.webp",
+        "/cafe/breath-coffee-works-gyeongju-10.webp",
+        "/cafe/breath-coffee-works-gyeongju-11.webp",
+        "/cafe/breath-coffee-works-gyeongju-12.webp",
+        "/cafe/breath-coffee-works-gyeongju-13.webp",
+        "/cafe/breath-coffee-works-gyeongju-14.webp",
+        "/cafe/breath-coffee-works-gyeongju-15.webp",
+        "/cafe/breath-coffee-works-gyeongju-16.webp",
+        "/cafe/breath-coffee-works-gyeongju-17.webp",
+        "/cafe/breath-coffee-works-gyeongju-last.webp"
+      ]
+    }
+  },
+  "terarosa-gyeongju": {
+    "services": ["카페", "베이커리", "디저트", "스페셜티 커피", "핸드드립"],
+    "purpose": ["데이트", "가족", "여행", "사진", "모임", "휴식", "커피 감상"],
+    "features": [
+      "대형 실내공간",
+      "한옥 스타일 건축",
+      "전통과 현대가 어우러진 인테리어",
+      "높은 층고",
+      "통창",
+      "중정",
+      "야외 테라스",
+      "고분 전망",
+      "스페셜티 커피",
+      "핸드드립 커피",
+      "다양한 베이커리"
+    ],
+    "floors": ["1층"],
+    "parking": [
+      "유료",
+      "이용 고객 1시간 30분 무료",
+      "추가 요금 10분당 700원",
+      "약 30대 정도"
+    ],
+    "pet": ["불가"],
+    "restroom": ["실내", "남녀 구분"],
+    "children": ["아이 동반 가능", "키즈케어존"],
+    "study": ["가능", "장시간 이용 비추천", "콘센트 없음"],
+    "smoking": ["불가"],
+    "view": ["고분뷰", "정원뷰", "한옥뷰"],
+    "seating": [
+      "실내 좌석",
+      "창가 좌석",
+      "야외 테라스 좌석",
+      "단체석",
+      "좌식",
+      "입식"
+    ],
+    "business": {
+      "opened_at": "2025-01-10",
+      "closed_days": "연중무휴",
+      "hours": {
+        "월요일": "09:00 ~ 21:00",
+        "화요일": "09:00 ~ 21:00",
+        "수요일": "09:00 ~ 21:00",
+        "목요일": "09:00 ~ 21:00",
+        "금요일": "09:00 ~ 21:00",
+        "토요일": "09:00 ~ 21:00",
+        "일요일": "09:00 ~ 21:00"
+      }
+    },
+    "price": {
+      "아메리카노": 5500,
+      "카페라떼": 6000,
+      "카푸치노": 6000
+    },
+    "media": {
+      "phone": "1668-2764",
+      "website": "https://terarosa.com/",
+      "instagram": "terarosacoffee",
+      "gallery": [
+        "/cafe/terarosa-gyeongju-01.webp",
+        "/cafe/terarosa-gyeongju-02.webp",
+        "/cafe/terarosa-gyeongju-03.webp",
+        "/cafe/terarosa-gyeongju-04.webp",
+        "/cafe/terarosa-gyeongju-05.webp",
+        "/cafe/terarosa-gyeongju-06.webp",
+        "/cafe/terarosa-gyeongju-07.webp",
+        "/cafe/terarosa-gyeongju-08.webp",
+        "/cafe/terarosa-gyeongju-09.webp",
+        "/cafe/terarosa-gyeongju-10.webp",
+        "/cafe/terarosa-gyeongju-11.webp",
+        "/cafe/terarosa-gyeongju-12.webp",
+        "/cafe/terarosa-gyeongju-13.webp",
+        "/cafe/terarosa-gyeongju-14.webp",
+        "/cafe/terarosa-gyeongju-15.webp",
+        "/cafe/terarosa-gyeongju-16.webp",
+        "/cafe/terarosa-gyeongju-17.webp",
+        "/cafe/terarosa-gyeongju-18.webp",
+        "/cafe/terarosa-gyeongju-19.webp",
+        "/cafe/terarosa-gyeongju-last.webp"
+      ]
+    }
+  },
+  "bosque-gyeongju": {
+    "services": [
+      "카페",
+      "베이커리",
+      "디저트",
+      "스페셜티 커피",
+      "식사",
+      "포토존"
+    ],
+    "purpose": [
+      "데이트",
+      "가족",
+      "드라이브",
+      "사진",
+      "모임",
+      "여행",
+      "휴식",
+      "식사"
+    ],
+    "features": [
+      "대형 실내공간",
+      "피라미드 형태 유리 온실",
+      "높은 층고",
+      "통유리 외관",
+      "식물원 분위기",
+      "야외 정원",
+      "조각 작품",
+      "야외 포토존",
+      "논밭 전망",
+      "스페셜티 커피",
+      "다양한 베이커리",
+      "수제 딸기 케이크",
+      "건축상 수상 건물"
+    ],
+    "floors": ["1층", "2층", "3층", "지상 공용 주차장"],
+    "parking": ["무료", "전용 공용 주차장", "약 100대 정도"],
+    "pet": ["가능", "야외 좌석 동반 가능", "실내 동반 불가"],
+    "restroom": ["실내", "남녀 구분"],
+    "children": ["아이 동반 가능", "유아의자 있음"],
+    "study": ["가능", "장시간 이용 비추천", "콘센트 없음"],
+    "smoking": ["가능", "외부 별도 흡연공간 있음"],
+    "view": ["논밭뷰", "정원뷰", "자연경관뷰"],
+    "seating": [
+      "실내 좌석",
+      "창가 좌석",
+      "정원 전망 좌석",
+      "야외 좌석",
+      "소파 좌석",
+      "단체 이용 가능"
+    ],
+    "business": {
+      "opened_at": "2020-05-18",
+      "closed_days": "연중무휴",
+      "hours": {
+        "월요일": "10:00 ~ 21:00",
+        "화요일": "10:00 ~ 21:00",
+        "수요일": "10:00 ~ 21:00",
+        "목요일": "10:00 ~ 21:00",
+        "금요일": "10:00 ~ 21:00",
+        "토요일": "10:00 ~ 21:00",
+        "일요일": "10:00 ~ 21:00"
+      }
+    },
+    "price": {
+      "아메리카노": 5500,
+      "아이스 아메리카노": 6000,
+      "카페라떼": 6000,
+      "명가치노": 6500
+    },
+    "media": {
+      "phone": "0507-1440-0076",
+      "website": "https://www.myungga.com/",
+      "instagram": "co_bosque",
+      "gallery": [
+        "/cafe/bosque-gyeongju-01.webp",
+        "/cafe/bosque-gyeongju-02.webp",
+        "/cafe/bosque-gyeongju-03.webp",
+        "/cafe/bosque-gyeongju-04.webp",
+        "/cafe/bosque-gyeongju-05.webp",
+        "/cafe/bosque-gyeongju-06.webp",
+        "/cafe/bosque-gyeongju-07.webp",
+        "/cafe/bosque-gyeongju-08.webp",
+        "/cafe/bosque-gyeongju-09.webp",
+        "/cafe/bosque-gyeongju-10.webp",
+        "/cafe/bosque-gyeongju-11.webp",
+        "/cafe/bosque-gyeongju-12.webp",
+        "/cafe/bosque-gyeongju-13.webp",
+        "/cafe/bosque-gyeongju-14.webp",
+        "/cafe/bosque-gyeongju-15.webp",
+        "/cafe/bosque-gyeongju-16.webp",
+        "/cafe/bosque-gyeongju-17.webp",
+        "/cafe/bosque-gyeongju-18.webp",
+        "/cafe/bosque-gyeongju-19.webp",
+        "/cafe/bosque-gyeongju-last.webp"
+      ]
+    }
+  },
+  "sansi-asan": {
+    "services": ["카페", "베이커리", "디저트", "브런치", "식사", "포토존"],
+    "purpose": [
+      "데이트",
+      "가족",
+      "드라이브",
+      "사진",
+      "모임",
+      "여행",
+      "휴식",
+      "식사"
+    ],
+    "features": [
+      "대형 실내공간",
+      "높은 층고",
+      "통창",
+      "신정호 전망",
+      "야외 테라스",
+      "루프탑",
+      "포토존",
+      "다양한 베이커리",
+      "화덕피자",
+      "파스타",
+      "리조또"
+    ],
+    "floors": ["1층", "2층", "3층"],
+    "parking": ["무료", "지상 전용 주차장", "약 60대 정도"],
+    "pet": ["불가"],
+    "restroom": ["실내", "남녀 구분"],
+    "children": ["아이 동반 가능"],
+    "study": ["가능", "장시간 이용 비추천", "콘센트 없음"],
+    "smoking": ["가능", "외부 별도 흡연공간 있음"],
+    "view": ["호수뷰", "신정호뷰", "마운틴뷰", "자연경관뷰"],
+    "seating": [
+      "약 200석 정도",
+      "다양한 형태의 좌석",
+      "실내 좌석",
+      "창가 좌석",
+      "야외 테라스 좌석",
+      "루프탑 좌석",
+      "단체석"
+    ],
+    "business": {
+      "opened_at": "2025-03-29",
+      "closed_days": "연중무휴",
+      "hours": {
+        "월요일": "09:30 ~ 22:00",
+        "화요일": "09:30 ~ 22:00",
+        "수요일": "09:30 ~ 22:00",
+        "목요일": "09:30 ~ 22:00",
+        "금요일": "09:30 ~ 22:00",
+        "토요일": "09:30 ~ 22:00",
+        "일요일": "09:30 ~ 22:00"
+      }
+    },
+    "price": {
+      "아메리카노": 6000,
+      "카페라떼": 6500,
+      "바닐라라떼": 7000,
+      "마르게리타 화덕피자": 23800
+    },
+    "media": {
+      "phone": "0507-1407-6171",
+      "website": null,
+      "instagram": "sansi.cafe",
+      "gallery": [
+        "/cafe/sansi-asan-01.webp",
+        "/cafe/sansi-asan-02.webp",
+        "/cafe/sansi-asan-03.webp",
+        "/cafe/sansi-asan-04.webp",
+        "/cafe/sansi-asan-05.webp",
+        "/cafe/sansi-asan-06.webp",
+        "/cafe/sansi-asan-07.webp",
+        "/cafe/sansi-asan-08.webp",
+        "/cafe/sansi-asan-09.webp",
+        "/cafe/sansi-asan-10.webp",
+        "/cafe/sansi-asan-11.webp",
+        "/cafe/sansi-asan-12.webp",
+        "/cafe/sansi-asan-13.webp",
+        "/cafe/sansi-asan-14.webp",
+        "/cafe/sansi-asan-15.webp",
+        "/cafe/sansi-asan-16.webp"
+      ]
+    }
+  },
+  "jm-coffee-roasters-busan": {
+    "services": [
+      "카페",
+      "베이커리",
+      "디저트",
+      "로스터리",
+      "스페셜티 커피",
+      "브런치",
+      "식사",
+      "원두 판매"
+    ],
+    "purpose": [
+      "데이트",
+      "가족",
+      "드라이브",
+      "사진",
+      "모임",
+      "여행",
+      "휴식",
+      "커피 감상",
+      "식사"
+    ],
+    "features": [
+      "대형 실내공간",
+      "현대적인 인테리어",
+      "높은 층고",
+      "넓은 통창",
+      "바다 전망",
+      "야외 테라스",
+      "자체 로스팅",
+      "A·B·C 커피바",
+      "에스프레소 전문 바",
+      "스페셜티 커피",
+      "다양한 베이커리",
+      "소금빵",
+      "큐브식빵",
+      "원두 및 드립백 판매",
+      "커피 관련 굿즈 판매"
+    ],
+    "floors": [
+      "지하 2층 주차장",
+      "지하 1층 주차장",
+      "1층",
+      "2층",
+      "3층 브런치 공간"
+    ],
+    "parking": [
+      "지하 전용 주차장",
+      "지하 1층 및 지하 2층",
+      "이용 고객 2시간 무료",
+      "약 100대 정도"
+    ],
+    "pet": ["불가"],
+    "restroom": ["실내", "남녀 구분"],
+    "children": ["가능"],
+    "study": ["가능", "장시간 이용 비추천", "콘센트 없음"],
+    "smoking": ["불가"],
+    "view": ["오션뷰", "항구뷰", "대변항뷰"],
+    "seating": [
+      "많음",
+      "실내 좌석",
+      "창가 좌석",
+      "바다 전망 좌석",
+      "야외 테라스 좌석",
+      "단체석",
+      "약 200석 이상"
+    ],
+    "business": {
+      "opened_at": "2026-07-25",
+      "closed_days": "연중무휴 안내",
+      "hours": {
+        "월요일": "10:30 ~ 22:00",
+        "화요일": "10:30 ~ 22:00",
+        "수요일": "10:30 ~ 22:00",
+        "목요일": "10:30 ~ 22:00",
+        "금요일": "10:30 ~ 22:00",
+        "토요일": "10:30 ~ 22:00",
+        "일요일": "10:30 ~ 22:00"
+      }
+    },
+    "price": {
+      "아메리카노": 6000,
+      "아이스 아메리카노": 6500,
+      "카페라떼": 7000,
+      "아이스 카페라떼": 7500
+    },
+    "media": {
+      "phone": "1899-0820",
+      "website": "https://jmcoffee.co.kr/",
+      "instagram": "jmcoffee_daily",
+      "gallery": [
+        "/cafe/jm-coffee-roasters-busan-01.webp",
+        "/cafe/jm-coffee-roasters-busan-02.webp",
+        "/cafe/jm-coffee-roasters-busan-03.webp",
+        "/cafe/jm-coffee-roasters-busan-04.webp",
+        "/cafe/jm-coffee-roasters-busan-05.webp",
+        "/cafe/jm-coffee-roasters-busan-06.webp",
+        "/cafe/jm-coffee-roasters-busan-07.webp",
+        "/cafe/jm-coffee-roasters-busan-08.webp",
+        "/cafe/jm-coffee-roasters-busan-09.webp",
+        "/cafe/jm-coffee-roasters-busan-10.webp",
+        "/cafe/jm-coffee-roasters-busan-11.webp",
+        "/cafe/jm-coffee-roasters-busan-12.webp",
+        "/cafe/jm-coffee-roasters-busan-13.webp",
+        "/cafe/jm-coffee-roasters-busan-14.webp",
+        "/cafe/jm-coffee-roasters-busan-15.webp",
+        "/cafe/jm-coffee-roasters-busan-16.webp",
+        "/cafe/jm-coffee-roasters-busan-17.webp",
+        "/cafe/jm-coffee-roasters-busan-18.webp",
+        "/cafe/jm-coffee-roasters-busan-19.webp",
+        "/cafe/jm-coffee-roasters-busan-last.webp"
+      ]
+    }
+  },
+  "tanti-gijang": {
+    "services": [
+      "카페",
+      "베이커리",
+      "디저트",
+      "공연",
+      "포토존",
+      "원두 및 음료 판매"
+    ],
+    "purpose": [
+      "데이트",
+      "가족",
+      "드라이브",
+      "사진",
+      "모임",
+      "여행",
+      "휴식",
+      "야경 감상",
+      "공연 관람"
+    ],
+    "features": [
+      "약 2,000평 규모",
+      "대형 실내공간",
+      "현대적인 건축물",
+      "화이트톤 인테리어",
+      "높은 층고",
+      "대형 통창",
+      "계단식 좌석",
+      "정관 시내 전망",
+      "야경 전망",
+      "클래식 공연",
+      "프라이빗룸",
+      "복합문화공간",
+      "야외 포토존",
+      "80종 이상의 베이커리",
+      "매일 직접 굽는 빵",
+      "시그니처 흑임자 음료"
+    ],
+    "floors": ["1층", "2층"],
+    "parking": [
+      "무료",
+      "지상 전용 주차장",
+      "주말 주차 대기 가능",
+      "약 100대 정도"
+    ],
+    "pet": [
+      "가능",
+      "실내 금지",
+      "방갈로 및 야외테라스 가능",
+      "기저귀 & 리드줄 착용"
+    ],
+    "restroom": ["실내", "남녀 구분"],
+    "children": ["아이 동반 가능", "유아의자 있음", "노키드존 있음"],
+    "study": [
+      "가능",
+      "장시간 이용 비추천",
+      "콘센트 없음",
+      "공연 시간대 소음 가능"
+    ],
+    "smoking": ["가능", "외부 별도 흡연공간 있음"],
+    "view": ["시티뷰", "마운틴뷰", "야경뷰", "자연경관뷰"],
+    "seating": [
+      "약 200석 이상",
+      "실내 좌석",
+      "창가 좌석",
+      "소파 좌석",
+      "단체석",
+      "프라이빗룸"
+    ],
+    "business": {
+      "opened_at": "2025-05-23",
+      "closed_days": "연중무휴",
+      "hours": {
+        "월요일": "10:00 ~ 01:00",
+        "화요일": "10:00 ~ 01:00",
+        "수요일": "10:00 ~ 01:00",
+        "목요일": "10:00 ~ 01:00",
+        "금요일": "10:00 ~ 01:00",
+        "토요일": "10:00 ~ 01:00",
+        "일요일": "10:00 ~ 01:00"
+      }
+    },
+    "price": {
+      "아메리카노": 6500,
+      "카페라떼": 7700
+    },
+    "media": {
+      "phone": "0507-1317-6798",
+      "website": "https://tanti.co.kr/",
+      "instagram": "tanti_daily",
+      "gallery": [
+        "/cafe/tanti-gijang-01.webp",
+        "/cafe/tanti-gijang-02.webp",
+        "/cafe/tanti-gijang-03.webp",
+        "/cafe/tanti-gijang-04.webp",
+        "/cafe/tanti-gijang-05.webp",
+        "/cafe/tanti-gijang-06.webp",
+        "/cafe/tanti-gijang-07.webp",
+        "/cafe/tanti-gijang-08.webp",
+        "/cafe/tanti-gijang-09.webp",
+        "/cafe/tanti-gijang-10.webp",
+        "/cafe/tanti-gijang-11.webp",
+        "/cafe/tanti-gijang-12.webp",
+        "/cafe/tanti-gijang-13.webp",
+        "/cafe/tanti-gijang-14.webp",
+        "/cafe/tanti-gijang-15.webp",
+        "/cafe/tanti-gijang-16.webp",
+        "/cafe/tanti-gijang-last.webp"
+      ]
+    }
+  },
+  "greetvi-seosaeng": {
+    "services": ["카페", "베이커리", "디저트", "브런치", "식사", "포토존"],
+    "purpose": [
+      "데이트",
+      "가족",
+      "드라이브",
+      "사진",
+      "모임",
+      "여행",
+      "휴식",
+      "일출 감상"
+    ],
+    "features": [
+      "대형 실내공간",
+      "삼각형 형태의 건축물",
+      "커피 드리퍼 모티프 건축",
+      "노출 콘크리트 인테리어",
+      "높은 층고",
+      "파노라마 통창",
+      "시네마 오션뷰",
+      "영화관 형태의 계단식 좌석",
+      "야외 테라스",
+      "루프탑",
+      "야외 정원",
+      "모래놀이터",
+      "다양한 베이커리",
+      "브런치 메뉴",
+      "2022 한국건축문화대상 대상 수상"
+    ],
+    "floors": ["1층", "2층", "3층 시네마뷰", "루프탑"],
+    "parking": ["무료", "전용 주차장", "카페 길건너 주차장", "약 50대 정도"],
+    "pet": ["1층 야외정원만 가능", "실내 금지"],
+    "restroom": ["실내", "남녀 구분"],
+    "children": [
+      "아이 동반 가능",
+      "유아의자 있음",
+      "야외 모래놀이터",
+      "시네마뷰 노키즈존",
+      "루프탑 노키즈존"
+    ],
+    "study": ["가능", "장시간 이용 비추천", "콘센트 없음"],
+    "smoking": ["불가", "외부 별도 흡연공간 없음"],
+    "view": ["오션뷰", "해안뷰", "일출뷰", "자연경관뷰"],
+    "seating": [
+      "약 200석 정도",
+      "실내 좌석",
+      "창가 좌석",
+      "오션뷰 좌석",
+      "계단식 좌석",
+      "야외 테라스 좌석",
+      "루프탑 좌석",
+      "단체석"
+    ],
+    "business": {
+      "opened_at": "2021-10-11",
+      "closed_days": "연중무휴",
+      "hours": {
+        "월요일": "10:00 ~ 20:50",
+        "화요일": "10:00 ~ 20:50",
+        "수요일": "10:00 ~ 20:50",
+        "목요일": "10:00 ~ 20:50",
+        "금요일": "10:00 ~ 20:50",
+        "토요일": "10:00 ~ 20:50",
+        "일요일": "10:00 ~ 20:50"
+      }
+    },
+    "price": {
+      "아메리카노": 6000,
+      "에스프레소": 6000,
+      "카페라떼": 6500
+    },
+    "media": {
+      "phone": "0507-1475-7021",
+      "website": null,
+      "instagram": "greetvicoffee",
+      "gallery": []
+    }
+  }
+}
