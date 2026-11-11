@@ -7,6 +7,12 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-autumn: #ff5b20;
+  --color-autumn-dark: #c83d12;
+  --color-leaf: #9cff75;
+  --color-leaf-dark: #8eed68;
+  --color-bark: #3a241c;
+  --color-cream: #fff3e5;
   --font-nanum: var(--nanum-square-neo), Arial, sans-serif;
   --font-paperlogy: var(--paperlogy), Arial, sans-serif;
   --font-anyvid: var(--anyvid), Arial, sans-serif;
@@ -127,5 +133,124 @@
   }
   html {
     @apply font-sans;
+  }
+}
+
+@layer utilities {
+  .autumn-background-pattern {
+    background-image:
+      radial-gradient(circle, rgb(255 255 255 / 22%) 1px, transparent 1.5px),
+      repeating-linear-gradient(
+        135deg,
+        transparent 0 34px,
+        rgb(93 35 14 / 5%) 34px 35px
+      );
+    background-size:
+      22px 22px,
+      52px 52px;
+    mask-image: linear-gradient(
+      to bottom,
+      black 0%,
+      rgb(0 0 0 / 65%) 72%,
+      transparent 100%
+    );
+  }
+
+  .leaf-fall {
+    animation: leaf-fall var(--leaf-duration) linear infinite;
+    animation-delay: var(--leaf-delay);
+    will-change: transform;
+  }
+
+  .leaf-fall-slow {
+    --leaf-duration: 18s;
+    --leaf-delay: -4s;
+    --leaf-start-rotation: -12deg;
+  }
+
+  .leaf-fall-medium {
+    --leaf-duration: 15s;
+    --leaf-delay: -10s;
+    --leaf-start-rotation: 12deg;
+  }
+
+  .leaf-fall-fast {
+    --leaf-duration: 13s;
+    --leaf-delay: -7s;
+    --leaf-start-rotation: 45deg;
+  }
+
+  @keyframes leaf-fall {
+    0% {
+      transform: translate3d(0, -18vh, 0) rotate(var(--leaf-start-rotation));
+    }
+    25% {
+      transform: translate3d(2.5rem, 14vh, 0)
+        rotate(calc(var(--leaf-start-rotation) + 70deg));
+    }
+    50% {
+      transform: translate3d(-1.5rem, 44vh, 0)
+        rotate(calc(var(--leaf-start-rotation) + 160deg));
+    }
+    75% {
+      transform: translate3d(2rem, 74vh, 0)
+        rotate(calc(var(--leaf-start-rotation) + 250deg));
+    }
+    100% {
+      transform: translate3d(-1rem, 110vh, 0)
+        rotate(calc(var(--leaf-start-rotation) + 360deg));
+    }
+  }
+
+  .loader {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &::before {
+      content: "";
+      width: 50px;
+      height: 50px;
+      background-color: var(--color-autumn);
+      border-radius: 50%;
+    }
+
+    &::after {
+      content: "";
+      width: 0;
+      height: 0;
+      border-radius: 50%;
+      border: 10px solid var(--color-cream);
+      position: absolute;
+      top: 30px;
+      left: 30px;
+      transform: translate(-50%, -50%);
+      animation: loader 1s -1s infinite ease;
+    }
+  }
+
+  @keyframes loader {
+    0% {
+      width: 0;
+      height: 0;
+    }
+    100% {
+      width: 70px;
+      height: 70px;
+    }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .leaf-fall {
+    animation: none;
+    transform: rotate(var(--leaf-start-rotation));
+  }
+
+  .loader::after {
+    animation: none;
   }
 }

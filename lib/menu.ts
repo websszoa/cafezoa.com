@@ -13,18 +13,46 @@ import {
   ShieldCheck,
 } from "lucide-react";
 
-export const navigation = [
-  { href: "/map", label: "지도", icon: MapPinned },
-  { href: "/card", label: "카드", icon: Newspaper },
-  { href: "/list", label: "목록", icon: LayoutList },
-  { href: "/gallery", label: "이미지", icon: Images },
+export const introLinks = [
+  {
+    href: "/map",
+    label: "지도",
+    description: "지도 유형으로 보기",
+    icon: MapPinned,
+  },
+  {
+    href: "/card",
+    label: "카드",
+    description: "카드 형식으로 보기",
+    icon: Newspaper,
+  },
+  {
+    href: "/list",
+    label: "목록",
+    description: "목록 형식으로 보기",
+    icon: LayoutList,
+  },
+  {
+    href: "/gallery",
+    label: "이미지",
+    description: "이미지로 보기",
+    icon: Images,
+  },
 ];
 
 export const supportLinks = [
-  { href: "/support?type=inquiry", label: "문의사항", icon: MessageCircleQuestion },
+  {
+    href: "/support?type=inquiry",
+    label: "문의사항",
+    icon: MessageCircleQuestion,
+  },
   { href: "/support?type=correction", label: "수정요청", icon: FilePenLine },
   { href: "/support?type=complaint", label: "불편신고", icon: CircleAlert },
-  { href: "/support?type=registration", label: "등록문의", icon: ClipboardPlus },
+  {
+    href: "/support?type=registration",
+    label: "등록문의",
+    icon: ClipboardPlus,
+  },
 ];
 
 export const legalLinks = [
