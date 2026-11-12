@@ -1,4 +1,5 @@
 import {
+  AtSign,
   CircleAlert,
   ClipboardList,
   ClipboardPlus,
@@ -8,10 +9,12 @@ import {
   Info,
   LayoutList,
   MapPinned,
+  MessageCircle,
   MessageCircleQuestion,
   Newspaper,
   ShieldCheck,
 } from "lucide-react";
+import { APP_INSTAGRAM_URL, APP_THREADS_URL } from "@/lib/constants";
 
 export const introLinks = [
   {
@@ -40,24 +43,60 @@ export const introLinks = [
   },
 ];
 
-export const supportLinks = [
+export const footerLinks = [
   {
-    href: "/support?type=inquiry",
-    label: "문의사항",
-    icon: MessageCircleQuestion,
+    title: "Explore",
+    label: "탐색 메뉴",
+    links: introLinks,
   },
-  { href: "/support?type=correction", label: "수정요청", icon: FilePenLine },
-  { href: "/support?type=complaint", label: "불편신고", icon: CircleAlert },
   {
-    href: "/support?type=registration",
-    label: "등록문의",
-    icon: ClipboardPlus,
+    title: "Support",
+    label: "고객지원 메뉴",
+    links: [
+      {
+        href: "/support?type=inquiry",
+        label: "문의사항",
+        icon: MessageCircleQuestion,
+      },
+      {
+        href: "/support?type=correction",
+        label: "수정요청",
+        icon: FilePenLine,
+      },
+      { href: "/support?type=complaint", label: "불편신고", icon: CircleAlert },
+      {
+        href: "/support?type=registration",
+        label: "등록문의",
+        icon: ClipboardPlus,
+      },
+    ],
   },
-];
-
-export const legalLinks = [
-  { href: "/about", label: "소개", icon: Info },
-  { href: "/policy", label: "운영정책", icon: ClipboardList },
-  { href: "/terms", label: "이용약관", icon: FileText },
-  { href: "/privacy", label: "개인정보처리방침", icon: ShieldCheck },
+  {
+    title: "Policy",
+    label: "정책 메뉴",
+    links: [
+      { href: "/about", label: "소개", icon: Info },
+      { href: "/policy", label: "운영정책", icon: ClipboardList },
+      { href: "/terms", label: "이용약관", icon: FileText },
+      { href: "/privacy", label: "개인정보처리방침", icon: ShieldCheck },
+    ],
+  },
+  {
+    title: "Social",
+    label: "소셜 미디어",
+    links: [
+      {
+        href: APP_INSTAGRAM_URL,
+        label: "Instagram",
+        icon: AtSign,
+        external: true,
+      },
+      {
+        href: APP_THREADS_URL,
+        label: "Threads",
+        icon: MessageCircle,
+        external: true,
+      },
+    ],
+  },
 ];

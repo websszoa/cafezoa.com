@@ -1,6 +1,13 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { Compass, Home } from "lucide-react";
 import { Button } from "@/components/ui/button";
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: null,
+  },
+};
 
 export default function NotFound() {
   return (

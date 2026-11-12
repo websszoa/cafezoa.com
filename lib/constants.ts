@@ -1,8 +1,9 @@
 export const APP_NAME = "카페조아";
 export const APP_ENG_NAME = "CafeZoa";
 export const APP_SLOGAN = "카페 탐방을 위한 완벽한 가이드";
-export const APP_COPYRIGHT = "© 2026 webstoryboy. All rights reserved.";
+export const APP_COPYRIGHT = "© 2026 ZoaZoa. All rights reserved.";
 
+export const ADMIN_NAME = "황상연";
 export const ADMIN_EMAIL = "helpzoa@naver.com";
 export const ADMIN_PHONE = "010-8022-8105";
 
@@ -13,7 +14,7 @@ export const APP_IMAGE_BASE_URL =
   "https://websszoa.github.io/cafezoa.com/public/";
 
 export const APP_DESCRIPTION =
-  "전국 카페 정보, 신상 카페, 디저트 카페, 브런치 카페, 베이커리 카페, 오션뷰·루프탑 카페 등 다양한 카페 정보를 제공하는 종합 카페 가이드입니다.";
+  "전국 인기 카페부터 신상 카페, 디저트 카페, 브런치 카페, 베이커리 카페까지! 지역별·유형별 카페 정보와 사진, 메뉴, 영업시간, 주차 정보를 한눈에 확인하고 취향에 맞는 카페를 찾아보세요.";
 
 export const APP_SHORT_DESCRIPTION =
   "필터를 활용해 전국 카페를 빠르게 찾아보세요.";
