@@ -8,6 +8,7 @@ import {
   APP_COPYRIGHT,
   APP_DESCRIPTION,
   APP_ENG_NAME,
+  APP_IMAGE_BASE_URL,
   APP_INSTAGRAM_URL,
   APP_KEYWORDS,
   APP_NAME,
@@ -119,9 +120,11 @@ export const metadata: Metadata = {
     telephone: false,
   },
   icons: {
-    icon: [{ url: "/icons/favicon.svg", type: "image/svg+xml" }],
-    shortcut: "/icons/favicon.svg",
-    apple: "/icons/icon192.png",
+    icon: [
+      { url: `${APP_IMAGE_BASE_URL}icons/favicon.svg`, type: "image/svg+xml" },
+    ],
+    shortcut: `${APP_IMAGE_BASE_URL}icons/favicon.svg`,
+    apple: `${APP_IMAGE_BASE_URL}icons/icon192.png`,
   },
   openGraph: {
     type: "website",
@@ -132,7 +135,7 @@ export const metadata: Metadata = {
     description: APP_DESCRIPTION,
     images: [
       {
-        url: "/cafezoa.png",
+        url: `${APP_IMAGE_BASE_URL}cafezoa.png`,
         width: 1536,
         height: 1024,
         alt: `${APP_NAME} - ${APP_SLOGAN}`,
@@ -143,7 +146,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: defaultTitle,
     description: APP_SHORT_DESCRIPTION,
-    images: ["/cafezoa.png"],
+    images: [`${APP_IMAGE_BASE_URL}cafezoa.png`],
   },
   robots: {
     index: true,

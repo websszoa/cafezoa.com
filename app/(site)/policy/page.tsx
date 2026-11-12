@@ -24,7 +24,7 @@ export default function Policy() {
         description={description}
       />
       <PagePolicy />
-      <PageFooter />
+      <PageFooter tone="light" />
     </>
   );
 }

@@ -24,7 +24,7 @@ export default function Terms() {
         description={description}
       />
       <PageTerms />
-      <PageFooter />
+      <PageFooter tone="light" />
     </>
   );
 }

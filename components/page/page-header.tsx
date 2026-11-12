@@ -16,7 +16,7 @@ export function PageHeader({
 }) {
   return (
     <header className={tone === "dark" ? "bg-autumn" : "bg-cream"}>
-      <div className="mx-auto max-w-3xl px-5 py-6 text-center">
+      <div className="mx-auto max-w-3xl px-5 py-10 text-center">
         <div className="my-4 lg:my-8">
           <Button
             render={<Link href="/" />}

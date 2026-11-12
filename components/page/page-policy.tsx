@@ -1,3 +1,6 @@
+import { PageDocument } from "@/components/page/page-document";
+import { policyDocument } from "@/lib/document";
+
 export function PagePolicy() {
-  return <main>PagePolicy</main>;
+  return <PageDocument content={policyDocument} />;
 }

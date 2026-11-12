@@ -4,7 +4,7 @@ import { Suspense } from "react";
 import { PageFooter } from "@/components/page/page-footer";
 import { PageHeader } from "@/components/page/page-header";
 import { PageSupport } from "@/components/page/page-support";
-import { supportTypes } from "@/lib/support";
+import { getSupportFormType, supportTypes } from "@/lib/support";
 
 async function getSupportType(
   searchParams: PageProps<"/support">["searchParams"],
@@ -36,31 +36,37 @@ export default function Support({ searchParams }: PageProps<"/support">) {
     <>
       <Suspense
         fallback={
-          <PageHeader
-            icon={<Icon className="size-7 sm:size-9" />}
-            title={title}
-            description={description}
-          />
+          <>
+            <PageHeader
+              icon={<Icon className="size-7 sm:size-9" />}
+              title={title}
+              description={description}
+            />
+            <PageSupport type="inquiry" />
+          </>
         }
       >
-        <SupportHeader searchParams={searchParams} />
+        <SupportContent searchParams={searchParams} />
       </Suspense>
-      <PageSupport />
       <PageFooter tone="light" />
     </>
   );
 }
 
-async function SupportHeader({
+async function SupportContent({
   searchParams,
 }: Pick<PageProps<"/support">, "searchParams">) {
   const { title, description, icon: Icon } = await getSupportType(searchParams);
+  const formType = getSupportFormType((await searchParams).type);
 
   return (
-    <PageHeader
-      icon={<Icon className="size-7 sm:size-9" />}
-      title={title}
-      description={description}
-    />
+    <>
+      <PageHeader
+        icon={<Icon className="size-7 sm:size-9" />}
+        title={title}
+        description={description}
+      />
+      <PageSupport key={formType} type={formType} />
+    </>
   );
 }

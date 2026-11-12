@@ -24,7 +24,7 @@ export default function Privacy() {
         description={description}
       />
       <PagePrivacy />
-      <PageFooter />
+      <PageFooter tone="light" />
     </>
   );
 }

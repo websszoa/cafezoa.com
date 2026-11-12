@@ -1,3 +1,6 @@
+import { PageDocument } from "@/components/page/page-document";
+import { aboutDocument } from "@/lib/document";
+
 export function PageAbout() {
-  return <main>PageAbout</main>;
+  return <PageDocument content={aboutDocument} />;
 }

@@ -1,3 +1,6 @@
+import { PageDocument } from "@/components/page/page-document";
+import { termsDocument } from "@/lib/document";
+
 export function PageTerms() {
-  return <main>PageTerms</main>;
+  return <PageDocument content={termsDocument} />;
 }

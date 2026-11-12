@@ -1,3 +1,6 @@
+import { PageDocument } from "@/components/page/page-document";
+import { privacyDocument } from "@/lib/document";
+
 export function PagePrivacy() {
-  return <main>PagePrivacy</main>;
+  return <PageDocument content={privacyDocument} />;
 }

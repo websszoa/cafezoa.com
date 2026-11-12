@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { APP_NAME, APP_SLOGAN } from "@/lib/constants";
+import { APP_IMAGE_BASE_URL, APP_NAME, APP_SLOGAN } from "@/lib/constants";
 import { introLinks } from "@/lib/menu";
 
 import { GoogleLoginButton } from "@/components/auth/auth-button-google";
@@ -21,7 +21,7 @@ export function PageIntro() {
       >
         <span className="leaf-fall leaf-fall-slow absolute -top-8 left-[4%] aspect-180/165 w-24 overflow-hidden opacity-90 sm:w-36">
           <Image
-            src="/images/leaf-maple-yellow.png"
+            src={`${APP_IMAGE_BASE_URL}images/leaf-maple-yellow.png`}
             fill
             sizes="(min-width: 640px) 144px, 96px"
             alt=""
@@ -30,7 +30,7 @@ export function PageIntro() {
         </span>
         <span className="leaf-fall leaf-fall-medium absolute top-[12%] right-[5%] aspect-180/165 w-20 overflow-hidden opacity-80 sm:w-32">
           <Image
-            src="/images/leaf-maple-red.png"
+            src={`${APP_IMAGE_BASE_URL}images/leaf-maple-red.png`}
             fill
             sizes="(min-width: 640px) 128px, 80px"
             alt=""
@@ -39,7 +39,7 @@ export function PageIntro() {
         </span>
         <span className="leaf-fall leaf-fall-fast absolute top-[34%] left-[8%] aspect-180/165 w-14 overflow-hidden opacity-55 sm:w-24">
           <Image
-            src="/images/leaf-oak-orange.png"
+            src={`${APP_IMAGE_BASE_URL}images/leaf-oak-orange.png`}
             fill
             sizes="(min-width: 640px) 96px, 56px"
             alt=""
@@ -93,7 +93,7 @@ export function PageIntro() {
 
         <div className="absolute -bottom-4 left-1/2 aspect-1680/936 w-[min(760px,100vw)] -translate-x-1/2 overflow-hidden sm:-bottom-8">
           <Image
-            src="/images/main-hero-autumn.png"
+            src={`${APP_IMAGE_BASE_URL}images/main-hero-autumn.png`}
             fill
             alt="가을 야외 카페에서 커피를 즐기는 사람들"
             priority

@@ -24,7 +24,7 @@ export default function About() {
         description={description}
       />
       <PageAbout />
-      <PageFooter />
+      <PageFooter tone="light" />
     </>
   );
 }
