@@ -3,6 +3,8 @@ import localFont from "next/font/local";
 import { cn } from "cn";
 import { Poppins } from "next/font/google";
 import { Toaster } from "sonner";
+import { LocationProvider } from "@/components/location/location-provider";
+import { PageFloat } from "@/components/page/page-float";
 
 import {
   APP_COPYRIGHT,
@@ -203,7 +205,10 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
             __html: JSON.stringify(websiteJsonLd).replace(/</g, "\\u003c"),
           }}
         />
-        {children}
+        <LocationProvider>
+          {children}
+          <PageFloat />
+        </LocationProvider>
         <Toaster
           position="top-center"
           toastOptions={{

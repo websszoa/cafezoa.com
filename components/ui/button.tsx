@@ -36,6 +36,8 @@ const buttonVariants = cva(
         // not-found/error 페이지의 pill 버튼 (예: 홈으로 이동, 다시 시도). 배경/텍스트 색은 className으로 지정
         sprout:
           "h-auto gap-2 rounded-full border-2 border-bark px-6 py-3 font-bold shadow-[2px_2px_0_var(--color-bark)] transition-[box-shadow,background-color] duration-200 ease-out hover:shadow-[0_0_0_var(--color-bark)]",
+        // sprout보다 작고 그림자가 없는 pill 버튼 (예: 지도 위 내 위치/설정). 배경/텍스트 색은 className으로 지정
+        seed: "h-auto gap-1.5 rounded-full border-2 border-bark px-4 py-2 text-sm font-bold transition-colors duration-200 ease-out",
       },
     },
     defaultVariants: {

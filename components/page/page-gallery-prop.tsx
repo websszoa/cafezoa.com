@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { Loader2, MapPin } from "lucide-react";
+import { LocationDistance } from "@/components/location/location-distance";
 import { cn } from "@/lib/utils";
 
 export type GalleryImage = {
@@ -11,6 +12,9 @@ export type GalleryImage = {
   slug: string;
   name: string;
   province: string;
+  // 카페 좌표. 내 위치를 켜면 거리 표시에 쓴다.
+  latitude: number;
+  longitude: number;
   features: string[];
 };
 
@@ -151,7 +155,9 @@ function GalleryCard({
           />
         </div>
       )}
+      {/* Next 이미지 최적화(/_next/image)를 거치지 않고 GitHub 주소에서 바로 불러온다. (서버 트래픽 절약) */}
       <Image
+        unoptimized
         src={image.src}
         alt={`${image.name} 공간 이미지`}
         fill
@@ -169,6 +175,11 @@ function GalleryCard({
         <p className="flex items-center gap-1 text-[11px] text-white/80">
           <MapPin aria-hidden="true" className="size-3" />
           {image.province}
+          <LocationDistance
+            latitude={image.latitude}
+            longitude={image.longitude}
+            className="ml-1 text-leaf"
+          />
         </p>
         <p className="font-paperlogy mt-0.5 truncate text-base font-semibold">
           {image.name}
@@ -182,6 +193,11 @@ function GalleryCard({
         <p className="flex items-center gap-1 text-xs text-white/80">
           <MapPin className="size-3.5" />
           {image.province}
+          <LocationDistance
+            latitude={image.latitude}
+            longitude={image.longitude}
+            className="ml-1 text-leaf"
+          />
         </p>
         <p className="font-paperlogy mt-1 text-2xl font-semibold">
           {image.name}

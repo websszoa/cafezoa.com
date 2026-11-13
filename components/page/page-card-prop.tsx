@@ -1,9 +1,11 @@
 "use client";
 
 import Image from "next/image";
-import { useEffect, useRef, useState } from "react";
-import { Loader2, MapPin, Star } from "lucide-react";
+import Link from "next/link";
 import { cn } from "@/lib/utils";
+import { useEffect, useRef, useState } from "react";
+import { ChevronRight, Loader2, MapPin, Star } from "lucide-react";
+import { LocationDistance } from "@/components/location/location-distance";
 
 // 이미지가 빨리 떠도 로딩 애니메이션을 최소한 이 시간(ms)만큼은 보여준다.
 const MIN_LOADING_MS = 500;
@@ -87,11 +89,15 @@ type CafeCardProps = {
   name: string;
   types: string[];
   address: string;
+  latitude: number;
+  longitude: number;
   description: string;
   image: string;
   naverRating: number | null;
-  // 첫 화면에 보이는 카드는 이미지를 바로 불러온다. (LCP 개선)
   eager?: boolean;
+  href?: string;
+  className?: string;
+  heading?: "h2" | "h3";
 };
 
 export function CafeCard({
@@ -99,10 +105,15 @@ export function CafeCard({
   name,
   types,
   address,
+  latitude,
+  longitude,
   description,
   image,
   naverRating,
   eager = false,
+  href,
+  className,
+  heading: Heading = "h2",
 }: CafeCardProps) {
   const [status, setStatus] = useState<"loading" | "loaded" | "error">(
     "loading",
@@ -120,65 +131,92 @@ export function CafeCard({
 
   const isLoading = status === "loading" || !minDelayDone;
 
+  const card = (
+    <article
+      id={slug}
+      className={cn(
+        "group flex h-full min-h-145 scroll-mt-6 flex-col overflow-hidden rounded-[1.6rem] bg-white shadow-[0_16px_35px_rgba(145,75,0,0.12)]",
+        className,
+      )}
+    >
+      <div className="relative aspect-4/4 shrink-0 overflow-hidden bg-[#eee]">
+        {isLoading && (
+          <div className="absolute inset-0 grid place-items-center">
+            <Loader2
+              aria-label="이미지 불러오는 중"
+              className="size-8 animate-spin text-autumn"
+            />
+          </div>
+        )}
+        {/* Next 이미지 최적화(/_next/image)를 거치지 않고 GitHub 주소에서 바로 불러온다. (서버 트래픽 절약) */}
+        <Image
+          unoptimized
+          src={image}
+          alt={`${name} 전경`}
+          fill
+          sizes="(max-width: 639px) 100vw, 380px"
+          loading={eager ? "eager" : "lazy"}
+          className={cn(
+            "object-cover transition-opacity duration-300",
+            isLoading ? "opacity-0" : "opacity-100",
+          )}
+          onLoad={() => setStatus("loaded")}
+          onError={() => setStatus("error")}
+        />
+        {naverRating !== null && (
+          <span className="absolute top-4 left-4 inline-flex items-center gap-1 rounded-full bg-linear-to-r from-autumn to-[#7d16ed] px-3 py-1.5 text-xs font-semibold text-white shadow-sm">
+            <Star aria-hidden="true" className="size-3.5 fill-white" />
+            네이버 {naverRating.toFixed(1)}
+          </span>
+        )}
+      </div>
+
+      <div className="flex flex-1 flex-col p-6 sm:p-7">
+        <div className="flex flex-wrap gap-1.5">
+          {types.slice(0, 3).map((type) => (
+            <span key={type} className="text-sm font-bold text-autumn">
+              #{type.replace(/\s+/g, "")}
+            </span>
+          ))}
+        </div>
+        <Heading className="font-paperlogy mt-2 truncate text-3xl font-semibold tracking-[-0.04em] text-bark">
+          {name}
+        </Heading>
+        <p className="mt-2 flex items-center gap-1.5 text-sm text-[#444]">
+          <MapPin aria-hidden="true" className="size-4 shrink-0 text-autumn" />
+          <span className="truncate">{address}</span>
+          <LocationDistance
+            latitude={latitude}
+            longitude={longitude}
+            className="ml-auto shrink-0 text-xs text-autumn"
+          />
+        </p>
+        <p className="mt-4 line-clamp-4 text-sm leading-6 text-[#666]">
+          {description}
+        </p>
+        {/* 카드 전체가 상세 페이지 링크(href)일 때, 설명 아래에 이동 안내 문구를 보여준다. */}
+        {href && (
+          <span className="mt-auto inline-flex items-center gap-1 pt-5 text-sm font-bold text-autumn transition-colors group-hover:text-bark">
+            상세 정보 보기
+            <ChevronRight aria-hidden="true" className="size-4" />
+          </span>
+        )}
+      </div>
+    </article>
+  );
+
   return (
     <li>
-      <article
-        id={slug}
-        className="group flex h-full min-h-145 scroll-mt-6 flex-col overflow-hidden rounded-[1.6rem] bg-white shadow-[0_16px_35px_rgba(145,75,0,0.12)]"
-      >
-        <div className="relative aspect-4/4 shrink-0 overflow-hidden bg-[#eee]">
-          {isLoading && (
-            <div className="absolute inset-0 grid place-items-center">
-              <Loader2
-                aria-label="이미지 불러오는 중"
-                className="size-8 animate-spin text-autumn"
-              />
-            </div>
-          )}
-          <Image
-            src={image}
-            alt={`${name} 전경`}
-            fill
-            sizes="(max-width: 639px) 100vw, 380px"
-            loading={eager ? "eager" : "lazy"}
-            className={cn(
-              "object-cover transition-opacity duration-300",
-              isLoading ? "opacity-0" : "opacity-100",
-            )}
-            onLoad={() => setStatus("loaded")}
-            onError={() => setStatus("error")}
-          />
-          {naverRating !== null && (
-            <span className="absolute top-4 left-4 inline-flex items-center gap-1 rounded-full bg-linear-to-r from-autumn to-[#7d16ed] px-3 py-1.5 text-xs font-semibold text-white shadow-sm">
-              <Star aria-hidden="true" className="size-3.5 fill-white" />
-              네이버 {naverRating.toFixed(1)}
-            </span>
-          )}
-        </div>
-
-        <div className="flex flex-1 flex-col p-6 sm:p-7">
-          <div className="flex flex-wrap gap-1.5">
-            {types.slice(0, 3).map((type) => (
-              <span key={type} className="text-sm font-bold text-autumn">
-                #{type.replace(/\s+/g, "")}
-              </span>
-            ))}
-          </div>
-          <h2 className="font-paperlogy mt-2 truncate text-3xl font-semibold tracking-[-0.04em] text-bark">
-            {name}
-          </h2>
-          <p className="mt-2 flex items-center gap-1.5 text-sm text-[#444]">
-            <MapPin
-              aria-hidden="true"
-              className="size-4 shrink-0 text-autumn"
-            />
-            {address}
-          </p>
-          <p className="mt-4 line-clamp-4 text-sm leading-6 text-[#666]">
-            {description}
-          </p>
-        </div>
-      </article>
+      {href ? (
+        <Link
+          href={href}
+          className="block h-full rounded-[1.6rem] outline-none focus-visible:ring-4 focus-visible:ring-autumn/40"
+        >
+          {card}
+        </Link>
+      ) : (
+        card
+      )}
     </li>
   );
 }

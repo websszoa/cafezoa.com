@@ -1,10 +1,10 @@
+import { APP_IMAGE_BASE_URL } from "@/lib/constants";
+import cafes from "@/data/cafe-basic.json";
+import cafeDetails from "@/data/cafe-details.json";
 import {
   GalleryGrid,
   type GalleryImage,
 } from "@/components/page/page-gallery-prop";
-import { APP_IMAGE_BASE_URL } from "@/lib/constants";
-import cafes from "@/data/cafe-basic.json";
-import cafeDetails from "@/data/cafe-details.json";
 
 type CafeDetail = (typeof cafeDetails)[keyof typeof cafeDetails];
 
@@ -30,6 +30,8 @@ const galleryImages: GalleryImage[] = cafes
       slug: cafe.slug,
       name: cafe.name,
       province: cafe.location.address.split(" ")[0],
+      latitude: cafe.location.latitude,
+      longitude: cafe.location.longitude,
       features: detail.features,
     }));
   })

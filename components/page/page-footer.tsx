@@ -22,7 +22,7 @@ export function PageFooter({ tone = "dark" }: { tone?: Tone }) {
         <div>
           <Link
             href="/"
-            className="font-pappin -mt-1 inline-flex items-center gap-1 text-4xl font-extrabold tracking-[-0.04em] uppercase"
+            className="font-pappin -mt-1 inline-flex items-center gap-1 text-4xl font-extrabold -tracking-widest uppercase"
           >
             <span>
               <span className={isDark ? "text-leaf" : "text-autumn"}>cafe</span>

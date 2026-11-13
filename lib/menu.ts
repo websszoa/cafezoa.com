@@ -1,3 +1,5 @@
+import { APP_INSTAGRAM_URL, APP_THREADS_URL } from "@/lib/constants";
+
 import {
   AtSign,
   CircleAlert,
@@ -14,7 +16,6 @@ import {
   Newspaper,
   ShieldCheck,
 } from "lucide-react";
-import { APP_INSTAGRAM_URL, APP_THREADS_URL } from "@/lib/constants";
 
 export const introLinks = [
   {
