@@ -76,7 +76,8 @@ export function getCafeTypeLabel(type: string) {
 }
 
 // 검색 결과에서 잘리지 않도록 소개 글을 문장 단위로 maxLength 이내까지 줄인다.
-export function getShortDescription(description: string, maxLength = 150) {
+// 기본 80자: 네이버 검색 설명문 권장 길이
+export function getShortDescription(description: string, maxLength = 80) {
   const sentences = description.match(/[^.!?]+[.!?]?/g) ?? [description];
   let result = "";
 
