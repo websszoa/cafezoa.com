@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import { cn } from "@/lib/utils";
 import { Poppins } from "next/font/google";
 import { Toaster } from "sonner";
+import { GoogleTagManager } from "@next/third-parties/google";
 import { LocationProvider } from "@/components/location/location-provider";
 import { PageFloat } from "@/components/page/page-float";
 import { DialogWelcome } from "@/components/dialog/dialog-welcome";
@@ -20,6 +21,7 @@ import {
   APP_SITE_URL,
   APP_SLOGAN,
   APP_THREADS_URL,
+  GTM_ID,
 } from "@/lib/constants";
 
 import { DEFAULT_OG_IMAGE } from "@/lib/metadata";
@@ -200,6 +202,11 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         pappin.variable,
       )}
     >
+      {/* 구글 태그 매니저. GA4 등 분석 태그는 GTM 안에서 관리한다.
+          실제 서비스(Vercel production)에서만 켜서 로컬·미리보기 방문이 통계에 섞이지 않게 한다. */}
+      {process.env.VERCEL_ENV === "production" && (
+        <GoogleTagManager gtmId={GTM_ID} />
+      )}
       <body className="font-nanum flex min-h-full flex-col">
         <script
           type="application/ld+json"

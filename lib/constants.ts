@@ -10,6 +10,9 @@ export const ADMIN_PHONE = "010-8022-8105";
 
 // 대표 주소. 서버가 cafezoa.com → www.cafezoa.com으로 넘기므로 canonical·sitemap도 www로 맞춘다.
 export const APP_SITE_URL = "https://www.cafezoa.com";
+// 구글 태그 매니저 컨테이너 ID (공개돼도 되는 값)
+export const GTM_ID = "GTM-KDKWH924";
+
 export const APP_INSTAGRAM_URL = "https://www.instagram.com/cafezoa_official";
 export const APP_THREADS_URL = "https://www.threads.com/@cafezoa_official";
 export const APP_IMAGE_BASE_URL =
