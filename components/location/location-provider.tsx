@@ -4,15 +4,19 @@ import {
   createContext,
   useCallback,
   useContext,
+  useEffect,
   useMemo,
+  useRef,
   useState,
   useSyncExternalStore,
   type ReactNode,
 } from "react";
 import { toast } from "sonner";
 import { DialogLocation } from "@/components/dialog/dialog-location";
+import { createClient } from "@/lib/supabase/client";
 
-// 내 위치 좌표. 로그인 없이 쓰므로 이 브라우저의 localStorage에만 저장한다.
+// 내 위치 좌표. 이 브라우저의 localStorage에 저장하고,
+// 로그인한 경우에는 계정(profiles.latitude/longitude)에도 저장해 다른 기기에서 불러온다.
 export type UserLocation = {
   latitude: number;
   longitude: number;
@@ -90,6 +94,65 @@ export function LocationProvider({ children }: { children: ReactNode }) {
 
   const [status, setStatus] = useState<LocationStatus>("idle");
   const [open, setOpen] = useState(false);
+
+  // 로그인한 사용자 id. 로그인·로그아웃할 때마다 바뀐다.
+  const [userId, setUserId] = useState<string | null>(null);
+  // 마지막으로 계정과 맞춘 위치("사용자id:확인 시각"). 같은 위치를 반복해서 저장하지 않는다.
+  const syncedRef = useRef<string | null>(null);
+
+  useEffect(() => {
+    const supabase = createClient();
+    const {
+      data: { subscription },
+    } = supabase.auth.onAuthStateChange((_event, session) => {
+      setUserId(session?.user.id ?? null);
+    });
+    return () => subscription.unsubscribe();
+  }, []);
+
+  // 로그인한 경우 위치를 계정과 맞춘다.
+  // - 이 브라우저에 위치가 있으면: 계정에 저장 (위치를 켜고 로그인 / 로그인 후 위치를 켬)
+  // - 이 브라우저에 위치가 없으면: 계정에 저장된 위치를 불러온다 (다른 기기에서 로그인)
+  // 위치를 한 번도 켜지 않은 사용자는 저장할 위치가 없으므로 아무것도 하지 않는다.
+  useEffect(() => {
+    if (!userId) return;
+    const supabase = createClient();
+
+    if (location) {
+      const key = `${userId}:${location.savedAt}`;
+      if (syncedRef.current === key) return;
+      syncedRef.current = key;
+
+      supabase
+        .from("profiles")
+        .update({
+          latitude: location.latitude,
+          longitude: location.longitude,
+        })
+        .eq("id", userId)
+        .then(({ error }) => {
+          if (error) console.error("profiles location update failed", error);
+        });
+      return;
+    }
+
+    supabase
+      .from("profiles")
+      .select("latitude, longitude")
+      .eq("id", userId)
+      .maybeSingle()
+      .then(({ data }) => {
+        if (data?.latitude == null || data.longitude == null) return;
+        const saved = {
+          latitude: Number(data.latitude),
+          longitude: Number(data.longitude),
+          savedAt: new Date().toISOString(),
+        };
+        // 계정에서 불러온 위치를 다시 계정에 저장하지 않도록 먼저 표시해 둔다.
+        syncedRef.current = `${userId}:${saved.savedAt}`;
+        writeStoredLocation(saved);
+      });
+  }, [userId, location]);
 
   // 브라우저에 현재 위치를 한 번 요청한다. (계속 추적하지 않는다)
   const requestLocation = useCallback((onSuccess?: () => void) => {

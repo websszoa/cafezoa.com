@@ -4,6 +4,7 @@ import Link from "next/link";
 import { Controller, useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Send } from "lucide-react";
+import { toast } from "sonner";
 import { Button } from "@/components/ui/button";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Field, FieldError, FieldLabel } from "@/components/ui/field";
@@ -12,13 +13,20 @@ import { Textarea } from "@/components/ui/textarea";
 import { supportTypes, type SupportFormType } from "@/lib/support";
 import { supportFormSchema, type SupportFormValues } from "@/lib/validations";
 
+// 마지막 글자에 받침이 있으면 true. ("문의사항이", "불편신고가"처럼 조사를 고를 때 쓴다)
+function hasFinalConsonant(word: string) {
+  const code = word.charCodeAt(word.length - 1) - 0xac00;
+  return code >= 0 && code <= 11171 && code % 28 !== 0;
+}
+
 export function PageSupport({ type }: { type: SupportFormType }) {
   const item = supportTypes[type];
   const {
     control,
     register,
     handleSubmit,
-    formState: { errors },
+    reset,
+    formState: { errors, isSubmitting },
   } = useForm<SupportFormValues>({
     resolver: zodResolver(supportFormSchema),
     defaultValues: {
@@ -30,6 +38,25 @@ export function PageSupport({ type }: { type: SupportFormType }) {
       privacyConsent: false,
     },
   });
+
+  // 문의 접수: /api/support에 저장하면 서버가 접수 확인 메일과 관리자 알림 메일을 보낸다.
+  async function submitSupport(values: SupportFormValues) {
+    try {
+      const response = await fetch("/api/support", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ ...values, type }),
+      });
+      if (!response.ok) throw new Error(String(response.status));
+
+      toast.success(
+        `${item.title}${hasFinalConsonant(item.title) ? "이" : "가"} 접수되었어요. 입력하신 이메일로 접수 안내를 보내드렸어요.`,
+      );
+      reset();
+    } catch {
+      toast.error("문의를 접수하지 못했어요. 잠시 후 다시 시도해 주세요.");
+    }
+  }
 
   return (
     <div className="bg-cream border-t border-b border-[#ead9ca]">
@@ -78,7 +105,7 @@ export function PageSupport({ type }: { type: SupportFormType }) {
 
           <form
             noValidate
-            onSubmit={handleSubmit(() => {})}
+            onSubmit={handleSubmit(submitSupport)}
             className="mt-7 space-y-6"
           >
             <div className="grid gap-5 sm:grid-cols-2">
@@ -197,6 +224,7 @@ export function PageSupport({ type }: { type: SupportFormType }) {
             <div className="flex justify-end border-t border-[#ead9ca] pt-6">
               <Button
                 type="submit"
+                disabled={isSubmitting}
                 variant="sprout"
                 className="shrink-0 bg-autumn text-white hover:bg-autumn-dark"
               >

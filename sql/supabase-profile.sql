@@ -42,6 +42,11 @@ create table if not exists public.profiles (
   bio text,
   auth_provider text not null default 'google',
 
+  -- 사용자가 '내 위치 사용하기'로 저장한 위치입니다. (로그인 사용자 위치 저장)
+  -- 위도·경도는 함께 저장하거나 함께 비웁니다.
+  latitude numeric(9, 6) check (latitude between -90 and 90),
+  longitude numeric(9, 6) check (longitude between -180 and 180),
+
   last_sign_in_at timestamptz,
   last_visited_at timestamptz,
   created_at timestamptz not null default now(),
@@ -50,8 +55,26 @@ create table if not exists public.profiles (
   constraint profiles_withdrawn_at_check check (
     (is_withdrawn = true and withdrawn_at is not null)
     or (is_withdrawn = false and withdrawn_at is null)
+  ),
+  constraint profiles_location_pair_check check (
+    (latitude is null) = (longitude is null)
   )
 );
+
+-- 이미 profiles 테이블이 있는 프로젝트에 위도·경도 컬럼을 추가합니다.
+-- (create table if not exists는 기존 테이블을 바꾸지 않으므로 별도로 실행합니다)
+alter table public.profiles
+  add column if not exists latitude numeric(9, 6)
+    check (latitude between -90 and 90),
+  add column if not exists longitude numeric(9, 6)
+    check (longitude between -180 and 180);
+
+alter table public.profiles
+  drop constraint if exists profiles_location_pair_check;
+alter table public.profiles
+  add constraint profiles_location_pair_check check (
+    (latitude is null) = (longitude is null)
+  );
 
 comment on table public.profiles is
   'Supabase Auth 사용자와 1:1로 연결되는 Cafezoa 기본 프로필';
@@ -60,6 +83,10 @@ comment on column public.profiles.role is 'user 또는 admin. 클라이언트 �
 comment on column public.profiles.visit_count is 'record_profile_visit()로 증가하는 누적 방문 횟수';
 comment on column public.profiles.is_withdrawn is '소프트 탈퇴 여부';
 comment on column public.profiles.auth_provider is '최초 가입 OAuth 공급자(예: google)';
+comment on column public.profiles.latitude is
+  '사용자가 저장한 내 위치 위도(WGS84). 경도와 함께 저장하거나 함께 비움';
+comment on column public.profiles.longitude is
+  '사용자가 저장한 내 위치 경도(WGS84). 위도와 함께 저장하거나 함께 비움';
 
 -- 초기 단계에서는 사용되지 않는 보조 인덱스를 만들지 않습니다.
 -- id 기본 키 인덱스로 본인 조회와 관리자 판별 쿼리를 처리할 수 있습니다.
@@ -75,11 +102,14 @@ revoke all on table public.profiles from anon, authenticated;
 grant select on table public.profiles to authenticated;
 -- 방문 관련 컬럼은 SECURITY INVOKER RPC가 갱신할 때 필요합니다.
 -- 임의 값 변경은 supabase-function.sql의 검증 트리거가 차단합니다.
+-- latitude/longitude는 사용자가 자기 위치를 저장·삭제할 때 필요합니다. (본인 행만: profiles_update_own 정책)
 grant update (
   name,
   avatar_url,
   phone,
   bio,
+  latitude,
+  longitude,
   visit_count,
   last_visited_at
 ) on table public.profiles to authenticated;

@@ -5,6 +5,7 @@ export const APP_COPYRIGHT = "© 2026 ZoaZoa. All rights reserved.";
 
 export const ADMIN_NAME = "황상연";
 export const ADMIN_EMAIL = "helpzoa@naver.com";
+export const EMAIL_FROM = "카페조아 <noreply@cafezoa.com>";
 export const ADMIN_PHONE = "010-8022-8105";
 
 export const APP_SITE_URL = "https://cafezoa.com";

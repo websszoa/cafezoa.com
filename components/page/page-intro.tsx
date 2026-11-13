@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { APP_IMAGE_BASE_URL, APP_NAME, APP_SLOGAN } from "@/lib/constants";
 import { introLinks } from "@/lib/menu";
+import { AdminStats } from "@/components/admin/admin-stats";
 
 import { GoogleLoginButton } from "@/components/auth/auth-button-google";
 import { KakaoLoginButton } from "@/components/auth/auth-button-kakao";
@@ -47,6 +48,9 @@ export function PageIntro() {
           />
         </span>
       </div>
+
+      {/* 관리자로 로그인했을 때만 보이는 현황 숫자 */}
+      <AdminStats className="absolute top-4 left-4 z-30" />
 
       <section className="relative z-10 mx-auto flex min-h-dvh w-full max-w-6xl flex-col items-center px-5 pt-[clamp(4.5rem,10vh,7rem)] text-center">
         <p className="font-paperlogy flex items-center gap-2.5 text-xs font-black tracking-[0.2em] uppercase">

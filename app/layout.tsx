@@ -1,10 +1,12 @@
 import type { Metadata, Viewport } from "next";
 import localFont from "next/font/local";
-import { cn } from "cn";
+import { cn } from "@/lib/utils";
 import { Poppins } from "next/font/google";
 import { Toaster } from "sonner";
 import { LocationProvider } from "@/components/location/location-provider";
 import { PageFloat } from "@/components/page/page-float";
+import { DialogWelcome } from "@/components/dialog/dialog-welcome";
+import { AuthLoginToast } from "@/components/auth/auth-login-toast";
 
 import {
   APP_COPYRIGHT,
@@ -19,6 +21,8 @@ import {
   APP_SLOGAN,
   APP_THREADS_URL,
 } from "@/lib/constants";
+
+import { DEFAULT_OG_IMAGE } from "@/lib/metadata";
 
 import "./globals.css";
 
@@ -113,9 +117,7 @@ export const metadata: Metadata = {
   publisher: APP_NAME,
   category: "카페·여행",
   referrer: "origin-when-cross-origin",
-  alternates: {
-    canonical: APP_SITE_URL,
-  },
+  // canonical은 페이지마다 지정한다. (여기에 두면 지정하지 않은 페이지가 모두 홈의 중복으로 처리됨)
   formatDetection: {
     email: false,
     address: false,
@@ -135,20 +137,20 @@ export const metadata: Metadata = {
     siteName: APP_NAME,
     title: defaultTitle,
     description: APP_DESCRIPTION,
-    images: [
-      {
-        url: `${APP_IMAGE_BASE_URL}cafezoa.png`,
-        width: 1536,
-        height: 1024,
-        alt: `${APP_NAME} - ${APP_SLOGAN}`,
-      },
-    ],
+    images: [DEFAULT_OG_IMAGE],
   },
   twitter: {
     card: "summary_large_image",
     title: defaultTitle,
     description: APP_SHORT_DESCRIPTION,
-    images: [`${APP_IMAGE_BASE_URL}cafezoa.png`],
+    images: [DEFAULT_OG_IMAGE.url],
+  },
+  // 구글 서치콘솔·네이버 서치어드바이저 소유 확인 코드 (배포 환경변수로 넣는다)
+  verification: {
+    google: process.env.GOOGLE_SITE_VERIFICATION,
+    other: process.env.NAVER_SITE_VERIFICATION
+      ? { "naver-site-verification": process.env.NAVER_SITE_VERIFICATION }
+      : undefined,
   },
   robots: {
     index: true,
@@ -208,6 +210,8 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <LocationProvider>
           {children}
           <PageFloat />
+          <DialogWelcome />
+          <AuthLoginToast />
         </LocationProvider>
         <Toaster
           position="top-center"

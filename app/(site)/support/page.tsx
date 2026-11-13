@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { createPageMetadata } from "@/lib/metadata";
 import { Suspense } from "react";
 
 import { PageFooter } from "@/components/page/page-footer";
@@ -20,13 +21,8 @@ export async function generateMetadata({
 }: PageProps<"/support">): Promise<Metadata> {
   const { title, description } = await getSupportType(searchParams);
 
-  return {
-    title,
-    description,
-    alternates: {
-      canonical: "/support",
-    },
-  };
+  // ?type=에 따라 제목은 바뀌지만 canonical은 /support 하나로 모은다.
+  return createPageMetadata({ title, description, path: "/support" });
 }
 
 export default function Support({ searchParams }: PageProps<"/support">) {

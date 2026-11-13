@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { createPageMetadata } from "@/lib/metadata";
 import { Info } from "lucide-react";
 import { PageAbout } from "@/components/page/page-about";
 import { PageFooter } from "@/components/page/page-footer";
@@ -7,13 +8,11 @@ import { PageHeader } from "@/components/page/page-header";
 const title = "카페조아 소개";
 const description = "좋은 카페를 소중한 사람들과 나누고 싶은 마음으로 시작했어요!";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title,
   description,
-  alternates: {
-    canonical: "/about",
-  },
-};
+  path: "/about",
+});
 
 export default function About() {
   return (

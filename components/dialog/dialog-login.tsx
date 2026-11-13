@@ -1,5 +1,9 @@
 "use client";
 
+import { useState } from "react";
+import { toast } from "sonner";
+import { createClient } from "@/lib/supabase/client";
+
 import { Button } from "@/components/ui/button";
 import { Eye, Heart, LogIn, MapPinned } from "lucide-react";
 import {
@@ -30,7 +34,7 @@ const loginNotices = [
   },
 ];
 
-// 로그인 안내 팝업. 디자인만 있고, 소셜 로그인 버튼은 아직 동작하지 않는다.
+// 로그인 안내 팝업. 구글·카카오·네이버 로그인 버튼.
 export function DialogLogin({
   open,
   onOpenChange,
@@ -38,6 +42,44 @@ export function DialogLogin({
   open: boolean;
   onOpenChange: (open: boolean) => void;
 }) {
+  // 로그인을 시작한 공급자. 이동하는 동안 버튼을 잠근다.
+  const [loadingProvider, setLoadingProvider] = useState<
+    "google" | "kakao" | "naver" | null
+  >(null);
+
+  // 소셜 로그인. 로그인이 끝나면 /auth/callback/{공급자}를 거쳐 지금 보고 있던 페이지로 돌아온다.
+  async function signIn(provider: "google" | "kakao") {
+    setLoadingProvider(provider);
+
+    const next = `${window.location.pathname}${window.location.search}`;
+    const supabase = createClient();
+    const { error } = await supabase.auth.signInWithOAuth({
+      provider,
+      options: {
+        redirectTo: `${window.location.origin}/auth/callback/${provider}?next=${encodeURIComponent(next)}`,
+      },
+    });
+
+    // 성공하면 바로 로그인 페이지로 이동하므로, 아래는 이동 자체가 실패했을 때만 실행된다.
+    if (error) {
+      setLoadingProvider(null);
+      toast.error(
+        `${provider === "google" ? "구글" : "카카오"} 로그인을 시작하지 못했어요. 잠시 후 다시 시도해 주세요.`,
+      );
+    }
+  }
+
+  // 네이버 로그인. Supabase에 네이버 공급자가 없어 서버 경로(/auth/naver)에서 직접 처리한다.
+  function signInWithNaver() {
+    setLoadingProvider("naver");
+    const next = `${window.location.pathname}${window.location.search}`;
+    // 서버 경로(Route Handler)라 클라이언트 이동이 아닌 전체 페이지 이동으로 연다.
+    // eslint-disable-next-line @next/next/no-location-assign-relative-destination -- Route Handler라 전체 페이지 이동이 필요하다.
+    window.location.assign(
+      `${window.location.origin}/auth/naver?next=${encodeURIComponent(next)}`,
+    );
+  }
+
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent className="gap-5 rounded-3xl border-2 border-bark bg-cream p-6 text-bark shadow-[4px_5px_0_var(--color-bark)] ring-0 sm:max-w-md sm:p-7">
@@ -73,6 +115,8 @@ export function DialogLogin({
         <div className="grid gap-2">
           <Button
             variant="seed"
+            disabled={loadingProvider !== null}
+            onClick={() => signIn("google")}
             className="w-full bg-white text-bark hover:bg-neutral-50"
           >
             <svg aria-hidden="true" viewBox="0 0 24 24" className="size-4">
@@ -97,6 +141,8 @@ export function DialogLogin({
           </Button>
           <Button
             variant="seed"
+            disabled={loadingProvider !== null}
+            onClick={() => signIn("kakao")}
             className="w-full bg-[#fee500] text-bark hover:bg-[#f4dc00]"
           >
             <svg aria-hidden="true" viewBox="0 0 24 24" className="size-4">
@@ -109,6 +155,8 @@ export function DialogLogin({
           </Button>
           <Button
             variant="seed"
+            disabled={loadingProvider !== null}
+            onClick={signInWithNaver}
             className="w-full bg-[#44ba5b] text-white hover:bg-[#3a9e4d]"
           >
             <svg aria-hidden="true" viewBox="-3 -3 30 30" className="size-4">

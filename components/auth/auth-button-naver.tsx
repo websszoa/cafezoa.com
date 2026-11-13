@@ -1,31 +1,17 @@
 "use client";
 
 import { useState } from "react";
-import { createClient } from "@/lib/supabase/client";
 import { Button } from "@/components/ui/button";
 
 export function NaverLoginButton() {
   const [isLoading, setIsLoading] = useState(false);
 
-  async function handleClick() {
+  // Supabase에 네이버 공급자가 없어 서버 경로(/auth/naver)에서 직접 처리한다. (lib/auth/naver.ts)
+  function handleClick() {
     setIsLoading(true);
-
-    const supabase = createClient();
-    // 네이버는 Supabase 기본 제공 프로바이더가 아니라, Supabase 대시보드에
-    // "naver"라는 이름의 Custom OIDC 프로바이더로 등록돼 있어야 동작한다.
-    const { error } = await supabase.auth.signInWithOAuth({
-      provider: "custom:naver",
-      options: {
-        redirectTo: `${window.location.origin}/auth/callback/naver`,
-      },
-    });
-
-    // 성공하면 즉시 네이버 로그인 페이지로 이동하므로, 아래는
-    // 리다이렉트 자체가 실패했을 때만(네트워크 오류 등) 실행된다.
-    if (error) {
-      setIsLoading(false);
-      console.error("signInWithOAuth failed", error);
-    }
+    // 서버 경로(Route Handler)라 클라이언트 이동이 아닌 전체 페이지 이동으로 연다.
+    // eslint-disable-next-line @next/next/no-location-assign-relative-destination -- Route Handler라 전체 페이지 이동이 필요하다.
+    window.location.assign(`${window.location.origin}/auth/naver?next=/`);
   }
 
   return (
