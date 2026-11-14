@@ -49,7 +49,6 @@ export type ListRow = {
   features: string[];
   floors: string[];
   hours: string[];
-  closedDays: string;
   prices: { menu: string; price: number | null }[];
   parking: string[];
   seating: string[];
@@ -114,21 +113,21 @@ const columns: {
     key: "services",
     title: "서비스",
     icon: Coffee,
-    defaultVisible: true,
+    defaultVisible: false,
     render: (row) => lines(row.services),
   },
   {
     key: "purpose",
     title: "추천 목적",
     icon: Users,
-    defaultVisible: true,
+    defaultVisible: false,
     render: (row) => lines(row.purpose),
   },
   {
     key: "features",
     title: "공간 특징",
     icon: Sparkles,
-    defaultVisible: true,
+    defaultVisible: false,
     render: (row) => lines(row.features),
   },
   {
@@ -151,7 +150,7 @@ const columns: {
     defaultVisible: false,
     // 최대 200px, 넘치는 줄은 말줄임표(...)로 자른다.
     className: "max-w-[250px]",
-    render: (row) => lines([...row.hours, row.closedDays], true),
+    render: (row) => lines(row.hours, true),
   },
   {
     key: "floors",
@@ -161,32 +160,18 @@ const columns: {
     render: (row) => lines(row.floors),
   },
   {
-    key: "parking",
-    title: "주차",
-    icon: CircleParking,
-    defaultVisible: false,
-    render: (row) => lines(row.parking),
-  },
-  {
     key: "seating",
     title: "좌석",
     icon: Armchair,
-    defaultVisible: false,
+    defaultVisible: true,
     render: (row) => lines(row.seating),
   },
   {
     key: "study",
     title: "스터디",
     icon: BookOpenCheck,
-    defaultVisible: false,
+    defaultVisible: true,
     render: (row) => lines(row.study),
-  },
-  {
-    key: "children",
-    title: "아이 동반",
-    icon: Baby,
-    defaultVisible: false,
-    render: (row) => lines(row.children),
   },
   {
     key: "pet",
@@ -194,6 +179,20 @@ const columns: {
     icon: PawPrint,
     defaultVisible: false,
     render: (row) => lines(row.pet),
+  },
+  {
+    key: "parking",
+    title: "주차",
+    icon: CircleParking,
+    defaultVisible: true,
+    render: (row) => lines(row.parking),
+  },
+  {
+    key: "children",
+    title: "아이 동반",
+    icon: Baby,
+    defaultVisible: false,
+    render: (row) => lines(row.children),
   },
   {
     key: "smoking",
@@ -222,16 +221,13 @@ const defaultVisibleKeys = columns
   .filter((column) => column.defaultVisible)
   .map((column) => column.key);
 
-// 칸 하나에 보여줄 최대 줄 수. 나머지는 상세 페이지에서 볼 수 있다.
-const MAX_LINES = 5;
-
-// 칸 안의 여러 줄 텍스트(최대 MAX_LINES줄). 내용이 없으면 null을 돌려줘 칸에 "-"가 표시된다.
+// 칸 안의 여러 줄 텍스트. 내용이 없으면 null을 돌려줘 칸에 "-"가 표시된다.
 // truncate가 true면 칸 너비를 넘치는 줄을 말줄임표(...)로 자른다. (블릿 점은 그대로 보이도록 글자만 자른다)
 function lines(items: string[], truncate = false) {
   if (!items.length) return null;
   return (
     <ul className="list-disc space-y-1 pl-4 marker:text-autumn">
-      {items.slice(0, MAX_LINES).map((item) => (
+      {items.map((item) => (
         <li key={item}>
           {truncate ? (
             <span title={item} className="block truncate">

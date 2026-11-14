@@ -32,7 +32,8 @@ export async function generateMetadata({
 
   // 예) "더티트렁크 - 파주 대형카페" → 화면 탭에는 "더티트렁크 - 파주 대형카페 | 카페조아"
   const title = `${cafe.name} - ${getCafeRegion(cafe.location.address)} ${getCafeTypeLabel(cafe.type[0])}`;
-  const description = getShortDescription(cafe.description);
+  // 검색 결과·공유 미리보기용 설명은 summary(60~80자). 없으면 소개 글 앞부분을 문장 단위로 줄여 쓴다.
+  const description = cafe.summary || getShortDescription(cafe.description);
   const url = `/cafe/${slug}`;
 
   // og:image·twitter:image는 같은 폴더의 opengraph-image.tsx / twitter-image.tsx가 자동으로 채운다.

@@ -7,6 +7,7 @@ import {
   ClipboardPlus,
   FilePenLine,
   FileText,
+  Heart,
   Images,
   Info,
   LayoutList,
@@ -41,6 +42,12 @@ export const introLinks = [
     label: "이미지",
     description: "이미지로 보기",
     icon: Images,
+  },
+  {
+    href: "/taste",
+    label: "취향",
+    description: "취향으로 찾기",
+    icon: Heart,
   },
 ];
 

@@ -6,13 +6,13 @@
     "purpose": ["데이트", "가족", "드라이브", "사진", "모임"],
     "features": ["높은 층고", "창고형 인테리어", "대형 실내공간"],
     "floors": ["지하1층", "1층", "2층"],
-    "parking": ["무료", "지상 · 지하 주차장", "60대 정도"],
-    "pet": ["불가", "반려동물 입장 불가"],
-    "restroom": ["남녀 구분"],
+    "parking": ["약 60대 정도", "무료", "지상 · 지하 주차장"],
+    "pet": ["불가"],
+    "restroom": ["실내", "남녀 구분"],
     "children": ["아이 동반 가능"],
-    "study": ["가능", "장시간 이용 비추천", "콘셉트 없음"],
+    "study": ["가능", "장시간 이용 비추천", "콘센트 없음"],
     "smoking": ["가능", "외부 별도 흡연공간 있음"],
-    "seating": ["200석 이상", "다양한 형태의 좌석"],
+    "seating": ["약 200석 정도", "계단식 좌석"],
     "business": {
       "closed_days": "연중무휴",
       "hours": {
@@ -36,20 +36,62 @@
       "instagram": "dirty_trunk_korea",
       "cover": "/cafe/dirty-trunk-paju-01.webp",
       "gallery": [
-        { "src": "/cafe/dirty-trunk-paju-01.webp", "alt": "높은 박공 천장의 창고형 실내 전경" },
-        { "src": "/cafe/dirty-trunk-paju-02.webp", "alt": "베이커리 진열대와 실내 좌석" },
-        { "src": "/cafe/dirty-trunk-paju-03.webp", "alt": "원형 창이 있는 주문 카운터" },
-        { "src": "/cafe/dirty-trunk-paju-04.webp", "alt": "COFFEE FACTORY 사인과 긴 테이블 좌석" },
-        { "src": "/cafe/dirty-trunk-paju-05.webp", "alt": "다양한 빵이 놓인 베이커리 진열대" },
-        { "src": "/cafe/dirty-trunk-paju-06.webp", "alt": "숫자가 적힌 계단식 좌석" },
-        { "src": "/cafe/dirty-trunk-paju-07.webp", "alt": "식물과 소파 좌석이 있는 실내" },
-        { "src": "/cafe/dirty-trunk-paju-08.webp", "alt": "긴 원목 테이블이 놓인 통로" },
-        { "src": "/cafe/dirty-trunk-paju-09.webp", "alt": "책장으로 둘러싸인 테이블 좌석" },
-        { "src": "/cafe/dirty-trunk-paju-10.webp", "alt": "파란 쿠션의 긴 소파 좌석" },
-        { "src": "/cafe/dirty-trunk-paju-11.webp", "alt": "창가 원목 테이블 좌석" },
-        { "src": "/cafe/dirty-trunk-paju-12.webp", "alt": "크리스마스 장식 조형물" },
-        { "src": "/cafe/dirty-trunk-paju-13.webp", "alt": "DIRTY TRUNK 네온사인과 시즌 장식" },
-        { "src": "/cafe/dirty-trunk-paju-14.webp", "alt": "크리스마스 트리로 꾸민 입구" },
+        {
+          "src": "/cafe/dirty-trunk-paju-01.webp",
+          "alt": "높은 박공 천장의 창고형 실내 전경"
+        },
+        {
+          "src": "/cafe/dirty-trunk-paju-02.webp",
+          "alt": "베이커리 진열대와 실내 좌석"
+        },
+        {
+          "src": "/cafe/dirty-trunk-paju-03.webp",
+          "alt": "원형 창이 있는 주문 카운터"
+        },
+        {
+          "src": "/cafe/dirty-trunk-paju-04.webp",
+          "alt": "COFFEE FACTORY 사인과 긴 테이블 좌석"
+        },
+        {
+          "src": "/cafe/dirty-trunk-paju-05.webp",
+          "alt": "다양한 빵이 놓인 베이커리 진열대"
+        },
+        {
+          "src": "/cafe/dirty-trunk-paju-06.webp",
+          "alt": "숫자가 적힌 계단식 좌석"
+        },
+        {
+          "src": "/cafe/dirty-trunk-paju-07.webp",
+          "alt": "식물과 소파 좌석이 있는 실내"
+        },
+        {
+          "src": "/cafe/dirty-trunk-paju-08.webp",
+          "alt": "긴 원목 테이블이 놓인 통로"
+        },
+        {
+          "src": "/cafe/dirty-trunk-paju-09.webp",
+          "alt": "책장으로 둘러싸인 테이블 좌석"
+        },
+        {
+          "src": "/cafe/dirty-trunk-paju-10.webp",
+          "alt": "파란 쿠션의 긴 소파 좌석"
+        },
+        {
+          "src": "/cafe/dirty-trunk-paju-11.webp",
+          "alt": "창가 원목 테이블 좌석"
+        },
+        {
+          "src": "/cafe/dirty-trunk-paju-12.webp",
+          "alt": "크리스마스 장식 조형물"
+        },
+        {
+          "src": "/cafe/dirty-trunk-paju-13.webp",
+          "alt": "DIRTY TRUNK 네온사인과 시즌 장식"
+        },
+        {
+          "src": "/cafe/dirty-trunk-paju-14.webp",
+          "alt": "크리스마스 트리로 꾸민 입구"
+        },
         { "src": "/cafe/dirty-trunk-paju-15.webp", "alt": "건물 옆 주차장" },
         { "src": "/cafe/dirty-trunk-paju-16.webp", "alt": "창고형 건물 외관" }
       ]
@@ -62,13 +104,13 @@
     "purpose": ["데이트", "가족", "드라이브", "사진", "모임"],
     "features": ["대형 실내공간", "독특한 목재 인테리어", "체험형 공간"],
     "floors": ["1층"],
-    "parking": ["무료", "지상 주차장", "100대 정도"],
-    "pet": ["불가", "반려동물 입장 불가"],
-    "restroom": ["남녀 구분", "매우 깨끗함"],
+    "parking": ["약 100대 정도", "무료", "지상 공용 주차장"],
+    "pet": ["불가"],
+    "restroom": ["실내", "남녀 구분", "매우 깨끗함"],
     "children": ["아이 동반 가능"],
-    "study": ["가능", "장시간 이용 비추천", "콘셉트 없음"],
+    "study": ["가능", "장시간 이용 비추천", "콘센트 없음"],
     "smoking": ["가능", "외부 별도 흡연공간 있음"],
-    "seating": ["300석 이상", "다양한 형태의 좌석"],
+    "seating": ["약 300석 정도", "단체석", "소파 좌석"],
     "business": {
       "closed_days": "연중무휴",
       "hours": {
@@ -93,24 +135,63 @@
       "instagram": "zatura__official",
       "cover": "/cafe/zatura-gimpo-01.webp",
       "gallery": [
-        { "src": "/cafe/zatura-gimpo-01.webp", "alt": "물결 모양 목재 천장과 원형 좌석" },
-        { "src": "/cafe/zatura-gimpo-02.webp", "alt": "목재 천장 아래 넓은 실내 좌석" },
-        { "src": "/cafe/zatura-gimpo-03.webp", "alt": "목재 구조물이 감싼 실내 공간" },
-        { "src": "/cafe/zatura-gimpo-04.webp", "alt": "목재 천장 아래 테이블 좌석" },
-        { "src": "/cafe/zatura-gimpo-05.webp", "alt": "채광창 아래 테이블 좌석" },
-        { "src": "/cafe/zatura-gimpo-06.webp", "alt": "주황색 조형물이 있는 실내 좌석" },
-        { "src": "/cafe/zatura-gimpo-07.webp", "alt": "목재 난간 옆 원형 테이블" },
-        { "src": "/cafe/zatura-gimpo-08.webp", "alt": "곡선형 테이블과 실내 전경" },
-        { "src": "/cafe/zatura-gimpo-09.webp", "alt": "원형 목재 조형물과 좌석" },
+        {
+          "src": "/cafe/zatura-gimpo-01.webp",
+          "alt": "물결 모양 목재 천장과 원형 좌석"
+        },
+        {
+          "src": "/cafe/zatura-gimpo-02.webp",
+          "alt": "목재 천장 아래 넓은 실내 좌석"
+        },
+        {
+          "src": "/cafe/zatura-gimpo-03.webp",
+          "alt": "목재 구조물이 감싼 실내 공간"
+        },
+        {
+          "src": "/cafe/zatura-gimpo-04.webp",
+          "alt": "목재 천장 아래 테이블 좌석"
+        },
+        {
+          "src": "/cafe/zatura-gimpo-05.webp",
+          "alt": "채광창 아래 테이블 좌석"
+        },
+        {
+          "src": "/cafe/zatura-gimpo-06.webp",
+          "alt": "주황색 조형물이 있는 실내 좌석"
+        },
+        {
+          "src": "/cafe/zatura-gimpo-07.webp",
+          "alt": "목재 난간 옆 원형 테이블"
+        },
+        {
+          "src": "/cafe/zatura-gimpo-08.webp",
+          "alt": "곡선형 테이블과 실내 전경"
+        },
+        {
+          "src": "/cafe/zatura-gimpo-09.webp",
+          "alt": "원형 목재 조형물과 좌석"
+        },
         { "src": "/cafe/zatura-gimpo-10.webp", "alt": "실내 볼링장" },
         { "src": "/cafe/zatura-gimpo-11.webp", "alt": "체험형 놀이 공간" },
-        { "src": "/cafe/zatura-gimpo-12.webp", "alt": "체크무늬 바닥의 게임 공간" },
-        { "src": "/cafe/zatura-gimpo-13.webp", "alt": "잠수함 조형물이 있는 컬러풀한 좌석" },
+        {
+          "src": "/cafe/zatura-gimpo-12.webp",
+          "alt": "체크무늬 바닥의 게임 공간"
+        },
+        {
+          "src": "/cafe/zatura-gimpo-13.webp",
+          "alt": "잠수함 조형물이 있는 컬러풀한 좌석"
+        },
         { "src": "/cafe/zatura-gimpo-14.webp", "alt": "원목 인테리어 화장실" },
         { "src": "/cafe/zatura-gimpo-15.webp", "alt": "곡선형 목재 터널 통로" },
-        { "src": "/cafe/zatura-gimpo-16.webp", "alt": "조명이 비추는 어두운 복도" },
+        {
+          "src": "/cafe/zatura-gimpo-16.webp",
+          "alt": "조명이 비추는 어두운 복도"
+        },
         { "src": "/cafe/zatura-gimpo-17.webp", "alt": "벽돌 건물 입구" },
-        { "src": "/cafe/zatura-gimpo-18.webp", "alt": "벽돌 건물 외관과 주차장" }
+        {
+          "src": "/cafe/zatura-gimpo-18.webp",
+          "alt": "벽돌 건물 외관과 주차장"
+        }
       ]
     }
   },
@@ -121,13 +202,13 @@
     "purpose": ["데이트", "가족", "드라이브", "사진", "모임"],
     "features": ["높은 층고", "대형 실내공간", "실내 정원", "포토존"],
     "floors": ["1층", "2층"],
-    "parking": ["무료", "지상 · 지하 주차장", "150대 정도"],
-    "pet": ["불가", "반려동물 입장 불가"],
-    "restroom": ["실내", "매우 깨끗함"],
+    "parking": ["약 150대 정도", "무료", "지상 · 지하 주차장"],
+    "pet": ["불가"],
+    "restroom": ["실내", "남녀 구분", "매우 깨끗함"],
     "children": ["아이 동반 가능"],
-    "study": ["가능", "장시간 이용 비추천"],
+    "study": ["가능", "장시간 이용 비추천", "콘센트 없음"],
     "smoking": ["가능", "외부 별도 흡연공간 있음"],
-    "seating": ["300석 이상", "다양한 형태의 좌석"],
+    "seating": ["약 300석 정도", "계단식 좌석", "단체석"],
     "business": {
       "closed_days": "연중무휴",
       "hours": {
@@ -152,23 +233,71 @@
       "instagram": "forestoutings_ilsan",
       "cover": "/cafe/forest-outings-goyang-01.webp",
       "gallery": [
-        { "src": "/cafe/forest-outings-goyang-01.webp", "alt": "돌고래 조형물이 매달린 실내 정원" },
-        { "src": "/cafe/forest-outings-goyang-02.webp", "alt": "높은 층고의 계단식 좌석" },
-        { "src": "/cafe/forest-outings-goyang-03.webp", "alt": "돌고래 장식과 실내 정원 전경" },
-        { "src": "/cafe/forest-outings-goyang-04.webp", "alt": "벽돌 기둥과 버블 조명 장식" },
-        { "src": "/cafe/forest-outings-goyang-05.webp", "alt": "열기구 조형물과 실내 정원" },
-        { "src": "/cafe/forest-outings-goyang-06.webp", "alt": "연못과 다리가 있는 실내 정원" },
-        { "src": "/cafe/forest-outings-goyang-07.webp", "alt": "돌고래 장식과 연못 정원" },
-        { "src": "/cafe/forest-outings-goyang-08.webp", "alt": "인조잔디 위 창가 좌석" },
-        { "src": "/cafe/forest-outings-goyang-09.webp", "alt": "계단과 테이블 좌석" },
-        { "src": "/cafe/forest-outings-goyang-10.webp", "alt": "벽돌 기둥 옆 바 좌석" },
-        { "src": "/cafe/forest-outings-goyang-11.webp", "alt": "버블 조명과 돌고래 장식" },
-        { "src": "/cafe/forest-outings-goyang-12.webp", "alt": "야자수와 테이블 좌석" },
-        { "src": "/cafe/forest-outings-goyang-13.webp", "alt": "긴 통로를 따라 놓인 좌석" },
-        { "src": "/cafe/forest-outings-goyang-14.webp", "alt": "위에서 내려다본 실내 정원" },
-        { "src": "/cafe/forest-outings-goyang-15.webp", "alt": "화장실 세면대" },
+        {
+          "src": "/cafe/forest-outings-goyang-01.webp",
+          "alt": "돌고래 조형물이 매달린 실내 정원"
+        },
+        {
+          "src": "/cafe/forest-outings-goyang-02.webp",
+          "alt": "높은 층고의 계단식 좌석"
+        },
+        {
+          "src": "/cafe/forest-outings-goyang-03.webp",
+          "alt": "돌고래 장식과 실내 정원 전경"
+        },
+        {
+          "src": "/cafe/forest-outings-goyang-04.webp",
+          "alt": "벽돌 기둥과 버블 조명 장식"
+        },
+        {
+          "src": "/cafe/forest-outings-goyang-05.webp",
+          "alt": "열기구 조형물과 실내 정원"
+        },
+        {
+          "src": "/cafe/forest-outings-goyang-06.webp",
+          "alt": "연못과 다리가 있는 실내 정원"
+        },
+        {
+          "src": "/cafe/forest-outings-goyang-07.webp",
+          "alt": "돌고래 장식과 연못 정원"
+        },
+        {
+          "src": "/cafe/forest-outings-goyang-08.webp",
+          "alt": "인조잔디 위 창가 좌석"
+        },
+        {
+          "src": "/cafe/forest-outings-goyang-09.webp",
+          "alt": "계단과 테이블 좌석"
+        },
+        {
+          "src": "/cafe/forest-outings-goyang-10.webp",
+          "alt": "벽돌 기둥 옆 바 좌석"
+        },
+        {
+          "src": "/cafe/forest-outings-goyang-11.webp",
+          "alt": "버블 조명과 돌고래 장식"
+        },
+        {
+          "src": "/cafe/forest-outings-goyang-12.webp",
+          "alt": "야자수와 테이블 좌석"
+        },
+        {
+          "src": "/cafe/forest-outings-goyang-13.webp",
+          "alt": "긴 통로를 따라 놓인 좌석"
+        },
+        {
+          "src": "/cafe/forest-outings-goyang-14.webp",
+          "alt": "위에서 내려다본 실내 정원"
+        },
+        {
+          "src": "/cafe/forest-outings-goyang-15.webp",
+          "alt": "화장실 세면대"
+        },
         { "src": "/cafe/forest-outings-goyang-17.webp", "alt": "층별 안내판" },
-        { "src": "/cafe/forest-outings-goyang-18.webp", "alt": "벽돌 건물 외관과 주차장 입구" }
+        {
+          "src": "/cafe/forest-outings-goyang-18.webp",
+          "alt": "벽돌 건물 외관과 주차장 입구"
+        }
       ]
     }
   },
@@ -179,13 +308,13 @@
     "purpose": ["데이트", "가족", "드라이브", "사진", "모임"],
     "features": ["높은 층고", "대형 실내공간", "실내 정원", "포토존"],
     "floors": ["1층", "2층", "3층"],
-    "parking": ["무료", "지상 · 지하 주차장", "150대 정도"],
-    "pet": ["가능", "1층 펫 프렌들리존 입장 가능"],
-    "restroom": ["남녀 구분", "깨끗함"],
+    "parking": ["약 150대 정도", "무료", "지상·지하 주차장"],
+    "pet": ["일부 구역 가능", "펫존 있음"],
+    "restroom": ["실내", "남녀 구분", "깨끗함"],
     "children": ["아이 동반 가능"],
-    "study": ["가능", "장시간 이용 비추천"],
+    "study": ["가능", "장시간 이용 비추천", "콘센트 없음"],
     "smoking": ["가능", "외부 별도 흡연공간 있음"],
-    "seating": ["300석 이상", "다양한 형태의 좌석"],
+    "seating": ["약 300석 정도", "계단식 좌석"],
     "business": {
       "closed_days": "연중무휴",
       "hours": {
@@ -210,19 +339,58 @@
       "instagram": "forestoutings_songdo",
       "cover": "/cafe/forest-outings-songdo-01.webp",
       "gallery": [
-        { "src": "/cafe/forest-outings-songdo-01.webp", "alt": "열기구 조형물과 실내 정원" },
-        { "src": "/cafe/forest-outings-songdo-02.webp", "alt": "열기구 장식과 버블 조명" },
-        { "src": "/cafe/forest-outings-songdo-03.webp", "alt": "돌고래 장식이 매달린 실내 정원" },
-        { "src": "/cafe/forest-outings-songdo-04.webp", "alt": "원형 조명이 매달린 높은 층고" },
-        { "src": "/cafe/forest-outings-songdo-05.webp", "alt": "버블 조명과 계단 좌석" },
-        { "src": "/cafe/forest-outings-songdo-06.webp", "alt": "조명 장식 아래 중앙 계단" },
-        { "src": "/cafe/forest-outings-songdo-07.webp", "alt": "불가사리 장식과 실내 정원 다리" },
-        { "src": "/cafe/forest-outings-songdo-08.webp", "alt": "야자수 사이 산책로" },
-        { "src": "/cafe/forest-outings-songdo-09.webp", "alt": "실내 테이블 좌석" },
-        { "src": "/cafe/forest-outings-songdo-10.webp", "alt": "식물이 놓인 창가 좌석" },
-        { "src": "/cafe/forest-outings-songdo-11.webp", "alt": "빵이 가득한 베이커리 진열대" },
-        { "src": "/cafe/forest-outings-songdo-12.webp", "alt": "파라솔이 있는 야외 테라스" },
-        { "src": "/cafe/forest-outings-songdo-13.webp", "alt": "화장실 세면대" },
+        {
+          "src": "/cafe/forest-outings-songdo-01.webp",
+          "alt": "열기구 조형물과 실내 정원"
+        },
+        {
+          "src": "/cafe/forest-outings-songdo-02.webp",
+          "alt": "열기구 장식과 버블 조명"
+        },
+        {
+          "src": "/cafe/forest-outings-songdo-03.webp",
+          "alt": "돌고래 장식이 매달린 실내 정원"
+        },
+        {
+          "src": "/cafe/forest-outings-songdo-04.webp",
+          "alt": "원형 조명이 매달린 높은 층고"
+        },
+        {
+          "src": "/cafe/forest-outings-songdo-05.webp",
+          "alt": "버블 조명과 계단 좌석"
+        },
+        {
+          "src": "/cafe/forest-outings-songdo-06.webp",
+          "alt": "조명 장식 아래 중앙 계단"
+        },
+        {
+          "src": "/cafe/forest-outings-songdo-07.webp",
+          "alt": "불가사리 장식과 실내 정원 다리"
+        },
+        {
+          "src": "/cafe/forest-outings-songdo-08.webp",
+          "alt": "야자수 사이 산책로"
+        },
+        {
+          "src": "/cafe/forest-outings-songdo-09.webp",
+          "alt": "실내 테이블 좌석"
+        },
+        {
+          "src": "/cafe/forest-outings-songdo-10.webp",
+          "alt": "식물이 놓인 창가 좌석"
+        },
+        {
+          "src": "/cafe/forest-outings-songdo-11.webp",
+          "alt": "빵이 가득한 베이커리 진열대"
+        },
+        {
+          "src": "/cafe/forest-outings-songdo-12.webp",
+          "alt": "파라솔이 있는 야외 테라스"
+        },
+        {
+          "src": "/cafe/forest-outings-songdo-13.webp",
+          "alt": "화장실 세면대"
+        },
         { "src": "/cafe/forest-outings-songdo-14.webp", "alt": "지하 주차장" },
         { "src": "/cafe/forest-outings-songdo-15.webp", "alt": "건물 외관" }
       ]
@@ -236,17 +404,17 @@
     "features": ["넓은 실내공간", "통창", "다양한 좌석", "루프탑"],
     "floors": ["1층", "2층", "루프탑"],
     "parking": [
+      "약 50대 정도",
       "유료",
       "매장 뒤편 전용 주차장",
-      "50대 정도",
       "2시간 무료, 이후 10분당 1000원"
     ],
-    "pet": ["불가", "반려동물 입장 불가"],
+    "pet": ["불가"],
     "restroom": ["실내", "남녀 구분"],
     "children": ["아이 동반 가능"],
-    "study": ["가능", "노트북 작업하기 좋은 좌석 있음", "콘셉트 있음"],
-    "smoking": ["불가", "흡연공간 없음"],
-    "seating": ["100석 이상", "창가 좌석 인기"],
+    "study": ["가능", "노트북 좌석 있음", "콘센트 있음"],
+    "smoking": ["불가", "외부 별도 흡연공간 없음"],
+    "seating": ["약 100석 정도", "창가 좌석"],
     "business": {
       "closed_days": "연중무휴",
       "hours": {
@@ -265,21 +433,66 @@
       "instagram": "official_hollys",
       "cover": "/cafe/hollys-jeju-dodu-coast-dt-01.webp",
       "gallery": [
-        { "src": "/cafe/hollys-jeju-dodu-coast-dt-01.webp", "alt": "통창 너머 바다가 보이는 창가 좌석" },
-        { "src": "/cafe/hollys-jeju-dodu-coast-dt-02.webp", "alt": "바다 전망의 실내 좌석" },
-        { "src": "/cafe/hollys-jeju-dodu-coast-dt-03.webp", "alt": "긴 소파와 창가 좌석" },
-        { "src": "/cafe/hollys-jeju-dodu-coast-dt-04.webp", "alt": "원형 거울이 있는 소파 좌석" },
-        { "src": "/cafe/hollys-jeju-dodu-coast-dt-05.webp", "alt": "컬러 창이 있는 실내 좌석" },
-        { "src": "/cafe/hollys-jeju-dodu-coast-dt-06.webp", "alt": "식물과 테이블 좌석" },
-        { "src": "/cafe/hollys-jeju-dodu-coast-dt-07.webp", "alt": "단체 테이블과 소파 좌석" },
-        { "src": "/cafe/hollys-jeju-dodu-coast-dt-08.webp", "alt": "창가 바 좌석" },
-        { "src": "/cafe/hollys-jeju-dodu-coast-dt-09.webp", "alt": "현무암 화분 조형물이 있는 실내" },
-        { "src": "/cafe/hollys-jeju-dodu-coast-dt-10.webp", "alt": "해질녘 바다가 보이는 루프탑" },
-        { "src": "/cafe/hollys-jeju-dodu-coast-dt-11.webp", "alt": "화장실 세면대" },
-        { "src": "/cafe/hollys-jeju-dodu-coast-dt-12.webp", "alt": "층별 안내판" },
-        { "src": "/cafe/hollys-jeju-dodu-coast-dt-13.webp", "alt": "노을 진 하늘과 주차장" },
-        { "src": "/cafe/hollys-jeju-dodu-coast-dt-14.webp", "alt": "빨간 로고의 입구" },
-        { "src": "/cafe/hollys-jeju-dodu-coast-dt-15.webp", "alt": "해질녘 건물 외관과 드라이브스루" }
+        {
+          "src": "/cafe/hollys-jeju-dodu-coast-dt-01.webp",
+          "alt": "통창 너머 바다가 보이는 창가 좌석"
+        },
+        {
+          "src": "/cafe/hollys-jeju-dodu-coast-dt-02.webp",
+          "alt": "바다 전망의 실내 좌석"
+        },
+        {
+          "src": "/cafe/hollys-jeju-dodu-coast-dt-03.webp",
+          "alt": "긴 소파와 창가 좌석"
+        },
+        {
+          "src": "/cafe/hollys-jeju-dodu-coast-dt-04.webp",
+          "alt": "원형 거울이 있는 소파 좌석"
+        },
+        {
+          "src": "/cafe/hollys-jeju-dodu-coast-dt-05.webp",
+          "alt": "컬러 창이 있는 실내 좌석"
+        },
+        {
+          "src": "/cafe/hollys-jeju-dodu-coast-dt-06.webp",
+          "alt": "식물과 테이블 좌석"
+        },
+        {
+          "src": "/cafe/hollys-jeju-dodu-coast-dt-07.webp",
+          "alt": "단체 테이블과 소파 좌석"
+        },
+        {
+          "src": "/cafe/hollys-jeju-dodu-coast-dt-08.webp",
+          "alt": "창가 바 좌석"
+        },
+        {
+          "src": "/cafe/hollys-jeju-dodu-coast-dt-09.webp",
+          "alt": "현무암 화분 조형물이 있는 실내"
+        },
+        {
+          "src": "/cafe/hollys-jeju-dodu-coast-dt-10.webp",
+          "alt": "해질녘 바다가 보이는 루프탑"
+        },
+        {
+          "src": "/cafe/hollys-jeju-dodu-coast-dt-11.webp",
+          "alt": "화장실 세면대"
+        },
+        {
+          "src": "/cafe/hollys-jeju-dodu-coast-dt-12.webp",
+          "alt": "층별 안내판"
+        },
+        {
+          "src": "/cafe/hollys-jeju-dodu-coast-dt-13.webp",
+          "alt": "노을 진 하늘과 주차장"
+        },
+        {
+          "src": "/cafe/hollys-jeju-dodu-coast-dt-14.webp",
+          "alt": "빨간 로고의 입구"
+        },
+        {
+          "src": "/cafe/hollys-jeju-dodu-coast-dt-15.webp",
+          "alt": "해질녘 건물 외관과 드라이브스루"
+        }
       ]
     }
   },
@@ -298,13 +511,13 @@
       "수유실"
     ],
     "floors": ["1층", "2층", "3층", "4층"],
-    "parking": ["무료", "지상 · 지하 주차장", "200대 정도"],
-    "pet": ["불가", "반려동물 입장 불가"],
+    "parking": ["약 150대 정도", "무료", "지상 · 지하 주차장"],
+    "pet": ["불가"],
     "restroom": ["실내", "남녀 구분"],
     "children": ["아이 동반 가능", "유아의자 있음", "수유실 있음"],
     "study": ["가능", "장시간 공부는 비추", "주말 혼잡"],
     "smoking": ["가능", "외부 별도 흡연공간 있음"],
-    "seating": ["300석 이상", "다양한 형태의 좌석", "단체석", "창가 좌석"],
+    "seating": ["약 300석 정도", "창가 좌석", "단체석"],
     "business": {
       "opened_at": "2025-06-24",
       "closed_days": "연중무휴",
@@ -328,21 +541,66 @@
       "instagram": "forestoutings_yongin",
       "cover": "/cafe/forest-outings-yongin-01.webp",
       "gallery": [
-        { "src": "/cafe/forest-outings-yongin-01.webp", "alt": "높은 층고의 실내 정원 전경" },
-        { "src": "/cafe/forest-outings-yongin-02.webp", "alt": "위에서 내려다본 실내 정원" },
-        { "src": "/cafe/forest-outings-yongin-03.webp", "alt": "야자수와 조명이 있는 실내 정원" },
-        { "src": "/cafe/forest-outings-yongin-04.webp", "alt": "화분 기둥 조형물과 층별 좌석" },
-        { "src": "/cafe/forest-outings-yongin-05.webp", "alt": "화분 기둥 조형물 옆 좌석" },
-        { "src": "/cafe/forest-outings-yongin-06.webp", "alt": "식물 샹들리에 아래 테이블 좌석" },
-        { "src": "/cafe/forest-outings-yongin-07.webp", "alt": "창가를 따라 놓인 좌석" },
-        { "src": "/cafe/forest-outings-yongin-08.webp", "alt": "대리석 바닥의 테이블 좌석" },
-        { "src": "/cafe/forest-outings-yongin-09.webp", "alt": "샹들리에와 아치형 창이 있는 홀" },
-        { "src": "/cafe/forest-outings-yongin-10.webp", "alt": "식물을 올린 긴 테이블 좌석" },
-        { "src": "/cafe/forest-outings-yongin-11.webp", "alt": "나무 모양 조명이 있는 실내 정원" },
-        { "src": "/cafe/forest-outings-yongin-12.webp", "alt": "아치형 통창 앞 테이블 좌석" },
-        { "src": "/cafe/forest-outings-yongin-13.webp", "alt": "창가 단체 테이블 좌석" },
-        { "src": "/cafe/forest-outings-yongin-14.webp", "alt": "단차가 있는 테이블 좌석" },
-        { "src": "/cafe/forest-outings-yongin-15.webp", "alt": "원형 거울이 있는 화장실" },
+        {
+          "src": "/cafe/forest-outings-yongin-01.webp",
+          "alt": "높은 층고의 실내 정원 전경"
+        },
+        {
+          "src": "/cafe/forest-outings-yongin-02.webp",
+          "alt": "위에서 내려다본 실내 정원"
+        },
+        {
+          "src": "/cafe/forest-outings-yongin-03.webp",
+          "alt": "야자수와 조명이 있는 실내 정원"
+        },
+        {
+          "src": "/cafe/forest-outings-yongin-04.webp",
+          "alt": "화분 기둥 조형물과 층별 좌석"
+        },
+        {
+          "src": "/cafe/forest-outings-yongin-05.webp",
+          "alt": "화분 기둥 조형물 옆 좌석"
+        },
+        {
+          "src": "/cafe/forest-outings-yongin-06.webp",
+          "alt": "식물 샹들리에 아래 테이블 좌석"
+        },
+        {
+          "src": "/cafe/forest-outings-yongin-07.webp",
+          "alt": "창가를 따라 놓인 좌석"
+        },
+        {
+          "src": "/cafe/forest-outings-yongin-08.webp",
+          "alt": "대리석 바닥의 테이블 좌석"
+        },
+        {
+          "src": "/cafe/forest-outings-yongin-09.webp",
+          "alt": "샹들리에와 아치형 창이 있는 홀"
+        },
+        {
+          "src": "/cafe/forest-outings-yongin-10.webp",
+          "alt": "식물을 올린 긴 테이블 좌석"
+        },
+        {
+          "src": "/cafe/forest-outings-yongin-11.webp",
+          "alt": "나무 모양 조명이 있는 실내 정원"
+        },
+        {
+          "src": "/cafe/forest-outings-yongin-12.webp",
+          "alt": "아치형 통창 앞 테이블 좌석"
+        },
+        {
+          "src": "/cafe/forest-outings-yongin-13.webp",
+          "alt": "창가 단체 테이블 좌석"
+        },
+        {
+          "src": "/cafe/forest-outings-yongin-14.webp",
+          "alt": "단차가 있는 테이블 좌석"
+        },
+        {
+          "src": "/cafe/forest-outings-yongin-15.webp",
+          "alt": "원형 거울이 있는 화장실"
+        },
         { "src": "/cafe/forest-outings-yongin-16.webp", "alt": "층별 안내판" },
         { "src": "/cafe/forest-outings-yongin-17.webp", "alt": "지하 주차장" },
         { "src": "/cafe/forest-outings-yongin-18.webp", "alt": "건물 외관" }
@@ -366,8 +624,8 @@
       "포토존"
     ],
     "floors": ["1층", "2층", "3층", "4층", "루프탑"],
-    "parking": ["무료", "지상 · 지하 주차장", "200대 이상"],
-    "pet": ["불가", "반려동물 입장 불가"],
+    "parking": ["약 200대 정도", "무료", "지상·지하 주차장"],
+    "pet": ["불가"],
     "restroom": ["실내", "남녀 구분", "층별 이용 가능"],
     "children": [
       "아이 동반 가능",
@@ -377,13 +635,7 @@
     ],
     "study": ["가능", "장시간 공부는 비추", "주말 혼잡"],
     "smoking": ["가능", "외부 별도 흡연공간 있음"],
-    "seating": [
-      "500석 이상",
-      "다양한 형태의 좌석",
-      "창가 좌석 인기",
-      "단체석",
-      "가족석"
-    ],
+    "seating": ["약 500석 정도", "창가 좌석", "단체석"],
     "business": {
       "closed_days": "연중무휴",
       "hours": {
@@ -406,21 +658,63 @@
       "instagram": "hutan_official",
       "cover": "/cafe/hutan-namyangju-01.webp",
       "gallery": [
-        { "src": "/cafe/hutan-namyangju-01.webp", "alt": "유리 천장 아래 대형 실내정원" },
-        { "src": "/cafe/hutan-namyangju-02.webp", "alt": "층마다 좌석이 둘러싼 실내정원" },
-        { "src": "/cafe/hutan-namyangju-03.webp", "alt": "실내정원 연못과 조형물" },
-        { "src": "/cafe/hutan-namyangju-04.webp", "alt": "열대식물과 실내 분수" },
-        { "src": "/cafe/hutan-namyangju-05.webp", "alt": "열대식물 사이 실내 수로" },
+        {
+          "src": "/cafe/hutan-namyangju-01.webp",
+          "alt": "유리 천장 아래 대형 실내정원"
+        },
+        {
+          "src": "/cafe/hutan-namyangju-02.webp",
+          "alt": "층마다 좌석이 둘러싼 실내정원"
+        },
+        {
+          "src": "/cafe/hutan-namyangju-03.webp",
+          "alt": "실내정원 연못과 조형물"
+        },
+        {
+          "src": "/cafe/hutan-namyangju-04.webp",
+          "alt": "열대식물과 실내 분수"
+        },
+        {
+          "src": "/cafe/hutan-namyangju-05.webp",
+          "alt": "열대식물 사이 실내 수로"
+        },
         { "src": "/cafe/hutan-namyangju-06.webp", "alt": "계단식 좌석" },
-        { "src": "/cafe/hutan-namyangju-07.webp", "alt": "야자수 옆 테이블 좌석" },
-        { "src": "/cafe/hutan-namyangju-08.webp", "alt": "통창을 따라 놓인 좌석" },
-        { "src": "/cafe/hutan-namyangju-09.webp", "alt": "단차가 있는 테이블 좌석" },
-        { "src": "/cafe/hutan-namyangju-10.webp", "alt": "통창 너머 저수지가 보이는 좌석" },
-        { "src": "/cafe/hutan-namyangju-11.webp", "alt": "오남저수지가 보이는 창가 좌석" },
-        { "src": "/cafe/hutan-namyangju-12.webp", "alt": "창가 단체 테이블 좌석" },
-        { "src": "/cafe/hutan-namyangju-13.webp", "alt": "파라솔이 있는 루프탑" },
-        { "src": "/cafe/hutan-namyangju-14.webp", "alt": "빵이 가득한 베이커리 진열대" },
-        { "src": "/cafe/hutan-namyangju-15.webp", "alt": "아치형 거울이 있는 화장실" },
+        {
+          "src": "/cafe/hutan-namyangju-07.webp",
+          "alt": "야자수 옆 테이블 좌석"
+        },
+        {
+          "src": "/cafe/hutan-namyangju-08.webp",
+          "alt": "통창을 따라 놓인 좌석"
+        },
+        {
+          "src": "/cafe/hutan-namyangju-09.webp",
+          "alt": "단차가 있는 테이블 좌석"
+        },
+        {
+          "src": "/cafe/hutan-namyangju-10.webp",
+          "alt": "통창 너머 저수지가 보이는 좌석"
+        },
+        {
+          "src": "/cafe/hutan-namyangju-11.webp",
+          "alt": "오남저수지가 보이는 창가 좌석"
+        },
+        {
+          "src": "/cafe/hutan-namyangju-12.webp",
+          "alt": "창가 단체 테이블 좌석"
+        },
+        {
+          "src": "/cafe/hutan-namyangju-13.webp",
+          "alt": "파라솔이 있는 루프탑"
+        },
+        {
+          "src": "/cafe/hutan-namyangju-14.webp",
+          "alt": "빵이 가득한 베이커리 진열대"
+        },
+        {
+          "src": "/cafe/hutan-namyangju-15.webp",
+          "alt": "아치형 거울이 있는 화장실"
+        },
         { "src": "/cafe/hutan-namyangju-16.webp", "alt": "층별 안내판" },
         { "src": "/cafe/hutan-namyangju-17.webp", "alt": "지하 주차장" },
         { "src": "/cafe/hutan-namyangju-18.webp", "alt": "야외 주차장" },
@@ -445,19 +739,18 @@
       "엘리베이터"
     ],
     "floors": ["1층", "2층", "3층", "루프탑"],
-    "parking": ["유료", "전용 주차장", "카페 이용 시 2시간 무료 주차 가능"],
-    "pet": ["불가", "반려동물 입장 불가"],
+    "parking": [
+      "약 100대 정도",
+      "유료",
+      "공용 주차장",
+      "카페 이용 시 2시간 무료 주차 가능"
+    ],
+    "pet": ["불가"],
     "restroom": ["실내", "남녀 구분"],
     "children": ["아이 동반 가능", "키즈존", "야외 잔디공간"],
-    "study": ["가능", "장시간 공부는 비추", "주말 혼잡"],
-    "smoking": ["불가", "흡연공간 없음"],
-    "seating": [
-      "100석 이하",
-      "다양한 형태의 좌석",
-      "오션뷰 창가 좌석 인기",
-      "계단식 좌석",
-      "단체석"
-    ],
+    "study": ["가능", "장시간 공부는 비추", "콘센트 없음"],
+    "smoking": ["불가", "외부 별도 흡연공간 없음"],
+    "seating": ["약 100석 정도", "창가 좌석", "계단식 좌석", "단체석"],
     "business": {
       "closed_days": "연중무휴",
       "hours": {
@@ -480,31 +773,76 @@
       "instagram": "cafe.mieum",
       "cover": "/cafe/mieum-yeongjongdo-01.webp",
       "gallery": [
-        { "src": "/cafe/mieum-yeongjongdo-01.webp", "alt": "바다가 보이는 창가 좌석" },
-        { "src": "/cafe/mieum-yeongjongdo-02.webp", "alt": "통창 옆 계단과 좌석" },
-        { "src": "/cafe/mieum-yeongjongdo-03.webp", "alt": "바다 쪽으로 이어진 계단" },
-        { "src": "/cafe/mieum-yeongjongdo-04.webp", "alt": "해변으로 열린 중정" },
-        { "src": "/cafe/mieum-yeongjongdo-05.webp", "alt": "중정을 바라보는 소파 좌석" },
-        { "src": "/cafe/mieum-yeongjongdo-06.webp", "alt": "방석이 놓인 계단식 좌석" },
+        {
+          "src": "/cafe/mieum-yeongjongdo-01.webp",
+          "alt": "바다가 보이는 창가 좌석"
+        },
+        {
+          "src": "/cafe/mieum-yeongjongdo-02.webp",
+          "alt": "통창 옆 계단과 좌석"
+        },
+        {
+          "src": "/cafe/mieum-yeongjongdo-03.webp",
+          "alt": "바다 쪽으로 이어진 계단"
+        },
+        {
+          "src": "/cafe/mieum-yeongjongdo-04.webp",
+          "alt": "해변으로 열린 중정"
+        },
+        {
+          "src": "/cafe/mieum-yeongjongdo-05.webp",
+          "alt": "중정을 바라보는 소파 좌석"
+        },
+        {
+          "src": "/cafe/mieum-yeongjongdo-06.webp",
+          "alt": "방석이 놓인 계단식 좌석"
+        },
         { "src": "/cafe/mieum-yeongjongdo-07.webp", "alt": "계단식 좌석" },
-        { "src": "/cafe/mieum-yeongjongdo-08.webp", "alt": "통창 너머 바다가 보이는 좌석" },
-        { "src": "/cafe/mieum-yeongjongdo-09.webp", "alt": "루프탑으로 오르는 야외 계단" },
-        { "src": "/cafe/mieum-yeongjongdo-10.webp", "alt": "나무가 심긴 중정과 계단" },
-        { "src": "/cafe/mieum-yeongjongdo-11.webp", "alt": "일몰 무렵 야외 계단" },
-        { "src": "/cafe/mieum-yeongjongdo-12.webp", "alt": "창가에서 본 서해 일몰" },
-        { "src": "/cafe/mieum-yeongjongdo-13.webp", "alt": "중정을 둘러싼 ㅁ자형 건물" },
-        { "src": "/cafe/mieum-yeongjongdo-14.webp", "alt": "빵이 놓인 베이커리 진열대" },
+        {
+          "src": "/cafe/mieum-yeongjongdo-08.webp",
+          "alt": "통창 너머 바다가 보이는 좌석"
+        },
+        {
+          "src": "/cafe/mieum-yeongjongdo-09.webp",
+          "alt": "루프탑으로 오르는 야외 계단"
+        },
+        {
+          "src": "/cafe/mieum-yeongjongdo-10.webp",
+          "alt": "나무가 심긴 중정과 계단"
+        },
+        {
+          "src": "/cafe/mieum-yeongjongdo-11.webp",
+          "alt": "일몰 무렵 야외 계단"
+        },
+        {
+          "src": "/cafe/mieum-yeongjongdo-12.webp",
+          "alt": "창가에서 본 서해 일몰"
+        },
+        {
+          "src": "/cafe/mieum-yeongjongdo-13.webp",
+          "alt": "중정을 둘러싼 ㅁ자형 건물"
+        },
+        {
+          "src": "/cafe/mieum-yeongjongdo-14.webp",
+          "alt": "빵이 놓인 베이커리 진열대"
+        },
         { "src": "/cafe/mieum-yeongjongdo-15.webp", "alt": "화장실 세면대" },
         { "src": "/cafe/mieum-yeongjongdo-16.webp", "alt": "층별 안내판" },
         { "src": "/cafe/mieum-yeongjongdo-17.webp", "alt": "해변 옆 주차장" },
-        { "src": "/cafe/mieum-yeongjongdo-18.webp", "alt": "통창이 있는 건물 외관" },
-        { "src": "/cafe/mieum-yeongjongdo-19.webp", "alt": "흰색 곡선 건물 외관" }
+        {
+          "src": "/cafe/mieum-yeongjongdo-18.webp",
+          "alt": "통창이 있는 건물 외관"
+        },
+        {
+          "src": "/cafe/mieum-yeongjongdo-19.webp",
+          "alt": "흰색 곡선 건물 외관"
+        }
       ]
     }
   },
   "jinjaengimoru-jeju": {
     "type": ["대형카페"],
-    "view": ["마운틴뷰", "정원뷰", "숲뷰", "성산뷰", "우도뷰"],
+    "view": ["마운틴뷰", "정원뷰", "숲뷰"],
     "services": ["카페", "디저트", "베이커리", "브런치", "포토존", "산책정원"],
     "purpose": ["데이트", "가족", "드라이브", "사진", "모임", "여행", "산책"],
     "features": [
@@ -523,19 +861,13 @@
       "포토존"
     ],
     "floors": ["1층", "2층", "3층", "하늘정원"],
-    "parking": ["무료", "전용 주차장", "자차 및 렌터카 이용 가능"],
-    "pet": ["가능", "야외 좌석 동반 가능", "실내 케이지 지참 필요"],
+    "parking": ["약 100대 정도", "무료", "전용 지상 주차장"],
+    "pet": ["가능", "케이지 필수"],
     "restroom": ["실내", "남녀 구분"],
     "children": ["아이 동반 가능", "유아의자 있음", "야외 산책정원"],
-    "study": ["가능", "장시간 공부는 비추"],
-    "smoking": [],
-    "seating": [
-      "300명 이하",
-      "다양한 형태의 좌석",
-      "단체석",
-      "야외 테이블",
-      "정원 좌석"
-    ],
+    "study": ["가능", "장시간 공부는 비추", "콘센트 없음"],
+    "smoking": ["불가", "외부 별도 흡연공간 없음"],
+    "seating": ["약 300명 정도", "야외 좌석", "단체석"],
     "business": {
       "closed_days": "연중무휴",
       "hours": {
@@ -558,20 +890,56 @@
       "instagram": null,
       "cover": "/cafe/jinjaengimoru-jeju-01.webp",
       "gallery": [
-        { "src": "/cafe/jinjaengimoru-jeju-01.webp", "alt": "통창을 따라 놓인 소파 좌석" },
-        { "src": "/cafe/jinjaengimoru-jeju-02.webp", "alt": "통창 너머 오름이 보이는 좌석" },
-        { "src": "/cafe/jinjaengimoru-jeju-03.webp", "alt": "창가 소파와 테이블 좌석" },
-        { "src": "/cafe/jinjaengimoru-jeju-04.webp", "alt": "통창 앞 테이블 좌석" },
-        { "src": "/cafe/jinjaengimoru-jeju-05.webp", "alt": "흑백 사진이 걸린 실내 좌석" },
+        {
+          "src": "/cafe/jinjaengimoru-jeju-01.webp",
+          "alt": "통창을 따라 놓인 소파 좌석"
+        },
+        {
+          "src": "/cafe/jinjaengimoru-jeju-02.webp",
+          "alt": "통창 너머 오름이 보이는 좌석"
+        },
+        {
+          "src": "/cafe/jinjaengimoru-jeju-03.webp",
+          "alt": "창가 소파와 테이블 좌석"
+        },
+        {
+          "src": "/cafe/jinjaengimoru-jeju-04.webp",
+          "alt": "통창 앞 테이블 좌석"
+        },
+        {
+          "src": "/cafe/jinjaengimoru-jeju-05.webp",
+          "alt": "흑백 사진이 걸린 실내 좌석"
+        },
         { "src": "/cafe/jinjaengimoru-jeju-06.webp", "alt": "계단식 좌석" },
-        { "src": "/cafe/jinjaengimoru-jeju-07.webp", "alt": "커피 머신이 있는 주문 카운터" },
+        {
+          "src": "/cafe/jinjaengimoru-jeju-07.webp",
+          "alt": "커피 머신이 있는 주문 카운터"
+        },
         { "src": "/cafe/jinjaengimoru-jeju-08.webp", "alt": "기념품 상점" },
-        { "src": "/cafe/jinjaengimoru-jeju-09.webp", "alt": "건물 외관과 주차장" },
-        { "src": "/cafe/jinjaengimoru-jeju-10.webp", "alt": "위에서 내려다본 건물과 정원" },
-        { "src": "/cafe/jinjaengimoru-jeju-11.webp", "alt": "분재가 있는 원형 정원" },
-        { "src": "/cafe/jinjaengimoru-jeju-12.webp", "alt": "연못이 있는 정원" },
-        { "src": "/cafe/jinjaengimoru-jeju-13.webp", "alt": "제주 돌이 놓인 산책 정원" },
-        { "src": "/cafe/jinjaengimoru-jeju-14.webp", "alt": "분재와 돌로 꾸민 정원" },
+        {
+          "src": "/cafe/jinjaengimoru-jeju-09.webp",
+          "alt": "건물 외관과 주차장"
+        },
+        {
+          "src": "/cafe/jinjaengimoru-jeju-10.webp",
+          "alt": "위에서 내려다본 건물과 정원"
+        },
+        {
+          "src": "/cafe/jinjaengimoru-jeju-11.webp",
+          "alt": "분재가 있는 원형 정원"
+        },
+        {
+          "src": "/cafe/jinjaengimoru-jeju-12.webp",
+          "alt": "연못이 있는 정원"
+        },
+        {
+          "src": "/cafe/jinjaengimoru-jeju-13.webp",
+          "alt": "제주 돌이 놓인 산책 정원"
+        },
+        {
+          "src": "/cafe/jinjaengimoru-jeju-14.webp",
+          "alt": "분재와 돌로 꾸민 정원"
+        },
         { "src": "/cafe/jinjaengimoru-jeju-15.webp", "alt": "건물 앞 주차장" },
         { "src": "/cafe/jinjaengimoru-jeju-16.webp", "alt": "넓은 야외 주차장" }
       ]
@@ -588,16 +956,17 @@
       "우드톤 인테리어",
       "야외 정원",
       "잔디밭",
-      "야외 포토존"
+      "야외 포토존",
+      "여유로운 좌석 간격"
     ],
     "floors": ["지하1층", "1층", "2층", "지상 전용 주차장"],
-    "parking": ["무료", "지상 전용 주차장", "약 60대 정도"],
+    "parking": ["약 60대 정도", "무료", "지상 전용 주차장"],
     "pet": ["불가"],
-    "restroom": ["남녀 구분"],
+    "restroom": ["실내", "남녀 구분"],
     "children": ["아이 동반 가능", "노키즈존 있음"],
-    "study": ["가능", "콘센트 있음", "지하 1층 공부하기 좋음"],
+    "study": ["가능", "콘센트 있는 곳도 있음", "지하 1층 작업하기 좋음"],
     "smoking": ["불가", "외부 별도 흡연공간 없음"],
-    "seating": ["실내 좌석", "창가 좌석", "야외 좌석", "여유로운 좌석 간격"],
+    "seating": ["약 200석 정도", "창가 좌석", "야외 좌석"],
     "business": {
       "opened_at": "2024-05-15",
       "closed_days": "매주 화요일, 대관 시 휴무",
@@ -623,23 +992,44 @@
       "instagram": "sihaon.official",
       "cover": "/cafe/sihaon-ulju-01.webp",
       "gallery": [
-        { "src": "/cafe/sihaon-ulju-01.webp", "alt": "산을 배경으로 한 건물과 수공간" },
+        {
+          "src": "/cafe/sihaon-ulju-01.webp",
+          "alt": "산을 배경으로 한 건물과 수공간"
+        },
         { "src": "/cafe/sihaon-ulju-02.webp", "alt": "수공간 앞 건물 외관" },
         { "src": "/cafe/sihaon-ulju-03.webp", "alt": "산이 비치는 수공간" },
-        { "src": "/cafe/sihaon-ulju-04.webp", "alt": "기둥이 이어진 야외 회랑" },
+        {
+          "src": "/cafe/sihaon-ulju-04.webp",
+          "alt": "기둥이 이어진 야외 회랑"
+        },
         { "src": "/cafe/sihaon-ulju-05.webp", "alt": "건물을 따라 난 산책로" },
-        { "src": "/cafe/sihaon-ulju-06.webp", "alt": "산이 보이는 야외 수공간" },
+        {
+          "src": "/cafe/sihaon-ulju-06.webp",
+          "alt": "산이 보이는 야외 수공간"
+        },
         { "src": "/cafe/sihaon-ulju-07.webp", "alt": "잔디 마당과 건물 외관" },
         { "src": "/cafe/sihaon-ulju-08.webp", "alt": "창가 테이블 좌석" },
-        { "src": "/cafe/sihaon-ulju-09.webp", "alt": "잔디가 보이는 창가 좌석" },
+        {
+          "src": "/cafe/sihaon-ulju-09.webp",
+          "alt": "잔디가 보이는 창가 좌석"
+        },
         { "src": "/cafe/sihaon-ulju-10.webp", "alt": "긴 테이블이 놓인 실내" },
-        { "src": "/cafe/sihaon-ulju-11.webp", "alt": "높은 층고의 긴 테이블 좌석" },
+        {
+          "src": "/cafe/sihaon-ulju-11.webp",
+          "alt": "높은 층고의 긴 테이블 좌석"
+        },
         { "src": "/cafe/sihaon-ulju-12.webp", "alt": "수공간 옆 야외 테이블" },
-        { "src": "/cafe/sihaon-ulju-13.webp", "alt": "숲이 비치는 야외 수공간" },
+        {
+          "src": "/cafe/sihaon-ulju-13.webp",
+          "alt": "숲이 비치는 야외 수공간"
+        },
         { "src": "/cafe/sihaon-ulju-14.webp", "alt": "곡선형 나선 계단" },
         { "src": "/cafe/sihaon-ulju-15.webp", "alt": "꽃 장식과 소파 포토존" },
         { "src": "/cafe/sihaon-ulju-16.webp", "alt": "주문 카운터" },
-        { "src": "/cafe/sihaon-ulju-17.webp", "alt": "대리석 세면대가 있는 화장실" },
+        {
+          "src": "/cafe/sihaon-ulju-17.webp",
+          "alt": "대리석 세면대가 있는 화장실"
+        },
         { "src": "/cafe/sihaon-ulju-18.webp", "alt": "숲이 보이는 야외 공간" },
         { "src": "/cafe/sihaon-ulju-19.webp", "alt": "건축상 수상 명판" }
       ]
@@ -673,12 +1063,12 @@
     ],
     "floors": ["1층", "2층", "3층", "루프탑"],
     "parking": [
+      "약 25대 정도",
       "무료",
       "매장 앞 전용 주차장",
-      "약 25대 정도",
       "장애인 주차장 있음"
     ],
-    "pet": ["야외 동반 가능", "실내 동반 불가"],
+    "pet": ["야외만 가능"],
     "restroom": ["실내", "남녀 구분"],
     "children": [
       "아이 동반 가능",
@@ -688,13 +1078,7 @@
     ],
     "study": ["가능", "장시간 이용 비추천", "콘센트 없음"],
     "smoking": ["가능", "외부 별도 흡연공간 있음"],
-    "seating": [
-      "다양한 형태의 좌석",
-      "창가 좌석",
-      "실내 좌석",
-      "야외 테라스 좌석",
-      "단체석"
-    ],
+    "seating": ["약 100석 정도", "창가 좌석", "야외 좌석", "단체석"],
     "business": {
       "opened_at": "2023-06-12",
       "closed_days": "매주 화요일",
@@ -720,25 +1104,76 @@
       "instagram": "space_concretewall",
       "cover": "/cafe/concrete-wall-jecheon-01.webp",
       "gallery": [
-        { "src": "/cafe/concrete-wall-jecheon-01.webp", "alt": "노출 콘크리트 건물 외관" },
-        { "src": "/cafe/concrete-wall-jecheon-02.webp", "alt": "거대한 돌 기둥과 정원" },
-        { "src": "/cafe/concrete-wall-jecheon-03.webp", "alt": "콘크리트 벽 사이 계단" },
-        { "src": "/cafe/concrete-wall-jecheon-04.webp", "alt": "콘크리트 지붕과 자갈 마당" },
-        { "src": "/cafe/concrete-wall-jecheon-05.webp", "alt": "콘크리트 벽 옆 수로" },
-        { "src": "/cafe/concrete-wall-jecheon-06.webp", "alt": "돌이 놓인 콘크리트 공간" },
-        { "src": "/cafe/concrete-wall-jecheon-07.webp", "alt": "파라솔이 있는 야외 테라스" },
-        { "src": "/cafe/concrete-wall-jecheon-08.webp", "alt": "콘크리트 벽 앞 바 좌석" },
-        { "src": "/cafe/concrete-wall-jecheon-09.webp", "alt": "숲이 보이는 통창 앞 원목 좌석" },
-        { "src": "/cafe/concrete-wall-jecheon-10.webp", "alt": "통창 사이 원목 테이블 좌석" },
-        { "src": "/cafe/concrete-wall-jecheon-11.webp", "alt": "숲을 향한 창가 원형 테이블" },
-        { "src": "/cafe/concrete-wall-jecheon-12.webp", "alt": "콘크리트 벽을 바라보는 바 좌석" },
-        { "src": "/cafe/concrete-wall-jecheon-13.webp", "alt": "콘크리트 벽 앞 창가 좌석" },
-        { "src": "/cafe/concrete-wall-jecheon-14.webp", "alt": "그늘막이 있는 루프탑 테라스" },
+        {
+          "src": "/cafe/concrete-wall-jecheon-01.webp",
+          "alt": "노출 콘크리트 건물 외관"
+        },
+        {
+          "src": "/cafe/concrete-wall-jecheon-02.webp",
+          "alt": "거대한 돌 기둥과 정원"
+        },
+        {
+          "src": "/cafe/concrete-wall-jecheon-03.webp",
+          "alt": "콘크리트 벽 사이 계단"
+        },
+        {
+          "src": "/cafe/concrete-wall-jecheon-04.webp",
+          "alt": "콘크리트 지붕과 자갈 마당"
+        },
+        {
+          "src": "/cafe/concrete-wall-jecheon-05.webp",
+          "alt": "콘크리트 벽 옆 수로"
+        },
+        {
+          "src": "/cafe/concrete-wall-jecheon-06.webp",
+          "alt": "돌이 놓인 콘크리트 공간"
+        },
+        {
+          "src": "/cafe/concrete-wall-jecheon-07.webp",
+          "alt": "파라솔이 있는 야외 테라스"
+        },
+        {
+          "src": "/cafe/concrete-wall-jecheon-08.webp",
+          "alt": "콘크리트 벽 앞 바 좌석"
+        },
+        {
+          "src": "/cafe/concrete-wall-jecheon-09.webp",
+          "alt": "숲이 보이는 통창 앞 원목 좌석"
+        },
+        {
+          "src": "/cafe/concrete-wall-jecheon-10.webp",
+          "alt": "통창 사이 원목 테이블 좌석"
+        },
+        {
+          "src": "/cafe/concrete-wall-jecheon-11.webp",
+          "alt": "숲을 향한 창가 원형 테이블"
+        },
+        {
+          "src": "/cafe/concrete-wall-jecheon-12.webp",
+          "alt": "콘크리트 벽을 바라보는 바 좌석"
+        },
+        {
+          "src": "/cafe/concrete-wall-jecheon-13.webp",
+          "alt": "콘크리트 벽 앞 창가 좌석"
+        },
+        {
+          "src": "/cafe/concrete-wall-jecheon-14.webp",
+          "alt": "그늘막이 있는 루프탑 테라스"
+        },
         { "src": "/cafe/concrete-wall-jecheon-15.webp", "alt": "층별 안내판" },
         { "src": "/cafe/concrete-wall-jecheon-16.webp", "alt": "화장실" },
-        { "src": "/cafe/concrete-wall-jecheon-17.webp", "alt": "건물 앞 주차장" },
-        { "src": "/cafe/concrete-wall-jecheon-18.webp", "alt": "건물 옆 진입로" },
-        { "src": "/cafe/concrete-wall-jecheon-19.webp", "alt": "한국건축가협회상 수상 명판" }
+        {
+          "src": "/cafe/concrete-wall-jecheon-17.webp",
+          "alt": "건물 앞 주차장"
+        },
+        {
+          "src": "/cafe/concrete-wall-jecheon-18.webp",
+          "alt": "건물 옆 진입로"
+        },
+        {
+          "src": "/cafe/concrete-wall-jecheon-19.webp",
+          "alt": "한국건축가협회상 수상 명판"
+        }
       ]
     }
   },
@@ -770,26 +1205,23 @@
       "기하학적인 건축 구조",
       "높은 층고",
       "통창",
-      "건축가 곽희수 설계",
-      "영인산성저수지 전망",
       "야외 테라스",
       "온돌 평상",
       "루프탑",
       "포토존"
     ],
     "floors": ["1층", "2층", "3층", "루프탑"],
-    "parking": ["무료", "지상 전용 주차장", "약 100대 정도"],
+    "parking": ["약 100대 정도", "무료", "지상 전용 주차장"],
     "pet": ["불가"],
     "restroom": ["실내", "남녀 구분"],
     "children": ["아이 동반 가능"],
     "study": ["가능", "비지니스룸 있음"],
     "smoking": ["가능", "외부 별도 흡연공간 있음"],
     "seating": [
-      "다양한 형태의 좌석",
+      "약 200석 정도",
       "창가 좌석",
-      "실내 좌석",
-      "야외 테라스 좌석",
-      "온돌 평상",
+      "야외 좌석",
+      "좌식 좌석",
       "단체석"
     ],
     "business": {
@@ -817,22 +1249,61 @@
       "instagram": "aleffee_official",
       "cover": "/cafe/aleffee-asan-01.webp",
       "gallery": [
-        { "src": "/cafe/aleffee-asan-01.webp", "alt": "노출 콘크리트 건물 외관" },
-        { "src": "/cafe/aleffee-asan-02.webp", "alt": "기하학적인 콘크리트 건물 외관" },
+        {
+          "src": "/cafe/aleffee-asan-01.webp",
+          "alt": "노출 콘크리트 건물 외관"
+        },
+        {
+          "src": "/cafe/aleffee-asan-02.webp",
+          "alt": "기하학적인 콘크리트 건물 외관"
+        },
         { "src": "/cafe/aleffee-asan-03.webp", "alt": "건물 앞 주차장" },
-        { "src": "/cafe/aleffee-asan-04.webp", "alt": "베이커리 진열대와 주문 카운터" },
-        { "src": "/cafe/aleffee-asan-05.webp", "alt": "위에서 내려다본 층별 좌석" },
-        { "src": "/cafe/aleffee-asan-06.webp", "alt": "저수지가 보이는 창가 좌석" },
-        { "src": "/cafe/aleffee-asan-07.webp", "alt": "통창 너머 저수지가 보이는 좌석" },
-        { "src": "/cafe/aleffee-asan-08.webp", "alt": "커튼이 드리운 창가 좌석" },
-        { "src": "/cafe/aleffee-asan-09.webp", "alt": "앤티크 의자와 화장대 포토존" },
-        { "src": "/cafe/aleffee-asan-10.webp", "alt": "블라인드 창가 테이블 좌석" },
+        {
+          "src": "/cafe/aleffee-asan-04.webp",
+          "alt": "베이커리 진열대와 주문 카운터"
+        },
+        {
+          "src": "/cafe/aleffee-asan-05.webp",
+          "alt": "위에서 내려다본 층별 좌석"
+        },
+        {
+          "src": "/cafe/aleffee-asan-06.webp",
+          "alt": "저수지가 보이는 창가 좌석"
+        },
+        {
+          "src": "/cafe/aleffee-asan-07.webp",
+          "alt": "통창 너머 저수지가 보이는 좌석"
+        },
+        {
+          "src": "/cafe/aleffee-asan-08.webp",
+          "alt": "커튼이 드리운 창가 좌석"
+        },
+        {
+          "src": "/cafe/aleffee-asan-09.webp",
+          "alt": "앤티크 의자와 화장대 포토존"
+        },
+        {
+          "src": "/cafe/aleffee-asan-10.webp",
+          "alt": "블라인드 창가 테이블 좌석"
+        },
         { "src": "/cafe/aleffee-asan-11.webp", "alt": "층을 잇는 실내 계단" },
-        { "src": "/cafe/aleffee-asan-12.webp", "alt": "파라솔과 데이베드가 있는 야외 테라스" },
-        { "src": "/cafe/aleffee-asan-13.webp", "alt": "파라솔이 놓인 야외 데크" },
+        {
+          "src": "/cafe/aleffee-asan-12.webp",
+          "alt": "파라솔과 데이베드가 있는 야외 테라스"
+        },
+        {
+          "src": "/cafe/aleffee-asan-13.webp",
+          "alt": "파라솔이 놓인 야외 데크"
+        },
         { "src": "/cafe/aleffee-asan-14.webp", "alt": "수영장 옆 야외 좌석" },
-        { "src": "/cafe/aleffee-asan-15.webp", "alt": "루프탑으로 오르는 야외 계단" },
-        { "src": "/cafe/aleffee-asan-16.webp", "alt": "저수지와 산이 보이는 루프탑 데크" },
+        {
+          "src": "/cafe/aleffee-asan-15.webp",
+          "alt": "루프탑으로 오르는 야외 계단"
+        },
+        {
+          "src": "/cafe/aleffee-asan-16.webp",
+          "alt": "저수지와 산이 보이는 루프탑 데크"
+        },
         { "src": "/cafe/aleffee-asan-17.webp", "alt": "화장실 세면대" },
         { "src": "/cafe/aleffee-asan-18.webp", "alt": "층별 안내" },
         { "src": "/cafe/aleffee-asan-19.webp", "alt": "세계건축상 수상 명판" }
@@ -874,13 +1345,13 @@
       "포토존"
     ],
     "floors": ["1층", "2층"],
-    "parking": ["무료", "지상 전용 주차장", "50대 이하"],
-    "pet": ["가능", "야외 펫존 이용 가능", "실내 동반 불가능"],
+    "parking": ["약 50대 정도", "무료", "지상 전용 주차장"],
+    "pet": ["야외만 가능", "펫존 있음"],
     "restroom": ["실내", "남녀 구분", "깨끗함"],
-    "children": ["유아의자 있음", "노키즈존"],
+    "children": ["아이 동반 가능", "유아의자 있음", "노키즈존"],
     "study": ["가능", "장시간 이용 비추천", "콘센트 없음"],
     "smoking": ["가능", "외부 별도 흡연공간 있음"],
-    "seating": ["200석 이하", "다양한 형태의 좌석", "실내 좌석", "야외 좌석"],
+    "seating": ["약 200석 정도", "야외 좌석"],
     "business": {
       "closed_days": "매주 화요일",
       "hours": {
@@ -906,42 +1377,99 @@
       "instagram": "mostseokmoon",
       "cover": "/cafe/most-seokmun-hoengseong-01.webp",
       "gallery": [
-        { "src": "/cafe/most-seokmun-hoengseong-01.webp", "alt": "크리스털 조명 설치 작품" },
-        { "src": "/cafe/most-seokmun-hoengseong-02.webp", "alt": "원형 테이블과 소파 좌석" },
-        { "src": "/cafe/most-seokmun-hoengseong-03.webp", "alt": "통창 앞 테이블 좌석" },
-        { "src": "/cafe/most-seokmun-hoengseong-04.webp", "alt": "원형 조명 아래 테이블 좌석" },
-        { "src": "/cafe/most-seokmun-hoengseong-05.webp", "alt": "숲이 보이는 창가 좌석" },
-        { "src": "/cafe/most-seokmun-hoengseong-06.webp", "alt": "미술 작품 아래 소파 좌석" },
-        { "src": "/cafe/most-seokmun-hoengseong-07.webp", "alt": "산이 보이는 단체 테이블" },
-        { "src": "/cafe/most-seokmun-hoengseong-08.webp", "alt": "주문 카운터" },
-        { "src": "/cafe/most-seokmun-hoengseong-09.webp", "alt": "창가 원형 테이블 좌석" },
-        { "src": "/cafe/most-seokmun-hoengseong-10.webp", "alt": "정원이 보이는 곡선형 통창" },
-        { "src": "/cafe/most-seokmun-hoengseong-11.webp", "alt": "창가 소파 좌석" },
-        { "src": "/cafe/most-seokmun-hoengseong-12.webp", "alt": "대리석 화장실 세면대" },
-        { "src": "/cafe/most-seokmun-hoengseong-13.webp", "alt": "정원과 건물 외관" },
-        { "src": "/cafe/most-seokmun-hoengseong-14.webp", "alt": "잔디 마당의 조형 작품" },
-        { "src": "/cafe/most-seokmun-hoengseong-15.webp", "alt": "곡선형 유리 건물과 정원" },
-        { "src": "/cafe/most-seokmun-hoengseong-16.webp", "alt": "콘크리트 벽 사이 조형 작품" },
-        { "src": "/cafe/most-seokmun-hoengseong-17.webp", "alt": "산을 배경으로 한 주차장" },
-        { "src": "/cafe/most-seokmun-hoengseong-18.webp", "alt": "삼각형 건물 외관" },
-        { "src": "/cafe/most-seokmun-hoengseong-19.webp", "alt": "넓은 잔디밭과 건물 전경" }
+        {
+          "src": "/cafe/most-seokmun-hoengseong-01.webp",
+          "alt": "크리스털 조명 설치 작품"
+        },
+        {
+          "src": "/cafe/most-seokmun-hoengseong-02.webp",
+          "alt": "원형 테이블과 소파 좌석"
+        },
+        {
+          "src": "/cafe/most-seokmun-hoengseong-03.webp",
+          "alt": "통창 앞 테이블 좌석"
+        },
+        {
+          "src": "/cafe/most-seokmun-hoengseong-04.webp",
+          "alt": "원형 조명 아래 테이블 좌석"
+        },
+        {
+          "src": "/cafe/most-seokmun-hoengseong-05.webp",
+          "alt": "숲이 보이는 창가 좌석"
+        },
+        {
+          "src": "/cafe/most-seokmun-hoengseong-06.webp",
+          "alt": "미술 작품 아래 소파 좌석"
+        },
+        {
+          "src": "/cafe/most-seokmun-hoengseong-07.webp",
+          "alt": "산이 보이는 단체 테이블"
+        },
+        {
+          "src": "/cafe/most-seokmun-hoengseong-08.webp",
+          "alt": "주문 카운터"
+        },
+        {
+          "src": "/cafe/most-seokmun-hoengseong-09.webp",
+          "alt": "창가 원형 테이블 좌석"
+        },
+        {
+          "src": "/cafe/most-seokmun-hoengseong-10.webp",
+          "alt": "정원이 보이는 곡선형 통창"
+        },
+        {
+          "src": "/cafe/most-seokmun-hoengseong-11.webp",
+          "alt": "창가 소파 좌석"
+        },
+        {
+          "src": "/cafe/most-seokmun-hoengseong-12.webp",
+          "alt": "대리석 화장실 세면대"
+        },
+        {
+          "src": "/cafe/most-seokmun-hoengseong-13.webp",
+          "alt": "정원과 건물 외관"
+        },
+        {
+          "src": "/cafe/most-seokmun-hoengseong-14.webp",
+          "alt": "잔디 마당의 조형 작품"
+        },
+        {
+          "src": "/cafe/most-seokmun-hoengseong-15.webp",
+          "alt": "곡선형 유리 건물과 정원"
+        },
+        {
+          "src": "/cafe/most-seokmun-hoengseong-16.webp",
+          "alt": "콘크리트 벽 사이 조형 작품"
+        },
+        {
+          "src": "/cafe/most-seokmun-hoengseong-17.webp",
+          "alt": "산을 배경으로 한 주차장"
+        },
+        {
+          "src": "/cafe/most-seokmun-hoengseong-18.webp",
+          "alt": "삼각형 건물 외관"
+        },
+        {
+          "src": "/cafe/most-seokmun-hoengseong-19.webp",
+          "alt": "넓은 잔디밭과 건물 전경"
+        }
       ]
     }
   },
   "navid-jeongseon": {
-    "type": ["뮤지엄카페"],
+    "type": ["뮤지엄카페", "공장형카페"],
     "view": ["실내뷰", "공장뷰"],
-    "services": ["카페", "디져트", "포토존"],
+    "services": ["카페", "디저트", "포토존"],
     "purpose": ["여행", "휴식", "데이트", "박물관 관람"],
     "features": ["박물관 내 카페", "문화공간 연계", "권양기실 리모델링"],
     "floors": ["1층", "2층"],
-    "parking": ["무료", "박물관 주차장 이용", "100대 정도"],
-    "pet": ["불가", "반려동물 입장 불가"],
+    "parking": ["약 100대 정도", "무료", "박물관 주차장 이용"],
+    "pet": ["불가"],
     "restroom": ["실내", "남녀 구분"],
-    "children": ["가능", "아이 동반 가능"],
-    "study": ["가능", "장시간 이용 비추천"],
-    "smoking": ["불가", "흡연공간 없음"],
-    "seating": ["100석 정도"],
+    "children": ["아이 동반 가능"],
+    "study": ["가능", "장시간 이용 비추천", "콘센트 없음"],
+    "smoking": ["불가", "외부 별도 흡연공간 없음"],
+    "seating": ["약 100석 정도", "창가 좌석"],
     "business": {
       "closed_days": "매월 둘째·넷째 화요일(공휴일이면 다음 날 휴무)",
       "hours": {
@@ -965,22 +1493,61 @@
       "instagram": null,
       "cover": "/cafe/navid-jeongseon-01.webp",
       "gallery": [
-        { "src": "/cafe/navid-jeongseon-01.webp", "alt": "옛 광산 설비 사이 실내 공간" },
+        {
+          "src": "/cafe/navid-jeongseon-01.webp",
+          "alt": "옛 광산 설비 사이 실내 공간"
+        },
         { "src": "/cafe/navid-jeongseon-02.webp", "alt": "대리석 주문 카운터" },
-        { "src": "/cafe/navid-jeongseon-03.webp", "alt": "샹들리에와 단체 테이블" },
-        { "src": "/cafe/navid-jeongseon-04.webp", "alt": "통창 앞 테이블 좌석" },
-        { "src": "/cafe/navid-jeongseon-05.webp", "alt": "권양기 설비가 보이는 실내" },
-        { "src": "/cafe/navid-jeongseon-06.webp", "alt": "위에서 내려다본 권양기실" },
-        { "src": "/cafe/navid-jeongseon-07.webp", "alt": "철제 구조물 사이 테이블 좌석" },
-        { "src": "/cafe/navid-jeongseon-08.webp", "alt": "산업 설비 아래 테이블 좌석" },
-        { "src": "/cafe/navid-jeongseon-09.webp", "alt": "광산 설비가 있는 실내 전경" },
+        {
+          "src": "/cafe/navid-jeongseon-03.webp",
+          "alt": "샹들리에와 단체 테이블"
+        },
+        {
+          "src": "/cafe/navid-jeongseon-04.webp",
+          "alt": "통창 앞 테이블 좌석"
+        },
+        {
+          "src": "/cafe/navid-jeongseon-05.webp",
+          "alt": "권양기 설비가 보이는 실내"
+        },
+        {
+          "src": "/cafe/navid-jeongseon-06.webp",
+          "alt": "위에서 내려다본 권양기실"
+        },
+        {
+          "src": "/cafe/navid-jeongseon-07.webp",
+          "alt": "철제 구조물 사이 테이블 좌석"
+        },
+        {
+          "src": "/cafe/navid-jeongseon-08.webp",
+          "alt": "산업 설비 아래 테이블 좌석"
+        },
+        {
+          "src": "/cafe/navid-jeongseon-09.webp",
+          "alt": "광산 설비가 있는 실내 전경"
+        },
         { "src": "/cafe/navid-jeongseon-10.webp", "alt": "창가 테이블 좌석" },
-        { "src": "/cafe/navid-jeongseon-11.webp", "alt": "옛 광산 소품이 놓인 공간" },
-        { "src": "/cafe/navid-jeongseon-12.webp", "alt": "엘리베이터 케이지 옆 좌석" },
-        { "src": "/cafe/navid-jeongseon-13.webp", "alt": "철제 원통형 화장실 입구" },
-        { "src": "/cafe/navid-jeongseon-14.webp", "alt": "원통형 구조물 화장실" },
+        {
+          "src": "/cafe/navid-jeongseon-11.webp",
+          "alt": "옛 광산 소품이 놓인 공간"
+        },
+        {
+          "src": "/cafe/navid-jeongseon-12.webp",
+          "alt": "엘리베이터 케이지 옆 좌석"
+        },
+        {
+          "src": "/cafe/navid-jeongseon-13.webp",
+          "alt": "철제 원통형 화장실 입구"
+        },
+        {
+          "src": "/cafe/navid-jeongseon-14.webp",
+          "alt": "원통형 구조물 화장실"
+        },
         { "src": "/cafe/navid-jeongseon-15.webp", "alt": "건물 외관" },
-        { "src": "/cafe/navid-jeongseon-16.webp", "alt": "산과 수직갱 타워가 보이는 외관" }
+        {
+          "src": "/cafe/navid-jeongseon-16.webp",
+          "alt": "산과 수직갱 타워가 보이는 외관"
+        }
       ]
     }
   },
@@ -1000,20 +1567,13 @@
       "엘리베이터"
     ],
     "floors": ["지하 1층", "1층", "옥상"],
-    "parking": ["무료", "지상 전용 주차장", "100대 정도"],
+    "parking": ["100대 정도", "무료", "지상 전용 주차장"],
     "pet": ["불가"],
-    "restroom": ["남녀 구분", "화장실 휠체어 이용가능"],
-    "children": ["가능"],
-    "study": ["가능", "장시간 이용 비추천"],
+    "restroom": ["실내", "남녀 구분", "화장실 휠체어 이용가능"],
+    "children": ["아이 동반 가능"],
+    "study": ["가능", "장시간 이용 비추천", "콘센트 있는 곳도 있음"],
     "smoking": ["가능", "외부 별도 흡연공간 있음"],
-    "seating": [
-      "300석 이상",
-      "다양한 형태의 좌석",
-      "창가 좌석",
-      "소파 좌석",
-      "빈백 좌석",
-      "야외 좌석"
-    ],
+    "seating": ["약 300석 정도", "창가 좌석", "야외 좌석", "소파 좌석"],
     "business": {
       "opened_at": "2023-07",
       "closed_days": "연중무휴",
@@ -1039,25 +1599,76 @@
       "instagram": "cafe_mokjeokji_nine",
       "cover": "/cafe/destination9-anseong-01.webp",
       "gallery": [
-        { "src": "/cafe/destination9-anseong-01.webp", "alt": "위에서 내려다본 실내 좌석" },
-        { "src": "/cafe/destination9-anseong-02.webp", "alt": "방석이 놓인 콘크리트 좌석" },
-        { "src": "/cafe/destination9-anseong-03.webp", "alt": "통창을 따라 놓인 빨간 좌석" },
-        { "src": "/cafe/destination9-anseong-04.webp", "alt": "곡선형 콘크리트 야외 벤치" },
-        { "src": "/cafe/destination9-anseong-05.webp", "alt": "원형 조명 아래 대형 원형 테이블" },
-        { "src": "/cafe/destination9-anseong-06.webp", "alt": "원목 테이블 좌석" },
-        { "src": "/cafe/destination9-anseong-07.webp", "alt": "저수지가 보이는 원형 테이블" },
-        { "src": "/cafe/destination9-anseong-08.webp", "alt": "숲이 보이는 통창" },
-        { "src": "/cafe/destination9-anseong-09.webp", "alt": "콘크리트 벽 사이 좌식 공간" },
-        { "src": "/cafe/destination9-anseong-10.webp", "alt": "아래층으로 이어진 계단" },
+        {
+          "src": "/cafe/destination9-anseong-01.webp",
+          "alt": "위에서 내려다본 실내 좌석"
+        },
+        {
+          "src": "/cafe/destination9-anseong-02.webp",
+          "alt": "방석이 놓인 콘크리트 좌석"
+        },
+        {
+          "src": "/cafe/destination9-anseong-03.webp",
+          "alt": "통창을 따라 놓인 빨간 좌석"
+        },
+        {
+          "src": "/cafe/destination9-anseong-04.webp",
+          "alt": "곡선형 콘크리트 야외 벤치"
+        },
+        {
+          "src": "/cafe/destination9-anseong-05.webp",
+          "alt": "원형 조명 아래 대형 원형 테이블"
+        },
+        {
+          "src": "/cafe/destination9-anseong-06.webp",
+          "alt": "원목 테이블 좌석"
+        },
+        {
+          "src": "/cafe/destination9-anseong-07.webp",
+          "alt": "저수지가 보이는 원형 테이블"
+        },
+        {
+          "src": "/cafe/destination9-anseong-08.webp",
+          "alt": "숲이 보이는 통창"
+        },
+        {
+          "src": "/cafe/destination9-anseong-09.webp",
+          "alt": "콘크리트 벽 사이 좌식 공간"
+        },
+        {
+          "src": "/cafe/destination9-anseong-10.webp",
+          "alt": "아래층으로 이어진 계단"
+        },
         { "src": "/cafe/destination9-anseong-11.webp", "alt": "화장실" },
-        { "src": "/cafe/destination9-anseong-12.webp", "alt": "빵이 놓인 베이커리 진열대" },
-        { "src": "/cafe/destination9-anseong-13.webp", "alt": "곡선형 주문 카운터" },
+        {
+          "src": "/cafe/destination9-anseong-12.webp",
+          "alt": "빵이 놓인 베이커리 진열대"
+        },
+        {
+          "src": "/cafe/destination9-anseong-13.webp",
+          "alt": "곡선형 주문 카운터"
+        },
         { "src": "/cafe/destination9-anseong-14.webp", "alt": "층별 안내판" },
-        { "src": "/cafe/destination9-anseong-15.webp", "alt": "목적지9 글자 벽과 주차장" },
-        { "src": "/cafe/destination9-anseong-16.webp", "alt": "건물 사이 정원" },
-        { "src": "/cafe/destination9-anseong-17.webp", "alt": "원통형 타워 건물" },
-        { "src": "/cafe/destination9-anseong-18.webp", "alt": "리본 장식을 두른 원통형 건물" },
-        { "src": "/cafe/destination9-anseong-19.webp", "alt": "건물 앞 화단과 마당" }
+        {
+          "src": "/cafe/destination9-anseong-15.webp",
+          "alt": "목적지9 글자 벽과 주차장"
+        },
+        {
+          "src": "/cafe/destination9-anseong-16.webp",
+          "alt": "건물 사이 정원"
+        },
+        {
+          "src": "/cafe/destination9-anseong-17.webp",
+          "alt": "원통형 타워 건물"
+        },
+        {
+          "src": "/cafe/destination9-anseong-18.webp",
+          "alt": "리본 장식을 두른 원통형 건물"
+        },
+        {
+          "src": "/cafe/destination9-anseong-19.webp",
+          "alt": "건물 앞 화단과 마당"
+        }
       ]
     }
   },
@@ -1104,19 +1715,18 @@
       "체험 프로그램"
     ],
     "floors": ["1층", "2층", "별도 전시 및 체험공간"],
-    "parking": ["무료", "전용 주차장", "약 100대", "테슬라 전기차 충전시설"],
-    "pet": ["가능", "실내 케이지 필요"],
+    "parking": [
+      "약 100대 정도",
+      "무료",
+      "전용 주차장",
+      "테슬라 전기차 충전시설"
+    ],
+    "pet": ["가능", "케이지 필수"],
     "restroom": ["실내", "남녀 구분", "장애인 화장실 있음"],
     "children": ["아이 동반 가능", "체험 프로그램", "키즈 체험시설"],
     "study": ["가능", "장시간 이용 비추천", "콘센트 없음"],
     "smoking": ["가능", "외부 별도 흡연공간 있음"],
-    "seating": [
-      "넓은 실내 좌석",
-      "식물원 주변 좌석",
-      "다양한 형태의 좌석",
-      "야외 좌석",
-      "단체 이용 가능"
-    ],
+    "seating": ["약 200석 정도", "야외 좌석", "단체석"],
     "business": {
       "opened_at": "2022-05-05",
       "closed_days": "연중무휴",
@@ -1142,24 +1752,72 @@
       "instagram": "rootsquare_kr",
       "cover": "/cafe/root-square-jincheon-01.webp",
       "gallery": [
-        { "src": "/cafe/root-square-jincheon-01.webp", "alt": "식물이 심긴 실내 좌석" },
-        { "src": "/cafe/root-square-jincheon-02.webp", "alt": "식물 화단 사이 테이블 좌석" },
-        { "src": "/cafe/root-square-jincheon-03.webp", "alt": "목재 천장 아래 테이블 좌석" },
-        { "src": "/cafe/root-square-jincheon-04.webp", "alt": "고목과 식물로 꾸민 실내 정원" },
-        { "src": "/cafe/root-square-jincheon-05.webp", "alt": "통창 너머 들판이 보이는 공간" },
-        { "src": "/cafe/root-square-jincheon-06.webp", "alt": "식물 옆 바 테이블" },
-        { "src": "/cafe/root-square-jincheon-07.webp", "alt": "식물 화단 옆 원목 테이블" },
-        { "src": "/cafe/root-square-jincheon-08.webp", "alt": "목재 퍼걸러 아래 야외 테이블" },
-        { "src": "/cafe/root-square-jincheon-09.webp", "alt": "베이커리 진열대와 주문 카운터" },
-        { "src": "/cafe/root-square-jincheon-10.webp", "alt": "목재 구조의 실내 좌석" },
-        { "src": "/cafe/root-square-jincheon-11.webp", "alt": "농산물이 진열된 긴 테이블" },
+        {
+          "src": "/cafe/root-square-jincheon-01.webp",
+          "alt": "식물이 심긴 실내 좌석"
+        },
+        {
+          "src": "/cafe/root-square-jincheon-02.webp",
+          "alt": "식물 화단 사이 테이블 좌석"
+        },
+        {
+          "src": "/cafe/root-square-jincheon-03.webp",
+          "alt": "목재 천장 아래 테이블 좌석"
+        },
+        {
+          "src": "/cafe/root-square-jincheon-04.webp",
+          "alt": "고목과 식물로 꾸민 실내 정원"
+        },
+        {
+          "src": "/cafe/root-square-jincheon-05.webp",
+          "alt": "통창 너머 들판이 보이는 공간"
+        },
+        {
+          "src": "/cafe/root-square-jincheon-06.webp",
+          "alt": "식물 옆 바 테이블"
+        },
+        {
+          "src": "/cafe/root-square-jincheon-07.webp",
+          "alt": "식물 화단 옆 원목 테이블"
+        },
+        {
+          "src": "/cafe/root-square-jincheon-08.webp",
+          "alt": "목재 퍼걸러 아래 야외 테이블"
+        },
+        {
+          "src": "/cafe/root-square-jincheon-09.webp",
+          "alt": "베이커리 진열대와 주문 카운터"
+        },
+        {
+          "src": "/cafe/root-square-jincheon-10.webp",
+          "alt": "목재 구조의 실내 좌석"
+        },
+        {
+          "src": "/cafe/root-square-jincheon-11.webp",
+          "alt": "농산물이 진열된 긴 테이블"
+        },
         { "src": "/cafe/root-square-jincheon-12.webp", "alt": "화장실 세면대" },
         { "src": "/cafe/root-square-jincheon-13.webp", "alt": "화장실" },
-        { "src": "/cafe/root-square-jincheon-14.webp", "alt": "유리 온실 건물 외관" },
-        { "src": "/cafe/root-square-jincheon-15.webp", "alt": "채소가 자라는 스마트팜 온실" },
-        { "src": "/cafe/root-square-jincheon-16.webp", "alt": "잔디 마당과 온실 전경" },
-        { "src": "/cafe/root-square-jincheon-17.webp", "alt": "입구 표지석과 정원" },
-        { "src": "/cafe/root-square-jincheon-18.webp", "alt": "건물 입구와 정원" },
+        {
+          "src": "/cafe/root-square-jincheon-14.webp",
+          "alt": "유리 온실 건물 외관"
+        },
+        {
+          "src": "/cafe/root-square-jincheon-15.webp",
+          "alt": "채소가 자라는 스마트팜 온실"
+        },
+        {
+          "src": "/cafe/root-square-jincheon-16.webp",
+          "alt": "잔디 마당과 온실 전경"
+        },
+        {
+          "src": "/cafe/root-square-jincheon-17.webp",
+          "alt": "입구 표지석과 정원"
+        },
+        {
+          "src": "/cafe/root-square-jincheon-18.webp",
+          "alt": "건물 입구와 정원"
+        },
         { "src": "/cafe/root-square-jincheon-19.webp", "alt": "온실 옆 주차장" }
       ]
     }
@@ -1207,9 +1865,10 @@
     ],
     "floors": ["1층", "야외 테라스", "별도 갤러리 및 공연공간"],
     "parking": [
+      "약 200대 정도",
       "유료",
+      "공동 주차장",
       "최초 3시간 무료 주차 가능",
-      "약 200대 이상",
       "추가 요금 10분당 500원, 최대 10,000원"
     ],
     "pet": ["불가"],
@@ -1217,14 +1876,7 @@
     "children": ["아이 동반 가능", "유아의자 있음", "유모차 이용 가능"],
     "study": ["가능", "장시간 이용 비추천", "콘센트 없음"],
     "smoking": ["가능", "외부 별도 흡연공간 있음"],
-    "seating": [
-      "약 100석 정도",
-      "다양한 형태의 좌석",
-      "창가 좌석",
-      "실내 좌석",
-      "야외 좌석",
-      "단체석"
-    ],
+    "seating": ["약 100석 정도", "창가 좌석", "야외 좌석", "단체석"],
     "business": {
       "opened_at": "2019-10-11",
       "closed_days": "연중무휴",
@@ -1250,20 +1902,59 @@
       "instagram": "monamour1857",
       "cover": "/cafe/monavalley-asan-01.webp",
       "gallery": [
-        { "src": "/cafe/monavalley-asan-01.webp", "alt": "풍차 조형물과 야외 파라솔 좌석" },
-        { "src": "/cafe/monavalley-asan-02.webp", "alt": "워터가든이 보이는 테라스 좌석" },
-        { "src": "/cafe/monavalley-asan-03.webp", "alt": "워터가든 옆 테라스 좌석" },
-        { "src": "/cafe/monavalley-asan-04.webp", "alt": "그림이 걸린 실내 좌석" },
-        { "src": "/cafe/monavalley-asan-05.webp", "alt": "미술 작품이 걸린 실내" },
-        { "src": "/cafe/monavalley-asan-06.webp", "alt": "빵이 놓인 베이커리 진열대" },
+        {
+          "src": "/cafe/monavalley-asan-01.webp",
+          "alt": "풍차 조형물과 야외 파라솔 좌석"
+        },
+        {
+          "src": "/cafe/monavalley-asan-02.webp",
+          "alt": "워터가든이 보이는 테라스 좌석"
+        },
+        {
+          "src": "/cafe/monavalley-asan-03.webp",
+          "alt": "워터가든 옆 테라스 좌석"
+        },
+        {
+          "src": "/cafe/monavalley-asan-04.webp",
+          "alt": "그림이 걸린 실내 좌석"
+        },
+        {
+          "src": "/cafe/monavalley-asan-05.webp",
+          "alt": "미술 작품이 걸린 실내"
+        },
+        {
+          "src": "/cafe/monavalley-asan-06.webp",
+          "alt": "빵이 놓인 베이커리 진열대"
+        },
         { "src": "/cafe/monavalley-asan-07.webp", "alt": "화장실 세면대" },
-        { "src": "/cafe/monavalley-asan-08.webp", "alt": "워터가든 앞 파라솔 좌석" },
-        { "src": "/cafe/monavalley-asan-09.webp", "alt": "정원 산책로와 야외 의자" },
-        { "src": "/cafe/monavalley-asan-10.webp", "alt": "워터가든과 컬러풀한 외벽" },
-        { "src": "/cafe/monavalley-asan-11.webp", "alt": "원형 분수와 나무 조형물" },
-        { "src": "/cafe/monavalley-asan-12.webp", "alt": "거울 건물 사이 수로" },
-        { "src": "/cafe/monavalley-asan-13.webp", "alt": "워터가든 분수 조형물" },
-        { "src": "/cafe/monavalley-asan-14.webp", "alt": "나무 사이 정원 산책로" },
+        {
+          "src": "/cafe/monavalley-asan-08.webp",
+          "alt": "워터가든 앞 파라솔 좌석"
+        },
+        {
+          "src": "/cafe/monavalley-asan-09.webp",
+          "alt": "정원 산책로와 야외 의자"
+        },
+        {
+          "src": "/cafe/monavalley-asan-10.webp",
+          "alt": "워터가든과 컬러풀한 외벽"
+        },
+        {
+          "src": "/cafe/monavalley-asan-11.webp",
+          "alt": "원형 분수와 나무 조형물"
+        },
+        {
+          "src": "/cafe/monavalley-asan-12.webp",
+          "alt": "거울 건물 사이 수로"
+        },
+        {
+          "src": "/cafe/monavalley-asan-13.webp",
+          "alt": "워터가든 분수 조형물"
+        },
+        {
+          "src": "/cafe/monavalley-asan-14.webp",
+          "alt": "나무 사이 정원 산책로"
+        },
         { "src": "/cafe/monavalley-asan-15.webp", "alt": "워터가든과 야외무대" }
       ]
     }
@@ -1292,24 +1983,17 @@
     ],
     "floors": ["1층", "2층", "3층", "4층", "루프탑"],
     "parking": [
+      "약 70대 정도",
       "유료",
       "전용 지상 주차장",
-      "카페 이용시 3시간 무료",
-      "약 70대 정도"
+      "카페 이용시 3시간 무료"
     ],
     "pet": ["불가"],
     "restroom": ["실내", "남녀 구분"],
     "children": ["아이 동반 가능"],
     "study": ["가능", "장시간 이용 비추천", "콘센트 없음"],
     "smoking": ["불가", "외부 별도 흡연공간 없음"],
-    "seating": [
-      "약 300석 이상",
-      "실내 좌석",
-      "창가 좌석",
-      "야외 테라스 좌석",
-      "단체석",
-      "룸"
-    ],
+    "seating": ["약 300석 정도", "창가 좌석", "야외 좌석", "단체석", "룸"],
     "business": {
       "opened_at": "2024-12-28",
       "closed_days": "연중무휴",
@@ -1334,28 +2018,73 @@
       "instagram": "arenafina_",
       "cover": "/cafe/arena-pina-gyeongju-01.webp",
       "gallery": [
-        { "src": "/cafe/arena-pina-gyeongju-01.webp", "alt": "바다 근처 건물 외관" },
-        { "src": "/cafe/arena-pina-gyeongju-02.webp", "alt": "통창 너머 바다가 보이는 좌석" },
-        { "src": "/cafe/arena-pina-gyeongju-03.webp", "alt": "동해 바다가 보이는 창가 좌석" },
-        { "src": "/cafe/arena-pina-gyeongju-04.webp", "alt": "바다를 바라보는 바 좌석" },
-        { "src": "/cafe/arena-pina-gyeongju-05.webp", "alt": "화이트톤 소파 라운지" },
-        { "src": "/cafe/arena-pina-gyeongju-06.webp", "alt": "펜던트 조명 아래 소파 좌석" },
-        { "src": "/cafe/arena-pina-gyeongju-07.webp", "alt": "아치형 창과 소파 좌석" },
-        { "src": "/cafe/arena-pina-gyeongju-08.webp", "alt": "노을 진 바다가 보이는 라운지" },
-        { "src": "/cafe/arena-pina-gyeongju-09.webp", "alt": "바다가 보이는 소파 라운지" },
-        { "src": "/cafe/arena-pina-gyeongju-10.webp", "alt": "베이커리 진열대" },
-        { "src": "/cafe/arena-pina-gyeongju-11.webp", "alt": "물결 장식의 주문 카운터" },
-        { "src": "/cafe/arena-pina-gyeongju-12.webp", "alt": "바다가 보이는 야외 테라스" },
-        { "src": "/cafe/arena-pina-gyeongju-13.webp", "alt": "조명이 있는 실내 복도" },
-        { "src": "/cafe/arena-pina-gyeongju-14.webp", "alt": "ARENA FINA 로고 벽" },
+        {
+          "src": "/cafe/arena-pina-gyeongju-01.webp",
+          "alt": "바다 근처 건물 외관"
+        },
+        {
+          "src": "/cafe/arena-pina-gyeongju-02.webp",
+          "alt": "통창 너머 바다가 보이는 좌석"
+        },
+        {
+          "src": "/cafe/arena-pina-gyeongju-03.webp",
+          "alt": "동해 바다가 보이는 창가 좌석"
+        },
+        {
+          "src": "/cafe/arena-pina-gyeongju-04.webp",
+          "alt": "바다를 바라보는 바 좌석"
+        },
+        {
+          "src": "/cafe/arena-pina-gyeongju-05.webp",
+          "alt": "화이트톤 소파 라운지"
+        },
+        {
+          "src": "/cafe/arena-pina-gyeongju-06.webp",
+          "alt": "펜던트 조명 아래 소파 좌석"
+        },
+        {
+          "src": "/cafe/arena-pina-gyeongju-07.webp",
+          "alt": "아치형 창과 소파 좌석"
+        },
+        {
+          "src": "/cafe/arena-pina-gyeongju-08.webp",
+          "alt": "노을 진 바다가 보이는 라운지"
+        },
+        {
+          "src": "/cafe/arena-pina-gyeongju-09.webp",
+          "alt": "바다가 보이는 소파 라운지"
+        },
+        {
+          "src": "/cafe/arena-pina-gyeongju-10.webp",
+          "alt": "베이커리 진열대"
+        },
+        {
+          "src": "/cafe/arena-pina-gyeongju-11.webp",
+          "alt": "물결 장식의 주문 카운터"
+        },
+        {
+          "src": "/cafe/arena-pina-gyeongju-12.webp",
+          "alt": "바다가 보이는 야외 테라스"
+        },
+        {
+          "src": "/cafe/arena-pina-gyeongju-13.webp",
+          "alt": "조명이 있는 실내 복도"
+        },
+        {
+          "src": "/cafe/arena-pina-gyeongju-14.webp",
+          "alt": "ARENA FINA 로고 벽"
+        },
         { "src": "/cafe/arena-pina-gyeongju-15.webp", "alt": "화장실 세면대" },
         { "src": "/cafe/arena-pina-gyeongju-16.webp", "alt": "층별 안내판" },
-        { "src": "/cafe/arena-pina-gyeongju-17.webp", "alt": "루프탑에서 본 바다와 주차장" }
+        {
+          "src": "/cafe/arena-pina-gyeongju-17.webp",
+          "alt": "루프탑에서 본 바다와 주차장"
+        }
       ]
     }
   },
   "breath-coffee-works-gyeongju": {
-    "type": ["대형카페", "건축미카페", "수변카페", "정원카페"],
+    "type": ["대형카페", "건축미카페", "정원카페"],
     "view": ["연못뷰", "정원뷰", "자연경관뷰"],
     "services": [
       "카페",
@@ -1389,20 +2118,13 @@
       "야외 포토존"
     ],
     "floors": ["지하 주차장", "1층", "2층"],
-    "parking": ["무료", "지하 전용 주차장", "약 50대 정도"],
-    "pet": ["불가", "반려동물 입장 불가"],
+    "parking": ["약 50대 정도", "무료", "지하 전용 주차장"],
+    "pet": ["불가"],
     "restroom": ["실내", "남녀 구분"],
     "children": ["아이 동반 가능", "키즈케어존", "실내 유모차 반입 제한"],
     "study": ["가능", "장시간 이용 비추천", "콘센트 없음"],
     "smoking": ["불가", "외부 별도 흡연공간 없음"],
-    "seating": [
-      "실내 좌석",
-      "창가 좌석",
-      "연못 전망 좌석",
-      "야외 테라스 좌석",
-      "단체석",
-      "룸 형태 좌석"
-    ],
+    "seating": ["약 100석 정도", "창가 좌석", "야외 좌석", "단체석", "룸"],
     "business": {
       "opened_at": "2025-04-26",
       "closed_days": "연중무휴",
@@ -1427,22 +2149,70 @@
       "instagram": "breath.coworks_",
       "cover": "/cafe/breath-coffee-works-gyeongju-01.webp",
       "gallery": [
-        { "src": "/cafe/breath-coffee-works-gyeongju-01.webp", "alt": "곡선형 건물과 화산석 정원" },
-        { "src": "/cafe/breath-coffee-works-gyeongju-02.webp", "alt": "곡선형 통창 옆 좌석" },
-        { "src": "/cafe/breath-coffee-works-gyeongju-03.webp", "alt": "곡선형 통창을 따라 난 복도" },
-        { "src": "/cafe/breath-coffee-works-gyeongju-05.webp", "alt": "숲이 보이는 단체 테이블" },
-        { "src": "/cafe/breath-coffee-works-gyeongju-06.webp", "alt": "곡선형 통창 앞 테이블 좌석" },
-        { "src": "/cafe/breath-coffee-works-gyeongju-07.webp", "alt": "창가 테이블 좌석" },
-        { "src": "/cafe/breath-coffee-works-gyeongju-08.webp", "alt": "수변을 바라보는 창가 좌석" },
-        { "src": "/cafe/breath-coffee-works-gyeongju-09.webp", "alt": "원목 진열대의 베이커리" },
-        { "src": "/cafe/breath-coffee-works-gyeongju-10.webp", "alt": "건물 옥상 수로" },
-        { "src": "/cafe/breath-coffee-works-gyeongju-11.webp", "alt": "산과 연못이 보이는 수공간" },
-        { "src": "/cafe/breath-coffee-works-gyeongju-12.webp", "alt": "산이 보이는 옥상 데크" },
-        { "src": "/cafe/breath-coffee-works-gyeongju-13.webp", "alt": "하늘이 비치는 수공간" },
-        { "src": "/cafe/breath-coffee-works-gyeongju-14.webp", "alt": "넓은 야외 마당과 건물" },
-        { "src": "/cafe/breath-coffee-works-gyeongju-15.webp", "alt": "화장실 세면대" },
-        { "src": "/cafe/breath-coffee-works-gyeongju-16.webp", "alt": "지하 주차장" },
-        { "src": "/cafe/breath-coffee-works-gyeongju-17.webp", "alt": "건축상 수상 명판" }
+        {
+          "src": "/cafe/breath-coffee-works-gyeongju-01.webp",
+          "alt": "곡선형 건물과 화산석 정원"
+        },
+        {
+          "src": "/cafe/breath-coffee-works-gyeongju-02.webp",
+          "alt": "곡선형 통창 옆 좌석"
+        },
+        {
+          "src": "/cafe/breath-coffee-works-gyeongju-03.webp",
+          "alt": "곡선형 통창을 따라 난 복도"
+        },
+        {
+          "src": "/cafe/breath-coffee-works-gyeongju-05.webp",
+          "alt": "숲이 보이는 단체 테이블"
+        },
+        {
+          "src": "/cafe/breath-coffee-works-gyeongju-06.webp",
+          "alt": "곡선형 통창 앞 테이블 좌석"
+        },
+        {
+          "src": "/cafe/breath-coffee-works-gyeongju-07.webp",
+          "alt": "창가 테이블 좌석"
+        },
+        {
+          "src": "/cafe/breath-coffee-works-gyeongju-08.webp",
+          "alt": "수변을 바라보는 창가 좌석"
+        },
+        {
+          "src": "/cafe/breath-coffee-works-gyeongju-09.webp",
+          "alt": "원목 진열대의 베이커리"
+        },
+        {
+          "src": "/cafe/breath-coffee-works-gyeongju-10.webp",
+          "alt": "건물 옥상 수로"
+        },
+        {
+          "src": "/cafe/breath-coffee-works-gyeongju-11.webp",
+          "alt": "산과 연못이 보이는 수공간"
+        },
+        {
+          "src": "/cafe/breath-coffee-works-gyeongju-12.webp",
+          "alt": "산이 보이는 옥상 데크"
+        },
+        {
+          "src": "/cafe/breath-coffee-works-gyeongju-13.webp",
+          "alt": "하늘이 비치는 수공간"
+        },
+        {
+          "src": "/cafe/breath-coffee-works-gyeongju-14.webp",
+          "alt": "넓은 야외 마당과 건물"
+        },
+        {
+          "src": "/cafe/breath-coffee-works-gyeongju-15.webp",
+          "alt": "화장실 세면대"
+        },
+        {
+          "src": "/cafe/breath-coffee-works-gyeongju-16.webp",
+          "alt": "지하 주차장"
+        },
+        {
+          "src": "/cafe/breath-coffee-works-gyeongju-17.webp",
+          "alt": "건축상 수상 명판"
+        }
       ]
     }
   },
@@ -1466,23 +2236,22 @@
     ],
     "floors": ["1층"],
     "parking": [
+      "약 30대 정도",
       "유료",
       "이용 고객 1시간 30분 무료",
-      "추가 요금 10분당 700원",
-      "약 30대 정도"
+      "추가 요금 10분당 700원"
     ],
     "pet": ["불가"],
     "restroom": ["실내", "남녀 구분"],
     "children": ["아이 동반 가능", "키즈케어존"],
     "study": ["가능", "장시간 이용 비추천", "콘센트 없음"],
-    "smoking": ["불가"],
+    "smoking": ["불가", "외부 별도 흡연공간 없음"],
     "seating": [
-      "실내 좌석",
+      "약 100석 정도",
       "창가 좌석",
-      "야외 테라스 좌석",
-      "단체석",
-      "좌식",
-      "입식"
+      "야외 좌석",
+      "좌식 좌석",
+      "단체석"
     ],
     "business": {
       "opened_at": "2025-01-10",
@@ -1508,24 +2277,69 @@
       "instagram": "terarosacoffee",
       "cover": "/cafe/terarosa-gyeongju-01.webp",
       "gallery": [
-        { "src": "/cafe/terarosa-gyeongju-01.webp", "alt": "돌담길과 한옥 입구" },
-        { "src": "/cafe/terarosa-gyeongju-02.webp", "alt": "고분이 보이는 야외 공간" },
-        { "src": "/cafe/terarosa-gyeongju-03.webp", "alt": "수공간을 둘러싼 한옥" },
+        {
+          "src": "/cafe/terarosa-gyeongju-01.webp",
+          "alt": "돌담길과 한옥 입구"
+        },
+        {
+          "src": "/cafe/terarosa-gyeongju-02.webp",
+          "alt": "고분이 보이는 야외 공간"
+        },
+        {
+          "src": "/cafe/terarosa-gyeongju-03.webp",
+          "alt": "수공간을 둘러싼 한옥"
+        },
         { "src": "/cafe/terarosa-gyeongju-04.webp", "alt": "한옥 건물 외관" },
-        { "src": "/cafe/terarosa-gyeongju-05.webp", "alt": "한옥 마당의 수공간" },
-        { "src": "/cafe/terarosa-gyeongju-06.webp", "alt": "한옥 마당의 야외 좌석" },
-        { "src": "/cafe/terarosa-gyeongju-07.webp", "alt": "징검다리가 있는 한옥 수공간" },
+        {
+          "src": "/cafe/terarosa-gyeongju-05.webp",
+          "alt": "한옥 마당의 수공간"
+        },
+        {
+          "src": "/cafe/terarosa-gyeongju-06.webp",
+          "alt": "한옥 마당의 야외 좌석"
+        },
+        {
+          "src": "/cafe/terarosa-gyeongju-07.webp",
+          "alt": "징검다리가 있는 한옥 수공간"
+        },
         { "src": "/cafe/terarosa-gyeongju-08.webp", "alt": "한옥 사이 마당" },
-        { "src": "/cafe/terarosa-gyeongju-09.webp", "alt": "나무가 있는 한옥 마당" },
-        { "src": "/cafe/terarosa-gyeongju-10.webp", "alt": "한옥 처마 아래 길" },
-        { "src": "/cafe/terarosa-gyeongju-11.webp", "alt": "한옥 서까래 아래 주문 카운터" },
-        { "src": "/cafe/terarosa-gyeongju-12.webp", "alt": "한옥 실내 테이블 좌석" },
-        { "src": "/cafe/terarosa-gyeongju-13.webp", "alt": "서까래가 드러난 한옥 실내" },
-        { "src": "/cafe/terarosa-gyeongju-14.webp", "alt": "원목 테이블이 있는 한옥 공간" },
-        { "src": "/cafe/terarosa-gyeongju-15.webp", "alt": "한옥 화장실 세면대" },
-        { "src": "/cafe/terarosa-gyeongju-16.webp", "alt": "한옥 대문과 반려동물 출입 금지 안내" },
+        {
+          "src": "/cafe/terarosa-gyeongju-09.webp",
+          "alt": "나무가 있는 한옥 마당"
+        },
+        {
+          "src": "/cafe/terarosa-gyeongju-10.webp",
+          "alt": "한옥 처마 아래 길"
+        },
+        {
+          "src": "/cafe/terarosa-gyeongju-11.webp",
+          "alt": "한옥 서까래 아래 주문 카운터"
+        },
+        {
+          "src": "/cafe/terarosa-gyeongju-12.webp",
+          "alt": "한옥 실내 테이블 좌석"
+        },
+        {
+          "src": "/cafe/terarosa-gyeongju-13.webp",
+          "alt": "서까래가 드러난 한옥 실내"
+        },
+        {
+          "src": "/cafe/terarosa-gyeongju-14.webp",
+          "alt": "원목 테이블이 있는 한옥 공간"
+        },
+        {
+          "src": "/cafe/terarosa-gyeongju-15.webp",
+          "alt": "한옥 화장실 세면대"
+        },
+        {
+          "src": "/cafe/terarosa-gyeongju-16.webp",
+          "alt": "한옥 대문과 반려동물 출입 금지 안내"
+        },
         { "src": "/cafe/terarosa-gyeongju-17.webp", "alt": "금연 안내판" },
-        { "src": "/cafe/terarosa-gyeongju-18.webp", "alt": "건축상 수상 명판과 안내판" },
+        {
+          "src": "/cafe/terarosa-gyeongju-18.webp",
+          "alt": "건축상 수상 명판과 안내판"
+        },
         { "src": "/cafe/terarosa-gyeongju-19.webp", "alt": "주차장 안내판" }
       ]
     }
@@ -1567,19 +2381,18 @@
       "건축상 수상 건물"
     ],
     "floors": ["1층", "2층", "3층", "지상 공용 주차장"],
-    "parking": ["무료", "전용 공용 주차장", "약 100대 정도"],
-    "pet": ["가능", "야외 좌석 동반 가능", "실내 동반 불가"],
+    "parking": ["약 100대 정도", "무료", "전용 공용 주차장"],
+    "pet": ["야외만 가능", "야외 테라스"],
     "restroom": ["실내", "남녀 구분"],
     "children": ["아이 동반 가능", "유아의자 있음"],
     "study": ["가능", "장시간 이용 비추천", "콘센트 없음"],
     "smoking": ["가능", "외부 별도 흡연공간 있음"],
     "seating": [
-      "실내 좌석",
+      "약 200석 정도",
       "창가 좌석",
-      "정원 전망 좌석",
       "야외 좌석",
       "소파 좌석",
-      "단체 이용 가능"
+      "단체석"
     ],
     "business": {
       "opened_at": "2020-05-18",
@@ -1606,25 +2419,67 @@
       "instagram": "co_bosque",
       "cover": "/cafe/bosque-gyeongju-01.webp",
       "gallery": [
-        { "src": "/cafe/bosque-gyeongju-01.webp", "alt": "Bosque 로고가 있는 콘크리트 외벽" },
+        {
+          "src": "/cafe/bosque-gyeongju-01.webp",
+          "alt": "Bosque 로고가 있는 콘크리트 외벽"
+        },
         { "src": "/cafe/bosque-gyeongju-02.webp", "alt": "건물 입구와 진입로" },
         { "src": "/cafe/bosque-gyeongju-03.webp", "alt": "건물 옆 경사로" },
-        { "src": "/cafe/bosque-gyeongju-04.webp", "alt": "노출 콘크리트 건물과 계단" },
-        { "src": "/cafe/bosque-gyeongju-05.webp", "alt": "빛이 드는 콘크리트 실내" },
-        { "src": "/cafe/bosque-gyeongju-06.webp", "alt": "들판이 보이는 원목 테이블 좌석" },
-        { "src": "/cafe/bosque-gyeongju-07.webp", "alt": "창가 원목 테이블 좌석" },
-        { "src": "/cafe/bosque-gyeongju-08.webp", "alt": "정원이 보이는 원목 테이블" },
-        { "src": "/cafe/bosque-gyeongju-09.webp", "alt": "펜던트 조명 아래 테이블 좌석" },
-        { "src": "/cafe/bosque-gyeongju-10.webp", "alt": "산이 보이는 야외 테라스" },
-        { "src": "/cafe/bosque-gyeongju-11.webp", "alt": "자전거 장식 벽과 가죽 소파 좌석" },
+        {
+          "src": "/cafe/bosque-gyeongju-04.webp",
+          "alt": "노출 콘크리트 건물과 계단"
+        },
+        {
+          "src": "/cafe/bosque-gyeongju-05.webp",
+          "alt": "빛이 드는 콘크리트 실내"
+        },
+        {
+          "src": "/cafe/bosque-gyeongju-06.webp",
+          "alt": "들판이 보이는 원목 테이블 좌석"
+        },
+        {
+          "src": "/cafe/bosque-gyeongju-07.webp",
+          "alt": "창가 원목 테이블 좌석"
+        },
+        {
+          "src": "/cafe/bosque-gyeongju-08.webp",
+          "alt": "정원이 보이는 원목 테이블"
+        },
+        {
+          "src": "/cafe/bosque-gyeongju-09.webp",
+          "alt": "펜던트 조명 아래 테이블 좌석"
+        },
+        {
+          "src": "/cafe/bosque-gyeongju-10.webp",
+          "alt": "산이 보이는 야외 테라스"
+        },
+        {
+          "src": "/cafe/bosque-gyeongju-11.webp",
+          "alt": "자전거 장식 벽과 가죽 소파 좌석"
+        },
         { "src": "/cafe/bosque-gyeongju-12.webp", "alt": "베이커리 진열대" },
-        { "src": "/cafe/bosque-gyeongju-13.webp", "alt": "원목 바 테이블 좌석" },
-        { "src": "/cafe/bosque-gyeongju-14.webp", "alt": "노출 콘크리트 실내 테이블 좌석" },
-        { "src": "/cafe/bosque-gyeongju-15.webp", "alt": "정원이 보이는 실내 좌석" },
-        { "src": "/cafe/bosque-gyeongju-16.webp", "alt": "소파와 피아노가 있는 라운지" },
+        {
+          "src": "/cafe/bosque-gyeongju-13.webp",
+          "alt": "원목 바 테이블 좌석"
+        },
+        {
+          "src": "/cafe/bosque-gyeongju-14.webp",
+          "alt": "노출 콘크리트 실내 테이블 좌석"
+        },
+        {
+          "src": "/cafe/bosque-gyeongju-15.webp",
+          "alt": "정원이 보이는 실내 좌석"
+        },
+        {
+          "src": "/cafe/bosque-gyeongju-16.webp",
+          "alt": "소파와 피아노가 있는 라운지"
+        },
         { "src": "/cafe/bosque-gyeongju-17.webp", "alt": "화장실 세면대" },
         { "src": "/cafe/bosque-gyeongju-18.webp", "alt": "넓은 야외 주차장" },
-        { "src": "/cafe/bosque-gyeongju-19.webp", "alt": "경상북도 건축문화상 수상 명판" }
+        {
+          "src": "/cafe/bosque-gyeongju-19.webp",
+          "alt": "경상북도 건축문화상 수상 명판"
+        }
       ]
     }
   },
@@ -1656,7 +2511,7 @@
       "리조또"
     ],
     "floors": ["1층", "2층", "3층"],
-    "parking": ["무료", "지상 전용 주차장", "약 60대 정도"],
+    "parking": ["약 60대 정도", "무료", "지상 전용 주차장"],
     "pet": ["불가"],
     "restroom": ["실내", "남녀 구분"],
     "children": ["아이 동반 가능"],
@@ -1664,10 +2519,8 @@
     "smoking": ["가능", "외부 별도 흡연공간 있음"],
     "seating": [
       "약 200석 정도",
-      "다양한 형태의 좌석",
-      "실내 좌석",
       "창가 좌석",
-      "야외 테라스 좌석",
+      "야외 좌석",
       "루프탑 좌석",
       "단체석"
     ],
@@ -1697,18 +2550,42 @@
       "cover": "/cafe/sansi-asan-01.webp",
       "gallery": [
         { "src": "/cafe/sansi-asan-01.webp", "alt": "노출 콘크리트 건물 외관" },
-        { "src": "/cafe/sansi-asan-02.webp", "alt": "계단식으로 쌓인 건물 외관" },
-        { "src": "/cafe/sansi-asan-03.webp", "alt": "신정호가 내려다보이는 건물" },
+        {
+          "src": "/cafe/sansi-asan-02.webp",
+          "alt": "계단식으로 쌓인 건물 외관"
+        },
+        {
+          "src": "/cafe/sansi-asan-03.webp",
+          "alt": "신정호가 내려다보이는 건물"
+        },
         { "src": "/cafe/sansi-asan-04.webp", "alt": "원형 화단 벤치와 창가" },
-        { "src": "/cafe/sansi-asan-05.webp", "alt": "빵이 놓인 베이커리 진열대" },
-        { "src": "/cafe/sansi-asan-06.webp", "alt": "호수가 보이는 넓은 실내 좌석" },
-        { "src": "/cafe/sansi-asan-07.webp", "alt": "통창을 따라 놓인 테이블 좌석" },
+        {
+          "src": "/cafe/sansi-asan-05.webp",
+          "alt": "빵이 놓인 베이커리 진열대"
+        },
+        {
+          "src": "/cafe/sansi-asan-06.webp",
+          "alt": "호수가 보이는 넓은 실내 좌석"
+        },
+        {
+          "src": "/cafe/sansi-asan-07.webp",
+          "alt": "통창을 따라 놓인 테이블 좌석"
+        },
         { "src": "/cafe/sansi-asan-08.webp", "alt": "원목 단체 테이블" },
         { "src": "/cafe/sansi-asan-09.webp", "alt": "호수가 보이는 창가 좌석" },
-        { "src": "/cafe/sansi-asan-10.webp", "alt": "통창 너머 신정호가 보이는 좌석" },
-        { "src": "/cafe/sansi-asan-11.webp", "alt": "나무가 있는 중정 옆 좌석" },
+        {
+          "src": "/cafe/sansi-asan-10.webp",
+          "alt": "통창 너머 신정호가 보이는 좌석"
+        },
+        {
+          "src": "/cafe/sansi-asan-11.webp",
+          "alt": "나무가 있는 중정 옆 좌석"
+        },
         { "src": "/cafe/sansi-asan-12.webp", "alt": "천창 아래 테이블 좌석" },
-        { "src": "/cafe/sansi-asan-13.webp", "alt": "조형물이 매달린 실내 좌석" },
+        {
+          "src": "/cafe/sansi-asan-13.webp",
+          "alt": "조형물이 매달린 실내 좌석"
+        },
         { "src": "/cafe/sansi-asan-14.webp", "alt": "층별 안내판" },
         { "src": "/cafe/sansi-asan-15.webp", "alt": "건물 앞 주차장" },
         { "src": "/cafe/sansi-asan-16.webp", "alt": "야외 주차장" }
@@ -1764,25 +2641,18 @@
       "3층 브런치 공간"
     ],
     "parking": [
+      "약 100대 정도",
+      "유료",
       "지하 전용 주차장",
       "지하 1층 및 지하 2층",
-      "이용 고객 2시간 무료",
-      "약 100대 정도"
+      "이용 고객 2시간 무료"
     ],
     "pet": ["불가"],
     "restroom": ["실내", "남녀 구분"],
-    "children": ["가능"],
+    "children": ["아이 동반 가능"],
     "study": ["가능", "장시간 이용 비추천", "콘센트 없음"],
-    "smoking": ["불가"],
-    "seating": [
-      "많음",
-      "실내 좌석",
-      "창가 좌석",
-      "바다 전망 좌석",
-      "야외 테라스 좌석",
-      "단체석",
-      "약 200석 이상"
-    ],
+    "smoking": ["불가", "외부 별도 흡연공간 없음"],
+    "seating": ["약 200석 정도", "창가 좌석", "야외 좌석", "단체석"],
     "business": {
       "opened_at": "2026-07-25",
       "closed_days": "연중무휴 안내",
@@ -1808,24 +2678,78 @@
       "instagram": "jmcoffee_daily",
       "cover": "/cafe/jm-coffee-roasters-busan-01.webp",
       "gallery": [
-        { "src": "/cafe/jm-coffee-roasters-busan-01.webp", "alt": "커피 로스팅 설비" },
-        { "src": "/cafe/jm-coffee-roasters-busan-02.webp", "alt": "대형 커피 로스터기" },
-        { "src": "/cafe/jm-coffee-roasters-busan-03.webp", "alt": "나선형 계단과 계단식 좌석" },
-        { "src": "/cafe/jm-coffee-roasters-busan-04.webp", "alt": "가죽 의자가 놓인 실내 좌석" },
-        { "src": "/cafe/jm-coffee-roasters-busan-05.webp", "alt": "대리석 커피 바" },
-        { "src": "/cafe/jm-coffee-roasters-busan-06.webp", "alt": "산이 보이는 창가 좌석" },
-        { "src": "/cafe/jm-coffee-roasters-busan-07.webp", "alt": "원목 수납장 앞 단체 테이블" },
-        { "src": "/cafe/jm-coffee-roasters-busan-08.webp", "alt": "창가를 따라 난 복도" },
-        { "src": "/cafe/jm-coffee-roasters-busan-09.webp", "alt": "소파 좌석이 있는 넓은 실내" },
-        { "src": "/cafe/jm-coffee-roasters-busan-10.webp", "alt": "항구가 보이는 루프탑 테라스" },
-        { "src": "/cafe/jm-coffee-roasters-busan-11.webp", "alt": "계단식 소파 좌석" },
-        { "src": "/cafe/jm-coffee-roasters-busan-12.webp", "alt": "곡선형 유리 건물 옆 야외 벤치" },
-        { "src": "/cafe/jm-coffee-roasters-busan-13.webp", "alt": "주문 카운터" },
-        { "src": "/cafe/jm-coffee-roasters-busan-14.webp", "alt": "베이커리 진열대" },
-        { "src": "/cafe/jm-coffee-roasters-busan-15.webp", "alt": "원두가 진열된 판매대" },
-        { "src": "/cafe/jm-coffee-roasters-busan-16.webp", "alt": "화장실 세면대" },
-        { "src": "/cafe/jm-coffee-roasters-busan-17.webp", "alt": "층별 안내판" },
-        { "src": "/cafe/jm-coffee-roasters-busan-18.webp", "alt": "지하 주차장" },
+        {
+          "src": "/cafe/jm-coffee-roasters-busan-01.webp",
+          "alt": "커피 로스팅 설비"
+        },
+        {
+          "src": "/cafe/jm-coffee-roasters-busan-02.webp",
+          "alt": "대형 커피 로스터기"
+        },
+        {
+          "src": "/cafe/jm-coffee-roasters-busan-03.webp",
+          "alt": "나선형 계단과 계단식 좌석"
+        },
+        {
+          "src": "/cafe/jm-coffee-roasters-busan-04.webp",
+          "alt": "가죽 의자가 놓인 실내 좌석"
+        },
+        {
+          "src": "/cafe/jm-coffee-roasters-busan-05.webp",
+          "alt": "대리석 커피 바"
+        },
+        {
+          "src": "/cafe/jm-coffee-roasters-busan-06.webp",
+          "alt": "산이 보이는 창가 좌석"
+        },
+        {
+          "src": "/cafe/jm-coffee-roasters-busan-07.webp",
+          "alt": "원목 수납장 앞 단체 테이블"
+        },
+        {
+          "src": "/cafe/jm-coffee-roasters-busan-08.webp",
+          "alt": "창가를 따라 난 복도"
+        },
+        {
+          "src": "/cafe/jm-coffee-roasters-busan-09.webp",
+          "alt": "소파 좌석이 있는 넓은 실내"
+        },
+        {
+          "src": "/cafe/jm-coffee-roasters-busan-10.webp",
+          "alt": "항구가 보이는 루프탑 테라스"
+        },
+        {
+          "src": "/cafe/jm-coffee-roasters-busan-11.webp",
+          "alt": "계단식 소파 좌석"
+        },
+        {
+          "src": "/cafe/jm-coffee-roasters-busan-12.webp",
+          "alt": "곡선형 유리 건물 옆 야외 벤치"
+        },
+        {
+          "src": "/cafe/jm-coffee-roasters-busan-13.webp",
+          "alt": "주문 카운터"
+        },
+        {
+          "src": "/cafe/jm-coffee-roasters-busan-14.webp",
+          "alt": "베이커리 진열대"
+        },
+        {
+          "src": "/cafe/jm-coffee-roasters-busan-15.webp",
+          "alt": "원두가 진열된 판매대"
+        },
+        {
+          "src": "/cafe/jm-coffee-roasters-busan-16.webp",
+          "alt": "화장실 세면대"
+        },
+        {
+          "src": "/cafe/jm-coffee-roasters-busan-17.webp",
+          "alt": "층별 안내판"
+        },
+        {
+          "src": "/cafe/jm-coffee-roasters-busan-18.webp",
+          "alt": "지하 주차장"
+        },
         { "src": "/cafe/jm-coffee-roasters-busan-19.webp", "alt": "건물 외관" }
       ]
     }
@@ -1871,18 +2795,8 @@
       "시그니처 흑임자 음료"
     ],
     "floors": ["1층", "2층"],
-    "parking": [
-      "무료",
-      "지상 전용 주차장",
-      "주말 주차 대기 가능",
-      "약 100대 정도"
-    ],
-    "pet": [
-      "가능",
-      "실내 금지",
-      "방갈로 및 야외테라스 가능",
-      "기저귀 & 리드줄 착용"
-    ],
+    "parking": ["약 100대 정도", "무료", "지상 전용 주차장"],
+    "pet": ["야외만 가능", "야외 테라스", "리드줄 필수", "기저귀 필수"],
     "restroom": ["실내", "남녀 구분"],
     "children": ["아이 동반 가능", "유아의자 있음", "노키드존 있음"],
     "study": [
@@ -1892,14 +2806,7 @@
       "공연 시간대 소음 가능"
     ],
     "smoking": ["가능", "외부 별도 흡연공간 있음"],
-    "seating": [
-      "약 200석 이상",
-      "실내 좌석",
-      "창가 좌석",
-      "소파 좌석",
-      "단체석",
-      "프라이빗룸"
-    ],
+    "seating": ["약 200석 정도", "창가 좌석", "소파 좌석", "단체석", "룸"],
     "business": {
       "opened_at": "2025-05-23",
       "closed_days": "연중무휴",
@@ -1923,21 +2830,57 @@
       "instagram": "tanti_daily",
       "cover": "/cafe/tanti-gijang-01.webp",
       "gallery": [
-        { "src": "/cafe/tanti-gijang-01.webp", "alt": "높은 층고의 실내와 베이커리 진열대" },
-        { "src": "/cafe/tanti-gijang-02.webp", "alt": "곡선 계단과 넓은 실내 좌석" },
-        { "src": "/cafe/tanti-gijang-03.webp", "alt": "높은 층고의 테이블 좌석" },
-        { "src": "/cafe/tanti-gijang-04.webp", "alt": "산이 보이는 원형 테이블 좌석" },
+        {
+          "src": "/cafe/tanti-gijang-01.webp",
+          "alt": "높은 층고의 실내와 베이커리 진열대"
+        },
+        {
+          "src": "/cafe/tanti-gijang-02.webp",
+          "alt": "곡선 계단과 넓은 실내 좌석"
+        },
+        {
+          "src": "/cafe/tanti-gijang-03.webp",
+          "alt": "높은 층고의 테이블 좌석"
+        },
+        {
+          "src": "/cafe/tanti-gijang-04.webp",
+          "alt": "산이 보이는 원형 테이블 좌석"
+        },
         { "src": "/cafe/tanti-gijang-05.webp", "alt": "위층 난간 옆 좌석" },
-        { "src": "/cafe/tanti-gijang-06.webp", "alt": "샹들리에 아래 창가 좌석" },
-        { "src": "/cafe/tanti-gijang-07.webp", "alt": "시내와 산이 보이는 창가 좌석" },
-        { "src": "/cafe/tanti-gijang-08.webp", "alt": "파라솔과 소파가 있는 야외 테라스" },
-        { "src": "/cafe/tanti-gijang-09.webp", "alt": "소파 좌석이 있는 넓은 실내" },
-        { "src": "/cafe/tanti-gijang-10.webp", "alt": "빵이 가득한 베이커리 진열대" },
-        { "src": "/cafe/tanti-gijang-11.webp", "alt": "시내가 보이는 야외 방갈로" },
-        { "src": "/cafe/tanti-gijang-12.webp", "alt": "작은 집 모양 야외 방갈로" },
+        {
+          "src": "/cafe/tanti-gijang-06.webp",
+          "alt": "샹들리에 아래 창가 좌석"
+        },
+        {
+          "src": "/cafe/tanti-gijang-07.webp",
+          "alt": "시내와 산이 보이는 창가 좌석"
+        },
+        {
+          "src": "/cafe/tanti-gijang-08.webp",
+          "alt": "파라솔과 소파가 있는 야외 테라스"
+        },
+        {
+          "src": "/cafe/tanti-gijang-09.webp",
+          "alt": "소파 좌석이 있는 넓은 실내"
+        },
+        {
+          "src": "/cafe/tanti-gijang-10.webp",
+          "alt": "빵이 가득한 베이커리 진열대"
+        },
+        {
+          "src": "/cafe/tanti-gijang-11.webp",
+          "alt": "시내가 보이는 야외 방갈로"
+        },
+        {
+          "src": "/cafe/tanti-gijang-12.webp",
+          "alt": "작은 집 모양 야외 방갈로"
+        },
         { "src": "/cafe/tanti-gijang-13.webp", "alt": "화장실" },
         { "src": "/cafe/tanti-gijang-14.webp", "alt": "야외 흡연 구역" },
-        { "src": "/cafe/tanti-gijang-15.webp", "alt": "시내가 보이는 야외 주차장" },
+        {
+          "src": "/cafe/tanti-gijang-15.webp",
+          "alt": "시내가 보이는 야외 주차장"
+        },
         { "src": "/cafe/tanti-gijang-16.webp", "alt": "건물 외관" }
       ]
     }
@@ -1974,8 +2917,8 @@
       "2022 한국건축문화대상 대상 수상"
     ],
     "floors": ["1층", "2층", "3층 시네마뷰", "루프탑"],
-    "parking": ["무료", "전용 주차장", "카페 길건너 주차장", "약 50대 정도"],
-    "pet": ["1층 야외정원만 가능", "실내 금지"],
+    "parking": ["약 50대 정도", "무료", "전용 주차장", "카페 길건너 주차장"],
+    "pet": ["야외만 가능", "야외 정원"],
     "restroom": ["실내", "남녀 구분"],
     "children": [
       "아이 동반 가능",
@@ -1988,13 +2931,10 @@
     "smoking": ["불가", "외부 별도 흡연공간 없음"],
     "seating": [
       "약 200석 정도",
-      "실내 좌석",
       "창가 좌석",
-      "오션뷰 좌석",
-      "계단식 좌석",
-      "야외 테라스 좌석",
+      "야외 좌석",
       "루프탑 좌석",
-      "단체석"
+      "계단식 좌석"
     ],
     "business": {
       "opened_at": "2021-10-11",
@@ -2020,25 +2960,205 @@
       "instagram": "greetvicoffee",
       "cover": "/cafe/greetvi-seosaeng-01.webp",
       "gallery": [
-        { "src": "/cafe/greetvi-seosaeng-01.webp", "alt": "통창 너머 동해가 보이는 계단식 좌석" },
-        { "src": "/cafe/greetvi-seosaeng-02.webp", "alt": "통창을 따라 놓인 계단식 좌석" },
-        { "src": "/cafe/greetvi-seosaeng-03.webp", "alt": "주문 카운터와 실내 좌석" },
-        { "src": "/cafe/greetvi-seosaeng-04.webp", "alt": "바다를 바라보는 창가 테이블" },
-        { "src": "/cafe/greetvi-seosaeng-05.webp", "alt": "바다가 보이는 단체 테이블" },
-        { "src": "/cafe/greetvi-seosaeng-06.webp", "alt": "방석이 놓인 콘크리트 좌석" },
-        { "src": "/cafe/greetvi-seosaeng-07.webp", "alt": "모래놀이터 옆 야외 좌석" },
-        { "src": "/cafe/greetvi-seosaeng-08.webp", "alt": "바다가 보이는 루프탑 테라스" },
-        { "src": "/cafe/greetvi-seosaeng-09.webp", "alt": "루프탑에서 내려다본 해안" },
-        { "src": "/cafe/greetvi-seosaeng-10.webp", "alt": "징검돌이 놓인 잔디 정원" },
-        { "src": "/cafe/greetvi-seosaeng-11.webp", "alt": "야자수가 있는 야외 정원" },
-        { "src": "/cafe/greetvi-seosaeng-12.webp", "alt": "현무암으로 꾸민 콘크리트 공간" },
-        { "src": "/cafe/greetvi-seosaeng-13.webp", "alt": "콘크리트 벽 사이 계단" },
-        { "src": "/cafe/greetvi-seosaeng-14.webp", "alt": "전시 공간이 있는 복도" },
-        { "src": "/cafe/greetvi-seosaeng-15.webp", "alt": "바다 옆 삼각형 건물 외관" },
-        { "src": "/cafe/greetvi-seosaeng-16.webp", "alt": "GREETVI 사인과 진입로" },
+        {
+          "src": "/cafe/greetvi-seosaeng-01.webp",
+          "alt": "통창 너머 동해가 보이는 계단식 좌석"
+        },
+        {
+          "src": "/cafe/greetvi-seosaeng-02.webp",
+          "alt": "통창을 따라 놓인 계단식 좌석"
+        },
+        {
+          "src": "/cafe/greetvi-seosaeng-03.webp",
+          "alt": "주문 카운터와 실내 좌석"
+        },
+        {
+          "src": "/cafe/greetvi-seosaeng-04.webp",
+          "alt": "바다를 바라보는 창가 테이블"
+        },
+        {
+          "src": "/cafe/greetvi-seosaeng-05.webp",
+          "alt": "바다가 보이는 단체 테이블"
+        },
+        {
+          "src": "/cafe/greetvi-seosaeng-06.webp",
+          "alt": "방석이 놓인 콘크리트 좌석"
+        },
+        {
+          "src": "/cafe/greetvi-seosaeng-07.webp",
+          "alt": "모래놀이터 옆 야외 좌석"
+        },
+        {
+          "src": "/cafe/greetvi-seosaeng-08.webp",
+          "alt": "바다가 보이는 루프탑 테라스"
+        },
+        {
+          "src": "/cafe/greetvi-seosaeng-09.webp",
+          "alt": "루프탑에서 내려다본 해안"
+        },
+        {
+          "src": "/cafe/greetvi-seosaeng-10.webp",
+          "alt": "징검돌이 놓인 잔디 정원"
+        },
+        {
+          "src": "/cafe/greetvi-seosaeng-11.webp",
+          "alt": "야자수가 있는 야외 정원"
+        },
+        {
+          "src": "/cafe/greetvi-seosaeng-12.webp",
+          "alt": "현무암으로 꾸민 콘크리트 공간"
+        },
+        {
+          "src": "/cafe/greetvi-seosaeng-13.webp",
+          "alt": "콘크리트 벽 사이 계단"
+        },
+        {
+          "src": "/cafe/greetvi-seosaeng-14.webp",
+          "alt": "전시 공간이 있는 복도"
+        },
+        {
+          "src": "/cafe/greetvi-seosaeng-15.webp",
+          "alt": "바다 옆 삼각형 건물 외관"
+        },
+        {
+          "src": "/cafe/greetvi-seosaeng-16.webp",
+          "alt": "GREETVI 사인과 진입로"
+        },
         { "src": "/cafe/greetvi-seosaeng-17.webp", "alt": "화장실 세면대" },
         { "src": "/cafe/greetvi-seosaeng-18.webp", "alt": "주차장" },
-        { "src": "/cafe/greetvi-seosaeng-19.webp", "alt": "울산광역시 건축상 대상 명판" }
+        {
+          "src": "/cafe/greetvi-seosaeng-19.webp",
+          "alt": "울산광역시 건축상 대상 명판"
+        }
+      ]
+    }
+  },
+
+  "cosmo40-incheon": {
+    "type": ["대형카페", "공장형카페", "건축미카페"],
+    "view": ["도심뷰", "산업건축뷰"],
+    "services": ["카페", "베이커리", "디저트", "포토존"],
+    "purpose": [
+      "데이트",
+      "가족",
+      "사진",
+      "모임",
+      "여행",
+      "휴식",
+      "전시 관람",
+      "공연 관람",
+      "건축 감상"
+    ],
+    "features": [
+      "약 40년 된 화학공장 리모델링",
+      "2018년 복합문화공간 개관",
+      "기존 공장 구조 보존",
+      "노출 콘크리트 인테리어",
+      "대형 철골 구조물",
+      "산업 설비와 호이스트 보존",
+      "약 13m의 높은 층고",
+      "대형 실내공간",
+      "산업적인 인테리어",
+      "기존 공장과 신축 건물의 조화",
+      "넓은 통창",
+      "개방적인 복층 구조",
+      "전시 및 공연 공간",
+      "복합문화공간",
+      "엘리베이터",
+      "다양한 베이커리",
+      "매장에서 직접 굽는 빵",
+      "2019 인천광역시 건축상 수상",
+      "높은 층고의 개방형 좌석"
+    ],
+    "floors": [
+      "1층 전시 및 공연 공간",
+      "2층 문화행사 및 다목적 공간",
+      "3층 카페 라운지 및 베이커리",
+      "4층 카페 좌석 및 문화공간"
+    ],
+    "parking": [
+      "약 40대 정도",
+      "유료",
+      "전용 지상 주차장",
+      "카페 이용 시 2시간 30분 무료",
+      "이후 30분당 1,000원"
+    ],
+    "pet": ["불가"],
+    "restroom": ["실내", "남녀 구분"],
+    "children": ["아이 동반 가능", "유아의자 있음"],
+    "study": [
+      "가능",
+      "장시간 이용 비추천",
+      "콘센트 없음",
+      "행사 및 공연 시간대 소음 가능"
+    ],
+    "smoking": ["불가", "외부 별도 흡연공간 없음"],
+    "seating": ["약 200석 정도", "창가 좌석", "단체석", "복층 좌석"],
+    "business": {
+      "opened_at": "2018",
+      "closed_days": "연중무휴",
+      "hours": {
+        "월요일": "10:00 ~ 20:00",
+        "화요일": "10:00 ~ 20:00",
+        "수요일": "10:00 ~ 20:00",
+        "목요일": "10:00 ~ 20:00",
+        "금요일": "10:00 ~ 20:00",
+        "토요일": "10:00 ~ 21:00",
+        "일요일": "10:00 ~ 21:00"
+      }
+    },
+    "price": {
+      "아메리카노": 6000,
+      "카페라떼": 6000,
+      "흑임자 아몬드 크림 라떼": 7500,
+      "명랑 소금빵": 4000,
+      "버터 알감자 포카치아": 8000
+    },
+    "media": {
+      "phone": "0507-1317-8862",
+      "website": "https://www.cosmo40.com/",
+      "instagram": "cosmo.40",
+      "cover": "/cafe/cosmo40-incheon-01.webp",
+      "gallery": [
+        {
+          "src": "/cafe/cosmo40-incheon-01.webp",
+          "alt": "COSMO 40 로고가 있는 벽돌색 공장 건물 외관"
+        },
+        {
+          "src": "/cafe/cosmo40-incheon-02.webp",
+          "alt": "철골 구조가 드러난 높은 층고의 실내"
+        },
+        { "src": "/cafe/cosmo40-incheon-03.webp", "alt": "유리 박스 카페와 자갈 정원 좌석" },
+        {
+          "src": "/cafe/cosmo40-incheon-04.webp",
+          "alt": "옛 공장 바닥 위의 무대형 전시 공간"
+        },
+        { "src": "/cafe/cosmo40-incheon-05.webp", "alt": "원목 큐브 의자가 놓인 넓은 홀" },
+        {
+          "src": "/cafe/cosmo40-incheon-06.webp",
+          "alt": "2층에서 내려다본 철골 구조와 계단"
+        },
+        {
+          "src": "/cafe/cosmo40-incheon-07.webp",
+          "alt": "주황색 곡선 테이블과 붉은 바닥의 라운지"
+        },
+        { "src": "/cafe/cosmo40-incheon-08.webp", "alt": "샹들리에 아래 창가 테이블 좌석" },
+        {
+          "src": "/cafe/cosmo40-incheon-09.webp",
+          "alt": "크레인 아래 소파 라운지와 대형 창"
+        },
+        { "src": "/cafe/cosmo40-incheon-10.webp", "alt": "코스모40 굿즈 진열 테이블" },
+        { "src": "/cafe/cosmo40-incheon-11.webp", "alt": "붉은 기둥 사이의 테이블 좌석" },
+        { "src": "/cafe/cosmo40-incheon-12.webp", "alt": "햇빛이 드는 철골 구조의 빈 홀" },
+        { "src": "/cafe/cosmo40-incheon-13.webp", "alt": "옛 공장 사진 액자 전시" },
+        {
+          "src": "/cafe/cosmo40-incheon-14.webp",
+          "alt": "옛 제어반을 살린 회의 테이블 공간"
+        },
+        { "src": "/cafe/cosmo40-incheon-15.webp", "alt": "베이커리 진열대" },
+        { "src": "/cafe/cosmo40-incheon-16.webp", "alt": "흰색 신축 건물 입구" },
+        { "src": "/cafe/cosmo40-incheon-17.webp", "alt": "야외 주차장" },
+        { "src": "/cafe/cosmo40-incheon-18.webp", "alt": "깔끔한 실내 화장실" }
       ]
     }
   }

@@ -30,26 +30,11 @@ type CafeDetail = {
 
 const WEEK_DAYS = ["월", "화", "수", "목", "금", "토", "일"];
 
-// 요일별 영업시간을 같은 시간끼리 묶어 줄 단위로 만든다. (예: "월~금 10:00 ~ 21:00")
+// 요일별 영업시간을 한 줄씩 만든다. (예: "월요일 : 09:30 ~ 21:30")
 function getBusinessHoursLines(hours: Record<string, string>) {
-  const groups: { days: number[]; time: string }[] = [];
-
-  WEEK_DAYS.forEach((day, index) => {
+  return WEEK_DAYS.flatMap((day) => {
     const time = hours[`${day}요일`];
-    if (!time) return;
-    const group = groups.find((item) => item.time === time);
-    if (group) group.days.push(index);
-    else groups.push({ days: [index], time });
-  });
-
-  return groups.map(({ days, time }) => {
-    if (days.length === WEEK_DAYS.length) return `매일 ${time}`;
-    const isRange = days.every((day, i) => i === 0 || day === days[i - 1] + 1);
-    const label =
-      isRange && days.length > 2
-        ? `${WEEK_DAYS[days[0]]}~${WEEK_DAYS[days.at(-1)!]}`
-        : days.map((day) => WEEK_DAYS[day]).join("·");
-    return `${label} ${time}`;
+    return time ? [`${day}요일 : ${time}`] : [];
   });
 }
 
@@ -114,7 +99,6 @@ const listRows: ListRow[] = cafes.flatMap((cafe) => {
       features: detail.features ?? [],
       floors: detail.floors ?? [],
       hours: getBusinessHoursLines(detail.business?.hours ?? {}),
-      closedDays: detail.business?.closed_days || "정보 없음",
       prices: Object.entries(detail.price ?? {}).map(([menu, price]) => ({
         menu,
         price,
