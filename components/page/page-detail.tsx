@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { cafeInfoNotices } from "@/lib/document";
 import { APP_NAME, APP_SITE_URL } from "@/lib/constants";
 import {
+  cn,
   distanceBetween,
   getCafeRegion,
   getCafeTypeLabel,
@@ -17,6 +18,11 @@ import {
   getImageUrl,
   type CafePhoto,
 } from "@/lib/cafe-images";
+import {
+  getCafeReview,
+  type CafeReview,
+  type ReviewPoint,
+} from "@/lib/reviews";
 import {
   BackButton,
   CafeLocationMap,
@@ -41,6 +47,8 @@ import {
   Rows3,
   Sparkles,
   Star,
+  ThumbsDown,
+  ThumbsUp,
   Toilet,
   Users,
 } from "lucide-react";
@@ -111,11 +119,7 @@ const SCHEMA_DAYS: Record<string, string> = {
 
 // 검색엔진용 구조화 데이터(JSON-LD). 카페 정보(CafeOrCoffeeShop)와 브레드크럼(BreadcrumbList).
 // 네이버·구글 평점은 다른 사이트의 평점이라 구글 가이드라인상 aggregateRating으로 넣지 않는다.
-function getCafeJsonLd(
-  cafe: Cafe,
-  detail: CafeDetail,
-  gallery: CafePhoto[],
-) {
+function getCafeJsonLd(cafe: Cafe, detail: CafeDetail, gallery: CafePhoto[]) {
   const url = `${APP_SITE_URL}/cafe/${cafe.slug}`;
   const { phone, website, instagram } = detail.media;
 
@@ -203,6 +207,7 @@ export function PageDetail({ slug }: { slug: string }) {
   const google = getLatestRating(cafe.slug, "google");
   const { phone, website, instagram } = detail.media;
   const gallery = getCafeGallery(slug);
+  const review = getCafeReview(slug);
   const instagramUrl = instagram
     ? `https://www.instagram.com/${instagram}/`
     : null;
@@ -422,6 +427,8 @@ export function PageDetail({ slug }: { slug: string }) {
             />
           </div>
         </section>
+
+        {review && <ReviewSection review={review} />}
 
         <section className="mt-16 sm:mt-24">
           <SectionHeading eyebrow="Location">
@@ -669,6 +676,115 @@ function InfoCard({
       <div className="mt-5 text-sm leading-6 text-[#795f55]">
         {children ?? <TagList items={items ?? []} />}
       </div>
+    </article>
+  );
+}
+
+// 방문자 후기 요약: 좋았던 점 / 아쉬운 점 두 카드와 출처.
+function ReviewSection({ review }: { review: CafeReview }) {
+  return (
+    <section className="mt-16 sm:mt-24">
+      <SectionHeading eyebrow="Review">
+        방문자들은 이렇게 말해요!
+      </SectionHeading>
+      <div className="mt-8 grid gap-8 lg:grid-cols-2">
+        <ReviewCard
+          icon={<ThumbsUp />}
+          title="좋았던 점"
+          summary={review.summary?.good}
+          points={review.good}
+          sources={review.sources}
+        />
+        <ReviewCard
+          icon={<ThumbsDown />}
+          title="아쉬운 점"
+          summary={review.summary?.bad}
+          points={review.bad}
+          sources={review.sources}
+          tone="bad"
+        />
+      </div>
+    </section>
+  );
+}
+
+function ReviewCard({
+  icon,
+  title,
+  summary,
+  points,
+  sources,
+  tone = "good",
+}: {
+  icon: ReactNode;
+  title: string;
+  summary?: string;
+  points: ReviewPoint[];
+  sources: CafeReview["sources"];
+  tone?: "good" | "bad";
+}) {
+  return (
+    <article className="rounded-3xl border-2 border-bark bg-white p-6 sm:p-7">
+      <div className="flex items-center gap-3">
+        <span
+          className={cn(
+            "grid size-10 place-items-center rounded-full [&_svg]:size-5",
+            tone === "good" ? "bg-leaf" : "bg-cream text-autumn",
+          )}
+        >
+          {icon}
+        </span>
+        <h3 className="font-paperlogy text-lg font-semibold">{title}</h3>
+      </div>
+      {summary && (
+        <p className="mt-5 rounded-2xl bg-cream px-4 py-3 text-sm leading-6 font-bold text-bark">
+          {summary}
+        </p>
+      )}
+      {points.length === 0 ? (
+        <p className="mt-5 text-sm text-[#795f55]">정보 없음</p>
+      ) : (
+        <ul className="mt-5 space-y-5">
+          {points.map((point) => (
+            <li
+              key={point.text}
+              className="border-t border-dashed border-[#ead9ca] pt-5 first:border-t-0 first:pt-0"
+            >
+              <p className="text-sm leading-6 text-[#5f4639]">{point.text}</p>
+              {point.tags.length > 0 && (
+                <div className="mt-3 flex flex-wrap gap-1.5">
+                  {point.tags.map((tag) => (
+                    <span
+                      key={tag}
+                      className="rounded-full bg-cream px-2.5 py-0.5 text-xs font-bold text-[#795f55]"
+                    >
+                      #{tag}
+                    </span>
+                  ))}
+                </div>
+              )}
+              {point.source_ids.length > 0 && (
+                <p className="mt-2.5 flex flex-wrap gap-x-3 gap-y-1 text-xs text-[#9b8478]">
+                  {point.source_ids.map((id) =>
+                    sources[id] ? (
+                      <a
+                        key={id}
+                        href={sources[id].url}
+                        target="_blank"
+                        rel="noopener noreferrer nofollow"
+                        className="inline-flex items-center gap-0.5 hover:text-autumn hover:underline underline-offset-3"
+                      >
+                        {sources[id].label}
+                        <ExternalLink aria-hidden="true" className="size-3" />
+                      </a>
+                    ) : null,
+                  )}
+                </p>
+              )}
+            </li>
+          ))}
+        </ul>
+      )}
     </article>
   );
 }

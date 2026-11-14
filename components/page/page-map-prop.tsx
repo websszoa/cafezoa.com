@@ -150,8 +150,9 @@ const sortOptions = {
 
 type SortKey = keyof typeof sortOptions;
 
-// 목록에 보여줄 카페 수.
-const LIST_LIMIT = 10;
+// 목록에 보여줄 카페 수. "TOP 10" 버튼을 누르면 TOP 20으로, 다시 누르면 TOP 10으로 바뀐다.
+const LIST_LIMITS = [10, 20] as const;
+type ListLimit = (typeof LIST_LIMITS)[number];
 
 type MapContextValue = {
   instanceRef: RefObject<NaverMapInstance | null>;
@@ -160,6 +161,8 @@ type MapContextValue = {
   query: string;
   setQuery: (query: string) => void;
   sortedCafes: MapListCafe[];
+  listLimit: ListLimit;
+  toggleListLimit: () => void;
 };
 
 // 띄어쓰기·대소문자와 상관없이 비교하도록 검색어와 대상 문자열을 정리한다.
@@ -186,7 +189,16 @@ export function MapProvider({
   const instanceRef = useRef<NaverMapInstance | null>(null);
   const [selectedSort, setSelectedSort] = useState<SortKey>("naver");
   const [query, setQuery] = useState("");
+  const [listLimit, setListLimit] = useState<ListLimit>(LIST_LIMITS[0]);
   const { location, openDialog } = useLocation();
+
+  const toggleListLimit = useCallback(
+    () =>
+      setListLimit((limit) =>
+        limit === LIST_LIMITS[0] ? LIST_LIMITS[1] : LIST_LIMITS[0],
+      ),
+    [],
+  );
 
   // 내 위치가 없으면 "가까운 순"을 쓸 수 없으므로 기본 정렬로 보여준다.
   const sort = selectedSort === "nearby" && !location ? "naver" : selectedSort;
@@ -231,13 +243,22 @@ export function MapProvider({
           if (bValue === null) return -1;
           return bValue - aValue;
         })
-        .slice(0, LIST_LIMIT)
+        .slice(0, listLimit)
     );
-  }, [cafes, sort, query, location]);
+  }, [cafes, sort, query, location, listLimit]);
 
   return (
     <MapContext.Provider
-      value={{ instanceRef, sort, setSort, query, setQuery, sortedCafes }}
+      value={{
+        instanceRef,
+        sort,
+        setSort,
+        query,
+        setQuery,
+        sortedCafes,
+        listLimit,
+        toggleListLimit,
+      }}
     >
       {children}
     </MapContext.Provider>
@@ -537,7 +558,7 @@ export function NaverMap({ cafes }: { cafes: MapListCafe[] }) {
 
 // 정렬 기준을 고르는 목록 제목과, 그 기준으로 정렬한 상위 카페 목록. (PC 전용)
 export function MapCafeList() {
-  const { sort, sortedCafes } = useMap();
+  const { sort, sortedCafes, listLimit, toggleListLimit } = useMap();
 
   return (
     <div className="hidden min-h-0 flex-1 flex-col lg:flex">
@@ -547,9 +568,14 @@ export function MapCafeList() {
             <button className="font-paperlogy flex items-center gap-1 rounded-full text-base font-semibold text-bark outline-none hover:text-autumn focus-visible:ring-2 focus-visible:ring-autumn" />
           }
         />
-        <span className="rounded-full bg-autumn px-2.5 py-0.5 text-xs font-bold text-white">
-          TOP {LIST_LIMIT}
-        </span>
+        <button
+          type="button"
+          onClick={toggleListLimit}
+          aria-label={`목록 개수 바꾸기 (지금 TOP ${listLimit})`}
+          className="rounded-full bg-autumn px-2.5 py-0.5 text-xs font-bold text-white transition-colors outline-none hover:bg-autumn-dark focus-visible:ring-2 focus-visible:ring-autumn/40"
+        >
+          TOP {listLimit}
+        </button>
       </div>
 
       <ScrollArea className="min-h-0 flex-1 **:data-[slot=scroll-area-thumb]:bg-transparent">
