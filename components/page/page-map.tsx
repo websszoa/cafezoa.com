@@ -1,8 +1,8 @@
 import Link from "next/link";
 import { MapPinned } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { APP_IMAGE_BASE_URL } from "@/lib/constants";
-import { getLatestRating } from "@/lib/utils";
+import { getCafeCoverUrl } from "@/lib/cafe-images";
+import { getLatestRating } from "@/lib/ratings";
 import {
   MapCafeList,
   MapProvider,
@@ -15,22 +15,17 @@ import {
 import cafes from "@/data/cafe-basic.json";
 import cafeDetails from "@/data/cafe-details.json";
 
-// GitHub Pages에 올라간 카페 대표 이미지 주소. (예: .../public/cafe/{slug}-02.webp)
-function getCafeImage(slug: string) {
-  return `${APP_IMAGE_BASE_URL}cafe/${slug}-02.webp`;
-}
-
 // 상세 정보(사진)가 있는 카페만 목록·지도에 보여준다.
 const mapCafes: MapListCafe[] = cafes
   .filter((cafe) => cafe.slug in cafeDetails)
   .map((cafe) => {
-    const naver = getLatestRating(cafe.ratings, "naver");
-    const google = getLatestRating(cafe.ratings, "google");
+    const naver = getLatestRating(cafe.slug, "naver");
+    const google = getLatestRating(cafe.slug, "google");
     return {
       slug: cafe.slug,
       name: cafe.name,
       types: cafe.type,
-      image: getCafeImage(cafe.slug),
+      image: getCafeCoverUrl(cafe.slug),
       latitude: cafe.location.latitude,
       longitude: cafe.location.longitude,
       naverRating: naver?.rating ?? null,

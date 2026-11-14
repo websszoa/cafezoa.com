@@ -4,14 +4,19 @@ import type { ReactNode } from "react";
 import { CafeCard } from "@/components/page/page-card-prop";
 import { Button } from "@/components/ui/button";
 import { cafeInfoNotices } from "@/lib/document";
-import { APP_IMAGE_BASE_URL, APP_NAME, APP_SITE_URL } from "@/lib/constants";
+import { APP_NAME, APP_SITE_URL } from "@/lib/constants";
 import {
   distanceBetween,
   getCafeRegion,
   getCafeTypeLabel,
-  getLatestRating,
-  type LatestRating,
 } from "@/lib/utils";
+import { getLatestRating, type LatestRating } from "@/lib/ratings";
+import {
+  getCafeCoverUrl,
+  getCafeGallery,
+  getImageUrl,
+  type CafePhoto,
+} from "@/lib/cafe-images";
 import {
   BackButton,
   CafeLocationMap,
@@ -65,21 +70,10 @@ type CafeDetail = {
     phone?: string | null;
     website?: string | null;
     instagram?: string | null;
-    gallery: string[];
   };
 };
 
 const details = cafeDetails as Record<string, CafeDetail>;
-
-// GitHub Pages에 올라간 이미지 주소. (예: /cafe/{slug}-01.webp → .../public/cafe/{slug}-01.webp)
-function getImageUrl(path: string) {
-  return `${APP_IMAGE_BASE_URL}${path.replace(/^\//, "")}`;
-}
-
-// 카페 대표 이미지 주소.
-function getCafeImage(slug: string) {
-  return `${APP_IMAGE_BASE_URL}cafe/${slug}-02.webp`;
-}
 
 // 같은 유형이 많이 겹치는 순, 같으면 가까운 순으로 추천 카페 3곳.
 function getRelatedCafes(currentCafe: Cafe) {
@@ -117,7 +111,11 @@ const SCHEMA_DAYS: Record<string, string> = {
 
 // 검색엔진용 구조화 데이터(JSON-LD). 카페 정보(CafeOrCoffeeShop)와 브레드크럼(BreadcrumbList).
 // 네이버·구글 평점은 다른 사이트의 평점이라 구글 가이드라인상 aggregateRating으로 넣지 않는다.
-function getCafeJsonLd(cafe: Cafe, detail: CafeDetail, gallery: string[]) {
+function getCafeJsonLd(
+  cafe: Cafe,
+  detail: CafeDetail,
+  gallery: CafePhoto[],
+) {
   const url = `${APP_SITE_URL}/cafe/${cafe.slug}`;
   const { phone, website, instagram } = detail.media;
 
@@ -150,7 +148,13 @@ function getCafeJsonLd(cafe: Cafe, detail: CafeDetail, gallery: string[]) {
       name: cafe.name,
       description: cafe.description,
       url,
-      image: [getCafeImage(cafe.slug), ...gallery.map(getImageUrl)],
+      // 대표 사진이 갤러리에도 있으므로 중복을 뺀다.
+      image: [
+        ...new Set([
+          getCafeCoverUrl(cafe.slug),
+          ...gallery.map((photo) => getImageUrl(photo.src)),
+        ]),
+      ],
       address: {
         "@type": "PostalAddress",
         streetAddress: cafe.location.address,
@@ -195,10 +199,10 @@ export function PageDetail({ slug }: { slug: string }) {
   const detail = details[slug];
   if (!cafe || !detail) return null;
 
-  const naver = getLatestRating(cafe.ratings, "naver");
-  const google = getLatestRating(cafe.ratings, "google");
+  const naver = getLatestRating(cafe.slug, "naver");
+  const google = getLatestRating(cafe.slug, "google");
   const { phone, website, instagram } = detail.media;
-  const gallery = detail.media.gallery.slice(0, -1); // 마지막 사진은 카페와 관련 없는 이미지라 제외한다.
+  const gallery = getCafeGallery(slug);
   const instagramUrl = instagram
     ? `https://www.instagram.com/${instagram}/`
     : null;
@@ -226,7 +230,7 @@ export function PageDetail({ slug }: { slug: string }) {
         {/* Next 이미지 최적화(/_next/image)를 거치지 않고 GitHub 주소에서 바로 불러온다. (서버 트래픽 절약) */}
         <Image
           unoptimized
-          src={getCafeImage(slug)}
+          src={getCafeCoverUrl(slug)}
           alt={`${cafe.name} 대표 전경 (${regionLabel})`}
           fill
           priority
@@ -498,11 +502,16 @@ export function PageDetail({ slug }: { slug: string }) {
               어떤 공간인지 함께 둘러봐요!
             </SectionHeading>
             <div className="mt-8 grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-3">
-              {gallery.map((path, index) => (
+              {gallery.map((photo, index) => (
                 <DetailGalleryImage
-                  key={path}
-                  src={getImageUrl(path)}
-                  alt={`${cafe.name}(${regionLabel}) 공간 사진 ${index + 1}`}
+                  key={photo.src}
+                  src={getImageUrl(photo.src)}
+                  // 사진 설명(alt)이 있으면 "카페 이름 + 설명", 없으면 기본 설명
+                  alt={
+                    photo.alt
+                      ? `${cafe.name} ${photo.alt}`
+                      : `${cafe.name}(${regionLabel}) 공간 사진 ${index + 1}`
+                  }
                 />
               ))}
             </div>
@@ -525,9 +534,9 @@ export function PageDetail({ slug }: { slug: string }) {
                 latitude={relatedCafe.location.latitude}
                 longitude={relatedCafe.location.longitude}
                 description={relatedCafe.description}
-                image={getCafeImage(relatedCafe.slug)}
+                image={getCafeCoverUrl(relatedCafe.slug)}
                 naverRating={
-                  getLatestRating(relatedCafe.ratings, "naver")?.rating ?? null
+                  getLatestRating(relatedCafe.slug, "naver")?.rating ?? null
                 }
                 href={`/cafe/${relatedCafe.slug}`}
                 className="shadow-none"

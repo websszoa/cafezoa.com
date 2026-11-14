@@ -1,6 +1,8 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { useState, type ReactNode } from "react";
 import { LocationDistance } from "@/components/location/location-distance";
 import { Checkbox } from "@/components/ui/checkbox";
@@ -24,6 +26,7 @@ import {
   ReceiptText,
   Sparkles,
   Star,
+  Tag,
   Toilet,
   Users,
   type LucideIcon,
@@ -38,7 +41,7 @@ export type ListRow = {
   longitude: number;
   image: string;
   ratings: { label: string; rating: number }[];
-  // 카페 이름 아래 아이콘 (주차·스터디·흡연·반려동물 가능 여부)
+  types: string[];
   indicators: { key: IndicatorKey; label: string; active: boolean }[];
   view: string[];
   services: string[];
@@ -94,6 +97,13 @@ const columns: {
       ),
   },
   {
+    key: "types",
+    title: "유형",
+    icon: Tag,
+    defaultVisible: true,
+    render: (row) => lines(row.types),
+  },
+  {
     key: "view",
     title: "뷰",
     icon: Eye,
@@ -106,6 +116,20 @@ const columns: {
     icon: Coffee,
     defaultVisible: true,
     render: (row) => lines(row.services),
+  },
+  {
+    key: "purpose",
+    title: "추천 목적",
+    icon: Users,
+    defaultVisible: true,
+    render: (row) => lines(row.purpose),
+  },
+  {
+    key: "features",
+    title: "공간 특징",
+    icon: Sparkles,
+    defaultVisible: true,
+    render: (row) => lines(row.features),
   },
   {
     key: "price",
@@ -124,24 +148,10 @@ const columns: {
     key: "hours",
     title: "영업시간",
     icon: Clock,
-    defaultVisible: true,
+    defaultVisible: false,
     // 최대 200px, 넘치는 줄은 말줄임표(...)로 자른다.
     className: "max-w-[250px]",
     render: (row) => lines([...row.hours, row.closedDays], true),
-  },
-  {
-    key: "purpose",
-    title: "추천 목적",
-    icon: Users,
-    defaultVisible: false,
-    render: (row) => lines(row.purpose),
-  },
-  {
-    key: "features",
-    title: "공간 특징",
-    icon: Sparkles,
-    defaultVisible: false,
-    render: (row) => lines(row.features),
   },
   {
     key: "floors",
@@ -154,14 +164,14 @@ const columns: {
     key: "parking",
     title: "주차",
     icon: CircleParking,
-    defaultVisible: true,
+    defaultVisible: false,
     render: (row) => lines(row.parking),
   },
   {
     key: "seating",
     title: "좌석",
     icon: Armchair,
-    defaultVisible: true,
+    defaultVisible: false,
     render: (row) => lines(row.seating),
   },
   {
@@ -213,7 +223,7 @@ const defaultVisibleKeys = columns
   .map((column) => column.key);
 
 // 칸 하나에 보여줄 최대 줄 수. 나머지는 상세 페이지에서 볼 수 있다.
-const MAX_LINES = 4;
+const MAX_LINES = 5;
 
 // 칸 안의 여러 줄 텍스트(최대 MAX_LINES줄). 내용이 없으면 null을 돌려줘 칸에 "-"가 표시된다.
 // truncate가 true면 칸 너비를 넘치는 줄을 말줄임표(...)로 자른다. (블릿 점은 그대로 보이도록 글자만 자른다)
@@ -286,10 +296,21 @@ function contactLinks(row: ListRow) {
 
 // 카페 목록 표. 표 위의 체크박스로 보여줄 칸을 고른다.
 export function ListTable({ rows }: { rows: ListRow[] }) {
+  const router = useRouter();
   const [visibleKeys, setVisibleKeys] = useState<string[]>(defaultVisibleKeys);
   const visibleColumns = columns.filter((column) =>
     visibleKeys.includes(column.key),
   );
+
+  // 줄 아무 곳이나 누르면 상세 페이지로 이동한다.
+  // 줄 안의 링크(이름·전화·웹사이트 등)를 누른 경우와 글자를 드래그해 선택한 경우는 제외한다.
+  function openDetail(event: React.MouseEvent, slug: string) {
+    if ((event.target as HTMLElement).closest("a, button, input, label")) {
+      return;
+    }
+    if (window.getSelection()?.toString()) return;
+    router.push(`/cafe/${slug}`);
+  }
 
   function toggleColumn(key: string, checked: boolean) {
     setVisibleKeys((keys) =>
@@ -367,7 +388,7 @@ export function ListTable({ rows }: { rows: ListRow[] }) {
               <tr>
                 <th
                   scope="col"
-                  className="hidden px-5 py-3.5 pr-0 text-center sm:table-cell"
+                  className="hidden px-3 py-3.5 pr-0 text-center sm:table-cell"
                 >
                   번호
                 </th>
@@ -400,12 +421,13 @@ export function ListTable({ rows }: { rows: ListRow[] }) {
               {rows.map((row, index) => (
                 <tr
                   key={row.slug}
+                  onClick={(event) => openDetail(event, row.slug)}
                   className={cn(
-                    "transition-colors hover:bg-[#fff1da]",
+                    "cursor-pointer transition-colors hover:bg-[#fff1da]",
                     index % 2 === 1 && "bg-[#fffaf2]",
                   )}
                 >
-                  <td className="hidden px-5 py-4 pr-0 align-middle sm:table-cell">
+                  <td className="hidden px-3 py-4 pr-0 align-middle sm:table-cell">
                     <div className="flex min-w-10 flex-col items-center">
                       <span className="font-nanum text-sm text-[#c3957a]">
                         {index + 1}
@@ -420,7 +442,7 @@ export function ListTable({ rows }: { rows: ListRow[] }) {
                       <td
                         key={key}
                         className={cn(
-                          "font-nanum px-4 py-4 align-top text-sm whitespace-nowrap text-bark",
+                          "font-nanum px-4 py-4 align-top text-[13px] whitespace-nowrap text-bark",
                           desktopOnly && "hidden sm:table-cell",
                           className,
                         )}
@@ -443,10 +465,15 @@ export function ListTable({ rows }: { rows: ListRow[] }) {
 function CafeCell({ row, index }: { row: ListRow; index: number }) {
   return (
     <div className="flex items-center gap-3">
-      <div className="relative h-24 w-20 shrink-0 overflow-hidden rounded">
+      <Link
+        href={`/cafe/${row.slug}`}
+        tabIndex={-1}
+        aria-hidden="true"
+        className="relative h-24 w-20 shrink-0 overflow-hidden rounded"
+      >
         <Image
           src={row.image}
-          alt={row.name}
+          alt={`${row.name} 대표 사진`}
           fill
           sizes="80px"
           className="object-cover"
@@ -454,10 +481,15 @@ function CafeCell({ row, index }: { row: ListRow; index: number }) {
         <span className="absolute top-1 left-1 z-10 flex size-5 items-center justify-center rounded-full bg-autumn text-[11px] font-bold text-white sm:hidden">
           {index + 1}
         </span>
-      </div>
+      </Link>
       <div className="min-w-0">
         <p className="font-paperlogy truncate text-xl font-semibold text-bark">
-          {row.name}
+          <Link
+            href={`/cafe/${row.slug}`}
+            className="rounded outline-none hover:text-autumn focus-visible:ring-4 focus-visible:ring-autumn/40"
+          >
+            {row.name}
+          </Link>
         </p>
         <p className="mt-0.5 flex items-center gap-1 text-sm whitespace-nowrap text-bark">
           <MapPin

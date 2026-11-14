@@ -1,4 +1,4 @@
-import { APP_IMAGE_BASE_URL } from "@/lib/constants";
+import { getCafeGallery, getImageUrl } from "@/lib/cafe-images";
 import cafes from "@/data/cafe-basic.json";
 import cafeDetails from "@/data/cafe-details.json";
 import {
@@ -18,15 +18,16 @@ function randomRank(value: string) {
   return hash >>> 0;
 }
 
-// 각 카페 갤러리 사진(마지막 한 장 제외)을 섞어서 한 목록으로 만든다.
+// 각 카페 갤러리 사진을 섞어서 한 목록으로 만든다.
 const galleryImages: GalleryImage[] = cafes
   .flatMap((cafe) => {
     const detail = (cafeDetails as Record<string, CafeDetail>)[cafe.slug];
     if (!detail) return [];
 
-    return detail.media.gallery.slice(0, -1).map((path) => ({
-      src: `${APP_IMAGE_BASE_URL}${path.replace(/^\//, "")}`,
-      rank: randomRank(path),
+    return getCafeGallery(cafe.slug).map((photo) => ({
+      src: getImageUrl(photo.src),
+      alt: photo.alt,
+      rank: randomRank(photo.src),
       slug: cafe.slug,
       name: cafe.name,
       province: cafe.location.address.split(" ")[0],

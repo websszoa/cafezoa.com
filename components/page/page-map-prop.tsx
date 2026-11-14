@@ -573,7 +573,7 @@ export function MapCafeList() {
                 <span className="relative size-16 shrink-0 overflow-hidden rounded-xl bg-stone-200">
                   <Image
                     src={cafe.image}
-                    alt=""
+                    alt={`${cafe.name} 대표 사진`}
                     fill
                     sizes="64px"
                     loading={index === 0 ? "eager" : "lazy"}

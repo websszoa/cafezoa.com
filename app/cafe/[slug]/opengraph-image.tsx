@@ -1,5 +1,5 @@
 import sharp from "sharp";
-import { APP_IMAGE_BASE_URL } from "@/lib/constants";
+import { getCafeCoverUrl } from "@/lib/cafe-images";
 
 import cafeDetails from "@/data/cafe-details.json";
 
@@ -20,7 +20,7 @@ export default async function Image({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const response = await fetch(`${APP_IMAGE_BASE_URL}cafe/${slug}-02.webp`);
+  const response = await fetch(getCafeCoverUrl(slug));
   const source = Buffer.from(await response.arrayBuffer());
 
   const image = await sharp(source)

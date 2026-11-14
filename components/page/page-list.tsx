@@ -1,6 +1,6 @@
 import { ListTable, type ListRow } from "@/components/page/page-list-prop";
-import { APP_IMAGE_BASE_URL } from "@/lib/constants";
-import { getLatestRating } from "@/lib/utils";
+import { getCafeCoverUrl } from "@/lib/cafe-images";
+import { getLatestRating } from "@/lib/ratings";
 
 import cafes from "@/data/cafe-basic.json";
 import cafeDetails from "@/data/cafe-details.json";
@@ -25,7 +25,6 @@ type CafeDetail = {
     phone?: string | null;
     website?: string | null;
     instagram?: string | null;
-    gallery: string[];
   };
 };
 
@@ -65,8 +64,8 @@ const listRows: ListRow[] = cafes.flatMap((cafe) => {
   if (!detail) return [];
 
   const ratings = [
-    { label: "네이버", rating: getLatestRating(cafe.ratings, "naver")?.rating },
-    { label: "구글", rating: getLatestRating(cafe.ratings, "google")?.rating },
+    { label: "네이버", rating: getLatestRating(cafe.slug, "naver")?.rating },
+    { label: "구글", rating: getLatestRating(cafe.slug, "google")?.rating },
   ].filter(
     (item): item is { label: string; rating: number } =>
       item.rating !== undefined,
@@ -84,8 +83,9 @@ const listRows: ListRow[] = cafes.flatMap((cafe) => {
       address: cafe.location.address,
       latitude: cafe.location.latitude,
       longitude: cafe.location.longitude,
-      image: `${APP_IMAGE_BASE_URL}cafe/${cafe.slug}-02.webp`,
+      image: getCafeCoverUrl(cafe.slug),
       ratings,
+      types: cafe.type,
       indicators: [
         {
           key: "parking",

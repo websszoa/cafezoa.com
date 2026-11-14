@@ -1,0 +1,164 @@
+{
+  "dirty-trunk-paju": {
+    "2026-09": {
+      "naver": [4.28, 31000],
+      "google": [3.9, 5400]
+    },
+    "2026-11": {
+      "naver": [4.3, 31416],
+      "google": [3.9, 5418]
+    }
+  },
+  "zatura-gimpo": {
+    "2026-09": {
+      "naver": [4.31, 3700],
+      "google": [4.5, 203]
+    }
+  },
+  "forest-outings-goyang": {
+    "2026-09": {
+      "naver": [4.43, 29000],
+      "google": [4.2, 3304]
+    }
+  },
+  "forest-outings-songdo": {
+    "2026-09": {
+      "naver": [4.39, 31000],
+      "google": [4.4, 2173]
+    }
+  },
+  "hollys-jeju-dodu-coast-dt": {
+    "2026-09": {
+      "naver": [4.3, 1503],
+      "google": [4.5, 187]
+    }
+  },
+  "forest-outings-yongin": {
+    "2026-09": {
+      "naver": [4.35, 5935]
+    },
+    "2026-10": {
+      "google": [4.1, 266]
+    }
+  },
+  "hutan-namyangju": {
+    "2026-10": {
+      "naver": [4.71, 25377],
+      "google": [4.5, 606]
+    }
+  },
+  "mieum-yeongjongdo": {
+    "2026-09": {
+      "naver": [4.42, 4632],
+      "google": [4.3, 387]
+    }
+  },
+  "jinjaengimoru-jeju": {
+    "2026-10": {
+      "naver": [0, 0],
+      "google": [0, 0]
+    }
+  },
+  "sihaon-ulju": {
+    "2026-10": {
+      "naver": [4.51, 2060],
+      "google": [4.7, 150]
+    }
+  },
+  "concrete-wall-jecheon": {
+    "2026-10": {
+      "naver": [4.49, 1888],
+      "google": [4.3, 92]
+    }
+  },
+  "aleffee-asan": {
+    "2026-10": {
+      "naver": [4.58, 4285],
+      "google": [4.2, 347]
+    }
+  },
+  "oh-bremen-pohang": {
+    "2026-10": {
+      "naver": [4.82, 12045],
+      "google": [4.4, 380]
+    }
+  },
+  "most-seokmun-hoengseong": {
+    "2026-10": {
+      "naver": [4.65, 314],
+      "google": [4, 8]
+    }
+  },
+  "navid-jeongseon": {
+    "2026-10": {
+      "naver": [0, 0],
+      "google": [0, 0]
+    }
+  },
+  "destination9-anseong": {
+    "2026-10": {
+      "naver": [4.67, 6270],
+      "google": [4.2, 212]
+    }
+  },
+  "root-square-jincheon": {
+    "2026-10": {
+      "naver": [4.79, 5268],
+      "google": [4.5, 240]
+    }
+  },
+  "monavalley-asan": {
+    "2026-10": {
+      "naver": [3.5, 875],
+      "google": [4.2, 5]
+    }
+  },
+  "arena-pina-gyeongju": {
+    "2026-10": {
+      "naver": [4.85, 5000],
+      "google": [4.4, 49]
+    }
+  },
+  "breath-coffee-works-gyeongju": {
+    "2026-10": {
+      "naver": [4.06, 2012],
+      "google": [4.2, 68]
+    }
+  },
+  "terarosa-gyeongju": {
+    "2026-10": {
+      "naver": [4.77, 5455],
+      "google": [4.5, 212]
+    }
+  },
+  "bosque-gyeongju": {
+    "2026-10": {
+      "naver": [4.46, 2736],
+      "google": [4.3, 902]
+    }
+  },
+  "sansi-asan": {
+    "2026-10": {
+      "naver": [4.34, 2330],
+      "google": [4.1, 80]
+    }
+  },
+  "jm-coffee-roasters-busan": {
+    "2026-10": {
+      "naver": [4.49, 5399],
+      "google": [4.3, 1444]
+    }
+  },
+  "tanti-gijang": {
+    "2026-10": {
+      "naver": [4.63, 4031],
+      "google": [4.3, 126]
+    }
+  },
+  "greetvi-seosaeng": {
+    "2026-10": {
+      "naver": [4.53, 5808],
+      "google": [4.4, 616]
+    }
+  }
+}
