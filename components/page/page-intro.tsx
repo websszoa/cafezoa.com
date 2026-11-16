@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+
 import { Button } from "@/components/ui/button";
 import { APP_IMAGE_BASE_URL, APP_NAME, APP_SLOGAN } from "@/lib/constants";
 import { introLinks } from "@/lib/menu";
@@ -52,24 +53,24 @@ export function PageIntro() {
       {/* 관리자로 로그인했을 때만 보이는 현황 숫자 */}
       <AdminStats className="absolute top-4 left-4 z-30" />
 
-      <section className="relative z-10 mx-auto flex min-h-dvh w-full max-w-6xl flex-col items-center px-5 pt-[clamp(4.5rem,10vh,7rem)] text-center">
+      <section className="relative z-10 mx-auto flex min-h-dvh w-full max-w-6xl flex-col items-center px-5 pt-18 sm:pt-22 text-center">
         <p className="font-paperlogy flex items-center gap-2.5 text-xs font-black tracking-[0.2em] uppercase">
           Cafe curation guide
         </p>
-        <h1 className="font-pappin mt-8 text-[clamp(3.5rem,16vw,8.25rem)] leading-[0.84] font-bold -tracking-widest uppercase [text-shadow:5px_5px_0_var(--color-autumn-dark)]">
+        <h1 className="font-pappin mt-6 text-[clamp(3.5rem,16vw,8.25rem)] leading-[0.84] font-bold -tracking-widest uppercase [text-shadow:5px_5px_0_var(--color-autumn-dark)] sm:mt-8">
           <span className="sr-only">{`${APP_NAME} | ${APP_SLOGAN}`}</span>
           <span aria-hidden="true">
             <span className="text-leaf">cafe</span>
             <span>zoa</span>
           </span>
         </h1>
-        <p className="font-nanum font-medium mt-7 leading-6.5">
+        <p className="font-nanum mt-5 leading-5.5 sm:leading-6.5 font-medium break-keep text-sm sm:text-base sm:mt-7">
           좋은 카페, 소중한 사람들과
           <span className="block">전국의 멋진 카페를 한눈에 찾아보세요!</span>
         </p>
 
         <div
-          className="relative z-20 mt-8 grid w-full max-w-xs grid-cols-1 gap-4 sm:mt-9"
+          className="relative z-20 mt-7 grid w-full max-w-xs grid-cols-1 gap-3 sm:mt-9 sm:gap-4"
           aria-label="카페 보기 방식"
         >
           {introLinks.map(({ href, description, icon: Icon }) => (
@@ -87,7 +88,7 @@ export function PageIntro() {
         </div>
 
         <div
-          className="relative z-20 mt-8 flex items-center justify-center gap-4"
+          className="relative z-20 mt-7 flex items-center justify-center gap-4 sm:mt-8"
           aria-label="소셜 로그인"
         >
           <GoogleLoginButton />
@@ -95,15 +96,19 @@ export function PageIntro() {
           <NaverLoginButton />
         </div>
 
-        <div className="absolute -bottom-4 left-1/2 aspect-1680/936 w-[min(760px,100vw)] -translate-x-1/2 overflow-hidden sm:-bottom-8">
-          <Image
-            src={`${APP_IMAGE_BASE_URL}images/main-hero-autumn.png`}
-            fill
-            alt="가을 야외 카페에서 커피를 즐기는 사람들"
-            priority
-            sizes="(max-width: 768px) 100vw, 760px"
-            className="object-contain drop-shadow-[0_24px_18px_rgba(132,42,13,0.2)]"
-          />
+        {/* 일러스트는 내용 아래에 이어 붙인다. (화면이 짧은 모바일에서 버튼·로그인 위로 겹치지 않도록)
+            내용이 짧으면 mt-auto로 화면 맨 아래에 붙고, 길면 그만큼 아래로 밀려 스크롤된다. (640px 이상은 예전처럼 화면 아래에 겹쳐 깐다) */}
+        <div className="mt-auto -mb-4 w-[min(760px,100vw)] shrink-0 pt-6 sm:absolute sm:-bottom-8 sm:left-1/2 sm:mb-0 sm:-translate-x-1/2 sm:pt-0">
+          <div className="relative aspect-1680/936">
+            <Image
+              src={`${APP_IMAGE_BASE_URL}images/main-hero-autumn.png`}
+              fill
+              alt="가을 야외 카페에서 커피를 즐기는 사람들"
+              priority
+              sizes="(max-width: 768px) 100vw, 760px"
+              className="object-contain drop-shadow-[0_24px_18px_rgba(132,42,13,0.2)]"
+            />
+          </div>
         </div>
       </section>
     </main>

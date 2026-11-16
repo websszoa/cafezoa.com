@@ -43,12 +43,6 @@ export const introLinks = [
     description: "이미지로 보기",
     icon: Images,
   },
-  {
-    href: "/taste",
-    label: "취향",
-    description: "취향으로 찾기",
-    icon: Heart,
-  },
 ];
 
 export const footerLinks = [
@@ -106,5 +100,11 @@ export const footerLinks = [
         external: true,
       },
     ],
+  },
+  // 시험 중인 페이지. 메뉴에는 두지 않고 푸터에서만 연결한다.
+  {
+    title: "Lab",
+    label: "시험 페이지 메뉴",
+    links: [{ href: "/taste", label: "취향 찾기", icon: Heart }],
   },
 ];

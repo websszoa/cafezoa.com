@@ -2,8 +2,8 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { cn } from "@/lib/utils";
-import { useEffect, useRef, useState } from "react";
+import { cn, shuffleWithSeed } from "@/lib/utils";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { ChevronRight, Loader2, MapPin, Star } from "lucide-react";
 import { LocationDistance } from "@/components/location/location-distance";
 
@@ -17,12 +17,25 @@ const ROWS_PER_PAGE = 2;
 
 export type CafeCardData = Omit<CafeCardProps, "eager">;
 
-// 화면에 들어가는 칸 수에 맞춰 처음엔 2줄만 보여주고, 끝까지 스크롤하면 2줄씩 더 보여준다.
+// 카드는 들어올 때마다 무작위 순서로 섞는다. 화면에 들어가는 칸 수에 맞춰 처음엔 2줄만 보여주고, 끝까지 스크롤하면 2줄씩 더 보여준다.
 export function CafeCardGrid({ cafes }: { cafes: CafeCardData[] }) {
   const listRef = useRef<HTMLUListElement>(null);
   const sentinelRef = useRef<HTMLDivElement>(null);
   const [columns, setColumns] = useState(3);
   const [rows, setRows] = useState(ROWS_PER_PAGE);
+  // 들어올 때마다 다른 순서로 보여주기 위한 값. 서버에서 만든 HTML은 기본 순서(null)이고,
+  // 브라우저에서 화면이 뜬 직후 한 번 섞는다. (이미지 페이지와 같은 방식)
+  const [shuffleSeed, setShuffleSeed] = useState<number | null>(null);
+
+  useEffect(() => {
+    const shuffle = () => setShuffleSeed(Math.random());
+    shuffle();
+  }, []);
+
+  const orderedCafes = useMemo(
+    () => (shuffleSeed === null ? cafes : shuffleWithSeed(cafes, shuffleSeed)),
+    [cafes, shuffleSeed],
+  );
 
   // 그리드 폭이 바뀔 때마다 한 줄에 들어가는 카드 수를 다시 계산한다. (640px 미만은 1칸)
   useEffect(() => {
@@ -68,7 +81,7 @@ export function CafeCardGrid({ cafes }: { cafes: CafeCardData[] }) {
         ref={listRef}
         className="grid grid-cols-1 gap-6 sm:grid-cols-[repeat(auto-fill,380px)] sm:justify-center"
       >
-        {cafes.slice(0, visibleCount).map((cafe, index) => (
+        {orderedCafes.slice(0, visibleCount).map((cafe, index) => (
           <CafeCard key={cafe.slug} {...cafe} eager={index < 4} />
         ))}
       </ul>

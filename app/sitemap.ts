@@ -9,7 +9,6 @@ const routes = [
   "/card",
   "/list",
   "/gallery",
-  "/taste",
   "/about",
   "/support",
   "/policy",

@@ -5,7 +5,7 @@ import Link from "next/link";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { Loader2, MapPin } from "lucide-react";
 import { LocationDistance } from "@/components/location/location-distance";
-import { cn } from "@/lib/utils";
+import { cn, shuffleWithSeed } from "@/lib/utils";
 
 export type GalleryImage = {
   src: string;
@@ -66,24 +66,6 @@ function distributeIntoColumns(images: GalleryImage[], columnCount: number) {
   });
 
   return columns;
-}
-
-// seed로 정해지는 섞기. (같은 seed면 같은 순서 → 화면을 다시 그려도 순서가 유지된다)
-function shuffleWithSeed<T>(items: T[], seed: number) {
-  const result = [...items];
-  let state = Math.floor(seed * 2 ** 32) || 1;
-  const next = () => {
-    // mulberry32: 간단한 의사 난수
-    state = (state + 0x6d2b79f5) | 0;
-    let t = Math.imul(state ^ (state >>> 15), 1 | state);
-    t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t;
-    return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
-  };
-  for (let i = result.length - 1; i > 0; i -= 1) {
-    const j = Math.floor(next() * (i + 1));
-    [result[i], result[j]] = [result[j], result[i]];
-  }
-  return result;
 }
 
 export function GalleryGrid({ images }: { images: GalleryImage[] }) {
