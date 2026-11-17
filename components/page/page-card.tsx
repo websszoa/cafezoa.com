@@ -1,5 +1,5 @@
 import { CafeCardGrid } from "@/components/page/page-card-prop";
-import { getCafeCoverUrl } from "@/lib/cafe-images";
+import { getCafeCoverUrl } from "@/lib/images";
 import { getLatestRating } from "@/lib/ratings";
 import cafes from "@/data/cafe-basic.json";
 import cafeDetails from "@/data/cafe-details.json";

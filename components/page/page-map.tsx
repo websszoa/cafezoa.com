@@ -4,7 +4,7 @@ import {
   getCafeCoverUrl,
   getCafeGallery,
   getImageUrl,
-} from "@/lib/cafe-images";
+} from "@/lib/images";
 import { getLatestRating } from "@/lib/ratings";
 import {
   MapCafeDrawer,

@@ -17,7 +17,7 @@ import {
   getCafeGallery,
   getImageUrl,
   type CafePhoto,
-} from "@/lib/cafe-images";
+} from "@/lib/images";
 import {
   getCafeReview,
   type CafeReview,

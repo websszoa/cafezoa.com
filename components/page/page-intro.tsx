@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { APP_IMAGE_BASE_URL, APP_NAME, APP_SLOGAN } from "@/lib/constants";
 import { introLinks } from "@/lib/menu";
 import { AdminStats } from "@/components/admin/admin-stats";
-import { getCafeCoverUrl } from "@/lib/cafe-images";
+import { getCafeCoverUrl } from "@/lib/images";
 import { getLatestRating } from "@/lib/ratings";
 import { getCafeRegion, getCafeTypeLabel } from "@/lib/utils";
 import { ArrowRight, Star } from "lucide-react";

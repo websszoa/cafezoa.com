@@ -1,4 +1,4 @@
-import { getCafeGallery, getImageUrl } from "@/lib/cafe-images";
+import { getCafeGallery, getImageUrl } from "@/lib/images";
 import cafes from "@/data/cafe-basic.json";
 import cafeDetails from "@/data/cafe-details.json";
 import {

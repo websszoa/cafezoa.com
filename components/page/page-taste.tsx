@@ -1,4 +1,4 @@
-import { getCafeCoverUrl } from "@/lib/cafe-images";
+import { getCafeCoverUrl } from "@/lib/images";
 import { getLatestRating } from "@/lib/ratings";
 import {
   TasteFinder,

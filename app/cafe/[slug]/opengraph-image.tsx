@@ -1,5 +1,5 @@
 import sharp from "sharp";
-import { getCafeCoverUrl } from "@/lib/cafe-images";
+import { getCafeCoverUrl } from "@/lib/images";
 
 import cafeDetails from "@/data/cafe-details.json";
 

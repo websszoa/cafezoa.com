@@ -1,5 +1,5 @@
 import { ListTable, type ListRow } from "@/components/page/page-list-prop";
-import { getCafeCoverUrl } from "@/lib/cafe-images";
+import { getCafeCoverUrl } from "@/lib/images";
 import { getLatestRating } from "@/lib/ratings";
 
 import cafes from "@/data/cafe-basic.json";

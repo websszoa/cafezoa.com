@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 import { APP_SITE_URL } from "@/lib/constants";
-import { getCafeGallery, getImageUrl } from "@/lib/cafe-images";
+import { getCafeGallery, getImageUrl } from "@/lib/images";
 
 import cafeDetails from "@/data/cafe-details.json";
 
