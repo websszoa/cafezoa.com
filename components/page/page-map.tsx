@@ -1,13 +1,17 @@
 import Link from "next/link";
-import { MapPinned } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { getCafeCoverUrl } from "@/lib/cafe-images";
+import { APP_NAME, APP_SITE_URL } from "@/lib/constants";
+import {
+  getCafeCoverUrl,
+  getCafeGallery,
+  getImageUrl,
+} from "@/lib/cafe-images";
 import { getLatestRating } from "@/lib/ratings";
 import {
-  MapCafeList,
+  MapCafeDrawer,
+  MapCafeListDrawer,
+  MapListButton,
+  MapNavMenu,
   MapProvider,
-  MapSearch,
-  MapSortMenu,
   NaverMap,
   type MapListCafe,
 } from "@/components/page/page-map-prop";
@@ -31,9 +35,30 @@ const mapCafes: MapListCafe[] = cafes
       naverRating: naver?.rating ?? null,
       googleRating: google?.rating ?? null,
       reviewCount: (naver?.count ?? 0) + (google?.count ?? 0),
+      naverReviewCount: naver?.count ?? 0,
+      googleReviewCount: google?.count ?? 0,
       address: cafe.location.address,
+      description: cafe.description,
+      // 서랍에서 넘겨 볼 사진. 너무 많으면 페이지가 무거워지므로 앞쪽 몇 장만 쓴다.
+      photos: getCafeGallery(cafe.slug)
+        .slice(0, 6)
+        .map((photo) => ({ src: getImageUrl(photo.src), alt: photo.alt })),
     };
   });
+
+// 검색엔진용 구조화 데이터: 지도에 표시하는 카페 목록과 각 상세페이지 주소.
+const mapJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  name: `${APP_NAME} 카페 지도`,
+  numberOfItems: mapCafes.length,
+  itemListElement: mapCafes.map((cafe, index) => ({
+    "@type": "ListItem",
+    position: index + 1,
+    name: cafe.name,
+    url: `${APP_SITE_URL}/cafe/${cafe.slug}`,
+  })),
+};
 
 export function PageMap() {
   return (
@@ -41,50 +66,42 @@ export function PageMap() {
       <main className="relative h-dvh w-full">
         <NaverMap cafes={mapCafes} />
 
-        <aside
-          aria-label="카페 목록"
-          className="absolute top-2 right-2 left-2 z-20 flex flex-col overflow-hidden rounded-2xl lg:inset-y-4 lg:right-auto lg:left-4 lg:w-[min(23rem,calc(100vw-2rem))] lg:rounded-3xl lg:bg-cream/95 lg:backdrop-blur-md"
-        >
-          <div className="flex shrink-0 items-center gap-3 p-3 lg:block lg:border-b lg:border-[#ead9ca] lg:px-5 lg:pt-5 lg:pb-4">
-            <div className="flex shrink-0 items-center gap-3">
-              <Button
-                render={<Link href="/" />}
-                nativeButton={false}
-                variant="sprout"
-                size="icon"
-                aria-label="홈으로 이동"
-                className="size-11 bg-leaf p-0 text-bark hover:bg-leaf-dark"
-              >
-                <MapPinned className="size-5" />
-              </Button>
-              <div className="hidden lg:block">
-                <h1 className="font-paperlogy text-xl font-semibold text-bark">
-                  지도 보기
-                </h1>
-                <p className="text-sm text-stone-500">
-                  지도에서 취향에 맞는 카페를 찾아보세요.
-                </p>
-              </div>
-            </div>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(mapJsonLd).replace(/</g, "\\u003c"),
+          }}
+        />
+        <h1 className="sr-only">전국 카페 지도 보기</h1>
 
-            <MapSearch />
-          </div>
+        {/* 지도·목록은 화면을 눌러야 나타나므로, 검색엔진과 화면 낭독기가 읽을 수 있게
+            지도에 표시하는 카페와 상세페이지 링크를 서버 HTML에 함께 넣어 둔다. (화면에는 보이지 않음) */}
+        <nav aria-labelledby="map-cafe-links" className="sr-only">
+          <h2 id="map-cafe-links">지도에 표시된 카페</h2>
+          <ul>
+            {mapCafes.map((cafe) => (
+              <li key={cafe.slug}>
+                <Link href={`/cafe/${cafe.slug}`} prefetch={false}>
+                  {cafe.name}
+                </Link>
+                {` · ${cafe.types.join(", ")} · ${cafe.address}`}
+              </li>
+            ))}
+          </ul>
+        </nav>
 
-          <MapCafeList />
-        </aside>
-
-        <div className="absolute bottom-5 left-1/2 z-20 -translate-x-1/2 lg:hidden">
-          <MapSortMenu
-            side="top"
-            align="center"
-            trigger={
-              <Button
-                variant="seed"
-                className="h-10 bg-white text-bark hover:bg-cream"
-              />
-            }
-          />
+        {/* 상단 왼쪽: 로고 버튼. 누르면 홈·보기 방식 이동 메뉴가 열린다. */}
+        <div className="absolute top-3 left-3 z-20 lg:top-5 lg:left-5">
+          <MapNavMenu />
         </div>
+
+        {/* 하단: 정렬 기준 버튼. 누르면 카페 목록이 열린다. (PC: 왼쪽, 모바일: 아래) */}
+        <div className="absolute bottom-5 left-1/2 z-20 -translate-x-1/2">
+          <MapListButton />
+        </div>
+
+        <MapCafeListDrawer />
+        <MapCafeDrawer />
       </main>
     </MapProvider>
   );

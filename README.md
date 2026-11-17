@@ -39,6 +39,21 @@ npx shadcn@latest add popover
 npx shadcn@latest add tabs
 npx shadcn@latest add field
 npx shadcn@latest add separator
+npx shadcn@latest add drawer
+```
+
+```bash
+# 1. 프로젝트 생성
+npx create-ait-app .
+
+# 2. Tailwind CSS 설치 (shadcn/ui에 필요)
+npm install tailwindcss @tailwindcss/vite
+
+# 3. shadcn/ui 초기화
+npx shadcn@latest init
+
+# 4. 컴포넌트 추가 예시
+npx shadcn@latest add card
 ```
 
 ---

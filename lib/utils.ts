@@ -18,8 +18,13 @@ const METROPOLITAN_CITIES = [
 
 // 주소에서 검색에 쓰이는 지역 이름을 뽑는다.
 // 예) "경기 파주시 지목로 114" → "파주", "부산 기장군 ..." → "기장", "인천 연수구 ..." → "인천"
+//    "인천광역시 서구 ..." → "인천" (정식 명칭으로 적힌 주소도 줄여서 비교한다)
 export function getCafeRegion(address: string) {
-  const [province = "", district = ""] = address.split(" ");
+  const [rawProvince = "", district = ""] = address.split(" ");
+  const province = rawProvince.replace(
+    /(특별자치시|특별자치도|광역시|특별시)$/,
+    "",
+  );
   if (METROPOLITAN_CITIES.includes(province) && district.endsWith("구")) {
     return province;
   }

@@ -33,10 +33,12 @@ export default function Support({ searchParams }: PageProps<"/support">) {
       <Suspense
         fallback={
           <>
+            {/* 로딩 중 헤더. 실제 헤더(h1)와 함께 HTML에 들어가므로 제목을 h1이 아닌 p로 둔다. */}
             <PageHeader
               icon={<Icon className="size-7 sm:size-9" />}
               title={title}
               description={description}
+              titleAs="p"
             />
             <PageSupport type="inquiry" />
           </>

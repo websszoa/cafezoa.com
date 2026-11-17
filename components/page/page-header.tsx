@@ -8,11 +8,14 @@ export function PageHeader({
   title,
   description,
   tone = "light",
+  titleAs: Title = "h1",
 }: {
   icon: ReactNode;
   title: string;
   description: string;
   tone?: "light" | "dark";
+  // 제목 태그. 로딩 중에 잠깐 보이는 헤더는 "p"로 써서 페이지에 h1이 두 개 생기지 않게 한다.
+  titleAs?: "h1" | "p";
 }) {
   return (
     <header className={tone === "dark" ? "bg-autumn" : "bg-cream"}>
@@ -29,14 +32,14 @@ export function PageHeader({
             {icon}
           </Button>
 
-          <h1
+          <Title
             className={cn(
               "font-paperlogy mt-3 text-[clamp(2.5rem,6vw,4.25rem)] font-semibold",
               tone === "dark" ? "text-white" : "text-bark",
             )}
           >
             {title}
-          </h1>
+          </Title>
 
           <p
             className={cn(
