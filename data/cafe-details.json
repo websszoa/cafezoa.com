@@ -4214,6 +4214,192 @@
       "phone": "053-851-5551",
       "website": null,
       "instagram": "infilm.cafe",
+      "cover": "/cafe/infilm-gyeongsan-01.webp",
+      "gallery": [
+        {
+          "src": "/cafe/infilm-gyeongsan-01.webp",
+          "alt": "infilm 로고 조형물과 벽돌 건물 입구"
+        },
+        {
+          "src": "/cafe/infilm-gyeongsan-02.webp",
+          "alt": "계단식 벽돌 외관과 얕은 수공간 데크"
+        },
+        {
+          "src": "/cafe/infilm-gyeongsan-03.webp",
+          "alt": "파라솔 루프탑 테라스와 통유리 1층 좌석"
+        },
+        {
+          "src": "/cafe/infilm-gyeongsan-04.webp",
+          "alt": "넓은 주차장 너머로 보이는 카페 건물"
+        },
+        {
+          "src": "/cafe/infilm-gyeongsan-05.webp",
+          "alt": "높은 층고의 노출 콘크리트 홀과 커피 바"
+        },
+        {
+          "src": "/cafe/infilm-gyeongsan-06.webp",
+          "alt": "억새 정원이 보이는 통창 앞 소파 좌석"
+        },
+        {
+          "src": "/cafe/infilm-gyeongsan-07.webp",
+          "alt": "방석이 놓인 계단식 원목 좌석"
+        },
+        {
+          "src": "/cafe/infilm-gyeongsan-08.webp",
+          "alt": "창가를 따라 놓인 원목 의자 좌석"
+        },
+        {
+          "src": "/cafe/infilm-gyeongsan-09.webp",
+          "alt": "창문 앞 석재 세면대가 있는 화장실"
+        },
+        {
+          "src": "/cafe/infilm-gyeongsan-10.webp",
+          "alt": "2025 경상북도 건축문화상 우수상 동판"
+        }
+      ]
+    }
+  },
+  "starbucks-the-namsan-seoul-tower": {
+    "type": ["대형카페", "전망카페"],
+    "view": ["시티뷰", "마운틴뷰", "자연경관뷰", "야경뷰"],
+    "services": ["카페", "디저트", "베이커리", "포토존"],
+    "purpose": [
+      "데이트",
+      "가족",
+      "사진",
+      "모임",
+      "여행",
+      "휴식",
+      "관광",
+      "전망 감상"
+    ],
+    "features": [
+      "약 248평 규모",
+      "남산서울타워 내 위치",
+      "서울 대표 관광 명소에 위치",
+      "남산의 자연경관",
+      "서울 도심 전망을 즐길 수 있는 입지",
+      "남산 산책로 인접",
+      "남산서울타워 전망시설 인접",
+      "서울 야경 감상 명소",
+      "관광과 휴식을 함께 즐길 수 있는 공간",
+      "스타벅스 커피와 디저트"
+    ],
+    "floors": ["남산서울타워 내 매장"],
+    "parking": ["주차 불가"],
+    "pet": ["불가", "반려동물 출입금지"],
+    "restroom": [],
+    "children": ["아이 동반 가능"],
+    "study": ["비추천"],
+    "smoking": ["불가"],
+    "seating": [],
+    "business": {
+      "opened_at": "2026-11-27",
+      "closed_days": "연중무휴",
+      "hours": {
+        "월요일": null,
+        "화요일": null,
+        "수요일": null,
+        "목요일": null,
+        "금요일": null,
+        "토요일": null,
+        "일요일": null
+      }
+    },
+    "price": {
+      "아메리카노": 4700,
+      "카페라떼": 5200
+    },
+    "media": {
+      "phone": "1522-3232",
+      "website": "https://www.starbucks.co.kr",
+      "instagram": "starbuckskorea",
+      "cover": "/cafe/starbucks-the-namsan-seoul-tower-01.webp",
+      "gallery": [
+        {
+          "src": "/cafe/starbucks-the-namsan-seoul-tower-01.webp",
+          "alt": "STARBUCKS 간판과 원목 출입문"
+        },
+        {
+          "src": "/cafe/starbucks-the-namsan-seoul-tower-02.webp",
+          "alt": "그림과 도자기 선반이 있는 원목 테이블 좌석"
+        },
+        {
+          "src": "/cafe/starbucks-the-namsan-seoul-tower-03.webp",
+          "alt": "은은한 조명의 한지 창살과 긴 원목 테이블"
+        },
+        {
+          "src": "/cafe/starbucks-the-namsan-seoul-tower-04.webp",
+          "alt": "바카디 술병과 도자기가 놓인 바 선반"
+        }
+      ]
+    }
+  },
+  "hollys-jeju-hamdeok-beach": {
+    "type": ["대형카페", "오션뷰카페"],
+    "view": ["오션뷰", "비치뷰", "자연경관뷰"],
+    "services": ["카페", "베이커리", "디저트", "포토존"],
+    "purpose": [
+      "데이트",
+      "가족",
+      "드라이브",
+      "사진",
+      "모임",
+      "여행",
+      "휴식",
+      "바다 감상"
+    ],
+    "features": [
+      "2026년 11월 신규 오픈",
+      "약 184평 규모",
+      "지상 2층 규모",
+      "함덕해수욕장 바로 앞 위치",
+      "에메랄드빛 제주 바다 전망",
+      "대부분의 좌석에서 바다 조망 가능",
+      "파도의 곡선을 형상화한 좌석",
+      "높은 시야를 확보한 계단식 좌석",
+      "열대식물 실내 조경",
+      "다양한 실내 좌석",
+      "넓은 단체 테이블",
+      "가족을 위한 좌식 공간",
+      "제주 돌담과 해녀 콘셉트 포토존",
+      "할리베어 캐릭터 포토존"
+    ],
+    "floors": ["1층 카페 및 캐리어 보관함", "2층 오션뷰 카페 좌석"],
+    "parking": ["주차 불가능", "근처 공영주차장 이용 가능"],
+    "pet": ["불가", "반려동물 출입금지"],
+    "restroom": ["실내", "남녀 구분"],
+    "children": ["아이 동반 가능", "가족용 좌식 공간 있음"],
+    "study": ["가능", "콘센트 있는 좌석 있음", "관광객 혼잡 및 소음 가능"],
+    "smoking": ["실내 금연", "외부 별도 흡연공간 확인 필요"],
+    "seating": [
+      "약 200석 정도",
+      "오션뷰 좌석",
+      "창가 좌석",
+      "좌식 좌석",
+      "단체 테이블"
+    ],
+    "business": {
+      "opened_at": "2026-11",
+      "closed_days": "연중무휴",
+      "hours": {
+        "월요일": "08:00 ~ 23:00",
+        "화요일": "08:00 ~ 23:00",
+        "수요일": "08:00 ~ 23:00",
+        "목요일": "08:00 ~ 23:00",
+        "금요일": "08:00 ~ 23:00",
+        "토요일": "08:00 ~ 23:00",
+        "일요일": "08:00 ~ 23:00"
+      }
+    },
+    "price": {
+      "아메리카노": 4700,
+      "카페라떼": 5200
+    },
+    "media": {
+      "phone": "064-782-7732",
+      "website": "https://www.hollys.co.kr",
+      "instagram": "hollyscoffee.official",
       "cover": null,
       "gallery": []
     }

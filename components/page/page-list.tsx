@@ -19,7 +19,11 @@ type CafeDetail = {
   smoking?: string[];
   view?: string[];
   seating?: string[];
-  business?: { closed_days?: string; hours?: Record<string, string> };
+  business?: {
+    closed_days?: string;
+    // 영업시간이 아직 정해지지 않은 요일은 null이다.
+    hours?: Record<string, string | null>;
+  };
   price?: Record<string, number | null>;
   media: {
     phone?: string | null;
@@ -31,7 +35,7 @@ type CafeDetail = {
 const WEEK_DAYS = ["월", "화", "수", "목", "금", "토", "일"];
 
 // 요일별 영업시간을 한 줄씩 만든다. (예: "월요일 : 09:30 ~ 21:30")
-function getBusinessHoursLines(hours: Record<string, string>) {
+function getBusinessHoursLines(hours: Record<string, string | null>) {
   return WEEK_DAYS.flatMap((day) => {
     const time = hours[`${day}요일`];
     return time ? [`${day}요일 : ${time}`] : [];

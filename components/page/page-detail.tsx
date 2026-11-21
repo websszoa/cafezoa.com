@@ -72,7 +72,8 @@ type CafeDetail = {
   smoking?: string[];
   view?: string[];
   seating?: string[];
-  business?: { closed_days?: string; hours?: Record<string, string> };
+  // 영업시간이 아직 정해지지 않은 요일(오픈 예정 카페 등)은 null이다.
+  business?: { closed_days?: string; hours?: Record<string, string | null> };
   price?: Record<string, number | null>;
   media: {
     phone?: string | null;
@@ -123,10 +124,10 @@ function getCafeJsonLd(cafe: Cafe, detail: CafeDetail, gallery: CafePhoto[]) {
   const url = `${APP_SITE_URL}/cafe/${cafe.slug}`;
   const { phone, website, instagram } = detail.media;
 
-  // "09:30 ~ 21:30" 형식만 변환하고, "휴무" 등은 건너뛴다.
+  // "09:30 ~ 21:30" 형식만 변환하고, "휴무"나 아직 정해지지 않은 시간(null, 오픈 예정 카페)은 건너뛴다.
   const openingHours = Object.entries(detail.business?.hours ?? {}).flatMap(
     ([day, time]) => {
-      const match = time.match(/^(\d{2}:\d{2})\s*~\s*(\d{2}:\d{2})$/);
+      const match = time?.match(/^(\d{2}:\d{2})\s*~\s*(\d{2}:\d{2})$/);
       if (!match || !SCHEMA_DAYS[day]) return [];
       return [
         {
@@ -370,7 +371,7 @@ export function PageDetail({ slug }: { slug: string }) {
                 {Object.entries(hours).map(([day, time]) => (
                   <div key={day} className="flex justify-between gap-4">
                     <span className="text-[#684d3e]">{day}</span>
-                    <span className="font-bold">{time}</span>
+                    <span className="font-bold">{time ?? "정보 없음"}</span>
                   </div>
                 ))}
                 <p className="border-t border-[#ead9ca] pt-3 font-bold text-autumn">
