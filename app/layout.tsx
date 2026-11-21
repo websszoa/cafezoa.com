@@ -6,6 +6,7 @@ import { Toaster } from "sonner";
 import { GoogleTagManager } from "@next/third-parties/google";
 import { LocationProvider } from "@/components/location/location-provider";
 import { PageFloat } from "@/components/page/page-float";
+import { PageSplash } from "@/components/page/page-splash";
 import { DialogWelcome } from "@/components/dialog/dialog-welcome";
 import { AuthLoginToast } from "@/components/auth/auth-login-toast";
 
@@ -214,6 +215,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
             __html: JSON.stringify(websiteJsonLd).replace(/</g, "\\u003c"),
           }}
         />
+        <PageSplash />
         <LocationProvider>
           {children}
           <PageFloat />

@@ -1,10 +1,6 @@
 import Link from "next/link";
 import { APP_NAME, APP_SITE_URL } from "@/lib/constants";
-import {
-  getCafeCoverUrl,
-  getCafeGallery,
-  getImageUrl,
-} from "@/lib/images";
+import { getCafeCoverUrl, getCafeGallery, getImageUrl } from "@/lib/images";
 import { getLatestRating } from "@/lib/ratings";
 import {
   MapCafeDrawer,
@@ -12,6 +8,7 @@ import {
   MapListButton,
   MapNavMenu,
   MapProvider,
+  MapStartDialog,
   NaverMap,
   type MapListCafe,
 } from "@/components/page/page-map-prop";
@@ -38,11 +35,16 @@ const mapCafes: MapListCafe[] = cafes
       naverReviewCount: naver?.count ?? 0,
       googleReviewCount: google?.count ?? 0,
       address: cafe.location.address,
+      // 주차 정보의 두 번째 값이 "무료"인 카페만 무료 주차로 본다. (부분 무료인 "유료"는 제외)
+      freeParking:
+        cafeDetails[cafe.slug as keyof typeof cafeDetails].parking?.[1] ===
+        "무료",
       description: cafe.description,
-      // 서랍에서 넘겨 볼 사진. 너무 많으면 페이지가 무거워지므로 앞쪽 몇 장만 쓴다.
-      photos: getCafeGallery(cafe.slug)
-        .slice(0, 6)
-        .map((photo) => ({ src: getImageUrl(photo.src), alt: photo.alt })),
+      // 서랍에서 넘겨 볼 사진. 갤러리 사진을 모두 보여준다.
+      photos: getCafeGallery(cafe.slug).map((photo) => ({
+        src: getImageUrl(photo.src),
+        alt: photo.alt,
+      })),
     };
   });
 
@@ -91,7 +93,7 @@ export function PageMap() {
         </nav>
 
         {/* 상단 왼쪽: 로고 버튼. 누르면 홈·보기 방식 이동 메뉴가 열린다. */}
-        <div className="absolute top-3 left-3 z-20 lg:top-5 lg:left-5">
+        <div className="absolute top-4 left-4 z-20 lg:top-5 lg:left-5">
           <MapNavMenu />
         </div>
 
@@ -102,6 +104,7 @@ export function PageMap() {
 
         <MapCafeListDrawer />
         <MapCafeDrawer />
+        <MapStartDialog />
       </main>
     </MapProvider>
   );

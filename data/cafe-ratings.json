@@ -172,5 +172,35 @@
       "naver": [4.43, 2207],
       "google": [4.3, 101]
     }
+  },
+  "montbreneu-gapyeong": {
+    "2026-11": {
+      "naver": [4.79, 3433],
+      "google": [4.4, 45]
+    }
+  },
+  "unend-gimhae": {
+    "2026-11": {
+      "naver": [4.84, 2492],
+      "google": [4.1, 87]
+    }
+  },
+  "poven-gimhae": {
+    "2026-11": {
+      "naver": [4.76, 11460],
+      "google": [4.2, 45]
+    }
+  },
+  "dandishim-miryang": {
+    "2026-11": {
+      "naver": [4.85, 271],
+      "google": [0, 0]
+    }
+  },
+  "margaux-forest-gyeongsan": {
+    "2026-11": {
+      "naver": [4.86, 13528],
+      "google": [4.3, 320]
+    }
   }
 }

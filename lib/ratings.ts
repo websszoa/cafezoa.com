@@ -43,3 +43,13 @@ export function getLatestRating(
   const [rating, count] = value;
   return { month: date.slice(0, 7), rating, count };
 }
+
+// 카페(slug)의 평점을 마지막으로 수집한 날. 사이트맵의 lastmod로 쓴다. 기록이 없으면 undefined.
+// 키가 "YYYY-MM"이면 그달 1일로 본다.
+export function getLastRatedDate(slug: string): string | undefined {
+  const ratings = ratingsBySlug[slug];
+  if (!ratings) return undefined;
+  const latest = Object.keys(ratings).sort().at(-1);
+  if (!latest) return undefined;
+  return latest.length === 7 ? `${latest}-01` : latest;
+}

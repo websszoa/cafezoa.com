@@ -6,6 +6,10 @@ import Script from "next/script";
 import { Button } from "@/components/ui/button";
 import { LocationDistance } from "@/components/location/location-distance";
 import { useLocation } from "@/components/location/location-provider";
+import {
+  DialogMapStart,
+  type MapStartChoice,
+} from "@/components/dialog/dialog-map-start";
 import { APP_IMAGE_BASE_URL } from "@/lib/constants";
 import { introLinks } from "@/lib/menu";
 import { distanceBetween } from "@/lib/utils";
@@ -159,6 +163,8 @@ export type MapListCafe = {
   naverReviewCount: number;
   googleReviewCount: number;
   address: string;
+  // 무료 주차 가능 여부 ("주차 무료 카페" 정렬에서 거른다)
+  freeParking: boolean;
   // 서랍에 보여줄 소개글과 사진(전체 주소)
   description: string;
   photos: { src: string; alt: string }[];
@@ -166,8 +172,18 @@ export type MapListCafe = {
   distance?: number | null;
 };
 
+type SortOption = {
+  label: string;
+  getValue: (cafe: MapListCafe) => number | null;
+  // 있으면 이 조건에 맞는 카페만 목록·지도에 남긴다.
+  filter?: (cafe: MapListCafe) => boolean;
+};
+
 // 목록 정렬 기준. 기준마다 비교할 값을 꺼내는 함수를 함께 둔다.
-const sortOptions = {
+const sortOptions: Record<
+  "naver" | "google" | "review" | "nearby" | "parking",
+  SortOption
+> = {
   naver: {
     label: "네이버 평점 높은 순",
     getValue: (cafe: MapListCafe) => cafe.naverRating,
@@ -185,6 +201,12 @@ const sortOptions = {
     label: "가까운 순",
     getValue: (cafe: MapListCafe) =>
       cafe.distance == null ? null : -cafe.distance,
+  },
+  // 무료 주차 카페만 거른 뒤 네이버 평점 높은 순으로 보여준다.
+  parking: {
+    label: "주차 무료 카페",
+    getValue: (cafe: MapListCafe) => cafe.naverRating,
+    filter: (cafe: MapListCafe) => cafe.freeParking,
   },
 };
 
@@ -277,7 +299,7 @@ export function MapProvider({
 
   // 검색어(카페 이름·주소)로 거른 뒤 선택한 기준으로 정렬한 상위 카페. 목록과 지도 마커가 함께 쓴다.
   const sortedCafes = useMemo(() => {
-    const { getValue } = sortOptions[sort];
+    const { getValue, filter } = sortOptions[sort];
     const keyword = normalize(query);
     return (
       cafes
@@ -292,6 +314,7 @@ export function MapProvider({
               )
             : null,
         }))
+        .filter((cafe) => !filter || filter(cafe))
         .filter(
           (cafe) =>
             !keyword ||
@@ -647,6 +670,39 @@ export function NaverMap({ cafes }: { cafes: MapListCafe[] }) {
   );
 }
 
+// 사진 주소는 있지만 파일이 없어 불러오지 못하면 커피 아이콘을 대신 보여준다.
+// 부모 요소는 relative여야 한다. (fill 이미지와 같은 자리를 채운다)
+function MapPhoto({
+  iconClassName,
+  ...props
+}: Omit<ComponentProps<typeof Image>, "unoptimized"> & {
+  iconClassName?: string;
+}) {
+  const [failedSrc, setFailedSrc] = useState<string | null>(null);
+
+  if (failedSrc === props.src) {
+    return (
+      <span
+        role="img"
+        aria-label={props.alt}
+        className="absolute inset-0 grid place-items-center bg-cream text-[#ceb5a0]"
+      >
+        <Coffee aria-hidden="true" className={iconClassName ?? "size-8"} />
+      </span>
+    );
+  }
+
+  return (
+    // Next 이미지 최적화(/_next/image)를 거치지 않고 GitHub 주소에서 바로 불러온다. (서버 트래픽 절약)
+    // eslint-disable-next-line jsx-a11y/alt-text -- alt는 props로 받는다.
+    <Image
+      unoptimized
+      {...props}
+      onError={() => setFailedSrc(String(props.src))}
+    />
+  );
+}
+
 // 화면 왼쪽 위 로고 버튼. 누르면 홈으로 가기와 보기 방식(지도·카드·목록·이미지) 이동 메뉴가 열린다.
 export function MapNavMenu() {
   return (
@@ -657,7 +713,7 @@ export function MapNavMenu() {
             variant="sprout"
             size="icon"
             aria-label="홈·페이지 이동 메뉴"
-            className="size-11 bg-leaf p-0 text-bark hover:bg-leaf-dark"
+            className="size-10 bg-leaf p-0 text-bark hover:bg-leaf-dark lg:size-11"
           />
         }
       >
@@ -692,6 +748,24 @@ export function MapNavMenu() {
   );
 }
 
+// 지도 페이지에 들어오면 보기 방식을 고르는 팝업을 띄운다.
+// 고르면 그 기준으로 정렬하고, PC에서는 카페 목록 서랍도 연다. (모바일은 지도를 가리지 않게 열지 않는다)
+// "내 위치"는 위치가 없으면 위치 안내 팝업이 이어서 뜬다.
+export function MapStartDialog() {
+  const { setSort, setListOpen, isDesktop } = useMap();
+  const [open, setOpen] = useState(true);
+
+  const handlePick = (choice: MapStartChoice) => {
+    setOpen(false);
+    setSort(choice);
+    if (isDesktop) setListOpen(true);
+  };
+
+  return (
+    <DialogMapStart open={open} onOpenChange={setOpen} onPick={handlePick} />
+  );
+}
+
 // 화면 하단 가운데의 정렬 버튼. 누르면 정렬 기준 메뉴가 열리고, 기준을 고르면 카페 목록 서랍이 열린다.
 export function MapListButton() {
   const { setListOpen } = useMap();
@@ -712,9 +786,6 @@ export function MapListButton() {
   );
 }
 
-// 모바일 목록 서랍의 높이: 처음엔 화면의 50%, 위로 끌어올리면 90%까지.
-const LIST_SNAP_POINTS = [0.5, 0.9];
-
 // 정렬 기준을 고르는 목록 제목과, 그 기준으로 정렬한 상위 카페 목록.
 // PC에서는 왼쪽에서, 모바일에서는 아래에서 나온다. 지도를 계속 쓸 수 있도록 모달 없이 띄운다.
 export function MapCafeListDrawer() {
@@ -731,10 +802,6 @@ export function MapCafeListDrawer() {
     selectedCafe,
     isDesktop,
   } = useMap();
-  const [snapPoint, setSnapPoint] = useState<number | string | null>(
-    LIST_SNAP_POINTS[0],
-  );
-
   // 목록에서 카페를 누르면 지도를 그 위치로 옮기고 상세 서랍을 연다.
   function focusCafe(cafe: MapListCafe) {
     const naver = window.naver;
@@ -749,24 +816,14 @@ export function MapCafeListDrawer() {
     <Drawer
       key={isDesktop ? "desktop" : "mobile"}
       open={listOpen}
-      onOpenChange={(open) => {
-        setListOpen(open);
-        // 다음에 열 때는 다시 50% 높이에서 시작한다.
-        if (!open) setSnapPoint(LIST_SNAP_POINTS[0]);
-      }}
+      onOpenChange={setListOpen}
       swipeDirection={isDesktop ? "left" : "down"}
       modal={false}
       disablePointerDismissal
-      {...(isDesktop
-        ? {}
-        : {
-            snapPoints: LIST_SNAP_POINTS,
-            snapPoint,
-            onSnapPointChange: setSnapPoint,
-          })}
     >
       <DrawerContent
-        style={isDesktop ? DESKTOP_DRAWER_STYLE : MOBILE_LIST_DRAWER_STYLE}
+        // 모바일에서는 상세 서랍과 같은 높이(화면 위 4rem 아래)까지 올라온다.
+        style={isDesktop ? DESKTOP_DRAWER_STYLE : MOBILE_DRAWER_STYLE}
         className="text-bark"
       >
         {!isDesktop && <DrawerHandle />}
@@ -849,8 +906,8 @@ export function MapCafeListDrawer() {
                 >
                   <span className="relative size-16 shrink-0 overflow-hidden rounded-xl bg-stone-200">
                     {/* Next 이미지 최적화(/_next/image)를 거치지 않고 GitHub 주소에서 바로 불러온다. (서버 트래픽 절약) */}
-                    <Image
-                      unoptimized
+                    <MapPhoto
+                      iconClassName="size-6"
                       src={cafe.image}
                       alt={`${cafe.name} 대표 사진`}
                       fill
@@ -958,14 +1015,6 @@ function DrawerHandle() {
   );
 }
 
-// 모바일 목록 서랍: 위로 끌어올려 90%까지 늘어난다.
-// 50%에서는 아래쪽이 화면 밖에 있으므로, 그만큼 아래 여백을 줘서 목록 끝까지 스크롤되게 한다.
-const MOBILE_LIST_DRAWER_STYLE = {
-  ...MOBILE_DRAWER_STYLE,
-  "--drawer-content-max-height": "90dvh",
-  paddingBottom:
-    "max(0px, calc(var(--drawer-snap-point-offset, 0px) + var(--drawer-swipe-movement-y, 0px)))",
-} as CSSProperties;
 
 // 마커를 누르면 열리는 카페 미리보기 서랍. PC에서는 오른쪽에서, 모바일에서는 아래에서 올라온다.
 // PC에서는 지도를 계속 움직이고 다른 마커를 누를 수 있도록 모달 없이 띄운다.
@@ -1071,8 +1120,8 @@ function MapCafeDrawerBody({ cafe }: { cafe: MapListCafe }) {
               <CarouselItem key={item.src} className="pl-0">
                 <div className="relative aspect-3/4">
                   {/* Next 이미지 최적화(/_next/image)를 거치지 않고 GitHub 주소에서 바로 불러온다. (서버 트래픽 절약) */}
-                  <Image
-                    unoptimized
+                  <MapPhoto
+                    iconClassName="size-12"
                     src={item.src}
                     alt={
                       item.alt
@@ -1133,6 +1182,52 @@ function MapCafeDrawerBody({ cafe }: { cafe: MapListCafe }) {
           <DrawerDescription className="text-left text-sm leading-6 text-[#795f55]">
             {cafe.description}
           </DrawerDescription>
+        </div>
+
+        {/* 길찾기: 상세페이지와 같은 네이버·카카오 지도 버튼 */}
+        <div className="mt-3 grid grid-cols-2 gap-2">
+          <Button
+            render={
+              <a
+                href={`https://map.naver.com/p/search/${encodeURIComponent(cafe.name)}`}
+                target="_blank"
+                rel="noreferrer"
+                aria-label="네이버 지도에서 보기 (새 창)"
+              />
+            }
+            nativeButton={false}
+            variant="seed"
+            className="bg-[#44ba5b] text-white hover:bg-[#3a9e4d]"
+          >
+            <svg aria-hidden="true" viewBox="-3 -3 30 30" className="size-4">
+              <path
+                fill="currentColor"
+                d="M16.273 12.845 7.376 0H0v24h7.727V11.155L16.624 24H24V0h-7.727v12.845Z"
+              />
+            </svg>
+            네이버 지도
+          </Button>
+          <Button
+            render={
+              <a
+                href={`https://map.kakao.com/link/map/${encodeURIComponent(cafe.name)},${cafe.latitude},${cafe.longitude}`}
+                target="_blank"
+                rel="noreferrer"
+                aria-label="카카오 지도에서 보기 (새 창)"
+              />
+            }
+            nativeButton={false}
+            variant="seed"
+            className="bg-[#fee500] text-bark hover:bg-[#f4dc00]"
+          >
+            <svg aria-hidden="true" viewBox="0 0 24 24" className="size-4">
+              <path
+                fill="currentColor"
+                d="M12 3C6.48 3 2 6.5 2 10.82c0 2.76 1.83 5.18 4.59 6.57l-.93 3.42a.38.38 0 0 0 .58.42l4.08-2.7c.55.07 1.11.11 1.68.11 5.52 0 10-3.5 10-7.82S17.52 3 12 3Z"
+              />
+            </svg>
+            카카오 지도
+          </Button>
         </div>
       </div>
     </>

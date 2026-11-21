@@ -5,38 +5,10 @@ import { Button } from "@/components/ui/button";
 import { APP_IMAGE_BASE_URL, APP_NAME, APP_SLOGAN } from "@/lib/constants";
 import { introLinks } from "@/lib/menu";
 import { AdminStats } from "@/components/admin/admin-stats";
-import { getCafeCoverUrl } from "@/lib/images";
-import { getLatestRating } from "@/lib/ratings";
-import { getCafeRegion, getCafeTypeLabel } from "@/lib/utils";
-import { ArrowRight, Star } from "lucide-react";
-
-import cafes from "@/data/cafe-basic.json";
-import cafeDetails from "@/data/cafe-details.json";
 
 import { GoogleLoginButton } from "@/components/auth/auth-button-google";
 import { KakaoLoginButton } from "@/components/auth/auth-button-kakao";
 import { NaverLoginButton } from "@/components/auth/auth-button-naver";
-
-// 홈 아래쪽 "인기 카페"에 보여줄 카페 수
-const POPULAR_CAFE_COUNT = 8;
-
-// 상세 페이지가 있는 카페 중 네이버 평점이 높은 순. (평점이 같으면 리뷰가 많은 순)
-const popularCafes = cafes
-  .filter((cafe) => cafe.slug in cafeDetails)
-  .map((cafe) => {
-    const naver = getLatestRating(cafe.slug, "naver");
-    return {
-      slug: cafe.slug,
-      name: cafe.name,
-      label: `${getCafeRegion(cafe.location.address)} ${getCafeTypeLabel(cafe.type[0])}`,
-      image: getCafeCoverUrl(cafe.slug),
-      rating: naver?.rating ?? null,
-      count: naver?.count ?? 0,
-    };
-  })
-  .filter((cafe) => cafe.rating !== null)
-  .sort((a, b) => b.rating! - a.rating! || b.count - a.count)
-  .slice(0, POPULAR_CAFE_COUNT);
 
 export function PageIntro() {
   return (
@@ -136,77 +108,6 @@ export function PageIntro() {
               sizes="(max-width: 768px) 100vw, 760px"
               className="object-contain drop-shadow-[0_24px_18px_rgba(132,42,13,0.2)]"
             />
-          </div>
-        </div>
-      </section>
-
-      {/* 인기 카페: 첫 화면 아래로 스크롤하면 보인다. 홈에서 카페 상세페이지로 바로 이어지는 길(검색엔진도 따라간다). */}
-      <section
-        aria-labelledby="popular-cafes"
-        className="relative bg-cream px-5 pt-16 pb-24 text-bark sm:pt-20"
-      >
-        <div className="mx-auto max-w-6xl">
-          <div className="text-center">
-            <h2
-              id="popular-cafes"
-              className="font-paperlogy text-2xl font-semibold sm:text-3xl"
-            >
-              지금 인기 있는 카페
-            </h2>
-            <p className="mt-2 text-sm break-keep text-[#795f55] sm:text-base">
-              네이버 평점이 높은 카페를 모았어요.
-            </p>
-          </div>
-
-          <ul className="mt-8 grid grid-cols-2 gap-3 sm:gap-5 lg:grid-cols-4">
-            {popularCafes.map((cafe) => (
-              <li key={cafe.slug}>
-                <Link
-                  href={`/cafe/${cafe.slug}`}
-                  className="group block overflow-hidden rounded-2xl bg-white outline-none focus-visible:ring-2 focus-visible:ring-autumn"
-                >
-                  <span className="relative block aspect-3/4 overflow-hidden bg-stone-200">
-                    {/* Next 이미지 최적화를 거치지 않고 GitHub 주소에서 바로 불러온다. (서버 트래픽 절약) */}
-                    <Image
-                      unoptimized
-                      src={cafe.image}
-                      alt={`${cafe.name} 대표 사진`}
-                      fill
-                      sizes="(min-width: 1024px) 25vw, 50vw"
-                      className="object-cover transition duration-500 group-hover:scale-105"
-                    />
-                  </span>
-                  <span className="block p-3 sm:p-4">
-                    <span className="font-paperlogy block truncate text-base font-semibold sm:text-lg">
-                      {cafe.name}
-                    </span>
-                    <span className="mt-1 flex items-center justify-between gap-2 text-xs text-stone-600 sm:text-sm">
-                      <span className="truncate">{cafe.label}</span>
-                      <span className="flex shrink-0 items-center gap-1 font-bold text-[#795f55]">
-                        <Star
-                          aria-hidden="true"
-                          className="size-3.5 fill-autumn text-autumn"
-                        />
-                        <span className="sr-only">네이버 평점</span>
-                        {cafe.rating!.toFixed(2)}
-                      </span>
-                    </span>
-                  </span>
-                </Link>
-              </li>
-            ))}
-          </ul>
-
-          <div className="mt-10 text-center">
-            <Button
-              render={<Link href="/list" />}
-              nativeButton={false}
-              variant="sprout"
-              className="bg-leaf text-bark hover:bg-leaf-dark"
-            >
-              전체 카페 목록 보기
-              <ArrowRight aria-hidden="true" className="size-4" />
-            </Button>
           </div>
         </div>
       </section>

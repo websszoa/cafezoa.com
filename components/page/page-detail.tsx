@@ -162,7 +162,11 @@ function getCafeJsonLd(cafe: Cafe, detail: CafeDetail, gallery: CafePhoto[]) {
       address: {
         "@type": "PostalAddress",
         streetAddress: cafe.location.address,
+        // "경기 파주시 지목로 114" → 시·도 "경기", 시·군·구 "파주시"
         addressRegion: cafe.location.address.split(" ")[0],
+        ...(getAddressLocality(cafe.location.address) && {
+          addressLocality: getAddressLocality(cafe.location.address),
+        }),
         addressCountry: "KR",
       },
       geo: {
@@ -196,6 +200,12 @@ function getCafeJsonLd(cafe: Cafe, detail: CafeDetail, gallery: CafePhoto[]) {
       ],
     },
   ];
+}
+
+// 주소의 두 번째 단어가 시·군·구면 돌려준다. (구조화 데이터의 addressLocality)
+function getAddressLocality(address: string) {
+  const locality = address.split(" ")[1];
+  return locality && /[시군구]$/.test(locality) ? locality : undefined;
 }
 
 export function PageDetail({ slug }: { slug: string }) {

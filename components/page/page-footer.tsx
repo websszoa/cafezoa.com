@@ -96,7 +96,7 @@ export function PageFooter({ tone = "dark" }: { tone?: Tone }) {
           </div>
         </div>
 
-        <div className="grid grid-cols-2 gap-2 sm:grid-cols-5 lg:justify-self-end">
+        <div className="grid grid-cols-2 gap-x-2 gap-y-10 sm:grid-cols-5 sm:gap-2 lg:justify-self-end">
           {footerLinks.map(({ title, label, links }) => (
             <div key={title}>
               <p

@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
-import { createPageMetadata } from "@/lib/metadata";
+import { createCafeItemListJsonLd, createPageMetadata } from "@/lib/metadata";
 import { LayoutList } from "lucide-react";
 import { PageFooter } from "@/components/page/page-footer";
+import { PageJsonLd } from "@/components/page/page-json-ld";
 import { PageHeader } from "@/components/page/page-header";
 import { PageList } from "@/components/page/page-list";
 
@@ -17,6 +18,7 @@ export const metadata: Metadata = createPageMetadata({
 export default function List() {
   return (
     <>
+      <PageJsonLd data={createCafeItemListJsonLd("카페 목록")} />
       <PageHeader
         icon={<LayoutList className="size-7 sm:size-9" />}
         title={title}
