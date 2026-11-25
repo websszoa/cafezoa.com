@@ -243,7 +243,7 @@ export function PageDetail({ slug }: { slug: string }) {
         }}
       />
       <section className="relative isolate min-h-[52vh] overflow-hidden bg-bark text-white">
-        {/* Next 이미지 최적화(/_next/image)를 거치지 않고 GitHub 주소에서 바로 불러온다. (서버 트래픽 절약) */}
+        {/* 개발은 로컬 public, 배포는 GitHub 주소에서 이미지를 직접 불러온다. */}
         <Image
           unoptimized
           src={getCafeCoverUrl(slug)}
@@ -365,6 +365,12 @@ export function PageDetail({ slug }: { slug: string }) {
             방문 전에 알아두면 좋아요!
           </SectionHeading>
           <div className="mt-8 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+            <InfoCard
+              icon={<Sparkles />}
+              title="공간 특징"
+              items={detail.features}
+              className="sm:col-span-2 lg:col-span-3"
+            />
             <InfoCard icon={<Clock3 />} title="영업시간">
               <div className="space-y-2">
                 {Object.keys(hours).length === 0 && <p>정보 없음</p>}
@@ -401,11 +407,6 @@ export function PageDetail({ slug }: { slug: string }) {
                 )}
               </div>
             </InfoCard>
-            <InfoCard
-              icon={<Sparkles />}
-              title="공간 특징"
-              items={detail.features}
-            />
             <InfoCard icon={<Building2 />} title="층" items={detail.floors} />
             <InfoCard icon={<Rows3 />} title="좌석" items={detail.seating} />
             <InfoCard icon={<Car />} title="주차" items={detail.parking} />
@@ -670,14 +671,18 @@ function InfoCard({
   title,
   items,
   children,
+  className,
 }: {
   icon: ReactNode;
   title: string;
   items?: string[];
   children?: ReactNode;
+  className?: string;
 }) {
   return (
-    <article className="rounded-3xl border-2 border-bark bg-white p-6">
+    <article
+      className={cn("rounded-3xl border-2 border-bark bg-white p-6", className)}
+    >
       <div className="flex items-center gap-3">
         <span className="grid size-10 place-items-center rounded-full bg-leaf [&_svg]:size-5">
           {icon}

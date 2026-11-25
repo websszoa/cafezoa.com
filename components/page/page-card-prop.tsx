@@ -161,7 +161,7 @@ export function CafeCard({
             />
           </div>
         )}
-        {/* Next 이미지 최적화(/_next/image)를 거치지 않고 GitHub 주소에서 바로 불러온다. (서버 트래픽 절약) */}
+        {/* 개발은 로컬 public, 배포는 GitHub 주소에서 이미지를 직접 불러온다. */}
         <Image
           unoptimized
           src={image}

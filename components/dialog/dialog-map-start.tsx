@@ -24,31 +24,26 @@ const mapStartChoices: {
   key: MapStartChoice;
   icon: typeof Star;
   title: string;
-  text: string;
 }[] = [
   {
     key: "nearby",
     icon: LocateFixed,
-    title: "내 위치 기준으로 검색하기",
-    text: "가까운 카페부터 거리순으로 보여드려요.",
+    title: "내 주변 카페 찾기",
   },
   {
     key: "naver",
     icon: Star,
     title: "네이버 평점 순으로 보기",
-    text: "네이버 평점이 높은 카페부터 보여드려요.",
   },
   {
     key: "google",
     icon: Star,
     title: "구글 평점 순으로 보기",
-    text: "구글 평점이 높은 카페부터 보여드려요.",
   },
   {
     key: "parking",
     icon: SquareParking,
     title: "주차 무료 카페 보기",
-    text: "무료로 주차할 수 있는 카페만 모아 보여드려요.",
   },
 ];
 
@@ -70,15 +65,15 @@ export function DialogMapStart({
             <MapPinned className="size-6" />
           </span>
           <DialogTitle className="font-paperlogy mt-2 text-2xl font-semibold">
-            어떻게 카페를 찾아볼까요?
+            오늘은 어떤 카페에 가볼까요?
           </DialogTitle>
-          <DialogDescription className="text-sm leading-6 text-[#795f55]">
+          <DialogDescription className="sr-only text-sm leading-6 text-[#795f55]">
             원하는 방식을 고르면 지도에 카페를 보여드려요.
           </DialogDescription>
         </DialogHeader>
 
         <ul className="space-y-2.5 border-y border-dashed border-[#ceb5a0] py-6">
-          {mapStartChoices.map(({ key, icon: Icon, title, text }) => (
+          {mapStartChoices.map(({ key, icon: Icon, title }) => (
             <li key={key}>
               <button
                 type="button"
@@ -89,13 +84,8 @@ export function DialogMapStart({
                   aria-hidden="true"
                   className="size-5 shrink-0 text-autumn"
                 />
-                <span className="min-w-0 flex-1">
-                  <span className="block pb-0.5 text-[15px] font-bold text-bark">
-                    {title}
-                  </span>
-                  <span className="block text-[13px] leading-5 text-[#795f55]">
-                    {text}
-                  </span>
+                <span className="min-w-0 flex-1 text-[15px] font-bold text-bark">
+                  {title}
                 </span>
                 <ChevronRight
                   aria-hidden="true"

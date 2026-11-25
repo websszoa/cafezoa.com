@@ -2,7 +2,8 @@ import { APP_IMAGE_BASE_URL } from "@/lib/constants";
 import cafeDetails from "@/data/cafe-details.json";
 
 // 카페 사진 (data/cafe-details.json 의 media.cover, media.gallery)
-// 사진 파일은 public/cafe/{slug}-{번호}.webp 이고, GitHub Pages 주소로 불러온다. (서버 트래픽 절약)
+// 사진 파일은 public/cafe/{slug}-{번호}.webp 이다.
+// 로컬 개발에서는 public 폴더에서 바로 불러오고, 배포 환경에서는 GitHub Pages를 사용한다.
 //   - cover: 대표 사진. 기본은 {slug}-01.webp
 //   - gallery: 상세·사진 페이지에 보여줄 사진 목록. alt에 사진 설명을 쓰면 이미지 검색에 쓰인다.
 //     (카페와 관련 없는 워터마크 사진은 gallery에 넣지 않는다)
@@ -22,9 +23,16 @@ const mediaBySlug = Object.fromEntries(
   ]),
 ) as Record<string, CafeMedia | undefined>;
 
-// "/cafe/x-01.webp" → "https://.../public/cafe/x-01.webp"
+// 개발: "/cafe/x-01.webp" → "/cafe/x-01.webp"
+// 배포: "/cafe/x-01.webp" → "https://.../public/cafe/x-01.webp"
 export function getImageUrl(path: string) {
-  return `${APP_IMAGE_BASE_URL}${path.replace(/^\//, "")}`;
+  const localPath = `/${path.replace(/^\//, "")}`;
+
+  if (process.env.NODE_ENV === "development") {
+    return localPath;
+  }
+
+  return `${APP_IMAGE_BASE_URL}${localPath.slice(1)}`;
 }
 
 // 카페 대표 사진 주소. cover가 없으면 {slug}-01.webp

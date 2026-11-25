@@ -212,8 +212,9 @@ const sortOptions: Record<
 
 type SortKey = keyof typeof sortOptions;
 
-// 목록에 보여줄 카페 수. "TOP 10" 버튼을 누르면 TOP 20으로, 다시 누르면 TOP 10으로 바뀐다.
-const LIST_LIMITS = [10, 20] as const;
+// 목록·지도에 보여줄 카페 수. null은 전체.
+// 처음에는 전체를 보여주고, 버튼을 누를 때마다 전체 → TOP 10 → TOP 20 → 전체 순으로 바뀐다.
+const LIST_LIMITS = [null, 10, 20] as const;
 type ListLimit = (typeof LIST_LIMITS)[number];
 
 type MapContextValue = {
@@ -279,8 +280,9 @@ export function MapProvider({
 
   const toggleListLimit = useCallback(
     () =>
-      setListLimit((limit) =>
-        limit === LIST_LIMITS[0] ? LIST_LIMITS[1] : LIST_LIMITS[0],
+      setListLimit(
+        (limit) =>
+          LIST_LIMITS[(LIST_LIMITS.indexOf(limit) + 1) % LIST_LIMITS.length],
       ),
     [],
   );
@@ -329,7 +331,7 @@ export function MapProvider({
           if (bValue === null) return -1;
           return bValue - aValue;
         })
-        .slice(0, listLimit)
+        .slice(0, listLimit ?? undefined)
     );
   }, [cafes, sort, query, location, listLimit]);
 
@@ -693,7 +695,7 @@ function MapPhoto({
   }
 
   return (
-    // Next 이미지 최적화(/_next/image)를 거치지 않고 GitHub 주소에서 바로 불러온다. (서버 트래픽 절약)
+    // 개발은 로컬 public, 배포는 GitHub 주소에서 이미지를 직접 불러온다.
     // eslint-disable-next-line jsx-a11y/alt-text -- alt는 props로 받는다.
     <Image
       unoptimized
@@ -802,6 +804,7 @@ export function MapCafeListDrawer() {
     selectedCafe,
     isDesktop,
   } = useMap();
+  const listLimitLabel = listLimit === null ? "전체" : `TOP ${listLimit}`;
   // 목록에서 카페를 누르면 지도를 그 위치로 옮기고 상세 서랍을 연다.
   function focusCafe(cafe: MapListCafe) {
     const naver = window.naver;
@@ -876,10 +879,10 @@ export function MapCafeListDrawer() {
           <button
             type="button"
             onClick={toggleListLimit}
-            aria-label={`목록 개수 바꾸기 (지금 TOP ${listLimit})`}
+            aria-label={`목록 개수 바꾸기 (지금 ${listLimitLabel})`}
             className="rounded-full bg-autumn px-2.5 py-0.5 text-xs font-bold text-white transition-colors outline-none hover:bg-autumn-dark focus-visible:ring-2 focus-visible:ring-autumn/40"
           >
-            TOP {listLimit}
+            {listLimitLabel}
           </button>
         </div>
 
@@ -905,7 +908,7 @@ export function MapCafeListDrawer() {
                   className="h-auto w-full justify-start gap-3 rounded-2xl border-0 bg-transparent p-2.5 text-left whitespace-normal hover:bg-transparent focus-visible:bg-[#fffaf2] focus-visible:ring-0 active:not-aria-[haspopup]:translate-y-0"
                 >
                   <span className="relative size-16 shrink-0 overflow-hidden rounded-xl bg-stone-200">
-                    {/* Next 이미지 최적화(/_next/image)를 거치지 않고 GitHub 주소에서 바로 불러온다. (서버 트래픽 절약) */}
+                    {/* 개발은 로컬 public, 배포는 GitHub 주소에서 이미지를 직접 불러온다. */}
                     <MapPhoto
                       iconClassName="size-6"
                       src={cafe.image}
@@ -1015,7 +1018,6 @@ function DrawerHandle() {
   );
 }
 
-
 // 마커를 누르면 열리는 카페 미리보기 서랍. PC에서는 오른쪽에서, 모바일에서는 아래에서 올라온다.
 // PC에서는 지도를 계속 움직이고 다른 마커를 누를 수 있도록 모달 없이 띄운다.
 export function MapCafeDrawer() {
@@ -1119,7 +1121,7 @@ function MapCafeDrawerBody({ cafe }: { cafe: MapListCafe }) {
             {photos.map((item, index) => (
               <CarouselItem key={item.src} className="pl-0">
                 <div className="relative aspect-3/4">
-                  {/* Next 이미지 최적화(/_next/image)를 거치지 않고 GitHub 주소에서 바로 불러온다. (서버 트래픽 절약) */}
+                  {/* 개발은 로컬 public, 배포는 GitHub 주소에서 이미지를 직접 불러온다. */}
                   <MapPhoto
                     iconClassName="size-12"
                     src={item.src}

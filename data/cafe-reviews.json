@@ -1071,5 +1071,891 @@
         "url": "https://www.ktriptips.com/kor/food/2840067"
       }
     }
+  },
+  "moifin-sky-yeosu": {
+    "updated_at": "2026-11",
+    "good": [
+      {
+        "text": "높은 지대의 대형 통창과 테라스에서 여수 바다와 섬을 넓게 내려다볼 수 있어 전망과 노을을 즐기기 좋다는 평가가 많아요.",
+        "tags": [
+          "오션뷰",
+          "노을",
+          "테라스"
+        ],
+        "source_ids": [
+          "moifin-dining",
+          "moifin-review",
+          "moifin-video"
+        ]
+      },
+      {
+        "text": "지하 1층부터 5층 루프탑까지 층마다 분위기와 좌석 구성이 달라 공간을 둘러보고 사진을 남기는 재미가 있어요.",
+        "tags": [
+          "대형 카페",
+          "인테리어",
+          "포토존"
+        ],
+        "source_ids": [
+          "moifin-dining",
+          "moifin-review",
+          "moifin-video"
+        ]
+      },
+      {
+        "text": "전용 주차 공간과 실내 좌석이 넉넉해 가족 나들이나 데이트, 단체 방문 때 이용하기 편하다는 의견이 있어요.",
+        "tags": [
+          "무료 주차",
+          "가족",
+          "넓은 좌석"
+        ],
+        "source_ids": [
+          "moifin-dining",
+          "moifin-tour",
+          "moifin-video"
+        ]
+      }
+    ],
+    "bad": [
+      {
+        "text": "아메리카노가 7천 원이고 일부 음료와 베이커리는 8천~9천 원대라 일반 카페보다 가격이 높게 느껴질 수 있어요.",
+        "tags": [
+          "가격"
+        ],
+        "source_ids": [
+          "moifin-dining",
+          "moifin-review",
+          "moifin-video"
+        ]
+      },
+      {
+        "text": "주말이나 성수기에는 방문객이 몰려 인기 있는 창가와 테라스 좌석을 잡기 어려울 수 있어요.",
+        "tags": [
+          "혼잡",
+          "좌석",
+          "주말"
+        ],
+        "source_ids": [
+          "moifin-review"
+        ]
+      },
+      {
+        "text": "인기 베이커리는 비교적 빨리 소진되고 늦은 오후에는 선택할 수 있는 디저트 종류가 적을 수 있어요.",
+        "tags": [
+          "베이커리",
+          "품절",
+          "방문 시간"
+        ],
+        "source_ids": [
+          "moifin-dining",
+          "moifin-review"
+        ]
+      }
+    ],
+    "sources": {
+      "moifin-dining": {
+        "label": "다이닝코드 방문자 후기",
+        "url": "https://www.diningcode.com/profile.php?rid=Ixfi4eCIlWvR"
+      },
+      "moifin-review": {
+        "label": "티스토리 · 주차와 베이커리 후기",
+        "url": "https://woori1025.tistory.com/134"
+      },
+      "moifin-tour": {
+        "label": "여수관광문화 · 모이핀 스카이",
+        "url": "https://yeosu.go.kr/tour/travel/mt_temple?idx=6834&mode=view"
+      },
+      "moifin-video": {
+        "label": "유추카 · 영상 리뷰 요약",
+        "url": "https://youchuca.popit.kr/place/6a088d959d5e7b1a94f135da"
+      }
+    }
+  },
+  "seongnim-ranch-yangsan": {
+    "updated_at": "2026-11",
+    "good": [
+      {
+        "text": "옛 목장의 흔적과 현대적인 곡선형 건축이 산과 숲 풍경에 자연스럽게 어우러져 공간을 구경하고 사진을 남기기 좋다는 평가가 많아요.",
+        "tags": [
+          "건축",
+          "인테리어",
+          "자연경관"
+        ],
+        "source_ids": [
+          "seongnim-dining",
+          "seongnim-review",
+          "seongnim-tour"
+        ]
+      },
+      {
+        "text": "커피와 베이커리뿐 아니라 목장 콘셉트에 어울리는 수제 우유와 요거트 메뉴를 함께 즐길 수 있고 맛도 좋다는 후기가 있어요.",
+        "tags": [
+          "커피",
+          "베이커리",
+          "우유",
+          "요거트"
+        ],
+        "source_ids": [
+          "seongnim-dining",
+          "seongnim-tour"
+        ]
+      },
+      {
+        "text": "무료 주차 구역이 여러 곳 마련되어 있고 실내외 좌석과 유아의자가 있어 가족 나들이나 드라이브로 방문하기 편해요.",
+        "tags": [
+          "무료 주차",
+          "아이 동반",
+          "드라이브"
+        ],
+        "source_ids": [
+          "seongnim-dining",
+          "seongnim-review",
+          "seongnim-tour"
+        ]
+      }
+    ],
+    "bad": [
+      {
+        "text": "산자락 안쪽에 있어 대중교통으로 접근하기 어렵고 자가용 없이 방문하기에는 불편할 수 있어요.",
+        "tags": [
+          "접근성",
+          "자가용"
+        ],
+        "source_ids": [
+          "seongnim-dining",
+          "seongnim-review"
+        ]
+      },
+      {
+        "text": "아메리카노가 6천 원이고 여러 음료가 7천 원대라 일반 카페보다 가격이 높게 느껴질 수 있어요.",
+        "tags": [
+          "가격"
+        ],
+        "source_ids": [
+          "seongnim-dining",
+          "seongnim-review"
+        ]
+      },
+      {
+        "text": "평일에는 오후 6시에 문을 닫고 늦게 방문하면 인기 베이커리가 대부분 소진될 수 있어 방문 시간을 미리 확인하는 것이 좋아요.",
+        "tags": [
+          "영업시간",
+          "베이커리",
+          "품절"
+        ],
+        "source_ids": [
+          "seongnim-dining",
+          "seongnim-review",
+          "seongnim-tour"
+        ]
+      }
+    ],
+    "sources": {
+      "seongnim-dining": {
+        "label": "다이닝코드 방문자 후기",
+        "url": "https://www.diningcode.com/profile.php?rid=9okIml0X2W2f"
+      },
+      "seongnim-review": {
+        "label": "티스토리 · 성림목장 방문 후기",
+        "url": "https://archive19.tistory.com/706"
+      },
+      "seongnim-tour": {
+        "label": "대한민국 구석구석 · 성림목장",
+        "url": "https://www.koreatriptips.com/dining/3072676.html"
+      }
+    }
+  },
+  "sett-yongin": {
+    "updated_at": "2026-11",
+    "good": [
+      {
+        "text": "높은 층고와 대형 통창, 화이트톤의 세련된 인테리어가 넓고 쾌적한 느낌을 주며 숲과 정원 풍경을 감상하기 좋다는 평가가 많아요.",
+        "tags": [
+          "인테리어",
+          "숲뷰",
+          "대형 카페"
+        ],
+        "source_ids": [
+          "sett-dining",
+          "sett-review",
+          "sett-cafe-review"
+        ]
+      },
+      {
+        "text": "커피 원두 선택지가 있고 베이커리와 디저트, 브런치와 식사까지 한 건물에서 다양하게 즐길 수 있어 모임이나 데이트에 편리해요.",
+        "tags": [
+          "커피",
+          "베이커리",
+          "브런치"
+        ],
+        "source_ids": [
+          "sett-dining",
+          "sett-review",
+          "sett-cafe-review"
+        ]
+      },
+      {
+        "text": "지상과 지하 주차 공간이 넉넉하고 엘리베이터로 각 층을 이동할 수 있어 가족이나 단체로 방문하기 편하다는 의견이 있어요.",
+        "tags": [
+          "주차",
+          "엘리베이터",
+          "단체"
+        ],
+        "source_ids": [
+          "sett-dining",
+          "sett-review",
+          "sett-cafe-review"
+        ]
+      }
+    ],
+    "bad": [
+      {
+        "text": "아메리카노가 7천 원부터 시작하고 브런치 메인 메뉴도 대부분 2만 원대로 전반적인 가격이 높게 느껴질 수 있어요.",
+        "tags": [
+          "가격"
+        ],
+        "source_ids": [
+          "sett-dining",
+          "sett-review",
+          "sett-cafe-review"
+        ]
+      },
+      {
+        "text": "주말과 인기 시간대에는 방문객이 몰려 1·2층 좌석이 가득 차거나 브런치 대기가 생길 수 있어요.",
+        "tags": [
+          "혼잡",
+          "대기",
+          "주말"
+        ],
+        "source_ids": [
+          "sett-dining",
+          "sett-cafe-review"
+        ]
+      },
+      {
+        "text": "층마다 운영시간과 이용 방식이 다르고 늦은 시간에는 일부 베이커리나 브런치 메뉴가 품절될 수 있어 미리 확인하는 것이 좋아요.",
+        "tags": [
+          "운영시간",
+          "품절",
+          "이용 안내"
+        ],
+        "source_ids": [
+          "sett-dining",
+          "sett-review",
+          "sett-cafe-review"
+        ]
+      }
+    ],
+    "sources": {
+      "sett-dining": {
+        "label": "다이닝코드 방문자 후기",
+        "url": "https://www.diningcode.com/profile.php?rid=NKqUwtSyli6a"
+      },
+      "sett-review": {
+        "label": "티스토리 · SETT 방문 후기",
+        "url": "https://hoinworld.tistory.com/entry/%EC%9A%A9%EC%9D%B8-SETT-%EB%82%B4%EB%8F%88%EB%82%B4%EC%82%B0-%EC%9A%A9%EC%9D%B8-%EB%8C%80%ED%98%95%EC%B9%B4%ED%8E%98-%EB%B0%A9%EB%AC%B8%EA%B8%B0-%EB%A7%9B%EC%9E%88%EB%8A%94-%EB%94%94%EC%A0%80%ED%8A%B8%EC%99%80-%EB%84%93%EA%B3%A0-%EC%BE%8C%EC%A0%81%ED%95%9C-%EA%B3%B5%EA%B0%84-%EB%8B%A4%EC%96%91%ED%95%9C-%EB%AC%B4%EB%93%9C%EC%99%80-%EB%A9%94%EB%89%B4%EA%B0%80-%ED%95%A8%EA%BB%98%ED%95%98%EB%8A%94-%EA%B3%A0%EA%B8%B0%EB%A6%AC-%EC%B6%94%EC%B2%9C-%EC%B9%B4%ED%8E%98"
+      },
+      "sett-cafe-review": {
+        "label": "티스토리 · SETT 솔직 리뷰",
+        "url": "https://jayzoeycafe.tistory.com/33"
+      }
+    }
+  },
+  "starbucks-gyeongdong-1960": {
+    "updated_at": "2026-11",
+    "good": [
+      {
+        "text": "1960년대 경동극장을 리모델링해 높은 목조 천장과 계단식 좌석이 그대로 살아 있어, 극장 안에서 커피를 마시는 듯한 이색적인 분위기를 즐길 수 있다는 평가가 많아요.",
+        "tags": [
+          "인테리어",
+          "레트로",
+          "이색 카페"
+        ],
+        "source_ids": [
+          "gd-visitseoul",
+          "gd-economist",
+          "gd-creatrip"
+        ]
+      },
+      {
+        "text": "사이렌오더로 주문하면 벽면 스크린에 닉네임이 비춰져 음료 준비를 알려주는 방식이 신기하고 재미있다는 후기가 있어요.",
+        "tags": [
+          "사이렌오더",
+          "스크린"
+        ],
+        "source_ids": [
+          "gd-polle",
+          "gd-visitseoul"
+        ]
+      },
+      {
+        "text": "경동시장 안에 있어 전통시장 구경과 시장 맛집 탐방을 함께 즐기기 좋고, 서울 이색 카페 나들이나 데이트 코스로 들르기 좋다는 의견이 많아요.",
+        "tags": [
+          "전통시장",
+          "관광",
+          "데이트"
+        ],
+        "source_ids": [
+          "gd-creatrip",
+          "gd-mommom"
+        ]
+      }
+    ],
+    "bad": [
+      {
+        "text": "평일에도 이용객이 많고 주말에는 대기가 생길 만큼 붐벼서, 넓은 매장이지만 좌석을 잡기 어려울 수 있어요. 여유롭게 즐기려면 평일 이른 시간 방문을 추천해요.",
+        "tags": [
+          "혼잡",
+          "좌석",
+          "주말"
+        ],
+        "source_ids": [
+          "gd-visitseoul",
+          "gd-polle",
+          "gd-mommom"
+        ]
+      },
+      {
+        "text": "매장 전용 주차장이 없어 상가 지하 민영주차장이나 길 건너 약령시장 공영주차장을 이용해야 해요.",
+        "tags": [
+          "주차"
+        ],
+        "source_ids": [
+          "gd-mommom",
+          "gd-polle"
+        ]
+      },
+      {
+        "text": "실내가 다소 어둡고 계단식 좌석이 많아 어린아이나 유모차와 함께 이동할 때는 주의가 필요하고, 별도 수유실이나 키즈존은 확인되지 않았어요.",
+        "tags": [
+          "아이 동반",
+          "계단",
+          "편의시설"
+        ],
+        "source_ids": [
+          "gd-mommom"
+        ]
+      }
+    ],
+    "sources": {
+      "gd-visitseoul": {
+        "label": "VISIT SEOUL · 스타벅스 경동1960점",
+        "url": "https://korean.visitseoul.net/restaurants/starbucks-kyungdong/KOPn3hblb"
+      },
+      "gd-economist": {
+        "label": "이코노미스트 · 경동1960점 오픈 기사",
+        "url": "https://economist.co.kr/article/view/ecn202212160059"
+      },
+      "gd-creatrip": {
+        "label": "크리에이트립 · 경동1960 소개",
+        "url": "https://creatrip.com/blog/13410"
+      },
+      "gd-polle": {
+        "label": "폴레 · 방문자 리뷰",
+        "url": "https://polle.com/place/514ZnE/%EC%8A%A4%ED%83%80%EB%B2%85%EC%8A%A4"
+      },
+      "gd-mommom": {
+        "label": "맘맘 장소 정보",
+        "url": "https://mom-mom.net/travel/places/63e9d59cefa917ab6ab97fe8"
+      }
+    }
+  },
+  "uncanny-gimpo": {
+    "updated_at": "2026-11",
+    "good": [
+      {
+        "text": "1·2층 모두 통창이라 초지대교와 서해 바다를 바라볼 수 있고, 일몰과 밤에 반짝이는 다리 야경이 특히 예쁘다는 평가가 많아요.",
+        "tags": [
+          "오션뷰",
+          "야경",
+          "노을"
+        ],
+        "source_ids": [
+          "uncanny-dining"
+        ]
+      },
+      {
+        "text": "높은 층고와 실내 나무 조경, 넓은 테이블 간격 덕분에 공간이 고급스럽고 여유롭게 느껴진다는 후기가 있어요.",
+        "tags": [
+          "인테리어",
+          "넓은 좌석",
+          "대형 카페"
+        ],
+        "source_ids": [
+          "uncanny-dining"
+        ]
+      },
+      {
+        "text": "주차장이 넓고 무료라 차로 찾기 편하고, 파스타·피자 같은 브런치와 베이커리 맛도 괜찮다는 의견이 있어요.",
+        "tags": [
+          "무료 주차",
+          "브런치",
+          "베이커리"
+        ],
+        "source_ids": [
+          "uncanny-dining"
+        ]
+      }
+    ],
+    "bad": [
+      {
+        "text": "아메리카노가 8천 원, 파스타와 피자는 2만 원대라 '뷰값이 포함된 가격'이라는 평가가 많아요.",
+        "tags": [
+          "가격"
+        ],
+        "source_ids": [
+          "uncanny-dining"
+        ]
+      },
+      {
+        "text": "해가 들어오는 시간에는 통창 쪽이 많이 눈부실 수 있고, 일부 좌석은 의자와 테이블 조합이 불편하다는 후기가 있어요.",
+        "tags": [
+          "눈부심",
+          "좌석"
+        ],
+        "source_ids": [
+          "uncanny-dining"
+        ]
+      },
+      {
+        "text": "가족 단위 손님이 많아 시끄러울 수 있고, 별도 수유실은 없어 영유아와 방문한다면 참고하는 것이 좋아요.",
+        "tags": [
+          "소음",
+          "아이 동반",
+          "편의시설"
+        ],
+        "source_ids": [
+          "uncanny-dining"
+        ]
+      }
+    ],
+    "sources": {
+      "uncanny-dining": {
+        "label": "다이닝코드 방문자 후기",
+        "url": "https://www.diningcode.com/profile.php?rid=lMHK8eznmOrX"
+      }
+    }
+  },
+  "oh-bremen-pohang": {
+    "updated_at": "2026-11",
+    "good": [
+      {
+        "text": "영일대해수욕장 바로 앞이라 통창 너머 바다 전망이 좋고, 함께 간 사람들이 다들 좋아했다는 후기가 있어요.",
+        "tags": [
+          "오션뷰",
+          "영일대"
+        ],
+        "source_ids": [
+          "bremen-polle",
+          "bremen-ktrip"
+        ]
+      },
+      {
+        "text": "실내 대형 회전목마와 원형 계단, 큰 조형물이 있어 공간이 웅장하고 포토존에서 사진을 남기기 좋다는 평가가 많아요.",
+        "tags": [
+          "회전목마",
+          "포토존",
+          "인테리어"
+        ],
+        "source_ids": [
+          "bremen-polle",
+          "bremen-ktrip"
+        ]
+      },
+      {
+        "text": "빵 종류와 굿즈가 다양하고, 에이드 등 음료가 대형 베이커리 카페치고 잘 나온다는 의견이 있어요. 엘리베이터가 있어 층간 이동도 편해요.",
+        "tags": [
+          "베이커리",
+          "음료",
+          "엘리베이터"
+        ],
+        "source_ids": [
+          "bremen-polle"
+        ]
+      }
+    ],
+    "bad": [
+      {
+        "text": "음료와 빵 가격이 높은 편인데 빵과 커피 맛은 평범하다는 평가가 있어, 맛보다는 공간과 뷰를 보러 가는 곳이라는 의견이 많아요.",
+        "tags": [
+          "가격",
+          "맛"
+        ],
+        "source_ids": [
+          "bremen-polle"
+        ]
+      },
+      {
+        "text": "방문객이 많아 조용한 바다뷰 카페를 원한다면 아쉬울 수 있고, 전용 주차장이 없어 주말에는 주차가 힘들 수 있어요.",
+        "tags": [
+          "혼잡",
+          "주차",
+          "주말"
+        ],
+        "source_ids": [
+          "bremen-polle",
+          "bremen-ktrip"
+        ]
+      },
+      {
+        "text": "안전사고 방지를 위해 어린이 출입을 제한하고 있어 아이와 함께라면 방문 전 확인이 필요해요.",
+        "tags": [
+          "노키즈존",
+          "아이 동반"
+        ],
+        "source_ids": [
+          "bremen-polle",
+          "bremen-ktrip"
+        ]
+      }
+    ],
+    "sources": {
+      "bremen-polle": {
+        "label": "뽈레 방문자 리뷰",
+        "url": "https://polle.com/place/3CMTsH/%EC%98%A4%21%20%EB%B8%8C%EB%A0%88%EB%A9%98"
+      },
+      "bremen-ktrip": {
+        "label": "K-TRIP TIPS 카페 소개",
+        "url": "https://www.ktriptips.com/kor/food/2912899"
+      }
+    }
+  },
+  "haegot-hwaseong": {
+    "updated_at": "2026-11",
+    "good": [
+      {
+        "text": "삼면 통창과 루프탑에서 탁 트인 서해 바다와 제부도 풍경을 볼 수 있고, 해 질 무렵 노을이 특히 아름답다는 평가가 많아요.",
+        "tags": [
+          "오션뷰",
+          "노을",
+          "루프탑"
+        ],
+        "source_ids": [
+          "haegot-dining",
+          "haegot-ibtravel"
+        ]
+      },
+      {
+        "text": "넓고 깔끔한 화이트톤 인테리어에 층마다 분위기가 달라 둘러보는 재미가 있고, 계단식 정원과 루프탑 소파 등 야외 좌석도 다양해요.",
+        "tags": [
+          "인테리어",
+          "야외 좌석",
+          "대형 카페"
+        ],
+        "source_ids": [
+          "haegot-dining",
+          "haegot-ibtravel"
+        ]
+      },
+      {
+        "text": "감태 아포카토와 머드라떼 같은 시그니처 메뉴가 독특하고 맛있다는 후기가 있고, 넓은 전용 주차장을 무료로 이용할 수 있어 편해요.",
+        "tags": [
+          "시그니처 메뉴",
+          "무료 주차"
+        ],
+        "source_ids": [
+          "haegot-dining",
+          "haegot-mommom"
+        ]
+      }
+    ],
+    "bad": [
+      {
+        "text": "아메리카노 6천 원, 시그니처 음료 8천 원대, 파스타 1만 8천 원대로 외곽 대형 카페다운 가격대라는 평가가 있어요.",
+        "tags": [
+          "가격"
+        ],
+        "source_ids": [
+          "haegot-dining"
+        ]
+      },
+      {
+        "text": "주말에는 주차장과 좌석이 붐비고, 인기 빵은 오후에 일찍 품절되는 경우가 많아 여유롭게 즐기려면 평일이나 이른 시간이 좋아요.",
+        "tags": [
+          "혼잡",
+          "품절",
+          "주말"
+        ],
+        "source_ids": [
+          "haegot-dining",
+          "haegot-ibtravel"
+        ]
+      },
+      {
+        "text": "엘리베이터가 없어 유모차와 함께라면 1층 이용을 권하고, 단체 손님이 많을 때는 높은 층고에 소리가 울려 시끄러울 수 있어요.",
+        "tags": [
+          "엘리베이터",
+          "아이 동반",
+          "소음"
+        ],
+        "source_ids": [
+          "haegot-dining"
+        ]
+      }
+    ],
+    "sources": {
+      "haegot-dining": {
+        "label": "다이닝코드 방문자 후기",
+        "url": "https://www.diningcode.com/profile.php?rid=F3pcs0bqa1pv"
+      },
+      "haegot-ibtravel": {
+        "label": "이번여행 · 해갓 방문기",
+        "url": "https://www.ibtravel.co.kr/travel/24284/"
+      },
+      "haegot-mommom": {
+        "label": "맘맘 장소 정보",
+        "url": "https://mom-mom.net/travel/places/66179dad51877bf1407c5cae"
+      }
+    }
+  },
+  "pequods-yangju": {
+    "updated_at": "2026-11",
+    "good": [
+      {
+        "text": "높은 층고와 넓은 통창, 특이한 인테리어가 돋보이고 2층의 대형 미디어아트 화면이 갤러리의 큰 액자를 보는 듯하다는 후기가 있어요.",
+        "tags": [
+          "인테리어",
+          "미디어아트",
+          "포토존"
+        ],
+        "source_ids": [
+          "pequods-dining",
+          "pequods-mommom"
+        ]
+      },
+      {
+        "text": "빵과 요거트 스무디, 피자·파스타 같은 브런치 메뉴가 맛있고 양도 적당하다는 평가가 많고, 가격 만족도도 높은 편이에요.",
+        "tags": [
+          "베이커리",
+          "브런치",
+          "가격"
+        ],
+        "source_ids": [
+          "pequods-dining"
+        ]
+      },
+      {
+        "text": "매장 앞 주차장이 넓고 좌석 간격도 여유로워 가족 방문이 편하며, 1층에는 아기의자와 유아 식기가 준비되어 있어요.",
+        "tags": [
+          "무료 주차",
+          "넓은 좌석",
+          "아이 동반"
+        ],
+        "source_ids": [
+          "pequods-dining",
+          "pequods-mommom"
+        ]
+      }
+    ],
+    "bad": [
+      {
+        "text": "아메리카노와 일부 디저트는 무난하지만 특별하지는 않다는 의견도 있어 음료 맛보다는 공간을 즐기러 가기 좋은 곳이에요.",
+        "tags": [
+          "맛"
+        ],
+        "source_ids": [
+          "pequods-dining"
+        ]
+      },
+      {
+        "text": "엘리베이터가 없어 2층으로 가려면 계단을 이용해야 하므로 유모차와 함께라면 1층 이용을 권해요.",
+        "tags": [
+          "엘리베이터",
+          "아이 동반"
+        ],
+        "source_ids": [
+          "pequods-dining"
+        ]
+      },
+      {
+        "text": "저녁에는 조명이 주황빛이라 음식 사진이 어둡게 나올 수 있어, 사진을 남기려면 낮 시간 방문이 좋아요.",
+        "tags": [
+          "조명",
+          "사진"
+        ],
+        "source_ids": [
+          "pequods-dining"
+        ]
+      }
+    ],
+    "sources": {
+      "pequods-dining": {
+        "label": "다이닝코드 방문자 후기",
+        "url": "https://www.diningcode.com/profile.php?rid=5CEd2quROADX"
+      },
+      "pequods-mommom": {
+        "label": "맘맘 장소 정보",
+        "url": "https://mom-mom.net/travel/places/65f794dcb1da306faf782c1d"
+      }
+    }
+  },
+  "mazimou-yongin": {
+    "updated_at": "2026-11",
+    "good": [
+      {
+        "text": "모로코 건축에서 영감을 받은 샌드 베이지 외관과 아치형 창호, 곡선 벽 인테리어 덕분에 해외여행을 온 듯한 이색적인 분위기라는 평가가 많아요.",
+        "tags": [
+          "건축",
+          "인테리어",
+          "포토존"
+        ],
+        "source_ids": [
+          "mazimou-polle"
+        ]
+      },
+      {
+        "text": "디저트와 샐러드, 브런치 맛이 좋다는 후기가 있고, 산미 있는 아메리카노와 적당히 달콤한 바닐라라떼 등 음료도 무난하게 즐길 수 있어요.",
+        "tags": [
+          "디저트",
+          "브런치",
+          "커피"
+        ],
+        "source_ids": [
+          "mazimou-polle"
+        ]
+      },
+      {
+        "text": "카페와 갤러리, 목공방이 여러 건물에 나뉘어 있어 공간을 둘러보는 재미가 있고, 좌석이 많아 오픈 시기가 지난 뒤에는 비교적 여유롭게 이용했다는 의견이 있어요.",
+        "tags": [
+          "복합문화공간",
+          "넓은 좌석"
+        ],
+        "source_ids": [
+          "mazimou-polle"
+        ]
+      }
+    ],
+    "bad": [
+      {
+        "text": "아메리카노가 7,500원, 시그니처 라떼는 9천 원 안팎이고 식사 메뉴는 2만 원대라 가격대가 높은 편이에요. 발렛 주차비도 따로 있어요.",
+        "tags": [
+          "가격",
+          "발렛"
+        ],
+        "source_ids": [
+          "mazimou-polle"
+        ]
+      },
+      {
+        "text": "인기 케이크와 디저트는 일찍 품절되는 경우가 있어 원하는 메뉴가 있다면 이른 시간 방문이 좋아요.",
+        "tags": [
+          "품절",
+          "디저트"
+        ],
+        "source_ids": [
+          "mazimou-polle"
+        ]
+      },
+      {
+        "text": "노키즈존으로 운영되는 날이 있어 아이와 함께라면 방문 전 이용 가능 연령과 요일을 확인하는 것이 좋아요.",
+        "tags": [
+          "노키즈존",
+          "아이 동반"
+        ],
+        "source_ids": [
+          "mazimou-polle"
+        ]
+      }
+    ],
+    "sources": {
+      "mazimou-polle": {
+        "label": "뽈레 방문자 리뷰",
+        "url": "https://polle.com/place/4vXIfP/%EB%A7%88%EC%A7%80%EB%AA%A8%EC%9A%B0"
+      }
+    }
+  },
+  "starbucks-the-jeju-songdang-park-r": {
+    "updated_at": "2026-11",
+    "good": [
+      {
+        "text": "1층과 2층, 야외 어디서든 한라산과 오름, 돌공원 풍경을 볼 수 있고, 연못과 산책로가 있는 넓은 정원이 잘 꾸며져 있다는 평가가 많아요.",
+        "tags": [
+          "한라산뷰",
+          "정원",
+          "산책"
+        ],
+        "source_ids": [
+          "songdang-polle",
+          "songdang-newdaily",
+          "songdang-mommom"
+        ]
+      },
+      {
+        "text": "현무암 실내 정원과 커피 재배부터 로스팅까지 표현한 천장 키네틱 아트가 인상적이라, 다른 스타벅스와 확연히 다른 매력이 있다는 후기가 있어요.",
+        "tags": [
+          "인테리어",
+          "키네틱 아트",
+          "리저브"
+        ],
+        "source_ids": [
+          "songdang-newdaily",
+          "songdang-polle"
+        ]
+      },
+      {
+        "text": "돌보루 마스카포네 브레드처럼 이곳에서만 파는 베이커리와 음료가 있고, 약 500대 규모의 넓은 주차장이 있어 차로 들르기 편해요.",
+        "tags": [
+          "한정 메뉴",
+          "베이커리",
+          "무료 주차"
+        ],
+        "source_ids": [
+          "songdang-newdaily",
+          "songdang-polle",
+          "songdang-mommom"
+        ]
+      }
+    ],
+    "bad": [
+      {
+        "text": "관광객이 많아 주말에는 주문 줄이 길고 사이렌 오더가 막히는 경우도 있어요. 평일 오전이나 오픈 시간대 방문을 추천해요.",
+        "tags": [
+          "혼잡",
+          "대기",
+          "주말"
+        ],
+        "source_ids": [
+          "songdang-polle",
+          "songdang-mommom",
+          "songdang-newdaily"
+        ]
+      },
+      {
+        "text": "리저브 전용 매장이라 디카페인 메뉴가 없고, 스페셜 음료와 디저트는 가격에 비해 맛이 평범하다는 의견도 있어요.",
+        "tags": [
+          "메뉴",
+          "가격",
+          "디카페인"
+        ],
+        "source_ids": [
+          "songdang-polle"
+        ]
+      },
+      {
+        "text": "방문객이 많아 매장이 다소 어수선할 수 있고, 수유실과 기저귀교환대가 없어 영유아와 간다면 미리 준비하는 것이 좋아요.",
+        "tags": [
+          "청결",
+          "아이 동반",
+          "편의시설"
+        ],
+        "source_ids": [
+          "songdang-polle",
+          "songdang-mommom"
+        ]
+      }
+    ],
+    "sources": {
+      "songdang-polle": {
+        "label": "뽈레 방문자 리뷰",
+        "url": "https://polle.com/place/3ORVwo/%EC%8A%A4%ED%83%80%EB%B2%85%EC%8A%A4"
+      },
+      "songdang-mommom": {
+        "label": "맘맘 장소 정보",
+        "url": "https://mom-mom.net/travel/places/666f99f21ab44a3aa772b8f1"
+      },
+      "songdang-newdaily": {
+        "label": "뉴데일리 · 송당 동화마을 르포",
+        "url": "https://biz.newdaily.co.kr/site/data/html/2024/06/19/2024061900090.html"
+      }
+    }
   }
 }

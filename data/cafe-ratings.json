@@ -81,6 +81,10 @@
     "2026-10": {
       "naver": [4.82, 12045],
       "google": [4.4, 380]
+    },
+    "2026-11": {
+      "naver": [4.83, 12238],
+      "google": [4.4, 388]
     }
   },
   "most-seokmun-hoengseong": {
@@ -201,6 +205,60 @@
     "2026-11": {
       "naver": [4.86, 13528],
       "google": [4.3, 320]
+    }
+  },
+  "moifin-sky-yeosu": {
+    "2026-11": {
+      "naver": [4.89, 6699],
+      "google": [4.6, 178]
+    }
+  },
+  "seongnim-ranch-yangsan": {
+    "2026-11": {
+      "naver": [4.83, 6804],
+      "google": [4.0, 85]
+    }
+  },
+  "sett-yongin": {
+    "2026-11": {
+      "naver": [4.71, 11131],
+      "google": [4.2, 189]
+    }
+  },
+  "uncanny-gimpo": {
+    "2026-11": {
+      "naver": [4.82, 6014],
+      "google": [4.3, 43]
+    }
+  },
+  "haegot-hwaseong": {
+    "2026-11": {
+      "naver": [4.81, 3364],
+      "google": [4.3, 84]
+    }
+  },
+  "pequods-yangju": {
+    "2026-11": {
+      "naver": [4.82, 4672],
+      "google": [4.0, 26]
+    }
+  },
+  "mazimou-yongin": {
+    "2026-11": {
+      "naver": [4.74, 2692],
+      "google": [4.3, 59]
+    }
+  },
+  "starbucks-the-jeju-songdang-park-r": {
+    "2026-11": {
+      "naver": [4.5, 5994],
+      "google": [4.3, 817]
+    }
+  },
+  "starbucks-daegu-jongno-gotaek": {
+    "2026-11": {
+      "naver": [4.7, 6137],
+      "google": [4.6, 1144]
     }
   }
 }
